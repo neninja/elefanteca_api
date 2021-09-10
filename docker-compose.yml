@@ -1,0 +1,30 @@
+version: "3.3"
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: elefanteca
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 123
+    ports:
+      - '5432:5432'
+    expose:
+      - '5432'
+    volumes:
+      - ./.docker/psql/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    build: .docker/php
+    volumes:
+      - ./.docker/apache/vhost.conf:/etc/apache2/sites-available/000-default.conf
+      - .:/var/www/html
+    working_dir: /var/www/html
+    links:
+      - db:db
+    ports:
+      - '8989:80'
+    expose:
+      - '8989'
+    depends_on:
+      - db
