@@ -11,7 +11,8 @@
     </testsuites>
 
     <logging>
-        <text outputFile="tests/_reports/tests.txt"/>
+        <testdoxText outputFile="docs/README.txt"/>
+        <testdoxHtml outputFile="docs/index.html"/>
     </logging>
 
     <coverage cacheDirectory="tests/_reports/cache_coverage"
@@ -25,9 +26,9 @@
             <text outputFile="php://stdout"/>
         </report>
 
-    <include>
+        <include>
             <directory suffix=".php">app/Core</directory>
-    </include>
+        </include>
     </coverage>
 
 

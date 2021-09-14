@@ -72,6 +72,6 @@ docker-compose exec app composer ci
 ```
 > Testes que contenham `@group db` resetarão as migrations, portanto caso queira fazer testes manuais após o phpunit utilize ``docker-compose exec app php artisan migrate --seed``
 
-> "Documentação" dos requisitos: ``docker-compose exec app cat tests/_reports/tests.txt``
+> Também é gerada a "documentação" dos requisitos em [docs](docs)
 
 > Coverage disponível em `tests/_reports/index.html`
