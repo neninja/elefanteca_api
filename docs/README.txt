@@ -1,5 +1,7 @@
 Cadastro Usuario Service
- [x] Deve cadastrar
+ [ ] Deve cadastrar com nome cpf email senha corretos
+ [ ] Deve criptografar senha
+ [ ] Deve criar ativo
 
 CPF
  [x] Deve formatar 81026092140 para 810.260.921-40

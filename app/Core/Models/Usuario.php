@@ -9,42 +9,32 @@ use Core\Models\{
 
 class Usuario
 {
-    protected ?int $id;
-    protected string $nome;
-    protected string $login;
-    protected string $ativo;
-    protected string $senha; // criptografada
-    public CPF $cpf;
-    public Email $email;
+    protected bool $ativo;
 
     public function __construct(
-        $id,
-        $nome,
-        $senha
+        private     ?int    $id = null,
+        public      string  $nome,
+        public      CPF     $cpf,
+        private     string  $senha, // criptografada
+        public      Email   $email,
     ) {
-        $this->id = $id;
-        $this->nome = $nome;
-        $this->senha = $senha;
+        $this->ativo = true;
     }
 
     public function getId() {
         return $this->id;
     }
 
-    public function getNome() {
-        return $this->nome;
-    }
-
     public function getSenha() {
         return $this->senha;
     }
 
-    public function ativaUsuario() {
+    public function ativar() {
         $this->ativo = true;
         return $this;
     }
 
-    public function inativaUsuario() {
+    public function inativar() {
         $this->ativo = false;
         return $this->senha;
     }

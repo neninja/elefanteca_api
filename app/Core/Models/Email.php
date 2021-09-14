@@ -19,7 +19,7 @@ class Email
 
     public function setEmail(string $email) {
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            throw new ValidationException("email", "deve estar válido", $email);
+            throw new ValidationException("Email deve estar válido", $email);
         }
         $this->email = $email;
         return $this;
