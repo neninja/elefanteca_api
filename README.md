@@ -1,5 +1,7 @@
 # elefanteca_api
 
+![Tests](https://github.com/nenitf/elefanteca_api/actions/workflows/tests.yml/badge.svg)
+
 API de sistema para bibliotecas
 
 ## Configuração inicial
