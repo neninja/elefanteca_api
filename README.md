@@ -46,7 +46,7 @@ docker-compose up
 ```
 > Pare com <kbd>Ctrl</kbd><kbd>C</kbd>
 
-> Caso modifique Dockerfile, rebuilde com ``docker-compose up -d --build``
+> Caso modifique Dockerfile, rebuilde com ``docker-compose up --build``
 
 ## Teste
 
