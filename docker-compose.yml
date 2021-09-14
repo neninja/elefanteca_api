@@ -4,9 +4,9 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_DB: elefanteca
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
       - '5432:5432'
     expose:
