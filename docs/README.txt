@@ -1,6 +1,3 @@
-Example
- [x] Example
-
 Cadastro Usuario Service
  [x] Deve cadastrar
 
