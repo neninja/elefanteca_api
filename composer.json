@@ -5,7 +5,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^7.4",
         "laravel/lumen-framework": "^8.0"
     },
     "require-dev": {
@@ -15,6 +15,7 @@
     },
     "autoload": {
         "psr-4": {
+            "Core\\": "app/Core",
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
@@ -33,6 +34,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "ci": [
+            "phpunit -c phpunit.ci.xml"
+        ],
+        "test": "phpunit ",
+        "swagger": "openapi --bootstrap ./swagger/consts.php --output ./public/swagger ./swagger/v1.php ./app/Http/Controllers",
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]

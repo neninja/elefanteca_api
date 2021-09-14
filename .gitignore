@@ -4,3 +4,9 @@ Homestead.json
 Homestead.yaml
 .env
 .phpunit.result.cache
+
+tests/_reports
+
+#.exrc
+#.ctags
+#tags

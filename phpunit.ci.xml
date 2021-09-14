@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="./vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+    >
+    <testsuites>
+        <testsuite name="Application Test Suite">
+            <directory suffix="Test.php">./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <logging>
+        <text outputFile="tests/_reports/tests.txt"/>
+    </logging>
+
+    <coverage cacheDirectory="tests/_reports/cache_coverage"
+          includeUncoveredFiles="true"
+          processUncoveredFiles="true"
+          pathCoverage="false"
+          ignoreDeprecatedCodeUnits="true"
+          disableCodeCoverageIgnore="true">
+        <report>
+            <html outputDirectory="tests/_reports" lowUpperBound="50" highLowerBound="90"/>
+            <text outputFile="php://stdout"/>
+        </report>
+
+    <include>
+            <directory suffix=".php">app/Core</directory>
+    </include>
+    </coverage>
+
+
+    <php>
+        <env name="APP_ENV" value="testing"/>
+        <env name="CACHE_DRIVER" value="array"/>
+        <env name="QUEUE_CONNECTION" value="sync"/>
+    </php>
+</phpunit>
