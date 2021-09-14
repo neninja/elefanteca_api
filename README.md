@@ -6,26 +6,31 @@ API de sistema para bibliotecas.
 
 ## Configuração inicial
 
-1. **Mude o usuário (`DB_USERNAME`) e senha (`DB_PASSWORD`) e senha de [.env](.env)**
+1. Duplique `.env.example` e renomeie para `.env`
+```sh
+cp .env.example .env
+```
 
-2. Crie os containers
+2. **Mude o usuário (`DB_USERNAME`) e senha (`DB_PASSWORD`) de `.env`**
+
+3. Crie os containers
 ```sh
 docker-compose up -d
 ```
 > Caso queira, ao final da configuração, pare os containers com ``docker-compose down``
 
-3. Baixe as dependências do composer
+4. Baixe as dependências do composer
 ```sh
 docker-compose exec app composer install
 ```
 
-4. Crie a chave de criptografia
+5. Crie a chave de criptografia
 ```sh
 docker-compose exec app php artisan key:generate
 ```
 
 <!--
-5. Crie as tabelas no banco
+6. Crie as tabelas no banco
 ```sh
 docker-compose exec app php artisan migrate --seed
 ```
@@ -33,7 +38,7 @@ docker-compose exec app php artisan migrate --seed
 
 > Caso queira popular dados falsos para testar a aplicação manualmente, use ``docker-compose exec app php artisan db:seed --class FakeSeeder``
 
-6. Crie a documentação de suporte (ficará disponível em `localhost:8989/public/swagger`)
+7. Crie a documentação de suporte (ficará disponível em `localhost:8989/public/swagger`)
 ```sh
 docker-compose exec app composer swagger
 ```
