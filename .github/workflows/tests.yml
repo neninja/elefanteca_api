@@ -1,5 +1,4 @@
-
-name: Tests
+name: Tests and update documentation
 on:
   push:
     branches:
@@ -22,3 +21,10 @@ jobs:
         with:
           php_version: 8.0
           configuration: ./phpunit.ci.xml
+
+      - name: Create living documentation
+        if: always()
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

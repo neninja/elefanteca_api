@@ -13,6 +13,8 @@
     <logging>
         <testdoxText outputFile="docs/README.txt"/>
         <testdoxHtml outputFile="docs/index.html"/>
+        <junit outputFile="docs/phpunit-log.xml"/>
+        <teamcity outputFile="docs/phpunit-teamcity.txt"/>
     </logging>
 
     <coverage cacheDirectory="tests/_reports/cache_coverage"
