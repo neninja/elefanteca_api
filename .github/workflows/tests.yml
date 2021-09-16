@@ -1,4 +1,4 @@
-name: Tests and update documentation
+name: Test and update documentation
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     steps:
       - uses: actions/checkout@v2
@@ -22,9 +22,14 @@ jobs:
           php_version: 8.0
           configuration: ./phpunit.ci.xml
 
+      - name: Teste
+        if: always()
+        run: ls build
+
       - name: Create living documentation
         if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+          keep_files: true
+          publish_dir: ./build

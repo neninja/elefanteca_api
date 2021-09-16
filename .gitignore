@@ -5,6 +5,8 @@ Homestead.yaml
 .env
 .phpunit.result.cache
 
+/docs
+/build
 tests/_reports
 
 #.exrc

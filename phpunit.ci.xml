@@ -11,10 +11,10 @@
     </testsuites>
 
     <logging>
-        <testdoxText outputFile="docs/README.txt"/>
-        <testdoxHtml outputFile="docs/index.html"/>
-        <junit outputFile="docs/phpunit-log.xml"/>
-        <teamcity outputFile="docs/phpunit-teamcity.txt"/>
+        <testdoxText outputFile="build/README.txt"/>
+        <testdoxHtml outputFile="build/index.html"/>
+        <junit outputFile="build/phpunit-log.xml"/>
+        <teamcity outputFile="build/phpunit-teamcity.txt"/>
     </logging>
 
     <coverage cacheDirectory="tests/_reports/cache_coverage"
