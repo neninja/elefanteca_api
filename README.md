@@ -1,6 +1,6 @@
 # elefanteca_api
 
-[![CI](https://github.com/nenitf/elefanteca_api/actions/workflows/tests.yml/badge.svg)](https://github.com/nenitf/elefanteca_api/actions/workflows/tests.yml)
+[![CI](https://github.com/nenitf/elefanteca_api/actions/workflows/ci.yml/badge.svg)](https://github.com/nenitf/elefanteca_api/actions/workflows/ci.yml)
 
 API de sistema para bibliotecas.
 
