@@ -1,0 +1,13 @@
+watch:
+  directories:
+    - app
+    - tests
+  fileMask: '*.php'
+notifications:
+  passingTests: false
+  failingTests: false
+phpunit:
+  binaryPath: ./vendor/phpunit/phpunit/phpunit
+  arguments: '-c phpunit.xml'
+  timeout: 180
+hideManual: false

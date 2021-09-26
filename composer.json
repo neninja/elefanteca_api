@@ -5,13 +5,14 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "8.0",
+        "php": "^8.0",
         "laravel/lumen-framework": "^8.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
         "mockery/mockery": "^1.3.1",
-        "phpunit/phpunit": "^9.3"
+        "phpunit/phpunit": "^9.3",
+        "spatie/phpunit-watcher": "^1.23"
     },
     "autoload": {
         "psr-4": {
@@ -37,7 +38,11 @@
         "ci": [
             "phpunit -c phpunit.ci.xml"
         ],
-        "test": "phpunit ",
+        "test": "phpunit",
+        "tdd": [
+            "Composer\\Config::disableProcessTimeout",
+            "phpunit-watcher watch"
+        ],
         "swagger": "openapi --bootstrap ./swagger/consts.php --output ./public/swagger ./swagger/v1.php ./app/Http/Controllers",
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
