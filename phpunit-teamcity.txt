@@ -29,10 +29,6 @@
 
 ##teamcity[testSuiteStarted name='testDeveFormatar' locationHint='php_qn:///app/tests/Unit/CPFTest.php::\CPFTest::testDeveFormatar' flowId='1']
 
-##teamcity[testStarted name='testDeveFormatar with data set "aa"' locationHint='php_qn:///app/tests/Unit/CPFTest.php::\CPFTest::testDeveFormatar with data set "aa"' flowId='1']
-
-##teamcity[testFinished name='testDeveFormatar with data set "aa"' duration='0' flowId='1']
-
 ##teamcity[testStarted name='testDeveFormatar with data set #0' locationHint='php_qn:///app/tests/Unit/CPFTest.php::\CPFTest::testDeveFormatar with data set #0' flowId='1']
 
 ##teamcity[testFinished name='testDeveFormatar with data set #0' duration='0' flowId='1']
@@ -40,6 +36,10 @@
 ##teamcity[testStarted name='testDeveFormatar with data set #1' locationHint='php_qn:///app/tests/Unit/CPFTest.php::\CPFTest::testDeveFormatar with data set #1' flowId='1']
 
 ##teamcity[testFinished name='testDeveFormatar with data set #1' duration='0' flowId='1']
+
+##teamcity[testStarted name='testDeveFormatar with data set #2' locationHint='php_qn:///app/tests/Unit/CPFTest.php::\CPFTest::testDeveFormatar with data set #2' flowId='1']
+
+##teamcity[testFinished name='testDeveFormatar with data set #2' duration='0' flowId='1']
 
 ##teamcity[testSuiteFinished name='testDeveFormatar' flowId='1']
 
