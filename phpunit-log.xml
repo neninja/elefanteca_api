@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="17" assertions="25" errors="3" warnings="0" failures="0" skipped="0" time="0.001010">
-    <testsuite name="Application Test Suite" tests="17" assertions="25" errors="3" warnings="0" failures="0" skipped="0" time="0.001010">
-      <testsuite name="CadastroUsuarioServiceTest" file="/app/tests/Integration/CadastroUsuarioServiceTest.php" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.000310">
-        <testcase name="testDeveCadastrarComNomeCpfEmailSenhaCorretos" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/Integration/CadastroUsuarioServiceTest.php" line="28" assertions="0" time="0.000208">
+  <testsuite name="" tests="17" assertions="25" errors="3" warnings="0" failures="0" skipped="0" time="0.000858">
+    <testsuite name="Application Test Suite" tests="17" assertions="25" errors="3" warnings="0" failures="0" skipped="0" time="0.000858">
+      <testsuite name="CadastroUsuarioServiceTest" file="/app/tests/Integration/CadastroUsuarioServiceTest.php" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.000238">
+        <testcase name="testDeveCadastrarComNomeCpfEmailSenhaCorretos" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/Integration/CadastroUsuarioServiceTest.php" line="28" assertions="0" time="0.000154">
           <error type="ArgumentCountError">CadastroUsuarioServiceTest::testDeveCadastrarComNomeCpfEmailSenhaCorretos
 ArgumentCountError: Too few arguments to function Core\Services\Usuario\CadastroUsuarioService::__construct(), 0 passed in /app/tests/Integration/CadastroUsuarioServiceTest.php on line 9 and exactly 2 expected
 
@@ -11,7 +11,7 @@ ArgumentCountError: Too few arguments to function Core\Services\Usuario\Cadastro
 /app/tests/Integration/CadastroUsuarioServiceTest.php:9
 /app/tests/Integration/CadastroUsuarioServiceTest.php:30</error>
         </testcase>
-        <testcase name="testDeveCriptografarSenha" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/Integration/CadastroUsuarioServiceTest.php" line="44" assertions="0" time="0.000059">
+        <testcase name="testDeveCriptografarSenha" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/Integration/CadastroUsuarioServiceTest.php" line="44" assertions="0" time="0.000047">
           <error type="ArgumentCountError">CadastroUsuarioServiceTest::testDeveCriptografarSenha
 ArgumentCountError: Too few arguments to function Core\Services\Usuario\CadastroUsuarioService::__construct(), 0 passed in /app/tests/Integration/CadastroUsuarioServiceTest.php on line 9 and exactly 2 expected
 
@@ -19,7 +19,7 @@ ArgumentCountError: Too few arguments to function Core\Services\Usuario\Cadastro
 /app/tests/Integration/CadastroUsuarioServiceTest.php:9
 /app/tests/Integration/CadastroUsuarioServiceTest.php:46</error>
         </testcase>
-        <testcase name="testDeveCriarAtivo" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/Integration/CadastroUsuarioServiceTest.php" line="60" assertions="0" time="0.000043">
+        <testcase name="testDeveCriarAtivo" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/Integration/CadastroUsuarioServiceTest.php" line="60" assertions="0" time="0.000037">
           <error type="ArgumentCountError">CadastroUsuarioServiceTest::testDeveCriarAtivo
 ArgumentCountError: Too few arguments to function Core\Services\Usuario\CadastroUsuarioService::__construct(), 0 passed in /app/tests/Integration/CadastroUsuarioServiceTest.php on line 9 and exactly 2 expected
 
@@ -28,24 +28,24 @@ ArgumentCountError: Too few arguments to function Core\Services\Usuario\Cadastro
 /app/tests/Integration/CadastroUsuarioServiceTest.php:62</error>
         </testcase>
       </testsuite>
-      <testsuite name="CPFTest" file="/app/tests/Unit/CPFTest.php" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.000699">
-        <testsuite name="CPFTest::testDeveFormatar" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000274">
-          <testcase name="testDeveFormatar with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="16" assertions="1" time="0.000222"/>
-          <testcase name="testDeveFormatar with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="16" assertions="1" time="0.000029"/>
-          <testcase name="testDeveFormatar with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="16" assertions="1" time="0.000023"/>
+      <testsuite name="CPFTest" file="/app/tests/Unit/CPFTest.php" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.000620">
+        <testsuite name="CPFTest::testDeveFormatar" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000220">
+          <testcase name="testDeveFormatar with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="16" assertions="1" time="0.000172"/>
+          <testcase name="testDeveFormatar with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="16" assertions="1" time="0.000026"/>
+          <testcase name="testDeveFormatar with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="16" assertions="1" time="0.000021"/>
         </testsuite>
-        <testsuite name="CPFTest::testDeveFalharComErroAmigavel" tests="11" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.000426">
-          <testcase name="testDeveFalharComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000182"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000031"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000029"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000023"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000022"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000021"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000024"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000022"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000021"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000020"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000030"/>
+        <testsuite name="CPFTest::testDeveFalharComErroAmigavel" tests="11" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.000400">
+          <testcase name="testDeveFalharComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000145"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000029"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000026"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000021"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000035"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000019"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000026"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000021"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000034"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000018"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/Unit/CPFTest.php" line="38" assertions="2" time="0.000027"/>
         </testsuite>
       </testsuite>
     </testsuite>
