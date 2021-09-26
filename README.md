@@ -73,11 +73,11 @@ docker-compose exec app bash
 ```sh
 composer tdd
 ```
-> Um arquivo: ``composer tdd`` <kbd>p</kbd> ``tests/caminho/do/ExemploTest.php``
+> Um arquivo: <kbd>p</kbd> ``tests/caminho/do/ExemploTest.php``
 
-> Um método de um arquivo: ``composer tdd`` <kbd>t</kbd> ``testName$ tests/caminho/do/ExemploTest.php``
+> Um método de um arquivo: <kbd>t</kbd> ``testName$ tests/caminho/do/ExemploTest.php``
 
-> <kbd>enter</kbd> repete o último teste
+> Repetir último teste: <kbd>enter</kbd>
 
 - CI
 ```sh
