@@ -37,14 +37,10 @@ class CPFTest extends \PHPUnit\Framework\TestCase
      */
     public function testDeveFalharComErroAmigavel($cpf)
     {
-        try {
-            $cpf = new CPF($cpf);
-            self::fail('Deve cair no catch');
-        } catch (CoreException $e) {
-            self::assertEquals(
-                $e->mensagemAmigavel(), "CPF inválido"
-            );
-        }
+        $this->expectException(CoreException::class);
+        $this->expectExceptionMessage('CPF inválido');
+
+        $cpf = new CPF($cpf);
     }
 
     public function cpfsInvalidos()
