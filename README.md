@@ -73,9 +73,9 @@ docker-compose exec app bash
 ```sh
 composer tdd
 ```
-> Um arquivo: <kbd>p</kbd> ``tests/caminho/do/ExemploTest.php``
+> Um arquivo: ``composer tdd tests/caminho/do/ExemploTest.php`` ou interativamente com <kbd>p</kbd><kbd>enter</kbd> ``tests/caminho/do/ExemploTest.php``
 
-> Um método de um arquivo: <kbd>t</kbd> ``testName$ tests/caminho/do/ExemploTest.php``
+> Um método de um arquivo: ``composer tdd -- --filter testName$ tests/caminho/do/ExemploTest.php`` ou interativamente com <kbd>t</kbd><kbd>enter</kbd> ``testName$ tests/caminho/do/ExemploTest.php``
 
 > Repetir último teste: <kbd>enter</kbd>
 
