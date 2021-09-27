@@ -1,6 +1,6 @@
 <?php
 
-interface Core\Repositories;
+namespace Core\Repositories;
 
 
 use Core\Models\Usuario;

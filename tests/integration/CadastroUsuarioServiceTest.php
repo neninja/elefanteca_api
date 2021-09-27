@@ -2,10 +2,11 @@
 
 use Core\Services\Usuario\CadastroUsuarioService;
 
-class CadastroUsuarioServiceTest extends \PHPUnit\Framework\TestCase
+class CadastroUsuarioServiceTest extends TestCase
 {
     private function newSut()
     {
+        $repo = (new \App\Repositories\Doctrine\UsuariosRepository());
         return new CadastroUsuarioService();
     }
 
