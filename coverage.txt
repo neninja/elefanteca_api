@@ -1,0 +1,12 @@
+
+
+Code Coverage Report:    
+  2021-09-30 22:04:44    
+                         
+ Summary:                
+  Classes:  0.00% (0/6)  
+  Methods:  9.52% (2/21) 
+  Lines:   55.68% (49/88)
+
+Core\Models\CPF
+  Methods:  40.00% ( 2/ 5)   Lines:  94.23% ( 49/ 52)
