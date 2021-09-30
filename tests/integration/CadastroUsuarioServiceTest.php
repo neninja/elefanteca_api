@@ -36,10 +36,6 @@ class CadastroUsuarioServiceTest extends TestCase
 
     private function newSut()
     {
-        $stmt = self::$em->getConnection()->prepare("SELECT * FROM usuarios");
-        $stmt->execute();
-        var_dump($stmt->fetchAll());
-
         $repo = (new \App\Repositories\Doctrine\UsuariosRepository(self::$em));
         $cryp = (new \App\Adapters\LumenCryptProvider());
         return new CadastroUsuarioService($repo, $cryp);
