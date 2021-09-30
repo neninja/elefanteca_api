@@ -24,7 +24,6 @@ jobs:
           php_extensions: xdebug
         env:
           XDEBUG_MODE: coverage
-          TEST_NAME: Scarlett
 
       - name: Create living documentation
         if: always()
