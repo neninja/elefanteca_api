@@ -14,3 +14,8 @@ CPF
  [x] Deve falhar como "CPF inválido" 99999999999
  [x] Deve falhar como "CPF inválido" 81026092141
 
+Cadastro Usuario Service
+ [ ] Deve cadastrar com nome cpf email senha corretos
+ [ ] Deve criptografar senha
+ [ ] Deve criar ativo
+

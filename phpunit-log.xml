@@ -1,26 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.009262">
-    <testsuite name="unit" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.009262">
-      <testsuite name="CPFTest" file="/app/tests/unit/CPFTest.php" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.009262">
-        <testsuite name="CPFTest::testDeveFormatar" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000605">
-          <testcase name="testDeveFormatar with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000400"/>
-          <testcase name="testDeveFormatar with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000126"/>
-          <testcase name="testDeveFormatar with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000079"/>
+  <testsuite name="" tests="17" assertions="25" errors="3" warnings="0" failures="0" skipped="0" time="0.043788">
+    <testsuite name="unit" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.012984">
+      <testsuite name="CPFTest" file="/app/tests/unit/CPFTest.php" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.012984">
+        <testsuite name="CPFTest::testDeveFormatar" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.003447">
+          <testcase name="testDeveFormatar with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.001318"/>
+          <testcase name="testDeveFormatar with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.001178"/>
+          <testcase name="testDeveFormatar with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000950"/>
         </testsuite>
-        <testsuite name="CPFTest::testDeveFalharComErroAmigavel" tests="11" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.008656">
-          <testcase name="testDeveFalharComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.001387"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000741"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000689"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000654"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000729"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.001026"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000742"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000703"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000642"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000659"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000684"/>
+        <testsuite name="CPFTest::testDeveFalharComErroAmigavel" tests="11" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.009537">
+          <testcase name="testDeveFalharComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.001244"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000712"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.001088"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000615"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000695"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000790"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000947"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000835"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000726"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000662"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.001223"/>
         </testsuite>
+      </testsuite>
+    </testsuite>
+    <testsuite name="integration" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.030803">
+      <testsuite name="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.030803">
+        <testcase name="testDeveCadastrarComNomeCpfEmailSenhaCorretos" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="30" assertions="0" time="0.025802">
+          <error type="Doctrine\DBAL\Exception">CadastroUsuarioServiceTest::testDeveCadastrarComNomeCpfEmailSenhaCorretos
+Doctrine\DBAL\Exception: The options 'driver' or 'driverClass' are mandatory if no PDO instance is given to DriverManager::getConnection().
+
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:126
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php:303
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php:249
+/app/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:925
+/app/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:904
+/app/app/Repositories/Doctrine/EntityManagerFactory.php:27
+/app/app/Repositories/Doctrine/UsuariosRepository.php:13
+/app/tests/integration/CadastroUsuarioServiceTest.php:9
+/app/tests/integration/CadastroUsuarioServiceTest.php:32</error>
+        </testcase>
+        <testcase name="testDeveCriptografarSenha" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="46" assertions="0" time="0.002570">
+          <error type="Doctrine\DBAL\Exception">CadastroUsuarioServiceTest::testDeveCriptografarSenha
+Doctrine\DBAL\Exception: Type email already exists.
+
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:272
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TypeRegistry.php:75
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php:252
+/app/app/Repositories/Doctrine/EntityManagerFactory.php:25
+/app/app/Repositories/Doctrine/UsuariosRepository.php:13
+/app/tests/integration/CadastroUsuarioServiceTest.php:9
+/app/tests/integration/CadastroUsuarioServiceTest.php:48</error>
+        </testcase>
+        <testcase name="testDeveCriarAtivo" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="62" assertions="0" time="0.002431">
+          <error type="Doctrine\DBAL\Exception">CadastroUsuarioServiceTest::testDeveCriarAtivo
+Doctrine\DBAL\Exception: Type email already exists.
+
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:272
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TypeRegistry.php:75
+/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php:252
+/app/app/Repositories/Doctrine/EntityManagerFactory.php:25
+/app/app/Repositories/Doctrine/UsuariosRepository.php:13
+/app/tests/integration/CadastroUsuarioServiceTest.php:9
+/app/tests/integration/CadastroUsuarioServiceTest.php:64</error>
+        </testcase>
       </testsuite>
     </testsuite>
   </testsuite>
