@@ -7,9 +7,9 @@
 
 ##teamcity[testStarted name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCadastrarComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFailed name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' message='Doctrine\DBAL\Exception : The options |'driver|' or |'driverClass|' are mandatory if no PDO instance is given to DriverManager::getConnection().' details=' /app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:126|n /app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php:303|n /app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php:249|n /app/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:925|n /app/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:904|n /app/app/Repositories/Doctrine/EntityManagerFactory.php:27|n /app/app/Repositories/Doctrine/UsuariosRepository.php:13|n /app/tests/integration/CadastroUsuarioServiceTest.php:9|n /app/tests/integration/CadastroUsuarioServiceTest.php:32|n ' duration='15' flowId='1']
+##teamcity[testFailed name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' message='Doctrine\DBAL\Exception : The options |'driver|' or |'driverClass|' are mandatory if no PDO instance is given to DriverManager::getConnection().' details=' /app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:126|n /app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php:303|n /app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php:249|n /app/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:925|n /app/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:904|n /app/app/Repositories/Doctrine/EntityManagerFactory.php:27|n /app/app/Repositories/Doctrine/UsuariosRepository.php:13|n /app/tests/integration/CadastroUsuarioServiceTest.php:9|n /app/tests/integration/CadastroUsuarioServiceTest.php:32|n ' duration='20' flowId='1']
 
-##teamcity[testFinished name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' duration='15' flowId='1']
+##teamcity[testFinished name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' duration='20' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriptografarSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriptografarSenha' flowId='1']
 
