@@ -28,7 +28,7 @@
           disableCodeCoverageIgnore="true">
         <report>
             <html outputDirectory="tests/_reports" lowUpperBound="50" highLowerBound="90"/>
-            <text outputFile="php://stdout"/>
+            <text outputFile="docs/coverage.txt"/>
         </report>
 
         <include>

@@ -20,8 +20,11 @@ jobs:
         uses: php-actions/phpunit@v2
         with:
           php_version: 8.0
-          testsuite: unit
           configuration: ./phpunit.ci.xml
+          php_extensions: xdebug
+        env:
+          XDEBUG_MODE: coverage
+          TEST_NAME: Scarlett
 
       - name: Create living documentation
         if: always()
