@@ -1,12 +1,14 @@
 
 
 Code Coverage Report:    
-  2021-09-30 23:35:22    
+  2021-09-30 23:39:12    
                          
  Summary:                
-  Classes:  0.00% (0/6)  
-  Methods:  9.52% (2/21) 
-  Lines:   55.68% (49/88)
+  Classes: 16.67% (1/6)  
+  Methods: 19.05% (4/21) 
+  Lines:   64.77% (57/88)
 
 Core\Models\CPF
   Methods:  40.00% ( 2/ 5)   Lines:  94.23% ( 49/ 52)
+Core\Services\Usuario\CadastroUsuarioService
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  8/  8)
