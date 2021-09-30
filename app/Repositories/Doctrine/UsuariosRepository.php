@@ -10,11 +10,13 @@ class UsuariosRepository implements \Core\Repositories\IUsuariosRepository
 
     function __construct()
     {
-        $this->em = (new EntityManagerCreator())->criaEntityManager();
+        $this->em = (new EntityManagerFactory())->get();
     }
 
     public function save(Usuario $u): Usuario
     {
+        $this->em->persist($u);
+        $this->em->flush();
         return $u;
     }
 }

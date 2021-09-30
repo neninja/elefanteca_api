@@ -7,7 +7,8 @@ class CadastroUsuarioServiceTest extends TestCase
     private function newSut()
     {
         $repo = (new \App\Repositories\Doctrine\UsuariosRepository());
-        return new CadastroUsuarioService();
+        $cryp = (new \App\Adapters\LumenCryptProvider());
+        return new CadastroUsuarioService($repo, $cryp);
     }
 
     private function fixture($contexto)

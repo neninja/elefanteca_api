@@ -29,15 +29,13 @@ docker-compose exec app composer install
 docker-compose exec app php artisan key:generate
 ```
 
-<!--
 6. Crie as tabelas no banco
 ```sh
-docker-compose exec app php artisan migrate --seed
+docker-compose exec app composer doctrine:migrations migrate
 ```
-> Limpar as tabelas e atualizar banco de acordo com as migrations com ``docker-compose exec app php artisan migrate:refresh --seed``
+> Rollback com ``docker-compose exec app composer doctrine:migrations migrations:migrate prev``
 
-> Caso queira popular dados falsos para testar a aplicação manualmente, use ``docker-compose exec app php artisan db:seed --class FakeSeeder``
-
+<!--
 7. Crie a documentação de suporte (ficará disponível em `localhost:8989/public/swagger`)
 ```sh
 docker-compose exec app composer swagger

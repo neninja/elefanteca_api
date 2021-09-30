@@ -14,14 +14,14 @@ use Core\Repositories\{
 
 
 use Core\Providers\{
-    ICrptografiaProvider,
+    ICriptografiaProvider,
 };
 
 class CadastroUsuarioService
 {
     function __construct(
         private IUsuariosRepository $repo,
-        private ICrptografiaProvider $crypt,
+        private ICriptografiaProvider $crypt,
     ){}
 
     function __invoke(

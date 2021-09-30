@@ -6,7 +6,11 @@
     "type": "project",
     "require": {
         "php": "^8.0",
-        "laravel/lumen-framework": "^8.0"
+        "doctrine/cache": "^2.1",
+        "doctrine/migrations": "^3.2",
+        "doctrine/orm": "^2.9",
+        "laravel/lumen-framework": "^8.0",
+        "symfony/cache": "^5.3"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -44,6 +48,8 @@
             "phpunit-watcher watch"
         ],
         "swagger": "openapi --bootstrap ./swagger/consts.php --output ./public/swagger ./swagger/v1.php ./app/Http/Controllers",
+        "doctrine": "doctrine",
+        "doctrine:migrations": "doctrine-migrations",
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
