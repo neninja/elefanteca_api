@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.000670">
-    <testsuite name="unit" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.000670">
-      <testsuite name="CPFTest" file="/app/tests/unit/CPFTest.php" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.000670">
-        <testsuite name="CPFTest::testDeveFormatar" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000288">
-          <testcase name="testDeveFormatar with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000233"/>
-          <testcase name="testDeveFormatar with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000033"/>
-          <testcase name="testDeveFormatar with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000021"/>
+  <testsuite name="" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.009262">
+    <testsuite name="unit" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.009262">
+      <testsuite name="CPFTest" file="/app/tests/unit/CPFTest.php" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.009262">
+        <testsuite name="CPFTest::testDeveFormatar" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.000605">
+          <testcase name="testDeveFormatar with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000400"/>
+          <testcase name="testDeveFormatar with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000126"/>
+          <testcase name="testDeveFormatar with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000079"/>
         </testsuite>
-        <testsuite name="CPFTest::testDeveFalharComErroAmigavel" tests="11" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.000383">
-          <testcase name="testDeveFalharComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000154"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000028"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000022"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000021"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000026"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000021"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000020"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000020"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000023"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000023"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000025"/>
+        <testsuite name="CPFTest::testDeveFalharComErroAmigavel" tests="11" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.008656">
+          <testcase name="testDeveFalharComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.001387"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000741"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000689"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000654"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000729"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.001026"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000742"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000703"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000642"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000659"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000684"/>
         </testsuite>
       </testsuite>
     </testsuite>
