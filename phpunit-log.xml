@@ -1,67 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="17" assertions="25" errors="3" warnings="0" failures="0" skipped="0" time="0.035972">
-    <testsuite name="unit" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.011555">
-      <testsuite name="CPFTest" file="/app/tests/unit/CPFTest.php" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.011555">
-        <testsuite name="CPFTest::testDeveFormatar" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.002696">
-          <testcase name="testDeveFormatar with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.001048"/>
-          <testcase name="testDeveFormatar with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000901"/>
-          <testcase name="testDeveFormatar with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000748"/>
+  <testsuite name="" tests="17" assertions="25" errors="3" warnings="0" failures="0" skipped="0" time="0.025148">
+    <testsuite name="unit" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.009759">
+      <testsuite name="CPFTest" file="/app/tests/unit/CPFTest.php" tests="14" assertions="25" errors="0" warnings="0" failures="0" skipped="0" time="0.009759">
+        <testsuite name="CPFTest::testDeveFormatar" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.002561">
+          <testcase name="testDeveFormatar with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000904"/>
+          <testcase name="testDeveFormatar with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000863"/>
+          <testcase name="testDeveFormatar with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="16" assertions="1" time="0.000795"/>
         </testsuite>
-        <testsuite name="CPFTest::testDeveFalharComErroAmigavel" tests="11" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.008858">
-          <testcase name="testDeveFalharComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000940"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000613"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000603"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000610"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.002205"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000610"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000606"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000609"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000614"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000611"/>
-          <testcase name="testDeveFalharComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000839"/>
+        <testsuite name="CPFTest::testDeveFalharComErroAmigavel" tests="11" assertions="22" errors="0" warnings="0" failures="0" skipped="0" time="0.007198">
+          <testcase name="testDeveFalharComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000893"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000611"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000602"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000605"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000607"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000606"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000612"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000605"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000610"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000613"/>
+          <testcase name="testDeveFalharComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="38" assertions="2" time="0.000834"/>
         </testsuite>
       </testsuite>
     </testsuite>
-    <testsuite name="integration" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.024418">
-      <testsuite name="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.024418">
-        <testcase name="testDeveCadastrarComNomeCpfEmailSenhaCorretos" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="30" assertions="0" time="0.020138">
-          <error type="Doctrine\DBAL\Exception">CadastroUsuarioServiceTest::testDeveCadastrarComNomeCpfEmailSenhaCorretos
-Doctrine\DBAL\Exception: The options 'driver' or 'driverClass' are mandatory if no PDO instance is given to DriverManager::getConnection().
+    <testsuite name="integration" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.015389">
+      <testsuite name="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" tests="3" assertions="0" errors="3" warnings="0" failures="0" skipped="0" time="0.015389">
+        <testcase name="testDeveCadastrarComNomeCpfEmailSenhaCorretos" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="60" assertions="0" time="0.011805">
+          <error type="Illuminate\Encryption\MissingAppKeyException">CadastroUsuarioServiceTest::testDeveCadastrarComNomeCpfEmailSenhaCorretos
+Illuminate\Encryption\MissingAppKeyException: No application encryption key has been specified.
 
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:126
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php:303
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DriverManager.php:249
-/app/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:925
-/app/vendor/doctrine/orm/lib/Doctrine/ORM/EntityManager.php:904
-/app/app/Repositories/Doctrine/EntityManagerFactory.php:27
-/app/app/Repositories/Doctrine/UsuariosRepository.php:13
-/app/tests/integration/CadastroUsuarioServiceTest.php:9
-/app/tests/integration/CadastroUsuarioServiceTest.php:32</error>
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:79
+/app/vendor/illuminate/support/helpers.php:263
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:81
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:60
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:32
+/app/vendor/illuminate/container/Container.php:869
+/app/vendor/illuminate/container/Container.php:754
+/app/vendor/illuminate/container/Container.php:692
+/app/vendor/laravel/lumen-framework/src/Application.php:300
+/app/vendor/laravel/lumen-framework/src/Application.php:668
+/app/vendor/laravel/lumen-framework/src/Application.php:423
+/app/vendor/illuminate/container/Container.php:869
+/app/vendor/illuminate/container/Container.php:754
+/app/vendor/illuminate/container/Container.php:692
+/app/vendor/laravel/lumen-framework/src/Application.php:300
+/app/vendor/illuminate/container/Container.php:1420
+/app/vendor/illuminate/support/Facades/Facade.php:198
+/app/vendor/illuminate/support/Facades/Facade.php:166
+/app/vendor/illuminate/support/Facades/Facade.php:255
+/app/app/Adapters/LumenCryptProvider.php:11
+/app/app/Core/Services/Usuario/CadastroUsuarioService.php:34
+/app/tests/integration/CadastroUsuarioServiceTest.php:70</error>
         </testcase>
-        <testcase name="testDeveCriptografarSenha" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="46" assertions="0" time="0.002058">
-          <error type="Doctrine\DBAL\Exception">CadastroUsuarioServiceTest::testDeveCriptografarSenha
-Doctrine\DBAL\Exception: Type email already exists.
+        <testcase name="testDeveCriptografarSenha" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="76" assertions="0" time="0.001796">
+          <error type="Illuminate\Encryption\MissingAppKeyException">CadastroUsuarioServiceTest::testDeveCriptografarSenha
+Illuminate\Encryption\MissingAppKeyException: No application encryption key has been specified.
 
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:272
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TypeRegistry.php:75
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php:252
-/app/app/Repositories/Doctrine/EntityManagerFactory.php:25
-/app/app/Repositories/Doctrine/UsuariosRepository.php:13
-/app/tests/integration/CadastroUsuarioServiceTest.php:9
-/app/tests/integration/CadastroUsuarioServiceTest.php:48</error>
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:79
+/app/vendor/illuminate/support/helpers.php:263
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:81
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:60
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:32
+/app/vendor/illuminate/container/Container.php:869
+/app/vendor/illuminate/container/Container.php:754
+/app/vendor/illuminate/container/Container.php:692
+/app/vendor/laravel/lumen-framework/src/Application.php:300
+/app/vendor/laravel/lumen-framework/src/Application.php:668
+/app/vendor/laravel/lumen-framework/src/Application.php:423
+/app/vendor/illuminate/container/Container.php:869
+/app/vendor/illuminate/container/Container.php:754
+/app/vendor/illuminate/container/Container.php:692
+/app/vendor/laravel/lumen-framework/src/Application.php:300
+/app/vendor/illuminate/container/Container.php:1420
+/app/vendor/illuminate/support/Facades/Facade.php:198
+/app/vendor/illuminate/support/Facades/Facade.php:166
+/app/vendor/illuminate/support/Facades/Facade.php:255
+/app/app/Adapters/LumenCryptProvider.php:11
+/app/app/Core/Services/Usuario/CadastroUsuarioService.php:34
+/app/tests/integration/CadastroUsuarioServiceTest.php:86</error>
         </testcase>
-        <testcase name="testDeveCriarAtivo" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="62" assertions="0" time="0.002222">
-          <error type="Doctrine\DBAL\Exception">CadastroUsuarioServiceTest::testDeveCriarAtivo
-Doctrine\DBAL\Exception: Type email already exists.
+        <testcase name="testDeveCriarAtivo" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="92" assertions="0" time="0.001788">
+          <error type="Illuminate\Encryption\MissingAppKeyException">CadastroUsuarioServiceTest::testDeveCriarAtivo
+Illuminate\Encryption\MissingAppKeyException: No application encryption key has been specified.
 
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:272
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/TypeRegistry.php:75
-/app/vendor/doctrine/dbal/lib/Doctrine/DBAL/Types/Type.php:252
-/app/app/Repositories/Doctrine/EntityManagerFactory.php:25
-/app/app/Repositories/Doctrine/UsuariosRepository.php:13
-/app/tests/integration/CadastroUsuarioServiceTest.php:9
-/app/tests/integration/CadastroUsuarioServiceTest.php:64</error>
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:79
+/app/vendor/illuminate/support/helpers.php:263
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:81
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:60
+/app/vendor/illuminate/encryption/EncryptionServiceProvider.php:32
+/app/vendor/illuminate/container/Container.php:869
+/app/vendor/illuminate/container/Container.php:754
+/app/vendor/illuminate/container/Container.php:692
+/app/vendor/laravel/lumen-framework/src/Application.php:300
+/app/vendor/laravel/lumen-framework/src/Application.php:668
+/app/vendor/laravel/lumen-framework/src/Application.php:423
+/app/vendor/illuminate/container/Container.php:869
+/app/vendor/illuminate/container/Container.php:754
+/app/vendor/illuminate/container/Container.php:692
+/app/vendor/laravel/lumen-framework/src/Application.php:300
+/app/vendor/illuminate/container/Container.php:1420
+/app/vendor/illuminate/support/Facades/Facade.php:198
+/app/vendor/illuminate/support/Facades/Facade.php:166
+/app/vendor/illuminate/support/Facades/Facade.php:255
+/app/app/Adapters/LumenCryptProvider.php:11
+/app/app/Core/Services/Usuario/CadastroUsuarioService.php:34
+/app/tests/integration/CadastroUsuarioServiceTest.php:102</error>
         </testcase>
       </testsuite>
     </testsuite>
