@@ -81,10 +81,6 @@ composer tdd
 ```sh
 docker-compose exec app composer ci
 ```
-<!--
-> Testes que contenham `@group db` resetarão as migrations, portanto caso queira fazer testes manuais após o phpunit utilize ``docker-compose exec app php artisan migrate --seed``
--->
+> Também é gerada a "documentação" dos requisitos em `docs` (não versionada), a última versão é publicada pelo [Github Pages](https://neni.dev/elefanteca_api/) junto com [relatório de cobertura](https://neni.dev/elefanteca_api/coverage.txt). Caso algum teste falhe na branch **main** do repositório, é possível ver o erro detalhado por [aqui](https://codepen.io/nenitf/full/GREQZRd?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/phpunit-log.xml)
 
-> Também é gerada a "documentação" dos requisitos em `docs` (não versionada), a última versão é publicada no [Github Pages](https://neni.dev/elefanteca_api/). Caso algum teste falhe na branch **main** do repositório, é possível ver o erro detalhado por [aqui](https://codepen.io/nenitf/full/GREQZRd?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/phpunit-log.xml)
-
-> Coverage disponível em `tests/_reports/index.html`
+> Dashboard de relatório de cobertura disponível em `tests/_reports/index.html`
