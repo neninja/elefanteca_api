@@ -2,16 +2,15 @@
 
 namespace App\Repositories\Doctrine;
 
+use Doctrine\ORM\EntityManagerInterface;
+
 use Core\Models\Usuario;
 
 class UsuariosRepository implements \Core\Repositories\IUsuariosRepository
 {
-    private $em;
-
-    function __construct()
-    {
-        $this->em = (new EntityManagerFactory())->get();
-    }
+    function __construct(
+        private EntityManagerInterface $em
+    ) {}
 
     public function save(Usuario $u): Usuario
     {

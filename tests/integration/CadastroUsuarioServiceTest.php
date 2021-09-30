@@ -1,12 +1,46 @@
 <?php
 
 use Core\Services\Usuario\CadastroUsuarioService;
+use Core\Models\Usuario;
 
 class CadastroUsuarioServiceTest extends TestCase
 {
+    private static $em;
+    private static $schemaTool;
+    private static $metadata;
+
+    public static function setUpBeforeClass(): void
+    {
+        self::$em = (new \App\Repositories\Doctrine\EntityManagerFactory())->get();
+        self::$schemaTool = new \Doctrine\ORM\Tools\SchemaTool(self::$em);
+        self::$metadata = self::$em->getClassMetadata(Usuario::class);
+        self::$schemaTool->createSchema([self::$metadata]);
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        self::$schemaTool->dropSchema([self::$metadata]);
+    }
+
+    public function setUp(): void
+    {
+        parent::setUp();
+        self::$em->beginTransaction();
+    }
+
+    public function tearDown(): void
+    {
+        parent::tearDown();
+        self::$em->rollback();
+    }
+
     private function newSut()
     {
-        $repo = (new \App\Repositories\Doctrine\UsuariosRepository());
+        $stmt = self::$em->getConnection()->prepare("SELECT * FROM usuarios");
+        $stmt->execute();
+        var_dump($stmt->fetchAll());
+
+        $repo = (new \App\Repositories\Doctrine\UsuariosRepository(self::$em));
         $cryp = (new \App\Adapters\LumenCryptProvider());
         return new CadastroUsuarioService($repo, $cryp);
     }

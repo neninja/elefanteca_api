@@ -22,8 +22,22 @@ class EntityManagerFactory
             'password'  => env('DB_PASSWORD')
         ];
 
-        Type::addType('email', 'App\Repositories\Doctrine\Types\EmailType');
+        $this->addCustomTypes();
 
         return EntityManager::create($con, $config);
+    }
+
+    private function addCustomTypes()
+    {
+        $types = [
+            [ 'email', 'App\Repositories\Doctrine\Types\EmailType' ]
+        ];
+
+        $types = array_filter($types, fn($t) => !Type::hasType("email"));
+        foreach($types as $type) {
+            Type::addType($type[0], $type[1]);
+        }
+
+        // Type::addType('email', 'App\Repositories\Doctrine\Types\EmailType');
     }
 }
