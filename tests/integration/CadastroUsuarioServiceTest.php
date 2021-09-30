@@ -3,6 +3,9 @@
 use Core\Services\Usuario\CadastroUsuarioService;
 use Core\Models\Usuario;
 
+/**
+ * @covers \Core\Services\Usuario\CadastroUsuarioService::<!private>
+ */
 class CadastroUsuarioServiceTest extends TestCase
 {
     private static $em;
