@@ -79,7 +79,7 @@
 
 ##teamcity[testStarted name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCadastrarComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' duration='21' flowId='1']
+##teamcity[testFinished name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' duration='17' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriptografarSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriptografarSenha' flowId='1']
 
