@@ -5,7 +5,7 @@ use Core\Models\CPF;
 use Core\Exceptions\CoreException;
 
 /**
- * @covers \Core\Models\CPF::<!private>
+ * @covers \Core\Models\CPF
  */
 class CPFTest extends \PHPUnit\Framework\TestCase
 {

@@ -4,7 +4,7 @@ use Core\Services\Usuario\CadastroUsuarioService;
 use Core\Models\Usuario;
 
 /**
- * @covers \Core\Services\Usuario\CadastroUsuarioService::<!private>
+ * @covers \Core\Services\Usuario\CadastroUsuarioService
  */
 class CadastroUsuarioServiceTest extends LumenTestCase
 {
