@@ -57,7 +57,7 @@
 
 ##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #8' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #8' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #8' duration='1' flowId='1']
+##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #8' duration='3' flowId='1']
 
 ##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #9' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #9' flowId='1']
 
