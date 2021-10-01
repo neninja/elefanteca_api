@@ -26,31 +26,35 @@ Lembre de explicar o cenário do bug/feature.
      git checkout -b my-fix-branch
      ```
 
-5. *Commite* suas mudanças usando a [convenção de commits](https://gist.github.com/nenitf/1cf5182bff009974bf436f978eea1996#emojicom)
-
-6. Atualize sua branch de acordo com o *upstream*, corrija conflitos se necessário.
+5. Ao final do desenvolvimento, atualize sua branch de acordo com o *upstream*. Corrija conflitos se necessário.
     ```sh
-    git fetch upstream
-    git rebase upstream/main
+    git pull upstream main
     ```
 
-7. Envie seu código para o *remote*:
+6. Envie seu código para o *remote*:
     ```sh
-    git push -f origin HEAD
+    git push origin HEAD
     ```
 
-8. Abra o PR para `main`.
+7. Abra o PR para `main`.
+
 * Se forem sugeridas mudanças na revisão do PR então:
   * Faça-as.
-  * *Rebase* sua branch e force *push* para seu *fork* (isso atualizará o PR):
+  * Atualize novamente sua branch:
+  ```sh
+  git pull upstream main
+  ```
+
+  * Atualize novamente seu *fork* (isso atualizará o PR):
     ```sh
-    git rebase main -i
-    git push -f origin HEAD
+    git push origin HEAD
     ```
 
-### Após PR
+> Os commits serão *squashados*, então não se preocupe em utilizar `rebase`
 
-Caso queira manter o projeto para futuros PRs, pode deletar somente sua branch e baixar as mudanças deste projeto:
+### Após PR concluído
+
+Caso queira manter o projeto para futurar contribuições, pode deletar somente sua branch e baixar as mudanças do projeto:
 
 * Trocar para a branch principal:
     ```sh
@@ -69,5 +73,6 @@ Caso queira manter o projeto para futuros PRs, pode deletar somente sua branch e
 
 * Atualizar a branch principal:
     ```sh
-    git pull --ff upstream main
+    git fetch --all
+    git reset --hard origin/main
     ```
