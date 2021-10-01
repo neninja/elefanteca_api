@@ -84,6 +84,24 @@ class CadastroUsuarioServiceTest extends LumenTestCase
         );
 
         $this->assertNotNull($usuario->getId());
+
+        $persistido = $this->usuarioPersistido($usuario);
+        $this->assertEquals(
+            $usuario->cpf,
+            $persistido->cpf
+        );
+        $this->assertEquals(
+            $usuario->email,
+            $persistido->email
+        );
+        $this->assertEquals(
+            $usuario->email,
+            $persistido->email
+        );
+        $this->assertEquals(
+            $usuario->getSenha(),
+            $persistido->getSenha()
+        );
     }
 
     public function testDeveCriptografarSenha()
@@ -100,6 +118,10 @@ class CadastroUsuarioServiceTest extends LumenTestCase
         );
 
         $this->assertNotEquals($fixture['senha'], $usuario->getSenha());
+        $this->assertNotEquals(
+            $fixture['senha'],
+            $this->usuarioPersistido($usuario)->getSenha()
+        );
     }
 
     public function testDeveCriarAtivo()
