@@ -26,7 +26,7 @@ class CadastroUsuarioService
 
     function __invoke(
         string $nome,
-        string  $cpf,
+        string $cpf,
         string $senha,
         string $email
     ): Usuario {

@@ -51,7 +51,7 @@ class CadastroUsuarioServiceTest extends LumenTestCase
 
     private function usuarioPersistido(Usuario $u): Usuario
     {
-        return $this->DoctrineFindById(self::$em, $u);
+        return $this->doctrineFindById(self::$em, $u);
     }
 
     private function fixture($contexto)
