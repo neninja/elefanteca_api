@@ -6,7 +6,7 @@ use Core\Models\Usuario;
 /**
  * @covers \Core\Services\Usuario\CadastroUsuarioService::<!private>
  */
-class CadastroUsuarioServiceTest extends TestCase
+class CadastroUsuarioServiceTest extends LumenTestCase
 {
     private static $em;
     private static $schemaTool;

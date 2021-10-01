@@ -2,7 +2,7 @@
 
 use Laravel\Lumen\Testing\TestCase as BaseTestCase;
 
-abstract class TestCase extends BaseTestCase
+abstract class LumenTestCase extends BaseTestCase
 {
     /**
      * Creates the application.
