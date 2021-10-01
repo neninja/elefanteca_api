@@ -12,6 +12,9 @@ class CadastroUsuarioServiceTest extends TestCase
     private static $schemaTool;
     private static $metadata;
 
+    private $repo;
+    private $crypt;
+
     public static function setUpBeforeClass(): void
     {
         self::$em = (new \App\Repositories\Doctrine\EntityManagerFactory())->get();
@@ -39,9 +42,17 @@ class CadastroUsuarioServiceTest extends TestCase
 
     private function newSut()
     {
-        $repo = (new \App\Repositories\Doctrine\UsuariosRepository(self::$em));
-        $cryp = (new \App\Adapters\LumenCryptProvider());
-        return new CadastroUsuarioService($repo, $cryp);
+        $this->repo = (new \App\Repositories\Doctrine\UsuariosRepository(self::$em));
+        $this->crypt = (new \App\Adapters\LumenCryptProvider());
+        return new CadastroUsuarioService($this->repo, $this->crypt);
+    }
+
+    private function usuarioPersistido(Usuario $u): Usuario
+    {
+        // $stmt = self::$em->getConnection()->prepare("SELECT * FROM usuarios");
+        // $stmt->execute();
+        // var_dump($stmt->fetchAll());
+        return $this->repo->findById($u->getId());
     }
 
     private function fixture($contexto)
@@ -106,5 +117,7 @@ class CadastroUsuarioServiceTest extends TestCase
         );
 
         $this->assertTrue($usuario->getAtivo());
+
+        $this->assertTrue($this->usuarioPersistido($usuario)->getAtivo());
     }
 }

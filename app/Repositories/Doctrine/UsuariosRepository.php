@@ -18,4 +18,9 @@ class UsuariosRepository implements \Core\Repositories\IUsuariosRepository
         $this->em->flush();
         return $u;
     }
+
+    public function findById(int $id): Usuario
+    {
+        return $this->em->find(Usuario::class, $id);
+    }
 }
