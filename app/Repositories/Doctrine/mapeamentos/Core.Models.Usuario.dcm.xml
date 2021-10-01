@@ -9,6 +9,10 @@
             type="string"
             length="45" />
 
+        <field name="ativo"
+            column="ativo"
+            type="boolean" />
+
         <field name="cpf"
             column="cpf"
             type="string"
