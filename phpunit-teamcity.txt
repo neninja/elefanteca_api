@@ -1,5 +1,5 @@
 
-##teamcity[testCount count='17' flowId='1']
+##teamcity[testCount count='18' flowId='1']
 
 ##teamcity[testSuiteStarted name='unit' flowId='1']
 
@@ -9,7 +9,7 @@
 
 ##teamcity[testStarted name='testDeveFormatar with data set #0' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFormatar with data set #0' flowId='1']
 
-##teamcity[testFinished name='testDeveFormatar with data set #0' duration='1' flowId='1']
+##teamcity[testFinished name='testDeveFormatar with data set #0' duration='2' flowId='1']
 
 ##teamcity[testStarted name='testDeveFormatar with data set #1' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFormatar with data set #1' flowId='1']
 
@@ -57,7 +57,7 @@
 
 ##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #8' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #8' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #8' duration='3' flowId='1']
+##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #8' duration='1' flowId='1']
 
 ##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #9' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #9' flowId='1']
 
@@ -79,11 +79,11 @@
 
 ##teamcity[testStarted name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCadastrarComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' duration='17' flowId='1']
+##teamcity[testFinished name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' duration='21' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriptografarSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriptografarSenha' flowId='1']
 
-##teamcity[testFinished name='testDeveCriptografarSenha' duration='3' flowId='1']
+##teamcity[testFinished name='testDeveCriptografarSenha' duration='4' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriarAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriarAtivo' flowId='1']
 
@@ -92,3 +92,17 @@
 ##teamcity[testSuiteFinished name='CadastroUsuarioServiceTest' flowId='1']
 
 ##teamcity[testSuiteFinished name='integration' flowId='1']
+
+##teamcity[testSuiteStarted name='e2e' flowId='1']
+
+##teamcity[testSuiteStarted name='UsersTest' locationHint='php_qn:///app/tests/e2e/UsersTest.php::\UsersTest' flowId='1']
+
+##teamcity[testStarted name='testDeveCriarUsuario' locationHint='php_qn:///app/tests/e2e/UsersTest.php::\UsersTest::testDeveCriarUsuario' flowId='1']
+
+##teamcity[testFailed name='testDeveCriarUsuario' message='Unable to find row in database table |[usuarios|] that matched attributes |[{"email":"sally@foo.com"}|].|nFailed asserting that 0 is greater than 0.' details=' /app/vendor/laravel/lumen-framework/src/Testing/TestCase.php:142|n /app/tests/e2e/UsersTest.php:27|n ' duration='38' flowId='1']
+
+##teamcity[testFinished name='testDeveCriarUsuario' duration='38' flowId='1']
+
+##teamcity[testSuiteFinished name='UsersTest' flowId='1']
+
+##teamcity[testSuiteFinished name='e2e' flowId='1']
