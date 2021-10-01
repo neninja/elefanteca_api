@@ -8,6 +8,8 @@ use Core\Models\Usuario;
  */
 class CadastroUsuarioServiceTest extends LumenTestCase
 {
+    use Doctrine;
+
     private static $em;
     private static $schemaTool;
     private static $metadata;
@@ -49,10 +51,7 @@ class CadastroUsuarioServiceTest extends LumenTestCase
 
     private function usuarioPersistido(Usuario $u): Usuario
     {
-        // $stmt = self::$em->getConnection()->prepare("SELECT * FROM usuarios");
-        // $stmt->execute();
-        // var_dump($stmt->fetchAll());
-        return $this->repo->findById($u->getId());
+        return $this->DoctrineFindById(self::$em, $u);
     }
 
     private function fixture($contexto)
