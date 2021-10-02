@@ -12,6 +12,7 @@ cp .env.example .env
 ```
 
 2. **Mude o usuário (`DB_USERNAME`) e senha (`DB_PASSWORD`) de `.env`**
+> Caso não mude e utilize o valor de exemplo, para mudar depois terá que remover a imagem (`docker ps -a` e `docker rm <id>`) e subir novamente (perdendo os dados anteriores)
 
 3. Crie os containers
 ```sh

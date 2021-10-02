@@ -49,9 +49,6 @@
         ],
         "swagger": "openapi --bootstrap ./swagger/consts.php --output ./public/swagger ./swagger/v1.php ./app/Http/Controllers",
         "doctrine": "doctrine",
-        "doctrine:migrations": "doctrine-migrations",
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ]
+        "doctrine:migrations": "doctrine-migrations"
     }
 }
