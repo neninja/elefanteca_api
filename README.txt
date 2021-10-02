@@ -20,5 +20,5 @@ Cadastro Usuario Service
  [x] Deve criar ativo
 
 Users
- [ ] Deve criar usuario
+ [x] Deve criar usuario
 
