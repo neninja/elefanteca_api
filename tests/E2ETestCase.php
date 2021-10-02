@@ -1,21 +1,16 @@
 <?php
 
+use Doctrine\ORM\EntityManagerInterface;
 use Core\Models\Usuario;
 
 class E2ETestCase extends LumenTestCase
 {
     use Doctrine;
 
-    private static $em;
-    private bool $conexaoAtualiza = false;
+    private $em;
+    private bool $appJaInicializado = false;
 
-    public static function setUpBeforeClass(): void
-    {
-        self::$em = (new \App\Repositories\Doctrine\EntityManagerFactory())->get();
-        self::criaBanco(self::$em);
-    }
-
-    private static function criaBanco($em)
+    private function criaBanco($em)
     {
         $metadata = $em->getClassMetadata(Usuario::class);
         $schemaTool = (new \Doctrine\ORM\Tools\SchemaTool($em))
@@ -26,9 +21,12 @@ class E2ETestCase extends LumenTestCase
     {
         parent::setUp();
 
-        if(!$this->conexaoAtualiza) {
+        if(!$this->appJaInicializado) {
+            $this->em = app()->make(EntityManagerInterface::class);
+            $this->criaBanco($this->em);
+
             # THANKS: https://stackoverflow.com/a/26836634
-            $connection = self::$em
+            $connection = $this->em
                 ->getConnection()
                 ->getWrappedConnection();
 
@@ -36,12 +34,12 @@ class E2ETestCase extends LumenTestCase
             $this->conexaoAtualiza = true;
         }
 
-        self::$em->beginTransaction();
+        $this->em->beginTransaction();
     }
 
     public function tearDown(): void
     {
         parent::tearDown();
-        self::$em->rollback();
+        $this->em->rollback();
     }
 }
