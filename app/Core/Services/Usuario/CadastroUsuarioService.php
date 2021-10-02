@@ -24,7 +24,7 @@ class CadastroUsuarioService
         private ICriptografiaProvider $crypt,
     ){}
 
-    function __invoke(
+    public function execute(
         string $nome,
         string $cpf,
         string $senha,

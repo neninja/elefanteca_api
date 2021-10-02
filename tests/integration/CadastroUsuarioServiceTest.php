@@ -76,7 +76,7 @@ class CadastroUsuarioServiceTest extends LumenTestCase
 
         $fixture = $this->fixture('ok');
 
-        $usuario = $sut(
+        $usuario = $sut->execute(
             nome:   $fixture['nome'],
             cpf:    $fixture['cpf'],
             email:  $fixture['email'],
@@ -110,7 +110,7 @@ class CadastroUsuarioServiceTest extends LumenTestCase
 
         $fixture = $this->fixture('ok');
 
-        $usuario = $sut(
+        $usuario = $sut->execute(
             nome:   $fixture['nome'],
             cpf:    $fixture['cpf'],
             email:  $fixture['email'],
@@ -130,7 +130,7 @@ class CadastroUsuarioServiceTest extends LumenTestCase
 
         $fixture = $this->fixture('ok');
 
-        $usuario = $sut(
+        $usuario = $sut->execute(
             nome:   $fixture['nome'],
             cpf:    $fixture['cpf'],
             email:  $fixture['email'],
