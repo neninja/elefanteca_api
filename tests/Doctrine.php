@@ -5,9 +5,10 @@ use Doctrine\ORM\EntityManagerInterface;
 trait Doctrine {
     function doctrineFindById(
         EntityManagerInterface $em,
-        $model,
+        string $namespace,
+        int $id,
     ) {
-        return $em->find($model::class, $model->getId());
+        return $em->find($namespace, $id);
     }
 
     function doctrineExecuteQuery(

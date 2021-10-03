@@ -3,16 +3,18 @@
 use Core\Services\Usuario\CadastroUsuarioService;
 use Core\Models\Usuario;
 
+use App\Repositories\Doctrine\{
+    UsuariosRepository,
+};
+use App\Adapters\{
+    LumenCryptProvider,
+};
+
 /**
  * @covers \Core\Services\Usuario\CadastroUsuarioService
  */
 class CadastroUsuarioServiceTest extends IntegrationTestCase
 {
-    use Doctrine;
-
-    private $repo;
-    private $crypt;
-
     protected function modelsToTables(): array
     {
         return [Usuario::class];
@@ -20,14 +22,15 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
 
     private function newSut()
     {
-        $this->repo = (new \App\Repositories\Doctrine\UsuariosRepository($this->em));
-        $this->crypt = (new \App\Adapters\LumenCryptProvider());
-        return new CadastroUsuarioService($this->repo, $this->crypt);
+        return new CadastroUsuarioService(
+            $this->container(UsuariosRepository::class),
+            $this->container(LumenCryptProvider::class),
+        );
     }
 
     private function usuarioPersistido(Usuario $u): Usuario
     {
-        return $this->doctrineFindById($this->em, $u);
+        return $this->databaseFindById(Usuario::class, $u->getId());
     }
 
     private function fixture($contexto)
