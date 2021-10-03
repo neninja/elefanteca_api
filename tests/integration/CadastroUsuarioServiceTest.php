@@ -15,11 +15,6 @@ use App\Adapters\{
  */
 class CadastroUsuarioServiceTest extends IntegrationTestCase
 {
-    protected function modelsToTables(): array
-    {
-        return [Usuario::class];
-    }
-
     private function newSut()
     {
         return new CadastroUsuarioService(
