@@ -2,9 +2,9 @@
 
 use Core\Models\Usuario;
 
-class UsersTest extends E2ETestCase
+class UsersAPITest extends E2ETestCase
 {
-    private $ep = '/api/users';
+    private static $ep = '/api/users';
 
     public function testDeveCriarUsuario()
     {
@@ -21,7 +21,7 @@ class UsersTest extends E2ETestCase
             'email'     => 'sally@foo.com',
         ];
 
-        $this->json('POST', $this->ep, $bodyRequest)
+        $this->json('POST', self::$ep, $bodyRequest)
              ->seeJson($bodyResponse);
 
         $this->seeInDatabase('usuarios', ['email' => 'sally@foo.com']);
