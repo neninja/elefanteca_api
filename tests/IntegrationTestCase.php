@@ -19,10 +19,33 @@ abstract class IntegrationTestCase extends LumenTestCase
 {
     use Doctrine;
 
-    private bool $databaseJaConfigurado = false;
+    private static bool $databaseJaConfigurado = false;
     protected static EntityManagerInterface $em;
     private static SchemaTool $schemaTool;
     private static array $metadatas;
+
+    protected static function databaseConfigProccess()
+    {
+        if(self::$databaseJaConfigurado) {
+            return true;
+        }
+
+        // pega conexão singleton que será utilizada na app
+        self::$em = app()->make(EntityManagerInterface::class);
+
+        self::createDatabase();
+        self::$databaseJaConfigurado = true;
+    }
+
+    protected static function beginTransaction()
+    {
+        self::$em->beginTransaction();
+    }
+
+    protected static function rollbackTransaction()
+    {
+        self::$em->rollback();
+    }
 
     protected static function createDatabase()
     {
@@ -44,25 +67,19 @@ abstract class IntegrationTestCase extends LumenTestCase
     public function setUp(): void
     {
         parent::setUp();
-        if(!$this->databaseJaConfigurado) {
-            // pega conexão singleton que será utilizada na app
-            self::$em = app()->make(EntityManagerInterface::class);
-
-            self::createDatabase();
-            $this->databaseJaConfigurado = true;
-        }
-        self::$em->beginTransaction();
-    }
-
-    public static function tearDownAfterClass(): void
-    {
-        self::deleteDatabase();
+        self::databaseConfigProccess();
+        self::beginTransaction();
     }
 
     public function tearDown(): void
     {
         parent::tearDown();
-        self::$em->rollback();
+        self::rollbackTransaction();
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        self::deleteDatabase();
     }
 
     protected function factory(string $namespace)
