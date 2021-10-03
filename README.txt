@@ -19,6 +19,6 @@ Cadastro Usuario Service
  [x] Deve criptografar senha
  [x] Deve criar ativo
 
-Users
+Users API
  [x] Deve criar usuario
 
