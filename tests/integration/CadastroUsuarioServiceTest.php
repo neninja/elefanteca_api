@@ -23,8 +23,8 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
     private function newSut()
     {
         return new CadastroUsuarioService(
-            $this->container(UsuariosRepository::class),
-            $this->container(LumenCryptProvider::class),
+            $this->factory(UsuariosRepository::class),
+            $this->factory(LumenCryptProvider::class),
         );
     }
 

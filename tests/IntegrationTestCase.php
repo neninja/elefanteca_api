@@ -58,7 +58,7 @@ abstract class IntegrationTestCase extends LumenTestCase
         $this->em->rollback();
     }
 
-    protected function container(string $namespace)
+    protected function factory(string $namespace)
     {
         if(preg_match('/Repository$/', $namespace)) {
             return new $namespace($this->em);
