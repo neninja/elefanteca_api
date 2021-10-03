@@ -6,52 +6,28 @@ use Core\Models\Usuario;
 /**
  * @covers \Core\Services\Usuario\CadastroUsuarioService
  */
-class CadastroUsuarioServiceTest extends LumenTestCase
+class CadastroUsuarioServiceTest extends IntegrationTestCase
 {
     use Doctrine;
-
-    private static $em;
-    private static $schemaTool;
-    private static $metadata;
 
     private $repo;
     private $crypt;
 
-    public static function setUpBeforeClass(): void
+    protected function modelsToTables(): array
     {
-        self::$em = (new \App\Repositories\Doctrine\EntityManagerFactory())->get();
-        self::$schemaTool = new \Doctrine\ORM\Tools\SchemaTool(self::$em);
-        self::$metadata = self::$em->getClassMetadata(Usuario::class);
-        self::$schemaTool->createSchema([self::$metadata]);
-    }
-
-    public static function tearDownAfterClass(): void
-    {
-        self::$schemaTool->dropSchema([self::$metadata]);
-    }
-
-    public function setUp(): void
-    {
-        parent::setUp();
-        self::$em->beginTransaction();
-    }
-
-    public function tearDown(): void
-    {
-        parent::tearDown();
-        self::$em->rollback();
+        return [Usuario::class];
     }
 
     private function newSut()
     {
-        $this->repo = (new \App\Repositories\Doctrine\UsuariosRepository(self::$em));
+        $this->repo = (new \App\Repositories\Doctrine\UsuariosRepository($this->em));
         $this->crypt = (new \App\Adapters\LumenCryptProvider());
         return new CadastroUsuarioService($this->repo, $this->crypt);
     }
 
     private function usuarioPersistido(Usuario $u): Usuario
     {
-        return $this->doctrineFindById(self::$em, $u);
+        return $this->doctrineFindById($this->em, $u);
     }
 
     private function fixture($contexto)
