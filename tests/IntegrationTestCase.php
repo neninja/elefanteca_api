@@ -1,7 +1,6 @@
 <?php
 
-use Laravel\Lumen\Testing\TestCase as BaseTestCase;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\ORM\EntityManagerInterface as EntityManager;
 
 use App\Repositories\Doctrine\{
     UsuariosRepository,
@@ -14,20 +13,20 @@ abstract class IntegrationTestCase extends LumenTestCase
 {
     use Doctrine;
 
-    private static string $execDatabaseConfigProccess;
-    protected static EntityManagerInterface $em;
+    private static string           $currentSetUpDatabase;
+    private static EntityManager    $em;
 
     public static function setUpBeforeClass(): void
     {
-        self::$execDatabaseConfigProccess = 'databaseConfigProccess';
+        self::$currentSetUpDatabase = 'databaseInitialConfigProccess';
     }
 
     public function setUp(): void
     {
         parent::setUp();
 
-        $execDatabaseConfigProccess = self::$execDatabaseConfigProccess;
-        $this->$execDatabaseConfigProccess();
+        $currentSetUpDatabase = self::$currentSetUpDatabase;
+        $this->$currentSetUpDatabase();
 
         self::beginTransaction();
     }
@@ -43,13 +42,13 @@ abstract class IntegrationTestCase extends LumenTestCase
         self::deleteDatabase();
     }
 
-    protected static function databaseConfigProccess()
+    protected static function databaseInitialConfigProccess()
     {
         // pega conexão singleton que será utilizada na app
-        self::$em = app()->make(EntityManagerInterface::class);
+        self::$em = app()->make(EntityManager::class);
 
         self::createDatabase();
-        self::$execDatabaseConfigProccess = 'databasePostConfigProccess';
+        self::$currentSetUpDatabase = 'databasePostConfigProccess';
     }
 
     protected static function databasePostConfigProccess()
