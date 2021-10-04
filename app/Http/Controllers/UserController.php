@@ -8,7 +8,7 @@ use Core\Services\{
     Usuario\CadastroUsuarioService,
 };
 
-class UsuarioController extends Controller
+class UserController extends Controller
 {
     public function __construct(
         private CadastroUsuarioService $cadastroService
