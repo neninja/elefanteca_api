@@ -1,4 +1,4 @@
-Users API
+/api/users
  [x] Deve criar usuario
 
 Cadastro Usuario Service
