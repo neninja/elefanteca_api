@@ -19,22 +19,49 @@ abstract class IntegrationTestCase extends LumenTestCase
 {
     use Doctrine;
 
-    private static bool $databaseJaConfigurado = false;
+    private static $execDatabaseConfigProccess = 'databaseConfigProccess';
     protected static EntityManagerInterface $em;
     private static SchemaTool $schemaTool;
     private static array $metadatas;
 
+    public static function setUpBeforeClass(): void
+    {
+        self::$execDatabaseConfigProccess = 'databaseConfigProccess';
+    }
+
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $execDatabaseConfigProccess = self::$execDatabaseConfigProccess;
+        $this->$execDatabaseConfigProccess();
+
+        self::beginTransaction();
+    }
+
+    public function tearDown(): void
+    {
+        parent::tearDown();
+        self::rollbackTransaction();
+    }
+
+    public static function tearDownAfterClass(): void
+    {
+        self::deleteDatabase();
+    }
+
     protected static function databaseConfigProccess()
     {
-        if(self::$databaseJaConfigurado) {
-            return true;
-        }
-
         // pega conexão singleton que será utilizada na app
         self::$em = app()->make(EntityManagerInterface::class);
 
         self::createDatabase();
-        self::$databaseJaConfigurado = true;
+        self::$execDatabaseConfigProccess = 'databasePostConfigProccess';
+    }
+
+    protected static function databasePostConfigProccess()
+    {
+        // tudo certo
     }
 
     protected static function beginTransaction()
@@ -62,24 +89,6 @@ abstract class IntegrationTestCase extends LumenTestCase
     protected static function deleteDatabase()
     {
         self::$schemaTool->dropSchema(self::$metadatas);
-    }
-
-    public function setUp(): void
-    {
-        parent::setUp();
-        self::databaseConfigProccess();
-        self::beginTransaction();
-    }
-
-    public function tearDown(): void
-    {
-        parent::tearDown();
-        self::rollbackTransaction();
-    }
-
-    public static function tearDownAfterClass(): void
-    {
-        self::deleteDatabase();
     }
 
     protected function factory(string $namespace)
