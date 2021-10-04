@@ -65,7 +65,7 @@ class UsuarioController extends Controller
         return response()
             ->json([
                 'name'      => $u->nome,
-                'cpf'       => $u->cpf->formatado(),
+                'cpf'       => $u->cpf->getNumero(),
                 'email'     => $u->email->getEmail(),
             ]);
     }
