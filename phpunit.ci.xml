@@ -35,6 +35,8 @@
         </report>
 
         <include>
+            <directory suffix=".php">routes</directory>
+            <directory suffix=".php">app/Http</directory>
             <directory suffix=".php">app/Core</directory>
         </include>
     </coverage>
