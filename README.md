@@ -4,6 +4,13 @@
 
 API de sistema para bibliotecas.
 
+## Documentação online
+
+- [Requisitos](https://neni.dev/elefanteca_api) ([simplificação](https://neni.dev/elefanteca_api/README.txt))
+- [Relatório de testes](https://codepen.io/nenitf/full/GREQZRd?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/phpunit-log.xml)
+- [Relatório de cobertura de testes](https://neni.dev/elefanteca_api/coverage/dashboard.html) ([simplificação](https://neni.dev/elefanteca_api/coverage.txt))
+- [Referência (swagger/openapi)](https://neni.dev/elefanteca_api/swagger/index.html?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml)
+
 ## Configuração inicial
 
 1. Duplique `.env.example` e renomeie para `.env`
@@ -80,6 +87,4 @@ composer tdd
 ```sh
 docker-compose exec app composer ci
 ```
-> Também é gerada a "documentação" dos requisitos em `docs` (não versionada), a última versão é publicada pelo [Github Pages](https://neni.dev/elefanteca_api/) junto com [relatório de cobertura](https://neni.dev/elefanteca_api/coverage.txt). Caso algum teste falhe na branch **main** do repositório, é possível ver o erro detalhado por [aqui](https://codepen.io/nenitf/full/GREQZRd?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/phpunit-log.xml)
-
 > Dashboard de relatório de cobertura disponível em `tests/_reports/index.html`

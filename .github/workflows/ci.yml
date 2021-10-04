@@ -25,6 +25,13 @@ jobs:
         env:
           XDEBUG_MODE: coverage
 
+      - name: Swagger
+        if: always()
+        run: |
+          composer swagger
+          sudo mv public/swagger docs/swagger
+          sudo mv tests/_reports docs/coverage
+
       - name: Create living documentation
         if: always()
         uses: peaceiris/actions-gh-pages@v3
