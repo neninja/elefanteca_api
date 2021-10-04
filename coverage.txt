@@ -1,15 +1,15 @@
 
 
 Code Coverage Report:     
-  2021-10-04 01:17:16     
+  2021-10-04 02:29:51     
                           
  Summary:                 
   Classes: 20.00% (2/10)  
   Methods: 37.04% (10/27) 
-  Lines:   75.44% (86/114)
+  Lines:   75.63% (90/119)
 
 App\Http\Controllers\UsuarioController
-  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 11/ 11)
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 13/ 13)
 Core\Models\CPF
   Methods:  60.00% ( 3/ 5)   Lines:  96.15% ( 50/ 52)
 Core\Models\Email
