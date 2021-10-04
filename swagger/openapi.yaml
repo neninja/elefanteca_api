@@ -1,0 +1,35 @@
+openapi: 3.0.0
+info:
+  title: Elefanteca
+  version: 0.0.0
+paths:
+  /api/users:
+    post:
+      tags:
+        - usuário
+      description: 'Cadastro de usuário'
+      operationId: d17aca44b742e453cc9529926463de3d
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Diego
+                cpf:
+                  type: string
+                  example: '37128197060'
+                password:
+                  type: string
+                  example: '19800507'
+                email:
+                  type: string
+                  example: example@foo.com
+              type: object
+      responses:
+        '200':
+          description: 'Usuário criado'
+externalDocs:
+  description: 'Código fonte do projeto'
+  url: 'https://github.com/nenitf/elefanteca_api'
