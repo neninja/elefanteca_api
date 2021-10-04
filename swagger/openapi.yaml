@@ -8,7 +8,7 @@ paths:
       tags:
         - usuário
       description: 'Cadastro de usuário'
-      operationId: d17aca44b742e453cc9529926463de3d
+      operationId: 592819a0265360b2014512d6dbfaf0e7
       requestBody:
         content:
           application/json;charset=UTF-8:

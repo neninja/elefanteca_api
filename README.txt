@@ -1,5 +1,5 @@
 Users API
- [ ] Deve criar usuario
+ [x] Deve criar usuario
 
 Cadastro Usuario Service
  [x] Deve cadastrar com nome cpf email senha corretos
