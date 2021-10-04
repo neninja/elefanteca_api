@@ -79,11 +79,11 @@
 
 ##teamcity[testStarted name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCadastrarComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' duration='51' flowId='1']
+##teamcity[testFinished name='testDeveCadastrarComNomeCpfEmailSenhaCorretos' duration='62' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriptografarSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriptografarSenha' flowId='1']
 
-##teamcity[testFinished name='testDeveCriptografarSenha' duration='4' flowId='1']
+##teamcity[testFinished name='testDeveCriptografarSenha' duration='5' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriarAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriarAtivo' flowId='1']
 
@@ -99,9 +99,9 @@
 
 ##teamcity[testStarted name='testDeveCriarUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testDeveCriarUsuario' flowId='1']
 
-##teamcity[testFailed name='testDeveCriarUsuario' message='Unable to find JSON fragment: |n|n|[{"cpf":"17427351002"}|]|n|nwithin|n|n|[{"cpf":"174.273.510-02","email":"sally@foo.com","name":"Sally"}|].|nFailed asserting that false is true.' details=' /app/vendor/illuminate/testing/AssertableJsonString.php:144|n /app/vendor/illuminate/testing/TestResponse.php:735|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:296|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:256|n /app/tests/e2e/UsersAPITest.php:25|n ' duration='35' flowId='1']
+##teamcity[testFailed name='testDeveCriarUsuario' message='Unable to find JSON fragment: |n|n|[{"cpf":"17427351002"}|]|n|nwithin|n|n|[{"cpf":"174.273.510-02","email":"sally@foo.com","name":"Sally"}|].|nFailed asserting that false is true.' details=' /app/vendor/illuminate/testing/AssertableJsonString.php:144|n /app/vendor/illuminate/testing/TestResponse.php:735|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:296|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:256|n /app/tests/e2e/UsersAPITest.php:25|n ' duration='40' flowId='1']
 
-##teamcity[testFinished name='testDeveCriarUsuario' duration='35' flowId='1']
+##teamcity[testFinished name='testDeveCriarUsuario' duration='40' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
