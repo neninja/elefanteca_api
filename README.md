@@ -36,12 +36,10 @@ docker-compose exec app composer doctrine:migrations migrate
 ```
 > Rollback com ``docker-compose exec app composer doctrine:migrations migrations:migrate prev``
 
-<!--
-7. Crie a documentação de suporte (ficará disponível em `localhost:8989/public/swagger`)
+7. Crie a documentação de suporte que ficará disponível em `localhost:8989/swagger`
 ```sh
 docker-compose exec app composer swagger
 ```
--->
 
 ## Execução local
 

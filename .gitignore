@@ -8,6 +8,8 @@ Homestead.yaml
 /docs
 tests/_reports
 
+openapi.yaml
+
 #.exrc
 #.ctags
 #tags

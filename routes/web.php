@@ -17,6 +17,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+$router->get('/swagger', function () use ($router) {
+    return redirect('/public/swagger');
+});
+
 $router->group(['prefix' => 'api'], function ($request) use ($router) {
     $router->post('users', 'UsuarioController@store');
 });

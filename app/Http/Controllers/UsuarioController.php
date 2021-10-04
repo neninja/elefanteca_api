@@ -14,6 +14,40 @@ class UsuarioController extends Controller
         private CadastroUsuarioService $cadastroService
     ) {}
 
+    /**
+     * @OA\Post(
+     *     tags={"usuário"},
+     *     path="/api/users",
+     *     description="Cadastro de usuário",
+     *     @OA\RequestBody(
+     *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
+     *         @OA\Schema(
+     *             @OA\Property(
+     *                  property="name",
+     *                  type="string",
+     *                  example="Diego"
+     *             ),
+     *             @OA\Property(
+     *                  property="cpf",
+     *                  type="string",
+     *                  example="37128197060"
+     *             ),
+     *             @OA\Property(
+     *                  property="password",
+     *                  type="string",
+     *                  example="19800507"
+     *             ),
+     *             @OA\Property(
+     *                  property="email",
+     *                  type="string",
+     *                  example="example@foo.com"
+     *             )
+     *         ),
+     *         )
+     *     ),
+     *     @OA\Response(response="200", description="Usuário criado")
+     * )
+     */
     public function store(Request $request)
     {
         $nome   = $request->input('name');
@@ -21,19 +55,18 @@ class UsuarioController extends Controller
         $senha  = $request->input('password');
         $email  = $request->input('email');
 
-        $this->cadastroService->execute(
-            nome: $nome,
-            cpf: $cpf,
-            senha: $senha,
-            email: $email,
+        $u = $this->cadastroService->execute(
+            nome:   $nome,
+            cpf:    $cpf,
+            senha:  $senha,
+            email:  $email,
         );
 
         return response()
             ->json([
-                'name'      => 'Sally',
-                'cpf'       => '17427351002',
-                'password'  => 'djiajdij34214',
-                'email'     => 'sally@foo.com',
+                'name'      => $u->nome,
+                'cpf'       => $u->cpf->formatado(),
+                'email'     => $u->email->getEmail(),
             ]);
     }
 }
