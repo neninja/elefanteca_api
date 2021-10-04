@@ -2,8 +2,15 @@
 
 use Doctrine\ORM\EntityManagerInterface;
 
+use Doctrine\ORM\Tools\SchemaTool;
+
+use Core\Models\{
+    Usuario,
+};
+
+
 trait Doctrine {
-    function doctrineFindById(
+    public function doctrineFindById(
         EntityManagerInterface $em,
         string $namespace,
         int $id,
@@ -11,7 +18,7 @@ trait Doctrine {
         return $em->find($namespace, $id);
     }
 
-    function doctrineExecuteQuery(
+    public function doctrineExecuteQuery(
         EntityManagerInterface $em,
         string $query,
     ) {
@@ -21,5 +28,31 @@ trait Doctrine {
 
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+
+    public static function doctrineGetMetadatas(
+        EntityManagerInterface $em
+    ) {
+        $models = [
+            Usuario::class
+        ];
+
+        return array_map(function($model) use ($em) {
+            return $em->getClassMetadata($model);
+        }, $models);
+    }
+
+    public static function doctrineCreateDatabase(
+        EntityManagerInterface $em
+    ) {
+        $schemaTool = new SchemaTool($em);
+        $schemaTool->createSchema(self::doctrineGetMetadatas($em));
+    }
+
+    public static function doctrineDeleteDatabase(
+        EntityManagerInterface $em
+    ) {
+        $schemaTool = new SchemaTool($em);
+        $schemaTool->dropSchema(self::doctrineGetMetadatas($em));
     }
 }

@@ -2,7 +2,6 @@
 
 use Laravel\Lumen\Testing\TestCase as BaseTestCase;
 use Doctrine\ORM\EntityManagerInterface;
-use Doctrine\ORM\Tools\SchemaTool;
 
 use App\Repositories\Doctrine\{
     UsuariosRepository,
@@ -11,18 +10,12 @@ use App\Adapters\{
     LumenCryptProvider,
 };
 
-use Core\Models\{
-    Usuario,
-};
-
 abstract class IntegrationTestCase extends LumenTestCase
 {
     use Doctrine;
 
-    private static $execDatabaseConfigProccess = 'databaseConfigProccess';
+    private static string $execDatabaseConfigProccess;
     protected static EntityManagerInterface $em;
-    private static SchemaTool $schemaTool;
-    private static array $metadatas;
 
     public static function setUpBeforeClass(): void
     {
@@ -76,19 +69,12 @@ abstract class IntegrationTestCase extends LumenTestCase
 
     protected static function createDatabase()
     {
-        $models = [
-            Usuario::class
-        ];
-        self::$schemaTool = new SchemaTool(self::$em);
-        self::$metadatas = array_map(function($model) {
-            return self::$em->getClassMetadata($model);
-        }, $models);
-        self::$schemaTool->createSchema(self::$metadatas);
+        self::doctrineCreateDatabase(self::$em);
     }
 
     protected static function deleteDatabase()
     {
-        self::$schemaTool->dropSchema(self::$metadatas);
+        self::doctrineDeleteDatabase(self::$em);
     }
 
     protected function factory(string $namespace)
