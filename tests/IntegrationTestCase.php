@@ -53,6 +53,9 @@ abstract class IntegrationTestCase extends LumenTestCase
 
     protected static function databasePostConfigProccess()
     {
+        self::deleteDatabase();
+        self::$em = app()->make(EntityManager::class);
+        self::createDatabase();
         // tudo certo
     }
 
@@ -94,5 +97,10 @@ abstract class IntegrationTestCase extends LumenTestCase
     protected function databaseFindById(string $namespace, int $id)
     {
         return $this->doctrineFindById(self::$em, $namespace, $id);
+    }
+
+    protected function databaseQuery(string $query)
+    {
+        return $this->doctrineExecuteQuery(self::$em, $query);
     }
 }

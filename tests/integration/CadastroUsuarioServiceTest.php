@@ -44,40 +44,6 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
         }
     }
 
-    public function testDeveCadastrarComNomeCpfEmailSenhaCorretos()
-    {
-        $sut = $this->newSut();
-
-        $fixture = $this->fixture('ok');
-
-        $usuario = $sut->execute(
-            nome:   $fixture['nome'],
-            cpf:    $fixture['cpf'],
-            email:  $fixture['email'],
-            senha:  $fixture['senha'],
-        );
-
-        $this->assertNotNull($usuario->getId());
-
-        $persistido = $this->usuarioPersistido($usuario);
-        $this->assertEquals(
-            $usuario->cpf,
-            $persistido->cpf
-        );
-        $this->assertEquals(
-            $usuario->email,
-            $persistido->email
-        );
-        $this->assertEquals(
-            $usuario->email,
-            $persistido->email
-        );
-        $this->assertEquals(
-            $usuario->getSenha(),
-            $persistido->getSenha()
-        );
-    }
-
     public function testDeveCriptografarSenha()
     {
         $sut = $this->newSut();
@@ -88,7 +54,7 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
             nome:   $fixture['nome'],
             cpf:    $fixture['cpf'],
             email:  $fixture['email'],
-            senha:  $fixture['senha'],
+            senha:  'aaaa',
         );
 
         $this->assertNotEquals($fixture['senha'], $usuario->getSenha());
@@ -108,11 +74,50 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
             nome:   $fixture['nome'],
             cpf:    $fixture['cpf'],
             email:  $fixture['email'],
-            senha:  $fixture['senha'],
+            senha:  'bbbbbbb',
         );
 
         $this->assertTrue($usuario->getAtivo());
 
         $this->assertTrue($this->usuarioPersistido($usuario)->getAtivo());
+    }
+
+    public function testDeveCadastrarComNomeCpfEmailSenhaCorretos()
+    {
+        $sut = $this->newSut();
+
+        $fixture = $this->fixture('ok');
+
+        $usuario = $sut->execute(
+            nome:   $fixture['nome'],
+            cpf:    $fixture['cpf'],
+            email:  $fixture['email'],
+            senha:  'senhadandoruim',
+        );
+
+        $this->assertNotNull($usuario->getId());
+
+        $persistido = $this->usuarioPersistido($usuario);
+        $this->assertEquals(
+            $usuario->cpf,
+            $persistido->cpf
+        );
+        $this->assertEquals(
+            $usuario->email,
+            $persistido->email
+        );
+        $this->assertEquals(
+            $usuario->email,
+            $persistido->email
+        );
+        // var_dump([
+                // 'senha do banco' => $this->databaseQuery('select * from usuarios')[0]['senha'],
+                // 'usuario' => $usuario->getSenha(),
+                // 'persistido' => $persistido->getSenha()
+            // ]);
+        $this->assertEquals(
+            $usuario->getSenha(),
+            $persistido->getSenha()
+        );
     }
 }
