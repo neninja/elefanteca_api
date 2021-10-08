@@ -41,10 +41,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "ci": [
-            "phpunit -c phpunit.ci.xml",
-            "infection"
-        ],
+        "ci": "phpunit -c phpunit.ci.xml",
         "test": "phpunit",
         "tdd": [
             "Composer\\Config::disableProcessTimeout",
