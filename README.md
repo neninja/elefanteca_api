@@ -9,8 +9,7 @@ API de sistema para bibliotecas.
 - [Documentação de requisitos](https://neni.dev/elefanteca_api) ([simplificação](https://neni.dev/elefanteca_api/README.txt))
 - [Relatório de testes](https://codepen.io/nenitf/full/GREQZRd?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/phpunit-log.xml)
 - [Relatório de cobertura de testes](https://neni.dev/elefanteca_api/coverage/dashboard.html) ([simplificação](https://neni.dev/elefanteca_api/coverage.txt))
-- [Referência da API (Swagger/OpenAPI)](https://neni.dev/elefanteca_api/swagger/index.html?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml)
-    - Como o projeto não está online, as chamadas não são funcionais. É apenas um exemplo da documentação gerada.
+- [Referência da API (Swagger/OpenAPI)](https://neni.dev/elefanteca_api/swagger/index.html?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml) (demo não funcional)
 
 ## Configuração inicial
 
