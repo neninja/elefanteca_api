@@ -13,20 +13,21 @@ abstract class IntegrationTestCase extends LumenTestCase
 {
     use Doctrine;
 
-    private static string           $currentSetUpDatabase;
+    private static array            $dynamicSetUp;
     private static EntityManager    $em;
 
     public static function setUpBeforeClass(): void
     {
-        self::$currentSetUpDatabase = 'databaseInitialConfigProccess';
+        self::$dynamicSetUp = ['databaseInitialConfigProccess'];
     }
 
     public function setUp(): void
     {
         parent::setUp();
 
-        $currentSetUpDatabase = self::$currentSetUpDatabase;
-        $this->$currentSetUpDatabase();
+        foreach(self::$dynamicSetUp as $setup) {
+            $this->$setup();
+        }
 
         self::beginTransaction();
     }
@@ -48,15 +49,7 @@ abstract class IntegrationTestCase extends LumenTestCase
         self::$em = app()->make(EntityManager::class);
 
         self::createDatabase();
-        self::$currentSetUpDatabase = 'databasePostConfigProccess';
-    }
-
-    protected static function databasePostConfigProccess()
-    {
-        self::deleteDatabase();
-        self::$em = app()->make(EntityManager::class);
-        self::createDatabase();
-        // tudo certo
+        self::$dynamicSetUp = [];
     }
 
     protected static function beginTransaction()
@@ -67,6 +60,7 @@ abstract class IntegrationTestCase extends LumenTestCase
     protected static function rollbackTransaction()
     {
         self::$em->rollback();
+        self::$em->clear();
     }
 
     protected static function createDatabase()
@@ -94,13 +88,13 @@ abstract class IntegrationTestCase extends LumenTestCase
         return $namespace;
     }
 
-    protected function databaseFindById(string $namespace, int $id)
-    {
-        return $this->doctrineFindById(self::$em, $namespace, $id);
-    }
-
     protected function databaseQuery(string $query)
     {
         return $this->doctrineExecuteQuery(self::$em, $query);
+    }
+
+    protected function databaseFindById(string $namespace, int $id)
+    {
+        return $this->doctrineFindById(self::$em, $namespace, $id);
     }
 }

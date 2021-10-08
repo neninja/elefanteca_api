@@ -31,9 +31,7 @@ class CadastroUsuarioService
         string $email
     ): Usuario {
 
-        // $senhaCriptografada = $senha;
         $senhaCriptografada = $this->crypt->encrypt($senha);
-
 
         $u = new Usuario(
             nome:   $nome,
