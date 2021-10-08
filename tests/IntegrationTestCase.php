@@ -53,7 +53,10 @@ abstract class IntegrationTestCase extends LumenTestCase
 
     protected static function databasePostConfigProccess()
     {
-        // tudo certo
+        // limpa identity map do doctrine, evitando
+        // inconsistência de dados novos ou alterados
+        // entre testes
+        self::$em->clear();
     }
 
     protected static function beginTransaction()
