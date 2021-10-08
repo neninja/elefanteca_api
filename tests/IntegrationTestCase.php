@@ -91,6 +91,11 @@ abstract class IntegrationTestCase extends LumenTestCase
         return $namespace;
     }
 
+    protected function databaseQuery(string $query)
+    {
+        return $this->doctrineExecuteQuery(self::$em, $query);
+    }
+
     protected function databaseFindById(string $namespace, int $id)
     {
         return $this->doctrineFindById(self::$em, $namespace, $id);
