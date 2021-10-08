@@ -15,6 +15,7 @@
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
+        "infection/infection": "^0.25.3",
         "mockery/mockery": "^1.3.1",
         "phpunit/phpunit": "^9.3",
         "spatie/phpunit-watcher": "^1.23"
@@ -40,9 +41,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "ci": [
-            "phpunit -c phpunit.ci.xml"
-        ],
+        "ci": "phpunit -c phpunit.ci.xml",
+        "ci:mutation": "infection",
         "test": "phpunit",
         "tdd": [
             "Composer\\Config::disableProcessTimeout",

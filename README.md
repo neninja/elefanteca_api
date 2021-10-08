@@ -89,3 +89,8 @@ composer tdd
 docker-compose exec app composer ci
 ```
 > Dashboard de relatório de cobertura disponível em `tests/_reports/index.html`
+
+- Testes de mutação
+```sh
+docker-compose exec app composer ci:mutation
+```

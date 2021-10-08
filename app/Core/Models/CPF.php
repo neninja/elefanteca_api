@@ -16,7 +16,7 @@ class CPF
         $this->numero = $numero;
     }
 
-    protected function cpfValido($cpf)
+    private function cpfValido($cpf)
     {
         if(strlen($cpf) !== 11){
             return false;
