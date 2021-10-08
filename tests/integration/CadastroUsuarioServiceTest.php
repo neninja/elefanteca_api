@@ -25,6 +25,7 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
 
     private function usuarioPersistido(Usuario $u): Usuario
     {
+        $this->seeInDatabase('usuarios', ['id' => $u->getId()]);
         return $this->databaseFindById(Usuario::class, $u->getId());
     }
 
