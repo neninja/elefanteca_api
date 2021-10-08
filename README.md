@@ -93,3 +93,5 @@ docker-compose exec app composer ci
 ```sh
 docker-compose exec app composer ci:mutation
 ```
+
+> Veja o resultado no arquivo gerado em `docs/infection.diff`
