@@ -13,20 +13,21 @@ abstract class IntegrationTestCase extends LumenTestCase
 {
     use Doctrine;
 
-    private static string           $currentSetUpDatabase;
+    private static array            $dynamicSetUp;
     private static EntityManager    $em;
 
     public static function setUpBeforeClass(): void
     {
-        self::$currentSetUpDatabase = 'databaseInitialConfigProccess';
+        self::$dynamicSetUp = ['databaseInitialConfigProccess'];
     }
 
     public function setUp(): void
     {
         parent::setUp();
 
-        $currentSetUpDatabase = self::$currentSetUpDatabase;
-        $this->$currentSetUpDatabase();
+        foreach(self::$dynamicSetUp as $setup) {
+            $this->$setup();
+        }
 
         self::beginTransaction();
     }
@@ -48,11 +49,7 @@ abstract class IntegrationTestCase extends LumenTestCase
         self::$em = app()->make(EntityManager::class);
 
         self::createDatabase();
-        self::$currentSetUpDatabase = 'databasePostConfigProccess';
-    }
-
-    protected static function databasePostConfigProccess()
-    {
+        self::$dynamicSetUp = [];
     }
 
     protected static function beginTransaction()
