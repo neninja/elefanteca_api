@@ -15,7 +15,16 @@ trait Doctrine {
         string $namespace,
         int $id,
     ) {
-        return $em->find($namespace, $id);
+        $e = $em->find($namespace, $id);
+
+        // Evita que o Doctrine cacheie id pesquisado,
+        // pois pode ocorrer de no próximo teste pesquisar
+        // pelo mesmo id mas o conteúdo do banco mudou.
+        // Ocorre com rollback de transaction entre testes
+        // THANKS: https://stackoverflow.com/a/7957067
+        $em->detach($e);
+
+        return $e;
     }
 
     public function doctrineExecuteQuery(
