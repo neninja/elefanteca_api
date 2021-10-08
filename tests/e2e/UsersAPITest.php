@@ -2,9 +2,6 @@
 
 use Core\Models\Usuario;
 
-/**
- * @testdox /api/users
- */
 class UsersAPITest extends E2ETestCase
 {
     private static $ep = '/api/users';
