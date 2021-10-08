@@ -2,7 +2,13 @@
     "$schema": "vendor/infection/infection/resources/schema.json",
     "source": {
         "directories": [
-            "app/Core"
+            "app/Core/Models",
+            "app/Core/Providers",
+            "app/Core/Repositories",
+            "app/Core/Services"
+        ],
+        "excludes": [
+            "/.*CPF.php/"
         ]
     },
     "logs": {
@@ -10,5 +16,6 @@
     },
     "mutators": {
         "@default": true
-    }
+    },
+    "testFrameworkOptions": "--configuration=phpunit.ci.xml"
 }
