@@ -1,8 +1,8 @@
-/api/users
+Users API
  [x] Deve criar usuario
 
 Cadastro Usuario Service
- [x] Deve cadastrar com nome cpf email senha corretos
+ [x] Deve persistir com nome cpf email senha corretos
  [x] Deve criptografar senha
  [x] Deve criar ativo
 
