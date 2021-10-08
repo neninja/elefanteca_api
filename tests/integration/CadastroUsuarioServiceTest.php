@@ -46,7 +46,7 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
         }
     }
 
-    public function testDeveCadastrarComNomeCpfEmailSenhaCorretos()
+    public function testDevePersistirComNomeCpfEmailSenhaCorretos()
     {
         $sut = $this->newSut();
 
@@ -62,6 +62,10 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
         $this->assertNotNull($usuario->getId());
 
         $persistido = $this->usuarioPersistido($usuario);
+        $this->assertEquals(
+            $usuario->getId(),
+            $persistido->getId()
+        );
         $this->assertEquals(
             $usuario->cpf,
             $persistido->cpf
