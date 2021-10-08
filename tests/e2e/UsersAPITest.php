@@ -11,22 +11,24 @@ class UsersAPITest extends E2ETestCase
 
     public function testDeveCriarUsuario()
     {
+        $faker = Faker\Factory::create('pt_BR');
+
         $bodyRequest = [
-            'name'      => 'Sally',
-            'cpf'       => '17427351002',
-            'password'  => 'djiajdij34214',
-            'email'     => 'sally@foo.com',
+            'name'      => $faker->name(),
+            'cpf'       => $faker->cpf(false),
+            'password'  => $faker->password(),
+            'email'     => $faker->email(),
         ];
 
         $bodyResponse = [
-            'name'      => 'Sally',
-            'cpf'       => '17427351002',
-            'email'     => 'sally@foo.com',
+            'name'      => $bodyRequest['name'],
+            'cpf'       => $bodyRequest['cpf'],
+            'email'     => $bodyRequest['email'],
         ];
 
         $this->json('POST', self::$ep, $bodyRequest)
              ->seeJson($bodyResponse);
 
-        $this->seeInDatabase('usuarios', ['email' => 'sally@foo.com']);
+        $this->seeInDatabase('usuarios', ['email' => $bodyRequest['email']]);
     }
 }
