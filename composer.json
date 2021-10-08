@@ -42,6 +42,7 @@
     "prefer-stable": true,
     "scripts": {
         "ci": "phpunit -c phpunit.ci.xml",
+        "ci:mutation": "infection",
         "test": "phpunit",
         "tdd": [
             "Composer\\Config::disableProcessTimeout",
@@ -49,7 +50,6 @@
         ],
         "swagger": "openapi --bootstrap ./swagger/consts.php --output ./public/swagger ./swagger/v1.php ./app/Http/Controllers",
         "doctrine": "doctrine",
-        "doctrine:migrations": "doctrine-migrations",
-        "infection": "infection"
+        "doctrine:migrations": "doctrine-migrations"
     }
 }
