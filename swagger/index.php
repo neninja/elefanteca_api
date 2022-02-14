@@ -1,4 +1,9 @@
-<?php require __DIR__ . '/../../swagger/consts.php' ?>
+<?php
+
+define("API_HOST", $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT']);
+define("OPENAPI_URL", API_HOST.'/swagger/openapi.yaml');
+
+?>
 <!-- HTML for static distribution bundle build -->
 <!DOCTYPE html>
 <html lang="en">
