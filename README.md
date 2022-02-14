@@ -53,11 +53,9 @@ docker-compose exec app composer swagger
 - Caso recém tenha feito a **configuração inicial** e os containers continuem rodando, tudo certo. Pode acessar ``localhost:8989``
 - Do contrário, suba os containers novamente:
 ```sh
-docker-compose up
+docker-compose up -d
 ```
-> Pare com <kbd>Ctrl</kbd><kbd>C</kbd>
-
-> Caso modifique Dockerfile, rebuilde com ``docker-compose up --build``
+> Caso modifique Dockerfile, rebuilde com ``docker-compose up -d --build``
 
 ## Teste
 
