@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testDeveCriarUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testDeveCriarUsuario' flowId='1']
 
-##teamcity[testFinished name='testDeveCriarUsuario' duration='95' flowId='1']
+##teamcity[testFinished name='testDeveCriarUsuario' duration='92' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
