@@ -45,16 +45,9 @@
         }
       }
 
-      var url = window.location.search.match(/url=([^&]+)/);
-      if (url && url.length > 1) {
-        url = decodeURIComponent(url[1]);
-      } else {
-          url = "https://neni.dev/elefanteca_api/swagger/openapi.yml";
-      }
-
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-        url: "http://<?=OPENAPI_URL?>",
+        url: "", // informe a url como queryparam: ?url=http://url.to/my-openapi.yml
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [
