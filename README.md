@@ -61,12 +61,9 @@ docker-compose up -d
 
 - Teste simples
 ```sh
-docker-compose exec app bash
+docker-compose exec app composer test tests/caminho/do/ExemploTest.php
 ```
-```sh
-composer test tests/caminho/do/ExemploTest.php
-```
-> Um método de um arquivo: ``composer test -- --filter testName$ tests/caminho/do/ExemploTest.php``
+> Um método de um arquivo: ``docker-compose exec app composer test -- --filter testName$ tests/caminho/do/ExemploTest.php``
 
 - TDD
 ```sh
