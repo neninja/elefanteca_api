@@ -23,8 +23,8 @@ services:
     links:
       - db:db
     ports:
-      - '8989:80'
+      - "${APP_PORT:?err}:80"
     expose:
-      - '8989'
+      - "${APP_PORT:?err}"
     depends_on:
       - db
