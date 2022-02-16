@@ -36,7 +36,7 @@ class Usuario
 
     public function inativar() {
         $this->ativo = false;
-        return $this->senha;
+        return $this;
     }
 
     public function getAtivo() {
