@@ -54,8 +54,7 @@ docker-compose exec app composer swagger
 
 ## Execução local
 
-- Caso recém tenha feito a **configuração inicial** e os containers continuem rodando, tudo certo. Pode acessar ``localhost:8989``
-- Do contrário, suba os containers novamente:
+Caso recém tenha feito a **configuração inicial** e os containers continuem rodando: tudo certo, aplicação disponível em ``localhost:8989``. Do contrário, suba os containers novamente:
 ```sh
 docker-compose up -d
 ```
