@@ -1,0 +1,24 @@
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="Core\Models\Livro" table="livros">
+        <id name="id" column="id" type="integer">
+            <generator strategy="IDENTITY" />
+        </id>
+
+        <field name="titulo"
+            column="titulo"
+            type="string"
+            length="45" />
+
+        <field name="quantidade"
+            column="quantidade"
+            type="integer" />
+
+        <one-to-one field="autor" target-entity="Autor" inversed-by="livro">
+            <join-column name="id_autor" referenced-column-name="id" />
+        </one-to-one>
+
+        <field name="ativo"
+            column="ativo"
+            type="boolean" />
+    </entity>
+</doctrine-mapping>

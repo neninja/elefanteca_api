@@ -6,6 +6,8 @@ use Doctrine\ORM\Tools\SchemaTool;
 
 use Core\Models\{
     Usuario,
+    Livro,
+    Autor,
 };
 
 
@@ -34,7 +36,9 @@ trait Doctrine {
         EntityManagerInterface $em
     ) {
         $models = [
-            Usuario::class
+            Usuario::class,
+            Livro::class,
+            Autor::class,
         ];
 
         return array_map(function($model) use ($em) {

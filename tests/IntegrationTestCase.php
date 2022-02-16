@@ -2,12 +2,16 @@
 
 use Core\Models\{
     Usuario,
+    Livro,
+    Autor,
 };
 
 abstract class IntegrationTestCase extends LumenTestCase
 {
     private array $tables = [
-        Usuario::class => 'usuarios'
+        Usuario::class  => 'usuarios',
+        Livro::class    => 'livros',
+        Autor::class    => 'autores',
     ];
 
     protected function persistidoById(
