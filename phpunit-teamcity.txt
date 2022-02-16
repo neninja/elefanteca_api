@@ -1,5 +1,5 @@
 
-##teamcity[testCount count='18' flowId='1']
+##teamcity[testCount count='19' flowId='1']
 
 ##teamcity[testSuiteStarted name='e2e' flowId='1']
 
@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testDeveCriarUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testDeveCriarUsuario' flowId='1']
 
-##teamcity[testFinished name='testDeveCriarUsuario' duration='104' flowId='1']
+##teamcity[testFinished name='testDeveCriarUsuario' duration='115' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -15,15 +15,25 @@
 
 ##teamcity[testSuiteStarted name='integration' flowId='1']
 
+##teamcity[testSuiteStarted name='CadastroLivroServiceTest' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest' flowId='1']
+
+##teamcity[testStarted name='testDevePersistirComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest::testDevePersistirComValoresObrigatorios' flowId='1']
+
+##teamcity[testFailed name='testDevePersistirComValoresObrigatorios' message='TypeError : App\Repositories\Doctrine\AutoresRepository::findById(): Return value must be of type Core\Models\Autor, null returned' details=' /app/app/Repositories/Doctrine/AutoresRepository.php:24|n /app/app/Core/Services/Emprestimo/CadastroLivroService.php:27|n /app/tests/integration/CadastroLivroServiceTest.php:55|n ' duration='16' flowId='1']
+
+##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='16' flowId='1']
+
+##teamcity[testSuiteFinished name='CadastroLivroServiceTest' flowId='1']
+
 ##teamcity[testSuiteStarted name='CadastroUsuarioServiceTest' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest' flowId='1']
 
 ##teamcity[testStarted name='testDevePersistirComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDevePersistirComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testDevePersistirComNomeCpfEmailSenhaCorretos' duration='12' flowId='1']
+##teamcity[testFinished name='testDevePersistirComNomeCpfEmailSenhaCorretos' duration='17' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriptografarSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriptografarSenha' flowId='1']
 
-##teamcity[testFinished name='testDeveCriptografarSenha' duration='8' flowId='1']
+##teamcity[testFinished name='testDeveCriptografarSenha' duration='9' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriarAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriarAtivo' flowId='1']
 
