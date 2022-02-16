@@ -11,6 +11,12 @@ API de sistema para bibliotecas.
 - [Relatório de cobertura de testes](https://neni.dev/elefanteca_api/coverage/dashboard.html) ([simplificação](https://neni.dev/elefanteca_api/coverage.txt))
 - [Referência da API](https://neni.dev/elefanteca_api/swagger/index.html?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml) (demo não funcional)
 
+## <a name="status"></a> Situação do projeto [:clipboard:](#status)
+
+- [Tarefas](https://github.com/nenitf/elefanteca_api/issues)
+- [Marcos](https://github.com/nenitf/elefanteca_api/milestones)
+- [Planejamento](https://github.com/nenitf/elefanteca_api/projects/2)
+
 ## Configuração inicial
 
 1. Duplique `.env.example` e renomeie para `.env`
