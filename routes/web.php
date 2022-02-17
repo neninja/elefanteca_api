@@ -23,4 +23,5 @@ $router->get('/swagger', function () use ($router) {
 
 $router->group(['prefix' => 'api'], function ($request) use ($router) {
     $router->post('users', 'UserController@store');
+    $router->post('authors', 'AuthorController@store');
 });
