@@ -1,33 +1,33 @@
 Authors API
- [x] Deve criar autor
+ [x] Cria autor
 
 Users API
- [x] Deve criar usuario
+ [x] Cria usuario
 
 Cadastro Autor Service
- [x] Deve persistir com valores obrigatorios
+ [x] Persiste com valores obrigatorios
 
 Cadastro Livro Service
- [x] Deve persistir com valores obrigatorios
+ [x] Persiste com valores obrigatorios
 
 Cadastro Usuario Service
- [x] Deve persistir com nome cpf email senha corretos
- [x] Deve criptografar senha
- [x] Deve criar ativo
+ [x] Persiste com nome cpf email senha corretos
+ [x] Criptografa senha
+ [x] Cria como ativo
 
 CPF
- [x] Deve formatar 81026092140 para 810.260.921-40
- [x] Deve formatar 84820226959 para 848.202.269-59
- [x] Deve formatar 74442704309 para 744.427.043-09
- [x] Deve falhar como "CPF inválido" 00000000000
- [x] Deve falhar como "CPF inválido" 11111111111
- [x] Deve falhar como "CPF inválido" 22222222222
- [x] Deve falhar como "CPF inválido" 33333333333
- [x] Deve falhar como "CPF inválido" 44444444444
- [x] Deve falhar como "CPF inválido" 55555555555
- [x] Deve falhar como "CPF inválido" 66666666666
- [x] Deve falhar como "CPF inválido" 77777777777
- [x] Deve falhar como "CPF inválido" 88888888888
- [x] Deve falhar como "CPF inválido" 99999999999
- [x] Deve falhar como "CPF inválido" 81026092141
+ [x] Formata 81026092140 para 810.260.921-40
+ [x] Formata 84820226959 para 848.202.269-59
+ [x] Formata 74442704309 para 744.427.043-09
+ [x] Falha como "CPF inválido" 00000000000
+ [x] Falha como "CPF inválido" 11111111111
+ [x] Falha como "CPF inválido" 22222222222
+ [x] Falha como "CPF inválido" 33333333333
+ [x] Falha como "CPF inválido" 44444444444
+ [x] Falha como "CPF inválido" 55555555555
+ [x] Falha como "CPF inválido" 66666666666
+ [x] Falha como "CPF inválido" 77777777777
+ [x] Falha como "CPF inválido" 88888888888
+ [x] Falha como "CPF inválido" 99999999999
+ [x] Falha como "CPF inválido" 81026092141
 

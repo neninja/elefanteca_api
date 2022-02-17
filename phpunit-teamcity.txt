@@ -5,17 +5,17 @@
 
 ##teamcity[testSuiteStarted name='AuthorsAPITest' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest' flowId='1']
 
-##teamcity[testStarted name='testDeveCriarAutor' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testDeveCriarAutor' flowId='1']
+##teamcity[testStarted name='testCriaAutor' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaAutor' flowId='1']
 
-##teamcity[testFinished name='testDeveCriarAutor' duration='107' flowId='1']
+##teamcity[testFinished name='testCriaAutor' duration='102' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthorsAPITest' flowId='1']
 
 ##teamcity[testSuiteStarted name='UsersAPITest' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest' flowId='1']
 
-##teamcity[testStarted name='testDeveCriarUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testDeveCriarUsuario' flowId='1']
+##teamcity[testStarted name='testCriaUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuario' flowId='1']
 
-##teamcity[testFinished name='testDeveCriarUsuario' duration='19' flowId='1']
+##teamcity[testFinished name='testCriaUsuario' duration='19' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -25,33 +25,33 @@
 
 ##teamcity[testSuiteStarted name='CadastroAutorServiceTest' locationHint='php_qn:///app/tests/integration/CadastroAutorServiceTest.php::\CadastroAutorServiceTest' flowId='1']
 
-##teamcity[testStarted name='testDevePersistirComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroAutorServiceTest.php::\CadastroAutorServiceTest::testDevePersistirComValoresObrigatorios' flowId='1']
+##teamcity[testStarted name='testPersisteComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroAutorServiceTest.php::\CadastroAutorServiceTest::testPersisteComValoresObrigatorios' flowId='1']
 
-##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='14' flowId='1']
+##teamcity[testFinished name='testPersisteComValoresObrigatorios' duration='11' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroAutorServiceTest' flowId='1']
 
 ##teamcity[testSuiteStarted name='CadastroLivroServiceTest' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest' flowId='1']
 
-##teamcity[testStarted name='testDevePersistirComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest::testDevePersistirComValoresObrigatorios' flowId='1']
+##teamcity[testStarted name='testPersisteComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest::testPersisteComValoresObrigatorios' flowId='1']
 
-##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='14' flowId='1']
+##teamcity[testFinished name='testPersisteComValoresObrigatorios' duration='20' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroLivroServiceTest' flowId='1']
 
 ##teamcity[testSuiteStarted name='CadastroUsuarioServiceTest' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest' flowId='1']
 
-##teamcity[testStarted name='testDevePersistirComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDevePersistirComNomeCpfEmailSenhaCorretos' flowId='1']
+##teamcity[testStarted name='testPersisteComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testPersisteComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testDevePersistirComNomeCpfEmailSenhaCorretos' duration='14' flowId='1']
+##teamcity[testFinished name='testPersisteComNomeCpfEmailSenhaCorretos' duration='13' flowId='1']
 
-##teamcity[testStarted name='testDeveCriptografarSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriptografarSenha' flowId='1']
+##teamcity[testStarted name='testCriptografaSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriptografaSenha' flowId='1']
 
-##teamcity[testFinished name='testDeveCriptografarSenha' duration='8' flowId='1']
+##teamcity[testFinished name='testCriptografaSenha' duration='7' flowId='1']
 
-##teamcity[testStarted name='testDeveCriarAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriarAtivo' flowId='1']
+##teamcity[testStarted name='testCriaComoAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriaComoAtivo' flowId='1']
 
-##teamcity[testFinished name='testDeveCriarAtivo' duration='7' flowId='1']
+##teamcity[testFinished name='testCriaComoAtivo' duration='6' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroUsuarioServiceTest' flowId='1']
 
@@ -61,69 +61,69 @@
 
 ##teamcity[testSuiteStarted name='CPFTest' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest' flowId='1']
 
-##teamcity[testSuiteStarted name='testDeveFormatar' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFormatar' flowId='1']
+##teamcity[testSuiteStarted name='testFormata' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFormata' flowId='1']
 
-##teamcity[testStarted name='testDeveFormatar with data set #0' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFormatar with data set #0' flowId='1']
+##teamcity[testStarted name='testFormata with data set #0' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFormata with data set #0' flowId='1']
 
-##teamcity[testFinished name='testDeveFormatar with data set #0' duration='1' flowId='1']
+##teamcity[testFinished name='testFormata with data set #0' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFormatar with data set #1' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFormatar with data set #1' flowId='1']
+##teamcity[testStarted name='testFormata with data set #1' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFormata with data set #1' flowId='1']
 
-##teamcity[testFinished name='testDeveFormatar with data set #1' duration='1' flowId='1']
+##teamcity[testFinished name='testFormata with data set #1' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFormatar with data set #2' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFormatar with data set #2' flowId='1']
+##teamcity[testStarted name='testFormata with data set #2' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFormata with data set #2' flowId='1']
 
-##teamcity[testFinished name='testDeveFormatar with data set #2' duration='1' flowId='1']
+##teamcity[testFinished name='testFormata with data set #2' duration='1' flowId='1']
 
-##teamcity[testSuiteFinished name='testDeveFormatar' flowId='1']
+##teamcity[testSuiteFinished name='testFormata' flowId='1']
 
-##teamcity[testSuiteStarted name='testDeveFalharComErroAmigavel' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel' flowId='1']
+##teamcity[testSuiteStarted name='testFalhaComErroAmigavel' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #0' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #0' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #0' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #0' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #0' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #0' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #1' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #1' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #1' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #1' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #1' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #1' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #2' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #2' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #2' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #2' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #2' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #2' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #3' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #3' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #3' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #3' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #3' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #3' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #4' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #4' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #4' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #4' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #4' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #4' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #5' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #5' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #5' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #5' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #5' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #5' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #6' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #6' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #6' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #6' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #6' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #6' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #7' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #7' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #7' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #7' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #7' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #7' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #8' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #8' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #8' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #8' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #8' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #8' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #9' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #9' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #9' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #9' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #9' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #9' duration='1' flowId='1']
 
-##teamcity[testStarted name='testDeveFalharComErroAmigavel with data set #10' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testDeveFalharComErroAmigavel with data set #10' flowId='1']
+##teamcity[testStarted name='testFalhaComErroAmigavel with data set #10' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #10' flowId='1']
 
-##teamcity[testFinished name='testDeveFalharComErroAmigavel with data set #10' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #10' duration='1' flowId='1']
 
-##teamcity[testSuiteFinished name='testDeveFalharComErroAmigavel' flowId='1']
+##teamcity[testSuiteFinished name='testFalhaComErroAmigavel' flowId='1']
 
 ##teamcity[testSuiteFinished name='CPFTest' flowId='1']
 
