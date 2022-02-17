@@ -4,7 +4,7 @@ namespace Core\Services\Emprestimo;
 
 use Core\Models\{
     Livro,
-    Autor
+    Autor,
 };
 
 use Core\Repositories\{
@@ -26,11 +26,11 @@ class CadastroLivroService
     ): Livro {
         $autor = $this->autoresRepo->findById($idAutor);
         $l = new Livro(
-            titulo:     $nome,
+            titulo:     $titulo,
             autor:      $autor,
             quantidade: $quantidade,
         );
 
-        return $this->livrosRepo->save($u);
+        return $this->livrosRepo->save($l);
     }
 }

@@ -14,7 +14,7 @@ class Livro
         private     ?int    $id = null,
         public      string  $titulo,
         public      Autor   $autor,
-        private     string  $quantidade,
+        public      string  $quantidade,
     ) {
         $this->ativo = true;
     }

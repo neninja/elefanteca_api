@@ -1,6 +1,10 @@
 <?php
 
-use Core\Services\Emprestimo\CadastroLivroService;
+use Core\Services\Emprestimo\{
+    CadastroLivroService,
+    CadastroAutorService,
+};
+
 use Core\Models\Livro;
 
 use App\Repositories\Doctrine\{
@@ -21,9 +25,9 @@ class CadastroLivroServiceTest extends IntegrationTestCase
         );
     }
 
-    private function usuarioPersistido(Usuario $u): Usuario
+    private function livroPersistido(Livro $l): Livro
     {
-        return $this->persistidoById(Usuario::class, $u->getId());
+        return $this->persistidoById(Livro::class, $l->getId());
     }
 
     private function fixture($contexto)
@@ -32,11 +36,13 @@ class CadastroLivroServiceTest extends IntegrationTestCase
 
         switch($contexto){
         case 'ok':
+            $autor = (new CadastroAutorService(
+                $this->factory(AutoresRepository::class),
+            ))->execute($faker->name());
             return [
-                'nome'  => $faker->name(),
-                'cpf'   => $faker->cpf(false),
-                'email' => $faker->email(),
-                'senha' => $faker->password(),
+                'titulo'        => $faker->name(),
+                'idAutor'       => $autor->getId(),
+                'quantidade'    => $faker->randomDigitNotNull(),
             ];
         default:
             throw new \InvalidArgumentException();
@@ -50,9 +56,9 @@ class CadastroLivroServiceTest extends IntegrationTestCase
         $fixture = $this->fixture('ok');
 
         $livro = $sut->execute(
-            titulo:     $fixture['nome'],
-            idAutor:    $fixture['cpf'],
-            quantidade: $fixture['email'],
+            titulo:     $fixture['titulo'],
+            idAutor:    $fixture['idAutor'],
+            quantidade: $fixture['quantidade'],
         );
 
         $this->assertNotNull($livro->getId());
@@ -63,57 +69,16 @@ class CadastroLivroServiceTest extends IntegrationTestCase
             $persistido->getId()
         );
         $this->assertEquals(
-            $usuario->titulo,
+            $livro->titulo,
             $persistido->titulo
         );
         $this->assertEquals(
-            $usuario->autor->getId(),
+            $livro->autor->getId(),
             $persistido->autor->getId()
         );
         $this->assertEquals(
-            $usuario->quantidade,
+            $livro->quantidade,
             $persistido->quantidade
         );
     }
-
-    /*
-    public function testDeveCriptografarSenha()
-    {
-        $sut = $this->newSut();
-
-        $fixture = $this->fixture('ok');
-
-        $usuario = $sut->execute(
-            nome:   $fixture['nome'],
-            cpf:    $fixture['cpf'],
-            email:  $fixture['email'],
-            senha:  $fixture['senha'],
-        );
-
-        $this->assertNotEquals($fixture['senha'], $usuario->getSenha());
-        $this->assertNotEquals(
-            $fixture['senha'],
-            $this->usuarioPersistido($usuario)->getSenha()
-        );
-    }
-
-    public function testDeveCriarAtivo()
-    {
-        $sut = $this->newSut();
-
-        $fixture = $this->fixture('ok');
-
-        $usuario = $sut->execute(
-            nome:   $fixture['nome'],
-            cpf:    $fixture['cpf'],
-            email:  $fixture['email'],
-            senha:  $fixture['senha'],
-        );
-
-        $this->assertTrue($usuario->getAtivo());
-
-        $this->assertTrue($this->usuarioPersistido($usuario)->getAtivo());
-    }
-     */
 }
-
