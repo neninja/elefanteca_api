@@ -1,13 +1,21 @@
 
-##teamcity[testCount count='20' flowId='1']
+##teamcity[testCount count='21' flowId='1']
 
 ##teamcity[testSuiteStarted name='e2e' flowId='1']
+
+##teamcity[testSuiteStarted name='AuthorsAPITest' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest' flowId='1']
+
+##teamcity[testStarted name='testDeveCriarAutor' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testDeveCriarAutor' flowId='1']
+
+##teamcity[testFinished name='testDeveCriarAutor' duration='107' flowId='1']
+
+##teamcity[testSuiteFinished name='AuthorsAPITest' flowId='1']
 
 ##teamcity[testSuiteStarted name='UsersAPITest' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriarUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testDeveCriarUsuario' flowId='1']
 
-##teamcity[testFinished name='testDeveCriarUsuario' duration='98' flowId='1']
+##teamcity[testFinished name='testDeveCriarUsuario' duration='19' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -19,7 +27,7 @@
 
 ##teamcity[testStarted name='testDevePersistirComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroAutorServiceTest.php::\CadastroAutorServiceTest::testDevePersistirComValoresObrigatorios' flowId='1']
 
-##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='12' flowId='1']
+##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='14' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroAutorServiceTest' flowId='1']
 
@@ -27,7 +35,7 @@
 
 ##teamcity[testStarted name='testDevePersistirComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest::testDevePersistirComValoresObrigatorios' flowId='1']
 
-##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='12' flowId='1']
+##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='14' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroLivroServiceTest' flowId='1']
 
@@ -35,7 +43,7 @@
 
 ##teamcity[testStarted name='testDevePersistirComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDevePersistirComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testDevePersistirComNomeCpfEmailSenhaCorretos' duration='13' flowId='1']
+##teamcity[testFinished name='testDevePersistirComNomeCpfEmailSenhaCorretos' duration='14' flowId='1']
 
 ##teamcity[testStarted name='testDeveCriptografarSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testDeveCriptografarSenha' flowId='1']
 

@@ -3,6 +3,24 @@ info:
   title: Elefanteca
   version: 0.0.0
 paths:
+  /api/authors:
+    post:
+      tags:
+        - autor
+      description: 'Cadastro de usuário'
+      operationId: 291d8539d3b5490d46fe9f2ebd84c64c
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: 'Edgar Allan Poe'
+              type: object
+      responses:
+        '200':
+          description: 'Autor criado'
   /api/users:
     post:
       tags:

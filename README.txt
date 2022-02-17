@@ -1,3 +1,6 @@
+Authors API
+ [x] Deve criar autor
+
 Users API
  [x] Deve criar usuario
 
