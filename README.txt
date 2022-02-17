@@ -1,8 +1,11 @@
 Users API
  [x] Deve criar usuario
 
+Cadastro Autor Service
+ [x] Deve persistir com valores obrigatorios
+
 Cadastro Livro Service
- [ ] Deve persistir com valores obrigatorios
+ [x] Deve persistir com valores obrigatorios
 
 Cadastro Usuario Service
  [x] Deve persistir com nome cpf email senha corretos
