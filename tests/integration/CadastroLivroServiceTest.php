@@ -49,7 +49,7 @@ class CadastroLivroServiceTest extends IntegrationTestCase
         }
     }
 
-    public function testDevePersistirComValoresObrigatorios()
+    public function testPersisteComValoresObrigatorios()
     {
         $sut = $this->newSut();
 

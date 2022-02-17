@@ -45,7 +45,7 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
         }
     }
 
-    public function testDevePersistirComNomeCpfEmailSenhaCorretos()
+    public function testPersisteComNomeCpfEmailSenhaCorretos()
     {
         $sut = $this->newSut();
 
@@ -83,7 +83,7 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
         );
     }
 
-    public function testDeveCriptografarSenha()
+    public function testCriptografaSenha()
     {
         $sut = $this->newSut();
 
@@ -103,7 +103,7 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
         );
     }
 
-    public function testDeveCriarAtivo()
+    public function testCriaComoAtivo()
     {
         $sut = $this->newSut();
 

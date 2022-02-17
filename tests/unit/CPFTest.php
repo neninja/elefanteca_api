@@ -10,10 +10,10 @@ use Core\Exceptions\CoreException;
 class CPFTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @testdox Deve formatar $cru para $formatado
+     * @testdox Formata $cru para $formatado
      * @dataProvider cpfsFormatados
      */
-    public function testDeveFormatar($cru, $formatado)
+    public function testFormata($cru, $formatado)
     {
         $cpf = new CPF($cru);
         $this->assertEquals(
@@ -32,10 +32,10 @@ class CPFTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @testdox Deve falhar como "CPF inválido" $cpf
+     * @testdox Falha como "CPF inválido" $cpf
      * @dataProvider cpfsInvalidos
      */
-    public function testDeveFalharComErroAmigavel($cpf)
+    public function testFalhaComErroAmigavel($cpf)
     {
         $this->expectException(CoreException::class);
         $this->expectExceptionMessage('CPF inválido');

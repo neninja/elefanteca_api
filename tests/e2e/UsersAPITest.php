@@ -6,7 +6,7 @@ class UsersAPITest extends E2ETestCase
 {
     private static $ep = '/api/users';
 
-    public function testDeveCriarUsuario()
+    public function testCriaUsuario()
     {
         $faker = Faker\Factory::create('pt_BR');
 

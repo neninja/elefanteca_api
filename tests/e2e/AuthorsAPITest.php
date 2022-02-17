@@ -6,7 +6,7 @@ class AuthorsAPITest extends E2ETestCase
 {
     private static $ep = '/api/authors';
 
-    public function testDeveCriarAutor()
+    public function testCriaAutor()
     {
         $faker = Faker\Factory::create('pt_BR');
 
