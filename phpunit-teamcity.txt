@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testDeveCriarUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testDeveCriarUsuario' flowId='1']
 
-##teamcity[testFinished name='testDeveCriarUsuario' duration='96' flowId='1']
+##teamcity[testFinished name='testDeveCriarUsuario' duration='98' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -27,7 +27,7 @@
 
 ##teamcity[testStarted name='testDevePersistirComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest::testDevePersistirComValoresObrigatorios' flowId='1']
 
-##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='13' flowId='1']
+##teamcity[testFinished name='testDevePersistirComValoresObrigatorios' duration='12' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroLivroServiceTest' flowId='1']
 
