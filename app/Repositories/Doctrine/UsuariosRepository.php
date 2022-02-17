@@ -19,7 +19,7 @@ class UsuariosRepository implements \Core\Repositories\IUsuariosRepository
         return $u;
     }
 
-    public function findById(int $id): Usuario
+    public function findById(int $id): ?Usuario
     {
         return $this->em->find(Usuario::class, $id);
     }

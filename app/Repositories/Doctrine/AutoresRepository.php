@@ -19,7 +19,7 @@ class AutoresRepository implements \Core\Repositories\IAutoresRepository
         return $e;
     }
 
-    public function findById(int $id): Autor
+    public function findById(int $id): ?Autor
     {
         return $this->em->find(Autor::class, $id);
     }

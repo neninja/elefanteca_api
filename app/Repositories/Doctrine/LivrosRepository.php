@@ -19,7 +19,7 @@ class LivrosRepository implements \Core\Repositories\ILivrosRepository
         return $e;
     }
 
-    public function findById(int $id): Livro
+    public function findById(int $id): ?Livro
     {
         return $this->em->find(Livro::class, $id);
     }

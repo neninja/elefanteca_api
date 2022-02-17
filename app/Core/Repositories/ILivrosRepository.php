@@ -7,6 +7,6 @@ use Core\Models\Livro;
 interface ILivrosRepository
 {
     public function save(Livro $e): Livro;
-    public function findById(int $id): Livro;
+    public function findById(int $id): ?Livro;
 }
 
