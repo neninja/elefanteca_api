@@ -64,6 +64,7 @@ class UserController extends Controller
 
         return response()
             ->json([
+                'id'        => $u->getId(),
                 'name'      => $u->nome,
                 'cpf'       => $u->cpf->getNumero(),
                 'email'     => $u->email->getEmail(),
