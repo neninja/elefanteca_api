@@ -21,7 +21,10 @@
         <env name="APP_KEY" value="nU9ClNv41WWjjrFPFSkCvujzteHWJ9SN"/>
         <env name="DB_CONNECTION_DOCTRINE" value="pdo_sqlite"/>
         <env name="DB_CONNECTION" value="sqlite"/>
+        <env name="DB_HOST" value="localhost" />
         <env name="DB_DATABASE" value=":memory:"/>
+        <env name="DB_USERNAME" value="elefanteca_user"/>
+        <env name="DB_PASSWORD" value="123"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
     </php>
