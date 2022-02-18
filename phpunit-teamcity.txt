@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testCriaTokenJWT' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testCriaTokenJWT' flowId='1']
 
-##teamcity[testFinished name='testCriaTokenJWT' duration='96' flowId='1']
+##teamcity[testFinished name='testCriaTokenJWT' duration='108' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenSemAutenticacaoJWT' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenSemAutenticacaoJWT' flowId='1']
 
@@ -19,136 +19,6 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacao' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacao' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacao' duration='14' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacao' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testCriaAutorComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaAutorComoColaborador' flowId='1']
-
-##teamcity[testFailed name='testCriaAutorComoColaborador' message='Unable to find JSON fragment: |n|n|[{"name":"Sr. Fabiano S\u00e9rgio Correia Filho"}|]|n|nwithin|n|n|[|["N\u00e3o autorizado Type error: $keyMaterial must be a string, resource, or OpenSSLAsymmetricKey"|]|].|nFailed asserting that false is true.' details=' /app/vendor/illuminate/testing/AssertableJsonString.php:144|n /app/vendor/illuminate/testing/TestResponse.php:735|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:296|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:256|n /app/tests/e2e/AuthorsAPITest.php:35|n ' duration='18' flowId='1']
-
-##teamcity[testFinished name='testCriaAutorComoColaborador' duration='18' flowId='1']
-
-##teamcity[testSuiteFinished name='AuthorsAPITest' flowId='1']
-
-##teamcity[testSuiteStarted name='UsersAPITest' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest' flowId='1']
-
-##teamcity[testStarted name='testFalhaSemAutenticacao' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSemAutenticacao' flowId='1']
-
-##teamcity[testFinished name='testFalhaSemAutenticacao' duration='12' flowId='1']
-
-##teamcity[testStarted name='testCriaUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuario' flowId='1']
-
-##teamcity[testFailed name='testCriaUsuario' message='Unable to find JSON fragment: |n|n|[{"cpf":"74119414922"}|]|n|nwithin|n|n|[|["N\u00e3o autorizado Type error: $keyMaterial must be a string, resource, or OpenSSLAsymmetricKey"|]|].|nFailed asserting that false is true.' details=' /app/vendor/illuminate/testing/AssertableJsonString.php:144|n /app/vendor/illuminate/testing/TestResponse.php:735|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:296|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:256|n /app/tests/e2e/UsersAPITest.php:41|n ' duration='17' flowId='1']
-
-##teamcity[testFinished name='testCriaUsuario' duration='17' flowId='1']
-
-##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
-
-##teamcity[testSuiteFinished name='e2e' flowId='1']
-
-##teamcity[testSuiteStarted name='integration' flowId='1']
-
-##teamcity[testSuiteStarted name='CadastroAutorServiceTest' locationHint='php_qn:///app/tests/integration/CadastroAutorServiceTest.php::\CadastroAutorServiceTest' flowId='1']
-
-##teamcity[testStarted name='testPersisteComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroAutorServiceTest.php::\CadastroAutorServiceTest::testPersisteComValoresObrigatorios' flowId='1']
-
-##teamcity[testFinished name='testPersisteComValoresObrigatorios' duration='16' flowId='1']
-
-##teamcity[testSuiteFinished name='CadastroAutorServiceTest' flowId='1']
-
-##teamcity[testSuiteStarted name='CadastroLivroServiceTest' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest' flowId='1']
-
-##teamcity[testStarted name='testPersisteComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest::testPersisteComValoresObrigatorios' flowId='1']
-
-##teamcity[testFinished name='testPersisteComValoresObrigatorios' duration='12' flowId='1']
-
-##teamcity[testSuiteFinished name='CadastroLivroServiceTest' flowId='1']
-
-##teamcity[testSuiteStarted name='CadastroUsuarioServiceTest' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest' flowId='1']
-
-##teamcity[testStarted name='testPersisteComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testPersisteComNomeCpfEmailSenhaCorretos' flowId='1']
-
-##teamcity[testFinished name='testPersisteComNomeCpfEmailSenhaCorretos' duration='12' flowId='1']
-
-##teamcity[testStarted name='testCriptografaSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriptografaSenha' flowId='1']
-
-##teamcity[testFinished name='testCriptografaSenha' duration='12' flowId='1']
-
-##teamcity[testStarted name='testCriaComoAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriaComoAtivo' flowId='1']
-
-##teamcity[testFinished name='testCriaComoAtivo' duration='13' flowId='1']
-
-##teamcity[testSuiteFinished name='CadastroUsuarioServiceTest' flowId='1']
-
-##teamcity[testSuiteFinished name='integration' flowId='1']
-
-##teamcity[testSuiteStarted name='unit' flowId='1']
-
-##teamcity[testSuiteStarted name='CPFTest' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest' flowId='1']
-
-##teamcity[testSuiteStarted name='testFormata' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFormata' flowId='1']
-
-##teamcity[testStarted name='testFormata with data set #0' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFormata with data set #0' flowId='1']
-
-##teamcity[testFinished name='testFormata with data set #0' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFormata with data set #1' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFormata with data set #1' flowId='1']
-
-##teamcity[testFinished name='testFormata with data set #1' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFormata with data set #2' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFormata with data set #2' flowId='1']
-
-##teamcity[testFinished name='testFormata with data set #2' duration='1' flowId='1']
-
-##teamcity[testSuiteFinished name='testFormata' flowId='1']
-
-##teamcity[testSuiteStarted name='testFalhaComErroAmigavel' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #0' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #0' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #0' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #1' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #1' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #1' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #2' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #2' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #2' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #3' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #3' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #3' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #4' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #4' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #4' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #5' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #5' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #5' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #6' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #6' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #6' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #7' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #7' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #7' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #8' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #8' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #8' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #9' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #9' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #9' duration='1' flowId='1']
-
-##teamcity[testStarted name='testFalhaComErroAmigavel with data set #10' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #10' flowId='1']
-
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #10' duration='1' flowId='1']
-
-##teamcity[testSuiteFinished name='testFalhaComErroAmigavel' flowId='1']
-
-##teamcity[testSuiteFinished name='CPFTest' flowId='1']
-
-##teamcity[testSuiteFinished name='unit' flowId='1']
