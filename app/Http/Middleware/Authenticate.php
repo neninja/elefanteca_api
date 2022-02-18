@@ -2,6 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use App\Repositories\Doctrine\UsuariosRepository;
+
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 use Closure;
 use Illuminate\Contracts\Auth\Factory as Auth;
 
@@ -35,10 +39,24 @@ class Authenticate
      */
     public function handle($request, Closure $next, $guard = null)
     {
-        if ($this->auth->guard($guard)->guest()) {
-            return response('Unauthorized.', 401);
-        }
+        try {
+            if (!$request->hasHeader('Authorization')) {
+                throw new \Exception();
+            }
+            $authorizationHeader = $request->header('Authorization');
+            $token = str_replace('Bearer ', '', $authorizationHeader);
+            $dadosAutenticacao = JWT::decode($token, new Key(env('JWT_KEY'), 'HS256'));
 
-        return $next($request);
+            $usuario = app(UsuariosRepository::class)
+                ->findByEmail($dadosAutenticacao->email);
+
+            if (is_null($usuario)) {
+                throw new \Exception();
+            }
+
+            return $next($request);
+        } catch (\Exception $e) {
+            return response()->json('Não autorizado', 401);
+        }
     }
 }

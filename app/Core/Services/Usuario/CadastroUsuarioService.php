@@ -28,7 +28,8 @@ class CadastroUsuarioService
         string $nome,
         string $cpf,
         string $senha,
-        string $email
+        string $email,
+        string $papel = 'membro',
     ): Usuario {
 
         $senhaCriptografada = $this->crypt->encrypt($senha);
