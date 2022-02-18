@@ -9,6 +9,7 @@
         "doctrine/cache": "^2.1",
         "doctrine/migrations": "^3.2",
         "doctrine/orm": "^2.9",
+        "firebase/php-jwt": "^6.0",
         "laravel/lumen-framework": "^8.0",
         "symfony/cache": "^5.3",
         "zircote/swagger-php": "^3.2"

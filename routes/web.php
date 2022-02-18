@@ -24,4 +24,7 @@ $router->get('/swagger', function () use ($router) {
 $router->group(['prefix' => 'api'], function ($request) use ($router) {
     $router->post('users', 'UserController@store');
     $router->post('authors', 'AuthorController@store');
+    $router->group(['prefix' => 'auth'], function ($request) use ($router) {
+        $router->get('login/jwt', 'AuthController@loginJWT');
+    });
 });
