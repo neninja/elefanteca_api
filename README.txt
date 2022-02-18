@@ -1,5 +1,5 @@
 Auth API
- [x] Cria token jw t
+ [x] Cria token jwt
  [x] Falha ao criar token sem autenticacao jwt
 
 Authors API
