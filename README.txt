@@ -1,8 +1,14 @@
+Auth API
+ [x] Cria token j w t
+ [x] Falha ao criar token sem autenticacao j w t
+
 Authors API
- [x] Cria autor
+ [x] Falha sem autenticacao
+ [ ] Cria autor como colaborador
 
 Users API
- [x] Cria usuario
+ [x] Falha sem autenticacao
+ [ ] Cria usuario
 
 Cadastro Autor Service
  [x] Persiste com valores obrigatorios

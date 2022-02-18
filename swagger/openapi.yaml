@@ -3,6 +3,27 @@ info:
   title: Elefanteca
   version: 0.0.0
 paths:
+  /api/auth/login/jwt:
+    post:
+      tags:
+        - auth
+      description: 'Login com JWT'
+      operationId: 7aa2ba8401e13c0f62d8ccaeb57b6b98
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              properties:
+                email:
+                  type: string
+                  example: example@foo.com
+                password:
+                  type: string
+                  example: '19800507'
+              type: object
+      responses:
+        '200':
+          description: 'JWT gerado'
   /api/authors:
     post:
       tags:
