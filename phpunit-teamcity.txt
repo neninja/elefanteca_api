@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testCriaTokenJWT' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testCriaTokenJWT' flowId='1']
 
-##teamcity[testFinished name='testCriaTokenJWT' duration='124' flowId='1']
+##teamcity[testFinished name='testCriaTokenJWT' duration='126' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenSemAutenticacaoJWT' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenSemAutenticacaoJWT' flowId='1']
 
@@ -19,13 +19,13 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacao' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacao' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacao' duration='15' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacao' duration='16' flowId='1']
 
 ##teamcity[testStarted name='testCriaAutorComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaAutorComoColaborador' flowId='1']
 
-##teamcity[testFailed name='testCriaAutorComoColaborador' message='Expected response status code |[200|] but received 401.|nFailed asserting that 200 is identical to 401.' details=' /app/vendor/illuminate/testing/TestResponse.php:177|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:426|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:437|n /app/tests/e2e/AuthorsAPITest.php:35|n ' duration='21' flowId='1']
+##teamcity[testFailed name='testCriaAutorComoColaborador' message='Expected response status code |[200|] but received 401.|nFailed asserting that 200 is identical to 401.' details=' /app/vendor/illuminate/testing/TestResponse.php:177|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:426|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:437|n /app/tests/e2e/AuthorsAPITest.php:35|n ' duration='22' flowId='1']
 
-##teamcity[testFinished name='testCriaAutorComoColaborador' duration='21' flowId='1']
+##teamcity[testFinished name='testCriaAutorComoColaborador' duration='22' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthorsAPITest' flowId='1']
 
@@ -37,9 +37,9 @@
 
 ##teamcity[testStarted name='testCriaUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuario' flowId='1']
 
-##teamcity[testFailed name='testCriaUsuario' message='Expected response status code |[200|] but received 401.|nFailed asserting that 200 is identical to 401.' details=' /app/vendor/illuminate/testing/TestResponse.php:177|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:426|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:437|n /app/tests/e2e/UsersAPITest.php:41|n ' duration='18' flowId='1']
+##teamcity[testFailed name='testCriaUsuario' message='Expected response status code |[200|] but received 401.|nFailed asserting that 200 is identical to 401.' details=' /app/vendor/illuminate/testing/TestResponse.php:177|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:426|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:437|n /app/tests/e2e/UsersAPITest.php:41|n ' duration='20' flowId='1']
 
-##teamcity[testFinished name='testCriaUsuario' duration='18' flowId='1']
+##teamcity[testFinished name='testCriaUsuario' duration='20' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -59,7 +59,7 @@
 
 ##teamcity[testStarted name='testPersisteComValoresObrigatorios' locationHint='php_qn:///app/tests/integration/CadastroLivroServiceTest.php::\CadastroLivroServiceTest::testPersisteComValoresObrigatorios' flowId='1']
 
-##teamcity[testFinished name='testPersisteComValoresObrigatorios' duration='13' flowId='1']
+##teamcity[testFinished name='testPersisteComValoresObrigatorios' duration='14' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroLivroServiceTest' flowId='1']
 
@@ -67,15 +67,15 @@
 
 ##teamcity[testStarted name='testPersisteComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testPersisteComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testPersisteComNomeCpfEmailSenhaCorretos' duration='13' flowId='1']
+##teamcity[testFinished name='testPersisteComNomeCpfEmailSenhaCorretos' duration='14' flowId='1']
 
 ##teamcity[testStarted name='testCriptografaSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriptografaSenha' flowId='1']
 
-##teamcity[testFinished name='testCriptografaSenha' duration='13' flowId='1']
+##teamcity[testFinished name='testCriptografaSenha' duration='14' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriaComoAtivo' flowId='1']
 
-##teamcity[testFinished name='testCriaComoAtivo' duration='14' flowId='1']
+##teamcity[testFinished name='testCriaComoAtivo' duration='15' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroUsuarioServiceTest' flowId='1']
 
