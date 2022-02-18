@@ -60,7 +60,8 @@ abstract class LumenTestCase extends TestCase
         self::$em = app()->make(EntityManager::class);
 
         self::createDatabase();
-        self::$dynamicSetUp = [];
+
+        // self::$dynamicSetUp = []; // deveria ser feita a configuração inicial somente uma vez
     }
 
     protected static function beginTransaction()
