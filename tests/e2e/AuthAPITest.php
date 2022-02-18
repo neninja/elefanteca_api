@@ -37,8 +37,8 @@ class AuthAPITest extends E2ETestCase
 
         $access = $this
             ->json('GET', '/api/auth/login/jwt', $bodyLoginRequest)
-            ->seeStatusCode(200)
             ->seeJsonStructure(['token'])
+            ->seeStatusCode(200)
             ->response
             ->decodeResponseJson();
     }
@@ -69,8 +69,8 @@ class AuthAPITest extends E2ETestCase
 
         $access = $this
             ->json('GET', '/api/auth/login/jwt', $bodyLoginRequest)
-            ->seeStatusCode(401)
             ->seeJson(["Usuário ou senha inválidos"])
+            ->seeStatusCode(401)
             ->response
             ->getContent();
     }

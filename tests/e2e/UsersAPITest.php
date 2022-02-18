@@ -38,8 +38,8 @@ class UsersAPITest extends E2ETestCase
 
         $response = $this
             ->jsonComoColaborador('POST', self::$ep, $bodyRequest)
-            ->seeStatusCode(200)
             ->seeJson($bodyResponse)
+            ->seeStatusCode(200)
             ->response
             ->decodeResponseJson();
 
