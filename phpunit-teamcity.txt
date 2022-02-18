@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testCriaTokenJwT' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testCriaTokenJwT' flowId='1']
 
-##teamcity[testFinished name='testCriaTokenJwT' duration='94' flowId='1']
+##teamcity[testFinished name='testCriaTokenJwT' duration='103' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenSemAutenticacaoJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenSemAutenticacaoJwt' flowId='1']
 
@@ -23,9 +23,7 @@
 
 ##teamcity[testStarted name='testCriaAutorComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaAutorComoColaborador' flowId='1']
 
-##teamcity[testFailed name='testCriaAutorComoColaborador' message='Unable to find JSON fragment: |n|n|[{"name":"Nicolas Eduardo Sales Sobrinho"}|]|n|nwithin|n|n|[|["N\u00e3o autorizado"|]|].|nFailed asserting that false is true.' details=' /app/vendor/illuminate/testing/AssertableJsonString.php:144|n /app/vendor/illuminate/testing/TestResponse.php:735|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:296|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:256|n /app/tests/e2e/AuthorsAPITest.php:35|n ' duration='16' flowId='1']
-
-##teamcity[testFinished name='testCriaAutorComoColaborador' duration='16' flowId='1']
+##teamcity[testFinished name='testCriaAutorComoColaborador' duration='22' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthorsAPITest' flowId='1']
 
@@ -33,13 +31,11 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacao' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSemAutenticacao' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacao' duration='10' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacao' duration='11' flowId='1']
 
 ##teamcity[testStarted name='testCriaUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuario' flowId='1']
 
-##teamcity[testFailed name='testCriaUsuario' message='Unable to find JSON fragment: |n|n|[{"cpf":"22906802573"}|]|n|nwithin|n|n|[|["N\u00e3o autorizado"|]|].|nFailed asserting that false is true.' details=' /app/vendor/illuminate/testing/AssertableJsonString.php:144|n /app/vendor/illuminate/testing/TestResponse.php:735|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:296|n /app/vendor/laravel/lumen-framework/src/Testing/Concerns/MakesHttpRequests.php:256|n /app/tests/e2e/UsersAPITest.php:41|n ' duration='15' flowId='1']
-
-##teamcity[testFinished name='testCriaUsuario' duration='15' flowId='1']
+##teamcity[testFinished name='testCriaUsuario' duration='18' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -67,15 +63,15 @@
 
 ##teamcity[testStarted name='testPersisteComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testPersisteComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testPersisteComNomeCpfEmailSenhaCorretos' duration='2' flowId='1']
+##teamcity[testFinished name='testPersisteComNomeCpfEmailSenhaCorretos' duration='3' flowId='1']
 
 ##teamcity[testStarted name='testCriptografaSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriptografaSenha' flowId='1']
 
-##teamcity[testFinished name='testCriptografaSenha' duration='3' flowId='1']
+##teamcity[testFinished name='testCriptografaSenha' duration='4' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriaComoAtivo' flowId='1']
 
-##teamcity[testFinished name='testCriaComoAtivo' duration='2' flowId='1']
+##teamcity[testFinished name='testCriaComoAtivo' duration='3' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroUsuarioServiceTest' flowId='1']
 
