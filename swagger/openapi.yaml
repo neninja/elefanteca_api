@@ -4,11 +4,11 @@ info:
   version: 0.0.0
 paths:
   /api/auth/login/jwt:
-    post:
+    get:
       tags:
         - auth
       description: 'Login com JWT'
-      operationId: 7aa2ba8401e13c0f62d8ccaeb57b6b98
+      operationId: 46fb8f96f11a2a9a0044e9824f10a247
       requestBody:
         content:
           application/json;charset=UTF-8:
