@@ -4,11 +4,11 @@ Auth API
 
 Authors API
  [x] Falha sem autenticacao
- [x] Cria autor como colaborador
+ [ ] Cria autor como colaborador
 
 Users API
  [x] Falha sem autenticacao
- [x] Cria usuario
+ [ ] Cria usuario
 
 Cadastro Autor Service
  [x] Persiste com valores obrigatorios
