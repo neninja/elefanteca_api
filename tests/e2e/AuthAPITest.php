@@ -11,7 +11,7 @@ use App\Adapters\{
 
 class AuthAPITest extends E2ETestCase
 {
-    public function testCriaTokenJwT()
+    public function testCriaTokenJwt()
     {
         $faker = Faker\Factory::create('pt_BR');
 
