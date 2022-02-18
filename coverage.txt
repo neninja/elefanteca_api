@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:      
-  2022-02-18 05:31:00      
+  2022-02-18 12:12:59      
                            
  Summary:                  
   Classes: 41.18% (7/17)   
   Methods: 56.82% (25/44)  
-  Lines:   83.42% (156/187)
+  Lines:   83.33% (155/186)
 
 App\Http\Controllers\AuthController
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 12/ 12)
@@ -15,7 +15,7 @@ App\Http\Controllers\AuthorController
 App\Http\Controllers\UserController
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 14/ 14)
 App\Http\Middleware\Authenticate
-  Methods:  50.00% ( 1/ 2)   Lines:  93.33% ( 14/ 15)
+  Methods:  50.00% ( 1/ 2)   Lines:  92.86% ( 13/ 14)
 Core\Models\Autor
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  3/  3)
 Core\Models\CPF
