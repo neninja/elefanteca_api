@@ -16,7 +16,7 @@ class AuthController extends Controller
     ) {}
 
     /**
-     * @OA\Post(
+     * @OA\Get(
      *     tags={"auth"},
      *     path="/api/auth/login/jwt",
      *     description="Login com JWT",
