@@ -16,6 +16,9 @@ jobs:
         with:
           php_version: 8.0
 
+      - name: Env file
+        run: mv .env.example .env
+
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v2
         with:
