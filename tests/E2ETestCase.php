@@ -2,13 +2,6 @@
 
 use Core\Services\Usuario\CadastroUsuarioService;
 
-use App\Repositories\Doctrine\{
-    UsuariosRepository,
-};
-use App\Adapters\{
-    LumenCryptProvider,
-};
-
 abstract class E2ETestCase extends LumenTestCase
 {
     protected function jsonComoColaborador(
@@ -16,10 +9,7 @@ abstract class E2ETestCase extends LumenTestCase
     ) {
         $faker = Faker\Factory::create('pt_BR');
 
-        $s = new CadastroUsuarioService(
-            $this->factory(UsuariosRepository::class),
-            $this->factory(LumenCryptProvider::class),
-        );
+        $s = $this->factory(CadastroUsuarioService::class);
 
         $email = $faker->email();
         $passw = $faker->password();

@@ -1,14 +1,8 @@
 <?php
 
-use Laravel\Lumen\Testing\TestCase;
-
 use Doctrine\ORM\EntityManagerInterface as EntityManager;
 
-use App\Adapters\{
-    LumenCryptProvider,
-};
-
-abstract class LumenTestCase extends TestCase
+abstract class LumenTestCase extends \Laravel\Lumen\Testing\TestCase
 {
     use Doctrine;
 
@@ -20,6 +14,14 @@ abstract class LumenTestCase extends TestCase
         return require __DIR__.'/../bootstrap/app.php';
     }
 
+    /*
+     * O App deve ser instanciado (usando ->createApplication), e isso ocorre
+     * APÓS ::setUpBeforeClass(), portando configurações que devem ser feitas
+     * somente uma vez e dependem do app:
+     *  1) Ainda devem ser estáticas
+     *  2) Precisam estar inicialmente no array de instruções
+     *  3) Serem removidas após a primeira execução
+     */
     public static function setUpBeforeClass(): void
     {
         self::$dynamicSetUp = ['databaseInitialConfigProccess'];
@@ -38,6 +40,7 @@ abstract class LumenTestCase extends TestCase
             ->getConnection()
             ->getWrappedConnection();
 
+        /* Asserts de database do Lumen */
         DB::connection()->setPdo($connection);
 
         self::beginTransaction();
@@ -56,7 +59,7 @@ abstract class LumenTestCase extends TestCase
 
     protected static function databaseInitialConfigProccess()
     {
-        // pega conexão singleton que será utilizada na app
+        /* Conexão singleton criada e utilizada no app pelo Lumen */
         self::$em = app()->make(EntityManager::class);
 
         self::createDatabase();
@@ -87,17 +90,7 @@ abstract class LumenTestCase extends TestCase
 
     protected function factory(string $namespace)
     {
-        if(preg_match('/Repository$/', $namespace)) {
-            return new $namespace(self::$em);
-        }
-
-        switch($namespace){
-        case LumenCryptProvider::class:
-            return new $namespace(self::$em);
-            break;
-        }
-
-        return $namespace;
+        return app()->make($namespace);
     }
 
     protected function databaseQuery(string $query)
