@@ -4,9 +4,6 @@ use Laravel\Lumen\Testing\TestCase;
 
 use Doctrine\ORM\EntityManagerInterface as EntityManager;
 
-use App\Repositories\Doctrine\{
-    UsuariosRepository,
-};
 use App\Adapters\{
     LumenCryptProvider,
 };
