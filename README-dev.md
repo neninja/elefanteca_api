@@ -58,6 +58,11 @@ composer doctrine orm:mapping:describe Livro
 docker-compose exec app composer doctrine:migrations migrations:status
 ```
 
+- Executa migration:
+```sh
+docker-compose exec app composer doctrine:migrations migrate
+```
+
 ## Testes
 
 - Simples
