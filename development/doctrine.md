@@ -55,3 +55,9 @@ docker-compose exec app composer doctrine:migrations migrations:status
 ```sh
 docker-compose exec app composer doctrine:migrations migrate
 ```
+
+- Reset database:
+```sh
+docker-compose exec app composer doctrine:migrations migrate first
+docker-compose exec app composer doctrine:migrations migrate latest
+```
