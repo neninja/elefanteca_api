@@ -1,7 +1,5 @@
 <?php
 
-use Core\Models\Usuario;
-
 class UsersAPITest extends E2ETestCase
 {
     private static $ep = '/api/users';
@@ -12,7 +10,7 @@ class UsersAPITest extends E2ETestCase
             'name' => $this->fakeName(),
         ];
 
-        $response = $this
+        $this
             ->json('POST', self::$ep, $bodyRequest)
             ->seeStatusCode(401);
     }
@@ -32,14 +30,11 @@ class UsersAPITest extends E2ETestCase
             'email'     => $bodyRequest['email'],
         ];
 
-        $response = $this
+        $this
             ->jsonComoColaborador('POST', self::$ep, $bodyRequest)
             ->seeJson($bodyResponse)
-            ->seeStatusCode(200)
-            ->response
-            ->decodeResponseJson();
-
-        $this->assertArrayHasKey('id', $response);
+            ->seeJsonStructure(['id'])
+            ->seeStatusCode(200);
 
         $this->seeInDatabase('usuarios', ['email' => $bodyRequest['email']]);
     }

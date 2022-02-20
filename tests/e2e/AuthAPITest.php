@@ -1,74 +1,35 @@
 <?php
 
-use Core\Services\Usuario\CadastroUsuarioService;
-
-use App\Repositories\Doctrine\{
-    UsuariosRepository,
-};
-use App\Adapters\{
-    LumenCryptProvider,
-};
-
 class AuthAPITest extends E2ETestCase
 {
     public function testCriaTokenJwt()
     {
-        $s = new CadastroUsuarioService(
-            $this->factory(UsuariosRepository::class),
-            $this->factory(LumenCryptProvider::class),
-        );
+        $d = $this->criaMembro();
 
-        $email = $this->fakeEmail();
-        $passw = $this->fakePassword();
+        $email = $d['loginJWT']['email'];
+        $passw = $d['loginJWT']['password'];
 
-        $u = $s->execute(
-            nome:   $this->fakeName(),
-            cpf:    $this->fakeCpf(),
-            email:  $email,
-            senha:  $passw,
-        );
-
-        $bodyLoginRequest = [
-            'email'     => $email,
-            'password'  => $passw,
-        ];
-
-        $access = $this
-            ->json('GET', '/api/auth/login/jwt', $bodyLoginRequest)
+        $this
+            ->json('GET', '/api/auth/login/jwt', [
+                'email' => $email, 'password' => $passw
+            ])
             ->seeJsonStructure(['token'])
-            ->seeStatusCode(200)
-            ->response
-            ->decodeResponseJson();
+            ->seeStatusCode(200);
     }
 
     public function testFalhaAoCriarTokenSemAutenticacaoJwt()
     {
-        $s = new CadastroUsuarioService(
-            $this->factory(UsuariosRepository::class),
-            $this->factory(LumenCryptProvider::class),
-        );
+        $d = $this->criaMembro();
 
-        $email = $this->fakeEmail();
-        $passw = $this->fakePassword();
+        $email = $d['loginJWT']['email'];
+        $passw = $d['loginJWT']['password'];
 
-        $u = $s->execute(
-            nome:   $this->fakeName(),
-            cpf:    $this->fakeCpf(),
-            email:  $email,
-            senha:  $passw,
-        );
-
-        $bodyLoginRequest = [
-            'email'     => $email,
-            'password'  => $passw.'senhaerrada',
-        ];
-
-        $access = $this
-            ->json('GET', '/api/auth/login/jwt', $bodyLoginRequest)
+        $this
+            ->json('GET', '/api/auth/login/jwt', [
+                'email' => $email, 'password' => $passw.'senhaincorreta'
+            ])
             ->seeJson(["Usuário ou senha inválidos"])
-            ->seeStatusCode(401)
-            ->response
-            ->getContent();
+            ->seeStatusCode(401);
     }
 }
 

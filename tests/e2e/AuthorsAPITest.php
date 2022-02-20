@@ -10,7 +10,7 @@ class AuthorsAPITest extends E2ETestCase
             'name' => $this->fakeName(),
         ];
 
-        $response = $this
+        $this
             ->json('POST', self::$ep, $bodyRequest)
             ->seeStatusCode(401);
     }
@@ -21,7 +21,7 @@ class AuthorsAPITest extends E2ETestCase
             'name' => $this->fakeName(),
         ];
 
-        $response = $this
+        $this
             ->json('POST', self::$ep, $bodyRequest)
             ->seeStatusCode(401);
     }
@@ -36,15 +36,11 @@ class AuthorsAPITest extends E2ETestCase
             'name'  => $bodyRequest['name'],
         ];
 
-        $response = $this
+        $this
             ->jsonComoColaborador('POST', self::$ep, $bodyRequest)
             ->seeJson($bodyResponse)
             ->seeJsonStructure(['id'])
-            ->seeStatusCode(200)
-            ->response
-            ->decodeResponseJson();
-
-        $this->assertArrayHasKey('id', $response);
+            ->seeStatusCode(200);
 
         $this->seeInDatabase('autores', ['nome' => $bodyRequest['name']]);
     }
@@ -59,15 +55,11 @@ class AuthorsAPITest extends E2ETestCase
             'name'  => $bodyRequest['name'],
         ];
 
-        $response = $this
+        $this
             ->jsonComoAdmin('POST', self::$ep, $bodyRequest)
             ->seeJson($bodyResponse)
             ->seeJsonStructure(['id'])
-            ->seeStatusCode(200)
-            ->response
-            ->decodeResponseJson();
-
-        $this->assertArrayHasKey('id', $response);
+            ->seeStatusCode(200);
 
         $this->seeInDatabase('autores', ['nome' => $bodyRequest['name']]);
     }
