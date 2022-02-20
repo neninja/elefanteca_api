@@ -17,10 +17,12 @@ class CadastroAutorService
     ){}
 
     public function execute(
-        string $nome,
+        string  $nome,
+        ?int    $id = null,
     ): Autor {
         $a = new Autor(
-            nome: $nome,
+            id:     $id,
+            nome:   $nome,
         );
 
         return $this->repo->save($a);

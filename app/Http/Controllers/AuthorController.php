@@ -34,18 +34,65 @@ class AuthorController extends Controller
      *     @OA\Response(response="200", description="Autor criado")
      * )
      */
-    public function store(Request $request)
+    public function store(Request $r)
     {
-        $nome = $request->input('name');
+        $this->validate($r, [
+            'name' => 'required',
+        ]);
 
         $a = $this->cadastroService->execute(
-            nome:   $nome,
+            nome: $r->name,
         );
 
         return response()
             ->json([
-                'id'        => $a->getId(),
-                'name'      => $a->nome,
+                'id'    => $a->getId(),
+                'name'  => $a->nome,
+            ]);
+    }
+
+    /**
+     * @OA\Put(
+     *     tags={"autor"},
+     *     path="/api/authors/{id}",
+     *     description="Cadastro de usuário",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         in="path",
+     *         name="id",
+     *         required=true,
+     *         @OA\Schema(type="string"),
+     *         @OA\Examples(example="int", value="1", summary="Id autor"),
+     *     ),
+     *     @OA\RequestBody(
+     *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
+     *         @OA\Schema(
+     *             @OA\Property(
+     *                  property="name",
+     *                  type="string",
+     *                  example="Edgar Allan Poe"
+     *             )
+     *         ),
+     *         )
+     *     ),
+     *     @OA\Response(response="200", description="Autor criado")
+     * )
+     */
+    public function update(int $id, Request $r)
+    {
+        $this->validate($r, [
+            'name' => 'required',
+        ]);
+
+        $a = $this->cadastroService->execute(
+            id:     $id,
+            nome:   $r->name,
+        );
+
+        return response()
+            ->json([
+                'id'    => $a->getId(),
+                'name'  => $a->nome,
             ]);
     }
 }

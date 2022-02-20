@@ -14,7 +14,11 @@ class AutoresRepository implements \Core\Repositories\IAutoresRepository
 
     public function save(Autor $e): Autor
     {
-        $this->em->persist($e);
+        if(is_null($e->getId())) {
+            $this->em->persist($e);
+        } else {
+            $this->em->merge($e);
+        }
         $this->em->flush();
         return $e;
     }
