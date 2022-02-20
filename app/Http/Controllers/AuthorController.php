@@ -19,6 +19,7 @@ class AuthorController extends Controller
      *     tags={"autor"},
      *     path="/api/authors",
      *     description="Cadastro de usuário",
+     *     security={{"JWT":{}}},
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
      *         @OA\Schema(
