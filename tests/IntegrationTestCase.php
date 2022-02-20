@@ -14,6 +14,7 @@ use App\Adapters\{
 
 abstract class IntegrationTestCase extends \PHPUnit\Framework\TestCase
 {
+    use Fake;
     use Doctrine;
 
     private static EntityManager    $em;

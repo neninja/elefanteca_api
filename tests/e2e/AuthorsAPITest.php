@@ -6,10 +6,8 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacao()
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         $bodyRequest = [
-            'name' => $faker->name(),
+            'name' => $this->fakeName(),
         ];
 
         $response = $this
@@ -22,7 +20,7 @@ class AuthorsAPITest extends E2ETestCase
         $faker = Faker\Factory::create('pt_BR');
 
         $bodyRequest = [
-            'name' => $faker->name(),
+            'name' => $this->fakeName(),
         ];
 
         $response = $this
@@ -35,7 +33,7 @@ class AuthorsAPITest extends E2ETestCase
         $faker = Faker\Factory::create('pt_BR');
 
         $bodyRequest = [
-            'name' => $faker->name(),
+            'name' => $this->fakeName(),
         ];
 
         $bodyResponse = [

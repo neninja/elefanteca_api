@@ -13,19 +13,17 @@ class AuthAPITest extends E2ETestCase
 {
     public function testCriaTokenJwt()
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         $s = new CadastroUsuarioService(
             $this->factory(UsuariosRepository::class),
             $this->factory(LumenCryptProvider::class),
         );
 
-        $email = $faker->email();
-        $passw = $faker->password();
+        $email = $this->fakeEmail();
+        $passw = $this->fakePassword();
 
         $u = $s->execute(
-            nome:   $faker->name(),
-            cpf:    $faker->cpf(false),
+            nome:   $this->fakeName(),
+            cpf:    $this->fakeCpf(),
             email:  $email,
             senha:  $passw,
         );
@@ -45,19 +43,17 @@ class AuthAPITest extends E2ETestCase
 
     public function testFalhaAoCriarTokenSemAutenticacaoJwt()
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         $s = new CadastroUsuarioService(
             $this->factory(UsuariosRepository::class),
             $this->factory(LumenCryptProvider::class),
         );
 
-        $email = $faker->email();
-        $passw = $faker->password();
+        $email = $this->fakeEmail();
+        $passw = $this->fakePassword();
 
         $u = $s->execute(
-            nome:   $faker->name(),
-            cpf:    $faker->cpf(false),
+            nome:   $this->fakeName(),
+            cpf:    $this->fakeCpf(),
             email:  $email,
             senha:  $passw,
         );

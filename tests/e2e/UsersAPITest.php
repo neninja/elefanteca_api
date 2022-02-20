@@ -8,10 +8,8 @@ class UsersAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacao()
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         $bodyRequest = [
-            'name' => $faker->name(),
+            'name' => $this->fakeName(),
         ];
 
         $response = $this
@@ -21,13 +19,11 @@ class UsersAPITest extends E2ETestCase
 
     public function testCriaUsuario()
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         $bodyRequest = [
-            'name'      => $faker->name(),
-            'cpf'       => $faker->cpf(false),
-            'password'  => $faker->password(),
-            'email'     => $faker->email(),
+            'name'      => $this->fakeName(),
+            'cpf'       => $this->fakeCpf(),
+            'password'  => $this->fakePassword(),
+            'email'     => $this->fakeEmail(),
         ];
 
         $bodyResponse = [

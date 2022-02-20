@@ -30,15 +30,13 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
 
     private function fixture($contexto)
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         switch($contexto){
         case 'ok':
             return [
-                'nome'  => $faker->name(),
-                'cpf'   => $faker->cpf(false),
-                'email' => $faker->email(),
-                'senha' => $faker->password(),
+                'nome'  => $this->fakeName(),
+                'cpf'   => $this->fakeCpf(),
+                'email' => $this->fakeEmail(),
+                'senha' => $this->fakePassword(),
             ];
         default:
             throw new \InvalidArgumentException();

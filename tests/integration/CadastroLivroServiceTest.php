@@ -32,17 +32,15 @@ class CadastroLivroServiceTest extends IntegrationTestCase
 
     private function fixture($contexto)
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         switch($contexto){
         case 'ok':
             $autor = (new CadastroAutorService(
                 $this->factory(AutoresRepository::class),
-            ))->execute($faker->name());
+            ))->execute($this->fakeName());
             return [
-                'titulo'        => $faker->name(),
+                'titulo'        => $this->fakeName(),
                 'idAutor'       => $autor->getId(),
-                'quantidade'    => $faker->randomDigitNotNull(),
+                'quantidade'    => $this->fakeDigit(),
             ];
         default:
             throw new \InvalidArgumentException();

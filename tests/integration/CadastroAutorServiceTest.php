@@ -26,12 +26,10 @@ class CadastroAutorServiceTest extends IntegrationTestCase
 
     private function fixture($contexto)
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         switch($contexto){
         case 'ok':
             return [
-                'nome' => $faker->name(),
+                'nome' => $this->fakeName(),
             ];
         default:
             throw new \InvalidArgumentException();

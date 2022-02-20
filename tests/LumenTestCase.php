@@ -4,6 +4,7 @@ use Doctrine\ORM\EntityManagerInterface as EntityManager;
 
 abstract class LumenTestCase extends \Laravel\Lumen\Testing\TestCase
 {
+    use Fake;
     use Doctrine;
 
     private static array            $dynamicSetUp;
