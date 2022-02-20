@@ -9,12 +9,15 @@ class AuthAPITest extends E2ETestCase
         $email = $d['loginJWT']['email'];
         $passw = $d['loginJWT']['password'];
 
-        $this
+        $token = $this
             ->json('POST', '/api/auth/login/jwt', [
                 'email' => $email, 'password' => $passw
             ])
-            ->seeJsonStructure(['token'])
-            ->seeStatusCode(200);
+            ->seeStatusCode(200)
+            ->response
+            ->getContent();
+
+        $this->assertNotEmpty($token);
     }
 
     public function testFalhaAoCriarTokenSemAutenticacaoJwt()

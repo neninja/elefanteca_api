@@ -58,6 +58,6 @@ class AuthController extends Controller
             'HS256'
         );
 
-        return response()->json([ 'token' => $token ]);
+        return $token;
     }
 }

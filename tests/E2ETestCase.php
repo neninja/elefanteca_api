@@ -14,14 +14,14 @@ abstract class E2ETestCase extends LumenTestCase
         array $body = [],
         $headers = []
     ) {
-        $access = $this
-            ->json('GET', '/api/auth/login/jwt', [
+        $token = $this
+            ->json('POST', '/api/auth/login/jwt', [
                 'email' => $email, 'password' => $password
             ])
             ->response
-            ->decodeResponseJson();
+            ->getContent();
 
-        $headers['Authorization'] = "Bearer {$access['token']}";
+        $headers['Authorization'] = "Bearer {$token}";
 
         return $this->json($method, $ep, $body, $headers);
     }
