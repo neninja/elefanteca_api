@@ -22,12 +22,13 @@ $router->get('/swagger', function () use ($router) {
 });
 
 $router->group(['prefix' => 'api'], function ($request) use ($router) {
+    $router->post('users', 'UserController@store');
+
     $router->group(['prefix' => 'auth'], function ($request) use ($router) {
         $router->get('login/jwt', 'AuthController@loginJWT');
     });
     $router->group(['middleware' => 'auth'], function ($request) use ($router) {
         $router->group(['middleware' => 'hasRole:COLABORADOR,ADMIN'], function ($request) use ($router) {
-            $router->post('users', 'UserController@store');
             $router->post('authors', 'AuthorController@store');
         });
     });

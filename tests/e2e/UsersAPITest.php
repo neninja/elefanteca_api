@@ -4,17 +4,6 @@ class UsersAPITest extends E2ETestCase
 {
     private static $ep = '/api/users';
 
-    public function testFalhaSemAutenticacao()
-    {
-        $bodyRequest = [
-            'name' => $this->fakeName(),
-        ];
-
-        $this
-            ->json('POST', self::$ep, $bodyRequest)
-            ->seeStatusCode(401);
-    }
-
     public function testCriaUsuario()
     {
         $bodyRequest = [
@@ -31,7 +20,7 @@ class UsersAPITest extends E2ETestCase
         ];
 
         $this
-            ->jsonComoColaborador('POST', self::$ep, $bodyRequest)
+            ->json('POST', self::$ep, $bodyRequest)
             ->seeJson($bodyResponse)
             ->seeJsonStructure(['id'])
             ->seeStatusCode(200);

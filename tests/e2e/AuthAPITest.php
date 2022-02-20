@@ -10,7 +10,7 @@ class AuthAPITest extends E2ETestCase
         $passw = $d['loginJWT']['password'];
 
         $this
-            ->json('GET', '/api/auth/login/jwt', [
+            ->json('POST', '/api/auth/login/jwt', [
                 'email' => $email, 'password' => $passw
             ])
             ->seeJsonStructure(['token'])
@@ -25,7 +25,7 @@ class AuthAPITest extends E2ETestCase
         $passw = $d['loginJWT']['password'];
 
         $this
-            ->json('GET', '/api/auth/login/jwt', [
+            ->json('POST', '/api/auth/login/jwt', [
                 'email' => $email, 'password' => $passw.'senhaincorreta'
             ])
             ->seeJson(["Usuário ou senha inválidos"])
