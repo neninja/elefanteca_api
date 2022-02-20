@@ -17,6 +17,19 @@ class AuthorsAPITest extends E2ETestCase
             ->seeStatusCode(401);
     }
 
+    public function testFalhaComoMembro()
+    {
+        $faker = Faker\Factory::create('pt_BR');
+
+        $bodyRequest = [
+            'name' => $faker->name(),
+        ];
+
+        $response = $this
+            ->json('POST', self::$ep, $bodyRequest)
+            ->seeStatusCode(401);
+    }
+
     public function testCriaAutorComoColaborador()
     {
         $faker = Faker\Factory::create('pt_BR');

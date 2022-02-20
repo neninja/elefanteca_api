@@ -6,19 +6,54 @@ use Core\Models\Papel;
 
 abstract class E2ETestCase extends LumenTestCase
 {
-    protected function jsonComoColaborador(
-        string $method, string $ep, array $body = [], $headers = []
+    private function jsonComo(
+        string $email,
+        string $password,
+        string $method,
+        string $ep,
+        array $body = [],
+        $headers = []
     ) {
-        $bodyLoginRequest = $this->criaColaborador()['loginJWT'];
-
         $access = $this
-            ->json('GET', '/api/auth/login/jwt', $bodyLoginRequest)
+            ->json('GET', '/api/auth/login/jwt', [
+                'email' => $email, 'password' => $password
+            ])
             ->response
             ->decodeResponseJson();
 
         $headers['Authorization'] = "Bearer {$access['token']}";
 
         return $this->json($method, $ep, $body, $headers);
+    }
+
+    protected function jsonComoMembro(
+        string $method, string $ep, array $body = [], $headers = []
+    ) {
+        $login = $this->criaMembro()['loginJWT'];
+
+        return $this->jsonComo(
+            $login['email'],
+            $login['password'],
+            $method,
+            $ep,
+            $body,
+            $headers,
+        );
+    }
+
+    protected function jsonComoColaborador(
+        string $method, string $ep, array $body = [], $headers = []
+    ) {
+        $login = $this->criaColaborador()['loginJWT'];
+
+        return $this->jsonComo(
+            $login['email'],
+            $login['password'],
+            $method,
+            $ep,
+            $body,
+            $headers,
+        );
     }
 
     protected function criaUsuario($papel)
@@ -45,6 +80,11 @@ abstract class E2ETestCase extends LumenTestCase
             ],
             'usuario' => $u,
         ];
+    }
+
+    protected function criaMembro()
+    {
+        return $this->criaUsuario(Papel::$MEMBRO);
     }
 
     protected function criaColaborador()
