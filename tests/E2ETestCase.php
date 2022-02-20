@@ -2,6 +2,8 @@
 
 use Core\Services\Usuario\CadastroUsuarioService;
 
+use Core\Models\Papel;
+
 abstract class E2ETestCase extends LumenTestCase
 {
     protected function jsonComoColaborador(
@@ -19,6 +21,7 @@ abstract class E2ETestCase extends LumenTestCase
             cpf:    $faker->cpf(false),
             email:  $email,
             senha:  $passw,
+            papel:  Papel::$COLABORADOR
         );
 
         $bodyLoginRequest = [
