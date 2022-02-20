@@ -36,10 +36,9 @@ abstract class LumenTestCase extends \Laravel\Lumen\Testing\TestCase
             $this->$setup();
         }
 
-        # THANKS: https://stackoverflow.com/a/26836634
         $connection = self::$em
             ->getConnection()
-            ->getWrappedConnection();
+            ->getNativeConnection();
 
         /* Asserts de database do Lumen */
         DB::connection()->setPdo($connection);
