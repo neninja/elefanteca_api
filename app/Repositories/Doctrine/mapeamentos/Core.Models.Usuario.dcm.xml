@@ -15,8 +15,7 @@
 
         <field name="cpf"
             column="cpf"
-            type="string"
-            length="11" />
+            type="cpf" />
 
         <field name="senha"
             column="senha"
@@ -29,7 +28,6 @@
 
         <field name="papel"
             column="papel"
-            type="string"
-            length="15" />
+            type="papel" />
     </entity>
 </doctrine-mapping>

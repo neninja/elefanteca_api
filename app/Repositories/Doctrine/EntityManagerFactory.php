@@ -30,14 +30,15 @@ class EntityManagerFactory
     private function addCustomTypes()
     {
         $types = [
-            [ 'email', 'App\Repositories\Doctrine\Types\EmailType' ]
+            [ 'email', 'App\Repositories\Doctrine\Types\EmailType' ],
+            [ 'cpf', 'App\Repositories\Doctrine\Types\CpfType' ],
+            [ 'papel', 'App\Repositories\Doctrine\Types\PapelType' ],
         ];
 
-        $types = array_filter($types, fn($t) => !Type::hasType("email"));
         foreach($types as $type) {
-            Type::addType($type[0], $type[1]);
+            if(!Type::hasType($type[0])) {
+                Type::addType($type[0], $type[1]);
+            }
         }
-
-        // Type::addType('email', 'App\Repositories\Doctrine\Types\EmailType');
     }
 }
