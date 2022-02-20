@@ -100,6 +100,7 @@ docker-compose exec app composer ci:mutation
 ### Instruções
 
 - Nomear teste com verbo no imperativo explicitando a intencionalidade do teste, evitar nomes como "deve fazer x". [Orientação do time do Spotify](https://github.com/spotify/should-up)
+- Quando for criada uma trait precisa ser recriado o autoload com ``composer du``
 
 ## Arquitetura
 
