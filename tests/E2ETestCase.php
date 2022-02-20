@@ -26,6 +26,21 @@ abstract class E2ETestCase extends LumenTestCase
         return $this->json($method, $ep, $body, $headers);
     }
 
+    protected function jsonComoAdmin(
+        string $method, string $ep, array $body = [], $headers = []
+    ) {
+        $login = $this->criaAdmin()['loginJWT'];
+
+        return $this->jsonComo(
+            $login['email'],
+            $login['password'],
+            $method,
+            $ep,
+            $body,
+            $headers,
+        );
+    }
+
     protected function jsonComoMembro(
         string $method, string $ep, array $body = [], $headers = []
     ) {
@@ -90,5 +105,10 @@ abstract class E2ETestCase extends LumenTestCase
     protected function criaColaborador()
     {
         return $this->criaUsuario(Papel::$COLABORADOR);
+    }
+
+    protected function criaAdmin()
+    {
+        return $this->criaUsuario(Papel::$ADMIN);
     }
 }

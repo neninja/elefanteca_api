@@ -48,4 +48,27 @@ class AuthorsAPITest extends E2ETestCase
 
         $this->seeInDatabase('autores', ['nome' => $bodyRequest['name']]);
     }
+
+    public function testCriaAutorComoAdmin()
+    {
+        $bodyRequest = [
+            'name' => $this->fakeName(),
+        ];
+
+        $bodyResponse = [
+            'name'  => $bodyRequest['name'],
+        ];
+
+        $response = $this
+            ->jsonComoAdmin('POST', self::$ep, $bodyRequest)
+            ->seeJson($bodyResponse)
+            ->seeJsonStructure(['id'])
+            ->seeStatusCode(200)
+            ->response
+            ->decodeResponseJson();
+
+        $this->assertArrayHasKey('id', $response);
+
+        $this->seeInDatabase('autores', ['nome' => $bodyRequest['name']]);
+    }
 }
