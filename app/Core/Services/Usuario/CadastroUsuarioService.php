@@ -6,6 +6,7 @@ use Core\Models\{
     Usuario,
     CPF,
     Email,
+    Papel,
 };
 
 use Core\Repositories\{
@@ -29,8 +30,11 @@ class CadastroUsuarioService
         string $cpf,
         string $senha,
         string $email,
-        string $papel = 'membro',
+        string $papel = '',
     ): Usuario {
+        if(empty($papel)) {
+            $papel = Papel::$MEMBRO;
+        }
 
         $senhaCriptografada = $this->crypt->encrypt($senha);
 
@@ -39,6 +43,7 @@ class CadastroUsuarioService
             cpf:    new CPF($cpf),
             senha:  $senhaCriptografada,
             email:  new Email($email),
+            papel:  new Papel($papel),
         );
 
         return $this->repo->save($u);

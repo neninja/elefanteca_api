@@ -6,6 +6,9 @@ use App\Models\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+
 class AuthServiceProvider extends ServiceProvider
 {
     /**
@@ -31,6 +34,29 @@ class AuthServiceProvider extends ServiceProvider
         // the User instance via an API token or any other method necessary.
 
         $this->app['auth']->viaRequest('api', function ($request) {
+            if (!$request->hasHeader('Authorization')) {
+                return null;
+            }
+
+            $authorizationHeader = $request->header('Authorization');
+            $token = str_replace('Bearer ', '', $authorizationHeader);
+            $dadosAutenticacao = JWT::decode($token, new Key(env('JWT_KEY'), 'HS256'));
+
+            $repo = app()->make(\App\Repositories\Doctrine\UsuariosRepository::class);
+
+            $usuario = $repo->findByEmail($dadosAutenticacao->email);
+
+            $user           = new \App\Models\User();
+            $user->id       = $usuario->getId();
+            $user->name     = $usuario->nome;
+            $user->email    = $usuario->email;
+            $user->role     = $usuario->papel->get();
+
+            return $user;
+        });
+
+        Gate::define('papel', function (User $u, string $papel) {
+            return $u->role === $papel;
         });
     }
 }

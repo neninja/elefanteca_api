@@ -5,6 +5,7 @@ namespace Core\Models;
 use Core\Models\{
     Email,
     CPF,
+    Papel,
 };
 
 class Usuario
@@ -17,6 +18,7 @@ class Usuario
         public      CPF     $cpf,
         private     string  $senha, // criptografada
         public      Email   $email,
+        public      Papel   $papel,
     ) {
         $this->ativo = true;
     }

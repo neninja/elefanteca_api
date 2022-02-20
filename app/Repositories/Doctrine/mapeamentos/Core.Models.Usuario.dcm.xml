@@ -26,5 +26,10 @@
         <field name="email"
             column="email"
             type="email" />
+
+        <field name="papel"
+            column="papel"
+            type="string"
+            length="15" />
     </entity>
 </doctrine-mapping>
