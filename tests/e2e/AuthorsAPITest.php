@@ -17,8 +17,6 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testFalhaComoMembro()
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         $bodyRequest = [
             'name' => $this->fakeName(),
         ];
@@ -30,8 +28,6 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testCriaAutorComoColaborador()
     {
-        $faker = Faker\Factory::create('pt_BR');
-
         $bodyRequest = [
             'name' => $this->fakeName(),
         ];
@@ -39,7 +35,6 @@ class AuthorsAPITest extends E2ETestCase
         $bodyResponse = [
             'name'  => $bodyRequest['name'],
         ];
-
 
         $response = $this
             ->jsonComoColaborador('POST', self::$ep, $bodyRequest)
