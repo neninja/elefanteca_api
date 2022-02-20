@@ -26,14 +26,16 @@ class AuthorsAPITest extends E2ETestCase
     {
         $this
             ->json('POST', self::$ep, ['name' => $this->fakeName()])
-            ->seeStatusCode(401);
+            ->response
+            ->assertUnauthorized();
     }
 
     public function testFalhaComoMembroAoCriar()
     {
         $this
             ->json('POST', self::$ep, ['name' => $this->fakeName()])
-            ->seeStatusCode(401);
+            ->response
+            ->assertUnauthorized();
     }
 
     public function testCriaComoColaborador()
@@ -46,7 +48,8 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonComoColaborador('POST', self::$ep, $body)
             ->seeJson($body)
             ->seeJsonStructure(['id'])
-            ->seeStatusCode(200);
+            ->response
+            ->assertOk();
 
         $this->seeInDatabase('autores', ['nome' => $body['name']]);
     }
@@ -61,7 +64,8 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonComoAdmin('POST', self::$ep, $body)
             ->seeJson($body)
             ->seeJsonStructure(['id'])
-            ->seeStatusCode(200);
+            ->response
+            ->assertOk();
 
         $this->seeInDatabase('autores', ['nome' => $body['name']]);
     }
@@ -78,7 +82,8 @@ class AuthorsAPITest extends E2ETestCase
 
         $this
             ->json('PUT', self::$ep."/{$u->getId()}", $body)
-            ->seeStatusCode(401);
+            ->response
+            ->assertUnauthorized();
     }
 
     public function testFalhaComoMembroAoEditar()
@@ -91,7 +96,8 @@ class AuthorsAPITest extends E2ETestCase
 
         $this
             ->json('PUT', self::$ep."/{$u->getId()}", $body)
-            ->seeStatusCode(401);
+            ->response
+            ->assertUnauthorized();
     }
 
     public function testEditaComoColaborador()
@@ -106,7 +112,8 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonComoColaborador('PUT', self::$ep."/{$u->getId()}", $body)
             ->seeJson($body)
             ->seeJsonStructure(['id'])
-            ->seeStatusCode(200);
+            ->response
+            ->assertOk();
 
         $this->seeInDatabase('autores', [
             'id'    => $u->getId(),

@@ -23,7 +23,8 @@ class UsersAPITest extends E2ETestCase
             ->json('POST', self::$ep, $bodyRequest)
             ->seeJson($bodyResponse)
             ->seeJsonStructure(['id'])
-            ->seeStatusCode(200);
+            ->response
+            ->assertOk();
 
         $this->seeInDatabase('usuarios', ['email' => $bodyRequest['email']]);
     }

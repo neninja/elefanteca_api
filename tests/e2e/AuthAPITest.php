@@ -13,8 +13,8 @@ class AuthAPITest extends E2ETestCase
             ->json('POST', '/api/auth/login/jwt', [
                 'email' => $email, 'password' => $passw
             ])
-            ->seeStatusCode(200)
             ->response
+            ->assertOk()
             ->getContent();
 
         $this->assertNotEmpty($token);
@@ -32,7 +32,8 @@ class AuthAPITest extends E2ETestCase
                 'email' => $email, 'password' => $passw.'senhaincorreta'
             ])
             ->seeJson(["Usuário ou senha inválidos"])
-            ->seeStatusCode(401);
+            ->response
+            ->assertUnauthorized();
     }
 }
 
