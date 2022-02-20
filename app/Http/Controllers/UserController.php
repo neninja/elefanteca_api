@@ -48,18 +48,21 @@ class UserController extends Controller
      *     @OA\Response(response="200", description="Usuário criado")
      * )
      */
-    public function store(Request $request)
+    public function store(Request $r)
     {
-        $nome   = $request->input('name');
-        $cpf    = $request->input('cpf');
-        $senha  = $request->input('password');
-        $email  = $request->input('email');
+        $this->validate($r, [
+            'name'      => 'required',
+            'cpf'       => 'required',
+            'email'     => 'required|email',
+            'password'  => 'required',
+        ]);
 
         $u = $this->cadastroService->execute(
-            nome:   $nome,
-            cpf:    $cpf,
-            senha:  $senha,
-            email:  $email,
+            nome:   $r->name,
+            cpf:    $r->cpf,
+            senha:  $r->password,
+            email:  $r->email,
+            papel:  $r->role ?? '',
         );
 
         return response()
