@@ -4,63 +4,47 @@ class AuthorsAPITest extends E2ETestCase
 {
     private static $ep = '/api/authors';
 
-    public function testFalhaSemAutenticacao()
+    public function testFalhaSemAutenticacaoAoCriar()
     {
-        $bodyRequest = [
-            'name' => $this->fakeName(),
-        ];
-
         $this
-            ->json('POST', self::$ep, $bodyRequest)
+            ->json('POST', self::$ep, ['name' => $this->fakeName()])
             ->seeStatusCode(401);
     }
 
-    public function testFalhaComoMembro()
+    public function testFalhaComoMembroAoCriar()
     {
-        $bodyRequest = [
-            'name' => $this->fakeName(),
-        ];
-
         $this
-            ->json('POST', self::$ep, $bodyRequest)
+            ->json('POST', self::$ep, ['name' => $this->fakeName()])
             ->seeStatusCode(401);
     }
 
-    public function testCriaAutorComoColaborador()
+    public function testCriaComoColaborador()
     {
-        $bodyRequest = [
+        $body = [
             'name' => $this->fakeName(),
         ];
 
-        $bodyResponse = [
-            'name'  => $bodyRequest['name'],
-        ];
-
         $this
-            ->jsonComoColaborador('POST', self::$ep, $bodyRequest)
-            ->seeJson($bodyResponse)
+            ->jsonComoColaborador('POST', self::$ep, $body)
+            ->seeJson($body)
             ->seeJsonStructure(['id'])
             ->seeStatusCode(200);
 
-        $this->seeInDatabase('autores', ['nome' => $bodyRequest['name']]);
+        $this->seeInDatabase('autores', ['nome' => $body['name']]);
     }
 
-    public function testCriaAutorComoAdmin()
+    public function testCriaComoAdmin()
     {
-        $bodyRequest = [
+        $body = [
             'name' => $this->fakeName(),
         ];
 
-        $bodyResponse = [
-            'name'  => $bodyRequest['name'],
-        ];
-
         $this
-            ->jsonComoAdmin('POST', self::$ep, $bodyRequest)
-            ->seeJson($bodyResponse)
+            ->jsonComoAdmin('POST', self::$ep, $body)
+            ->seeJson($body)
             ->seeJsonStructure(['id'])
             ->seeStatusCode(200);
 
-        $this->seeInDatabase('autores', ['nome' => $bodyRequest['name']]);
+        $this->seeInDatabase('autores', ['nome' => $body['name']]);
     }
 }
