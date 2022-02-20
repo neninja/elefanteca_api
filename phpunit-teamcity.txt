@@ -1,5 +1,5 @@
 
-##teamcity[testCount count='25' flowId='1']
+##teamcity[testCount count='27' flowId='1']
 
 ##teamcity[testSuiteStarted name='e2e' flowId='1']
 
@@ -7,11 +7,11 @@
 
 ##teamcity[testStarted name='testCriaTokenJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testCriaTokenJwt' flowId='1']
 
-##teamcity[testFinished name='testCriaTokenJwt' duration='110' flowId='1']
+##teamcity[testFinished name='testCriaTokenJwt' duration='113' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenSemAutenticacaoJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenSemAutenticacaoJwt' flowId='1']
 
-##teamcity[testFinished name='testFalhaAoCriarTokenSemAutenticacaoJwt' duration='15' flowId='1']
+##teamcity[testFinished name='testFalhaAoCriarTokenSemAutenticacaoJwt' duration='18' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthAPITest' flowId='1']
 
@@ -19,11 +19,19 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacao' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacao' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacao' duration='14' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacao' duration='13' flowId='1']
+
+##teamcity[testStarted name='testFalhaComoMembro' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaComoMembro' flowId='1']
+
+##teamcity[testFinished name='testFalhaComoMembro' duration='14' flowId='1']
 
 ##teamcity[testStarted name='testCriaAutorComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaAutorComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testCriaAutorComoColaborador' duration='26' flowId='1']
+##teamcity[testFinished name='testCriaAutorComoColaborador' duration='30' flowId='1']
+
+##teamcity[testStarted name='testCriaAutorComoAdmin' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaAutorComoAdmin' flowId='1']
+
+##teamcity[testFinished name='testCriaAutorComoAdmin' duration='24' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthorsAPITest' flowId='1']
 
@@ -35,7 +43,7 @@
 
 ##teamcity[testStarted name='testCriaUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuario' flowId='1']
 
-##teamcity[testFinished name='testCriaUsuario' duration='19' flowId='1']
+##teamcity[testFinished name='testCriaUsuario' duration='26' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -63,11 +71,11 @@
 
 ##teamcity[testStarted name='testPersisteComNomeCpfEmailSenhaCorretos' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testPersisteComNomeCpfEmailSenhaCorretos' flowId='1']
 
-##teamcity[testFinished name='testPersisteComNomeCpfEmailSenhaCorretos' duration='3' flowId='1']
+##teamcity[testFinished name='testPersisteComNomeCpfEmailSenhaCorretos' duration='4' flowId='1']
 
 ##teamcity[testStarted name='testCriptografaSenha' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriptografaSenha' flowId='1']
 
-##teamcity[testFinished name='testCriptografaSenha' duration='4' flowId='1']
+##teamcity[testFinished name='testCriptografaSenha' duration='3' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriaComoAtivo' flowId='1']
 

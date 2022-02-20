@@ -4,7 +4,9 @@ Auth API
 
 Authors API
  [x] Falha sem autenticacao
+ [x] Falha como membro
  [x] Cria autor como colaborador
+ [x] Cria autor como admin
 
 Users API
  [x] Falha sem autenticacao
