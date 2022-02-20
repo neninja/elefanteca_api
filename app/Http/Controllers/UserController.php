@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Gate;
+use Core\Models\Papel;
+
 use Core\Services\{
     Usuario\CadastroUsuarioService,
 };
@@ -19,6 +22,7 @@ class UserController extends Controller
      *     tags={"usuário"},
      *     path="/api/users",
      *     description="Cadastro de usuário",
+     *     security={{"JWT":{}}},
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
      *         @OA\Schema(
@@ -57,12 +61,18 @@ class UserController extends Controller
             'password'  => 'required',
         ]);
 
+        $role = '';
+
+        if(Gate::check('papel', Papel::$ADMIN)) {
+            $role = $r->role ?? '';
+        }
+
         $u = $this->cadastroService->execute(
             nome:   $r->name,
             cpf:    $r->cpf,
             senha:  $r->password,
             email:  $r->email,
-            papel:  $r->role ?? '',
+            papel:  $role,
         );
 
         return response()
