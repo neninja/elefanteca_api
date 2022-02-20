@@ -66,6 +66,13 @@ docker-compose exec app composer test tests/caminho/do/ExemploTest.php
 ```
 > Um método de um arquivo: ``docker-compose exec app composer test -- --filter testName$ tests/caminho/do/ExemploTest.php``
 
+- TDD
+```sh
+bash tdd.sh
+```
+
+> O script executa o teste simples anterior, aceitando argumentos como ``bash tdd.sh -- --filter testName$ tests/caminho/do/ExemploTest.php``
+
 - CI
 ```sh
 docker-compose exec app composer ci
