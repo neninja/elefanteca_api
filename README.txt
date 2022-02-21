@@ -16,7 +16,8 @@ Users API
  [x] Cria usuario
 
 Cadastro Autor Service
- [x] Persiste com valores obrigatorios
+ [x] Cria com valores obrigatorios
+ [x] Edita com valores obrigatorios
 
 Cadastro Livro Service
  [x] Persiste com valores obrigatorios

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645458169">
-  <project timestamp="1645458169">
+<coverage generated="1645465733">
+  <project timestamp="1645465733">
     <file name="/app/app/Core/Exceptions/CoreException.php">
       <class name="Core\Exceptions\CoreException" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
@@ -176,9 +176,9 @@
       <class name="Core\Services\Emprestimo\CadastroAutorService" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </class>
-      <line num="19" type="method" name="execute" visibility="public" complexity="1" crap="1" count="6"/>
-      <line num="23" type="stmt" count="6"/>
-      <line num="28" type="stmt" count="6"/>
+      <line num="19" type="method" name="execute" visibility="public" complexity="1" crap="1" count="7"/>
+      <line num="23" type="stmt" count="7"/>
+      <line num="28" type="stmt" count="7"/>
       <metrics loc="31" ncloc="31" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
     </file>
     <file name="/app/app/Core/Services/Emprestimo/CadastroLivroService.php">
