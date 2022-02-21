@@ -12,7 +12,7 @@ use App\Repositories\Doctrine\{
  */
 class CadastroAutorServiceTest extends IntegrationTestCase
 {
-    private function newSut()
+    private function sut()
     {
         return new CadastroAutorService(
             $this->factory(AutoresRepository::class),
@@ -36,13 +36,11 @@ class CadastroAutorServiceTest extends IntegrationTestCase
         }
     }
 
-    public function testPersisteComValoresObrigatorios()
+    public function testCriaComValoresObrigatorios()
     {
-        $sut = $this->newSut();
-
         $fixture = $this->fixture('ok');
 
-        $autor = $sut->execute(
+        $autor = $this->sut()->execute(
             nome: $fixture['nome'],
         );
 
@@ -59,4 +57,34 @@ class CadastroAutorServiceTest extends IntegrationTestCase
         );
     }
 
+    public function criaAutor()
+    {
+        $fixture = $this->fixture('ok');
+
+        return $this->sut()->execute(
+            nome: $fixture['nome'],
+        );
+    }
+
+    public function testEditaComValoresObrigatorios()
+    {
+        $autor = $this->criaAutor();
+
+        $nomeAlterado = $autor->nome."_alterado";
+
+        $autor = $this->sut()->execute(
+            id:     $autor->getId(),
+            nome:   $nomeAlterado,
+        );
+
+        $persistido = $this->autorPersistido($autor);
+        $this->assertEquals(
+            $autor->getId(),
+            $persistido->getId()
+        );
+        $this->assertEquals(
+            $nomeAlterado,
+            $persistido->nome
+        );
+    }
 }

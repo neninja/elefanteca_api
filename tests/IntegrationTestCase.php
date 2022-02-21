@@ -8,6 +8,18 @@ use Core\Models\{
     Autor,
 };
 
+use Core\Services\Emprestimo\{
+    CadastroUsuarioService,
+    CadastroLivroService,
+    CadastroAutorService,
+};
+
+use App\Repositories\Doctrine\{
+    UsuariosRepository,
+    LivrosRepository,
+    AutoresRepository,
+};
+
 use App\Adapters\{
     LumenCryptProvider,
 };
@@ -65,10 +77,13 @@ abstract class IntegrationTestCase extends \PHPUnit\Framework\TestCase
         switch($namespace){
         case LumenCryptProvider::class:
             return new $namespace();
-            break;
+        case CadastroAutorService::class:
+            return new CadastroAutorService(
+                $this->factory(AutoresRepository::class),
+            );
         }
 
-        return $namespace;
+        return new $namespace;
     }
 
     protected static function beginTransaction()

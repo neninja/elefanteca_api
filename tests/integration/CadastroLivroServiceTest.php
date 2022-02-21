@@ -17,7 +17,7 @@ use App\Repositories\Doctrine\{
  */
 class CadastroLivroServiceTest extends IntegrationTestCase
 {
-    private function newSut()
+    private function sut()
     {
         return new CadastroLivroService(
             $this->factory(LivrosRepository::class),
@@ -34,9 +34,8 @@ class CadastroLivroServiceTest extends IntegrationTestCase
     {
         switch($contexto){
         case 'ok':
-            $autor = (new CadastroAutorService(
-                $this->factory(AutoresRepository::class),
-            ))->execute($this->fakeName());
+            $autor = $this->factory(CadastroAutorService::class)
+                          ->execute($this->fakeName());
             return [
                 'titulo'        => $this->fakeName(),
                 'idAutor'       => $autor->getId(),
@@ -49,11 +48,9 @@ class CadastroLivroServiceTest extends IntegrationTestCase
 
     public function testPersisteComValoresObrigatorios()
     {
-        $sut = $this->newSut();
-
         $fixture = $this->fixture('ok');
 
-        $livro = $sut->execute(
+        $livro = $this->sut()->execute(
             titulo:     $fixture['titulo'],
             idAutor:    $fixture['idAutor'],
             quantidade: $fixture['quantidade'],

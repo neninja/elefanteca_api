@@ -15,7 +15,7 @@ use App\Adapters\{
  */
 class CadastroUsuarioServiceTest extends IntegrationTestCase
 {
-    private function newSut()
+    private function sut()
     {
         return new CadastroUsuarioService(
             $this->factory(UsuariosRepository::class),
@@ -45,11 +45,9 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
 
     public function testPersisteComNomeCpfEmailSenhaCorretos()
     {
-        $sut = $this->newSut();
-
         $fixture = $this->fixture('ok');
 
-        $usuario = $sut->execute(
+        $usuario = $this->sut()->execute(
             nome:   $fixture['nome'],
             cpf:    $fixture['cpf'],
             email:  $fixture['email'],
@@ -83,11 +81,9 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
 
     public function testCriptografaSenha()
     {
-        $sut = $this->newSut();
-
         $fixture = $this->fixture('ok');
 
-        $usuario = $sut->execute(
+        $usuario = $this->sut()->execute(
             nome:   $fixture['nome'],
             cpf:    $fixture['cpf'],
             email:  $fixture['email'],
@@ -103,11 +99,9 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
 
     public function testCriaComoAtivo()
     {
-        $sut = $this->newSut();
-
         $fixture = $this->fixture('ok');
 
-        $usuario = $sut->execute(
+        $usuario = $this->sut()->execute(
             nome:   $fixture['nome'],
             cpf:    $fixture['cpf'],
             email:  $fixture['email'],
