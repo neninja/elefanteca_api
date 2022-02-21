@@ -35,7 +35,6 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
-        var_dump('Erro interno');die;
         // var_dump($exception->getMessage(), $exception->getFile(), $exception->getLine());die;
         // parent::report($exception);
     }
