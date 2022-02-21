@@ -1,18 +1,40 @@
 <?php
 
+use Core\Services\Usuario\CadastroUsuarioService;
+
+use Core\Models\Papel;
+
 class AuthAPITest extends E2ETestCase
 {
+    protected function criaUsuario($papel)
+    {
+        $s = $this->factory(CadastroUsuarioService::class);
+
+        $email = $this->fakeEmail();
+        $passw = $this->fakePassword();
+
+        $u = $s->execute(
+            nome:   "Colaborador {$this->fakeName()}",
+            cpf:    $this->fakeCpf(),
+            email:  $email,
+            senha:  $passw,
+            papel:  $papel,
+        );
+
+        return [
+            'loginJWT' => [
+                'email'     => $email,
+                'password'  => $passw,
+            ],
+            'usuario' => $u,
+        ];
+    }
+
     public function testCriaTokenJwt()
     {
-        $d = $this->criaMembro();
-
-        $email = $d['loginJWT']['email'];
-        $passw = $d['loginJWT']['password'];
-
+        $loginJWT = $this->criaUsuario(Papel::$MEMBRO)['loginJWT'];
         $token = $this
-            ->json('POST', '/api/auth/login/jwt', [
-                'email' => $email, 'password' => $passw
-            ])
+            ->json('POST', '/api/auth/login/jwt', $loginJWT)
             ->response
             ->assertOk()
             ->getContent();
@@ -22,10 +44,10 @@ class AuthAPITest extends E2ETestCase
 
     public function testFalhaAoCriarTokenSemAutenticacaoJwt()
     {
-        $d = $this->criaMembro();
+        $login = $this->criaUsuario(Papel::$MEMBRO)['loginJWT'];
 
-        $email = $d['loginJWT']['email'];
-        $passw = $d['loginJWT']['password'];
+        $email = $login['email'];
+        $passw = $login['password'];
 
         $this
             ->json('POST', '/api/auth/login/jwt', [

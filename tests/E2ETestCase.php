@@ -1,39 +1,26 @@
 <?php
 
-use Core\Services\Usuario\CadastroUsuarioService;
-
 use Core\Models\Papel;
 
 abstract class E2ETestCase extends LumenTestCase
 {
     private function jsonComo(
-        string $email,
-        string $password,
+        \App\Models\User $user,
         string $method,
         string $ep,
         array $body = [],
         $headers = []
     ) {
-        $token = $this
-            ->json('POST', '/api/auth/login/jwt', [
-                'email' => $email, 'password' => $password
-            ])
-            ->response
-            ->getContent();
-
-        $headers['Authorization'] = "Bearer {$token}";
-
-        return $this->json($method, $ep, $body, $headers);
+        return $this
+            ->actingAs($user)
+            ->json($method, $ep, $body, $headers);
     }
 
     protected function jsonComoAdmin(
         string $method, string $ep, array $body = [], $headers = []
     ) {
-        $login = $this->criaAdmin()['loginJWT'];
-
         return $this->jsonComo(
-            $login['email'],
-            $login['password'],
+            $this->criaAdmin(),
             $method,
             $ep,
             $body,
@@ -44,11 +31,8 @@ abstract class E2ETestCase extends LumenTestCase
     protected function jsonComoMembro(
         string $method, string $ep, array $body = [], $headers = []
     ) {
-        $login = $this->criaMembro()['loginJWT'];
-
         return $this->jsonComo(
-            $login['email'],
-            $login['password'],
+            $this->criaMembro(),
             $method,
             $ep,
             $body,
@@ -62,8 +46,7 @@ abstract class E2ETestCase extends LumenTestCase
         $login = $this->criaColaborador()['loginJWT'];
 
         return $this->jsonComo(
-            $login['email'],
-            $login['password'],
+            $this->criaColaborador(),
             $method,
             $ep,
             $body,
@@ -75,26 +58,12 @@ abstract class E2ETestCase extends LumenTestCase
     {
         $faker = Faker\Factory::create('pt_BR');
 
-        $s = $this->factory(CadastroUsuarioService::class);
+        $u = new \App\Models\User();
+        $u->name = $this->fakeName();
+        $u->email = $this->fakeEmail();
+        $u->role = $papel;
 
-        $email = $faker->email();
-        $passw = $faker->password();
-
-        $u = $s->execute(
-            nome:   "Colaborador {$faker->name()}",
-            cpf:    $faker->cpf(false),
-            email:  $email,
-            senha:  $passw,
-            papel:  $papel
-        );
-
-        return [
-            'loginJWT' => [
-                'email'     => $email,
-                'password'  => $passw,
-            ],
-            'usuario' => $u,
-        ];
+        return $u;
     }
 
     protected function criaMembro()

@@ -40,17 +40,7 @@ class Authenticate
     public function handle($request, Closure $next, $guard = null)
     {
         try {
-            if (!$request->hasHeader('Authorization')) {
-                throw new \Exception();
-            }
-            $authorizationHeader = $request->header('Authorization');
-            $token = str_replace('Bearer ', '', $authorizationHeader);
-            $dadosAutenticacao = JWT::decode($token, new Key(env('JWT_KEY'), 'HS256'));
-
-            $usuario = app(UsuariosRepository::class)
-                ->findByEmail($dadosAutenticacao->email);
-
-            if (is_null($usuario)) {
+            if(is_null(\Auth::user())) {
                 throw new \Exception();
             }
 

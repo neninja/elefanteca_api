@@ -55,8 +55,13 @@ class AuthServiceProvider extends ServiceProvider
             return $user;
         });
 
-        Gate::define('papel', function (User $u, string $papel) {
-            return $u->role === $papel;
+        Gate::define('papel', function (User $_, string $papel) {
+            /*
+             * Usar \Auth::user() ao invés do parametro User para
+             * facilitar nos testes ou outras formas de garantir
+             * o usuário logado
+             */
+            return \Auth::user()->role === $papel;
         });
     }
 }
