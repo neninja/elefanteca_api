@@ -10,14 +10,14 @@ class AuthorsAPITest extends E2ETestCase
             \Core\Services\Emprestimo\CadastroAutorService::class
         );
 
-        $u = $s->execute($this->fakeName());
+        $a = $s->execute($this->fakeName());
 
         $this->seeInDatabase('autores', [
-            'id' => $u->getId(),
-            'nome' => $u->nome
+            'id' => $a->getId(),
+            'nome' => $a->nome
         ]);
 
-        return $u;
+        return $a;
     }
 
     /******** CREATE *******/
@@ -74,49 +74,49 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacaoAoEditar()
     {
-        $u = $this->criaAutor();
+        $a = $this->criaAutor();
 
         $body = [
-            'name' => $u->nome."diferente",
+            'name' => $a->nome."diferente",
         ];
 
         $this
-            ->json('PUT', self::$ep."/{$u->getId()}", $body)
+            ->json('PUT', self::$ep."/{$a->getId()}", $body)
             ->response
             ->assertUnauthorized();
     }
 
     public function testFalhaComoMembroAoEditar()
     {
-        $u = $this->criaAutor();
+        $a = $this->criaAutor();
 
         $body = [
-            'name' => $u->nome."diferente",
+            'name' => $a->nome."diferente",
         ];
 
         $this
-            ->json('PUT', self::$ep."/{$u->getId()}", $body)
+            ->json('PUT', self::$ep."/{$a->getId()}", $body)
             ->response
             ->assertUnauthorized();
     }
 
     public function testEditaComoColaborador()
     {
-        $u = $this->criaAutor();
+        $a = $this->criaAutor();
 
         $body = [
-            'name' => $u->nome."diferente",
+            'name' => $a->nome."diferente",
         ];
 
         $this
-            ->jsonComoColaborador('PUT', self::$ep."/{$u->getId()}", $body)
+            ->jsonComoColaborador('PUT', self::$ep."/{$a->getId()}", $body)
             ->seeJson($body)
             ->seeJsonStructure(['id'])
             ->response
             ->assertOk();
 
         $this->seeInDatabase('autores', [
-            'id'    => $u->getId(),
+            'id'    => $a->getId(),
             'nome'  => $body['name'],
         ]);
     }
