@@ -35,4 +35,8 @@ docker-compose exec app composer ci:mutation
 
 - Nomear teste com verbo no imperativo explicitando a intencionalidade do teste, evitar nomes como "deve fazer x". [Orientação do time do Spotify](https://github.com/spotify/should-up)
 - Quando for criada uma trait precisa ser recriado o autoload com ``composer du``
-- [Relatório do ci no github](https://codepen.io/nenitf/full/GREQZRd?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/phpunit-log.xml) com total de cobertura [completa](https://neni.dev/elefanteca_api/coverage/dashboard.html) e [simplificada](https://neni.dev/elefanteca_api/coverage.txt)
+- Analise dos testes executados no github actions:
+    - [Visualizador JUnit (relatório de testes)](https://codepen.io/nenitf/full/GREQZRd?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/phpunit-log.xml)
+    - [Visualizador Clover (relatório de cobertura)](https://codepen.io/nenitf/full/NWwYQoz?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/clover.xml)
+    - [Dashboard de cobertura](https://neni.dev/elefanteca_api/coverage/dashboard.html)
+    - [Relatório de cobertura simplificado](https://neni.dev/elefanteca_api/coverage.txt)
