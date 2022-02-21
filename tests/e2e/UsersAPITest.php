@@ -4,6 +4,25 @@ class UsersAPITest extends E2ETestCase
 {
     private static $ep = '/api/users';
 
+    /**
+     * @testdox Falha $_dataName
+     * @dataProvider bodyInvalido
+     */
+    public function testValida($body, $camposComErro)
+    {
+        $this
+            ->call('POST', self::$ep, $body)
+            ->assertJsonValidationErrors($camposComErro, $responseKey = null);
+    }
+
+    public function bodyInvalido()
+    {
+        yield "sem todos campos" => [
+            [],
+            ['name','cpf','email', 'password'],
+        ];
+    }
+
     public function testCriaUsuario()
     {
         $bodyRequest = [
