@@ -2,37 +2,39 @@
 
 trait Fake
 {
-    private $faker = 'a';
+    private $faker;
 
-    function __construct()
+    public function faker(): Faker\Generator
     {
-        parent::__construct();
-        $this->faker = Faker\Factory::create('pt_BR');
+        try {
+            return $this->faker;
+        } catch(\Throwable $e) {
+            $this->faker = Faker\Factory::create('pt_BR');
+            return $this->faker;
+        }
     }
-
     public function fakeName()
     {
-        return $this->faker->name();
+        return $this->faker()->name();
     }
 
     public function fakeEmail()
     {
-        return $this->faker->email();
+        return $this->faker()->email();
     }
 
     public function fakePassword()
     {
-        return $this->faker->password();
+        return $this->faker()->password();
     }
 
     public function fakeCpf()
     {
-        return $this->faker->cpf(false);
+        return $this->faker()->cpf(false);
     }
 
     public function fakeDigit()
     {
-        return $this->faker->randomDigitNotNull();
+        return $this->faker()->randomDigitNotNull();
     }
-
 }
