@@ -31,6 +31,7 @@
         <report>
             <html outputDirectory="tests/_reports" lowUpperBound="50" highLowerBound="90"/>
             <text outputFile="docs/coverage.txt"/>
+            <clover outputFile="docs/clover.xml"/>
         </report>
 
         <include>

@@ -37,8 +37,8 @@ jobs:
         with:
           push_badge: false
           coverage_badge_path: 'docs/coverage.svg'
-          report_type: html
-          report: docs/coverage/index.html
+          report_type: clover
+          report: docs/clover.xml
 
       - name: Deploy documentation
         if: always()
