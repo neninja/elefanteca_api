@@ -6,6 +6,20 @@ Diretório com arquivos "documentando" o desenvolvimento, seja para auxiliar ou 
 
 ### FAQ
 
+#### Quando usar nome no plural/singular e português/inglês?
+
+- Repository: **plural** e **português**
+> `UsuariosRepository`
+
+- Controller: **singular** e **inglês**
+> `AuthorController`
+
+- Endpoint: **plural** e **inglês**
+> `AuthorsAPITestP  testa `/api/authors`
+
+- Requisição e resposta JSON: **inglês**
+> No banco está `nome` e na model `nome`, porém a resposta ou requisição será `name`
+
 #### O que são classes *Provider*, *Repository* e *Service*?
 
 A separação é feita para deixar explícita suas responsabilidades, sendo:
