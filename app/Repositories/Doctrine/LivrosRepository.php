@@ -6,22 +6,18 @@ use Doctrine\ORM\EntityManagerInterface;
 
 use Core\Models\Livro;
 
-class LivrosRepository implements \Core\Repositories\ILivrosRepository
+class LivrosRepository extends BaseRepository implements \Core\Repositories\ILivrosRepository
 {
-    function __construct(
-        private EntityManagerInterface $em
-    ) {}
+    protected string $model = Livro::class;
 
     public function save(Livro $e): Livro
     {
-        $this->em->persist($e);
-        $this->em->flush();
-        return $e;
+        return $this->base_save($e);
     }
 
     public function findById(int $id): ?Livro
     {
-        return $this->em->find(Livro::class, $id);
+        return $this->base_findById($id);
     }
 }
 

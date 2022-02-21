@@ -6,26 +6,18 @@ use Doctrine\ORM\EntityManagerInterface;
 
 use Core\Models\Autor;
 
-class AutoresRepository implements \Core\Repositories\IAutoresRepository
+class AutoresRepository extends BaseRepository implements \Core\Repositories\IAutoresRepository
 {
-    function __construct(
-        private EntityManagerInterface $em
-    ) {}
+    protected string $model = Autor::class;
 
     public function save(Autor $e): Autor
     {
-        if(is_null($e->getId())) {
-            $this->em->persist($e);
-        } else {
-            $this->em->merge($e);
-        }
-        $this->em->flush();
-        return $e;
+        return $this->base_save($e);
     }
 
     public function findById(int $id): ?Autor
     {
-        return $this->em->find(Autor::class, $id);
+        return $this->base_findById($id);
     }
 }
 

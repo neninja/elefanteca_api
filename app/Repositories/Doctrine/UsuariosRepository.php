@@ -9,42 +9,22 @@ use Core\Models\{
     Email,
 };
 
-class UsuariosRepository implements \Core\Repositories\IUsuariosRepository
+class UsuariosRepository extends BaseRepository implements \Core\Repositories\IUsuariosRepository
 {
-    function __construct(
-        private EntityManagerInterface $em
-    ) {}
+    protected string $model = Usuario::class;
 
-    public function save(Usuario $u): Usuario
+    public function save(Usuario $e): Usuario
     {
-        $this->em->persist($u);
-        $this->em->flush();
-        return $u;
+        return $this->base_save($e);
     }
 
     public function findById(int $id): ?Usuario
     {
-        return $this->em->find(Usuario::class, $id);
-    }
-
-    public function findBy(array $condition): array
-    {
-        return $this
-            ->em
-            ->getRepository(Usuario::class)
-            ->findBy($condition);
-    }
-
-    public function findOneBy(array $condition): ?Usuario
-    {
-        return $this
-            ->em
-            ->getRepository(Usuario::class)
-            ->findOneBy($condition);
+        return $this->base_findById($id);
     }
 
     public function findByEmail(string $email): ?Usuario
     {
-        return $this->findOneBy(['email' => new Email($email)]);
+        return $this->base_findOneBy(['email' => new Email($email)]);
     }
 }
