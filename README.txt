@@ -12,6 +12,7 @@ Authors API
  [x] Edita como colaborador
 
 Users API
+ [x] Falha sem todos campos
  [x] Cria usuario
 
 Cadastro Autor Service
