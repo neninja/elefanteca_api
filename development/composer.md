@@ -1,6 +1,6 @@
 # Composer
 
 - Recriar autoload
-```sh
-docker-compose exec app composer du
-```
+    ```sh
+    docker-compose exec app composer du
+    ```

@@ -1,30 +1,30 @@
 # Testes
 
 - Simples
-```sh
-docker-compose exec app composer test tests/caminho/do/ExemploTest.php
-```
-> Um método de um arquivo: ``docker-compose exec app composer test -- --filter testName$ tests/caminho/do/ExemploTest.php``
+    ```sh
+    docker-compose exec app composer test tests/caminho/do/ExemploTest.php
+    ```
+    > Um método de um arquivo: ``docker-compose exec app composer test -- --filter testName$ tests/caminho/do/ExemploTest.php``
 
 - TDD
-```sh
-bash tdd.sh
-```
+    ```sh
+    bash tdd.sh
+    ```
 
-> O script executa o teste simples anterior, aceitando argumentos como ``bash tdd.sh -- --filter testName$ tests/caminho/do/ExemploTest.php``
+    > O script executa o teste simples anterior, aceitando argumentos como ``bash tdd.sh -- --filter testName$ tests/caminho/do/ExemploTest.php``
 
 - CI
-```sh
-docker-compose exec app composer ci
-```
-> Dashboard de relatório de cobertura disponível em `tests/_reports/index.html`
+    ```sh
+    docker-compose exec app composer ci
+    ```
+    > Dashboard de relatório de cobertura disponível em `tests/_reports/index.html`
 
 - Testes de mutação
-```sh
-docker-compose exec app composer ci:mutation
-```
+    ```sh
+    docker-compose exec app composer ci:mutation
+    ```
 
-> Veja o resultado no arquivo gerado em `docs/infection.diff`
+    > Veja o resultado no arquivo gerado em `docs/infection.diff`
 
 ## Configurações
 

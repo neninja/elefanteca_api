@@ -17,41 +17,42 @@ API de sistema para bibliotecas.
 ## Configuração inicial
 
 1. Duplique `.env.example` e renomeie para `.env`
-```sh
-cp .env.example .env
-```
+    ```sh
+    cp .env.example .env
+    ```
 
 2. **Mude o usuário (`DB_USERNAME`), senha (`DB_PASSWORD`) e JWT (`JWT_KEY`) de `.env`**
 
 3. Crie os containers
-```sh
-docker-compose up -d
-```
-> Caso queira, ao final da configuração, pare os containers com ``docker-compose down``
+    ```sh
+    docker-compose up -d
+    ```
+    > Caso queira, ao final da configuração, pare os containers com ``docker-compose down``
 
 4. Baixe as dependências do composer
-```sh
-docker-compose exec app composer install
-```
+    ```sh
+    docker-compose exec app composer install
+    ```
 
 5. Crie a chave de criptografia
-```sh
-docker-compose exec app php artisan key:generate
-```
+    ```sh
+    docker-compose exec app php artisan key:generate
+    ```
 
 6. Crie as tabelas no banco
-```sh
-docker-compose exec app composer doctrine:migrations migrate
-```
+    ```sh
+    docker-compose exec app composer doctrine:migrations migrate
+    ```
 
 7. Crie a documentação de suporte que ficará disponível em `localhost:8989/swagger`
-```sh
-docker-compose exec app composer swagger
-```
+    ```sh
+    docker-compose exec app composer swagger
+    ```
 
 ## Execução local
 
 Caso recém tenha feito a **configuração inicial** e os containers continuem rodando: tudo certo, aplicação disponível em ``localhost:8989``. Do contrário, suba os containers novamente:
+
 ```sh
 docker-compose up -d
 ```
@@ -59,11 +60,11 @@ docker-compose up -d
 ## Teste
 
 - Individual
-```sh
-docker-compose exec app composer test tests/caminho/do/ExemploTest.php
-```
+    ```sh
+    docker-compose exec app composer test tests/caminho/do/ExemploTest.php
+    ```
 
 - Completo
-```sh
-docker-compose exec app composer ci
-```
+    ```sh
+    docker-compose exec app composer ci
+    ```
