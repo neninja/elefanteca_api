@@ -7,9 +7,6 @@ use App\Repositories\Doctrine\{
     AutoresRepository,
 };
 
-/**
- * @covers \Core\Services\Emprestimo\CadastroAutorService
- */
 class CadastroAutorServiceTest extends IntegrationTestCase
 {
     private function sut()

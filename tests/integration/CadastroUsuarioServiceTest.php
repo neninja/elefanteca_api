@@ -10,9 +10,6 @@ use App\Adapters\{
     LumenCryptProvider,
 };
 
-/**
- * @covers \Core\Services\Usuario\CadastroUsuarioService
- */
 class CadastroUsuarioServiceTest extends IntegrationTestCase
 {
     private function sut()

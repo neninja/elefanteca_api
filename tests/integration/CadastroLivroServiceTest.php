@@ -12,9 +12,6 @@ use App\Repositories\Doctrine\{
     AutoresRepository,
 };
 
-/**
- * @covers \Core\Services\Emprestimo\CadastroLivroService
- */
 class CadastroLivroServiceTest extends IntegrationTestCase
 {
     private function sut()
