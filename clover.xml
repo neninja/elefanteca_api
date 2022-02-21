@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645454498">
-  <project timestamp="1645454498">
+<coverage generated="1645457071">
+  <project timestamp="1645457071">
     <file name="/app/app/Core/Exceptions/CoreException.php">
       <class name="Core\Exceptions\CoreException" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
@@ -146,8 +146,8 @@
       </class>
       <line num="15" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="3"/>
       <line num="23" type="stmt" count="3"/>
-      <line num="26" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="27" type="stmt" count="1"/>
+      <line num="26" type="method" name="getId" visibility="public" complexity="1" crap="1" count="3"/>
+      <line num="27" type="stmt" count="3"/>
       <line num="30" type="method" name="getSenha" visibility="public" complexity="1" crap="1" count="2"/>
       <line num="31" type="stmt" count="2"/>
       <line num="34" type="method" name="ativar" visibility="public" complexity="1" crap="2" count="0"/>
