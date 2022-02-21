@@ -4,11 +4,11 @@ info:
   version: 0.0.0
 paths:
   /api/auth/login/jwt:
-    get:
+    post:
       tags:
         - auth
       description: 'Login com JWT'
-      operationId: 46fb8f96f11a2a9a0044e9824f10a247
+      operationId: 7aa2ba8401e13c0f62d8ccaeb57b6b98
       requestBody:
         content:
           application/json;charset=UTF-8:
@@ -42,6 +42,41 @@ paths:
       responses:
         '200':
           description: 'Autor criado'
+      security:
+        -
+          JWT: []
+  '/api/authors/{id}':
+    put:
+      tags:
+        - autor
+      description: 'Cadastro de usuário'
+      operationId: 2a9f154a4061c0d3257520aba98221a5
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          examples:
+            int:
+              summary: 'Id autor'
+              value: '1'
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: 'Edgar Allan Poe'
+              type: object
+      responses:
+        '200':
+          description: 'Autor criado'
+      security:
+        -
+          JWT: []
   /api/users:
     post:
       tags:
@@ -69,6 +104,14 @@ paths:
       responses:
         '200':
           description: 'Usuário criado'
+      security:
+        -
+          JWT: []
+components:
+  securitySchemes:
+    JWT:
+      type: http
+      scheme: bearer
 externalDocs:
   description: 'Código fonte do projeto'
   url: 'https://github.com/nenitf/elefanteca_api'

@@ -3,13 +3,15 @@ Auth API
  [x] Falha ao criar token sem autenticacao jwt
 
 Authors API
- [x] Falha sem autenticacao
- [x] Falha como membro
- [x] Cria autor como colaborador
- [x] Cria autor como admin
+ [x] Falha sem autenticacao ao criar
+ [x] Falha como membro ao criar
+ [x] Cria como colaborador
+ [x] Cria como admin
+ [x] Falha sem autenticacao ao editar
+ [x] Falha como membro ao editar
+ [x] Edita como colaborador
 
 Users API
- [x] Falha sem autenticacao
  [x] Cria usuario
 
 Cadastro Autor Service
