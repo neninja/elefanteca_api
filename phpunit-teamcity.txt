@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testCriaTokenJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testCriaTokenJwt' flowId='1']
 
-##teamcity[testFinished name='testCriaTokenJwt' duration='112' flowId='1']
+##teamcity[testFinished name='testCriaTokenJwt' duration='118' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenSemAutenticacaoJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenSemAutenticacaoJwt' flowId='1']
 
@@ -19,15 +19,15 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoCriar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoCriar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoCriar' duration='15' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoCriar' duration='16' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoCriar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaComoMembroAoCriar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoCriar' duration='13' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoCriar' duration='14' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testCriaComoColaborador' duration='22' flowId='1']
+##teamcity[testFinished name='testCriaComoColaborador' duration='24' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoAdmin' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaComoAdmin' flowId='1']
 
@@ -53,13 +53,13 @@
 
 ##teamcity[testStarted name='testValida with data set "sem todos campos"' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testValida with data set "sem todos campos"' flowId='1']
 
-##teamcity[testFinished name='testValida with data set "sem todos campos"' duration='15' flowId='1']
+##teamcity[testFinished name='testValida with data set "sem todos campos"' duration='16' flowId='1']
 
 ##teamcity[testSuiteFinished name='testValida' flowId='1']
 
 ##teamcity[testStarted name='testCriaUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuario' flowId='1']
 
-##teamcity[testFinished name='testCriaUsuario' duration='17' flowId='1']
+##teamcity[testFinished name='testCriaUsuario' duration='18' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -95,7 +95,7 @@
 
 ##teamcity[testStarted name='testCriaComoAtivo' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testCriaComoAtivo' flowId='1']
 
-##teamcity[testFinished name='testCriaComoAtivo' duration='2' flowId='1']
+##teamcity[testFinished name='testCriaComoAtivo' duration='3' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroUsuarioServiceTest' flowId='1']
 
