@@ -25,6 +25,13 @@ jobs:
         env:
           XDEBUG_MODE: coverage
 
+      - name: Generate test coverage badge
+        uses: timkrase/phpunit-coverage-badge@v1.2.0
+        with:
+          push_badge: false
+          coverage_badge_path: 'docs/coverage.svg'
+          report: ./docs/clover.xml
+
       - name: Swagger and coverage report to public
         if: always()
         run: |
