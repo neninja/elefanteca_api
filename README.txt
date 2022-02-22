@@ -45,3 +45,12 @@ CPF
  [x] Falha como "CPF inválido" 881026092141
  [x] Falha como "CPF inválido" 8102609214
 
+Email
+ [x] Falha como "Email inválido" exemplo
+ [x] Falha como "Email inválido" exemplo@
+ [x] Falha como "Email inválido" exemplo.com
+ [x] Falha como "Email inválido" exemplo@.com
+ [x] Falha como "Email inválido" @com
+ [x] Falha como "Email inválido" @.com
+ [x] Falha como "Email inválido" exemplo@com
+

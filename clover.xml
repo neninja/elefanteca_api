@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645497143">
-  <project timestamp="1645497143">
+<coverage generated="1645497424">
+  <project timestamp="1645497424">
     <file name="/app/app/Core/Exceptions/CoreException.php">
       <class name="Core\Exceptions\CoreException" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </class>
-      <line num="6" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
-      <line num="7" type="stmt" count="13"/>
+      <line num="6" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="20"/>
+      <line num="7" type="stmt" count="20"/>
       <metrics loc="13" ncloc="13" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
     </file>
     <file name="/app/app/Core/Exceptions/ValidationException.php">
       <class name="Core\Exceptions\ValidationException" namespace="global">
         <metrics complexity="3" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="2" elements="7" coveredelements="3"/>
       </class>
-      <line num="8" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
-      <line num="9" type="stmt" count="13"/>
-      <line num="11" type="stmt" count="13"/>
+      <line num="8" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="20"/>
+      <line num="9" type="stmt" count="20"/>
+      <line num="11" type="stmt" count="20"/>
       <line num="14" type="method" name="mensagemAmigavel" visibility="public" complexity="1" crap="2" count="0"/>
       <line num="16" type="stmt" count="0"/>
       <line num="19" type="method" name="mensagemLog" visibility="public" complexity="1" crap="2" count="0"/>
@@ -91,18 +91,18 @@
     </file>
     <file name="/app/app/Core/Models/Email.php">
       <class name="Core\Models\Email" namespace="global">
-        <metrics complexity="4" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="9" coveredelements="7"/>
+        <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="9" coveredelements="9"/>
       </class>
-      <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="6"/>
-      <line num="13" type="stmt" count="6"/>
+      <line num="11" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="13"/>
+      <line num="13" type="stmt" count="13"/>
       <line num="16" type="method" name="getEmail" visibility="public" complexity="1" crap="1" count="6"/>
       <line num="17" type="stmt" count="6"/>
-      <line num="20" type="method" name="setEmail" visibility="public" complexity="2" crap="2.06" count="6"/>
-      <line num="21" type="stmt" count="6"/>
-      <line num="22" type="stmt" count="0"/>
+      <line num="20" type="method" name="setEmail" visibility="public" complexity="2" crap="2" count="13"/>
+      <line num="21" type="stmt" count="13"/>
+      <line num="22" type="stmt" count="7"/>
       <line num="24" type="stmt" count="6"/>
       <line num="25" type="stmt" count="6"/>
-      <metrics loc="27" ncloc="27" classes="1" methods="3" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="5" elements="9" coveredelements="7"/>
+      <metrics loc="27" ncloc="27" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="9" coveredelements="9"/>
     </file>
     <file name="/app/app/Core/Models/Livro.php">
       <class name="Core\Models\Livro" namespace="global">
@@ -326,6 +326,6 @@
       <line num="36" type="stmt" count="11"/>
       <metrics loc="40" ncloc="29" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="11" elements="13" coveredelements="11"/>
     </file>
-    <metrics files="23" loc="887" ncloc="749" classes="17" methods="37" coveredmethods="25" conditionals="0" coveredconditionals="0" statements="165" coveredstatements="144" elements="202" coveredelements="169"/>
+    <metrics files="23" loc="887" ncloc="749" classes="17" methods="37" coveredmethods="26" conditionals="0" coveredconditionals="0" statements="165" coveredstatements="145" elements="202" coveredelements="171"/>
   </project>
 </coverage>
