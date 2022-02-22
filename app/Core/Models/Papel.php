@@ -22,9 +22,4 @@ class Papel
     {
         return $this->papel;
     }
-
-    public function __toString()
-    {
-        return $this->papel;
-    }
 }
