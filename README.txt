@@ -14,6 +14,8 @@ Authors API
 Users API
  [x] Falha sem todos campos
  [x] Cria usuario
+ [x] Cria usuario como colaborador
+ [x] Cria usuario como membro tentando criar colaborador
 
 Cadastro Autor Service
  [x] Cria com valores obrigatorios

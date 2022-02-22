@@ -1,23 +1,23 @@
 
 
 Code Coverage Report:      
-  2022-02-22 02:57:12      
+  2022-02-22 03:19:20      
                            
  Summary:                  
-  Classes: 64.71% (11/17)  
-  Methods: 72.97% (27/37)  
-  Lines:   90.53% (153/169)
+  Classes: 70.59% (12/17)  
+  Methods: 74.29% (26/35)  
+  Lines:   91.07% (153/168)
 
 App\Http\Controllers\AuthController
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 10/ 10)
 App\Http\Controllers\AuthorController
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 14/ 14)
 App\Http\Controllers\UserController
-  Methods:   0.00% ( 0/ 1)   Lines:  93.33% ( 14/ 15)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 16/ 16)
 App\Http\Middleware\Authenticate
-  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  6/  6)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  5/  5)
 App\Http\Middleware\HasRole
-  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  6/  6)
 Core\Exceptions\CoreException
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  1/  1)
 Core\Exceptions\ValidationException
