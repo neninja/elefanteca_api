@@ -26,6 +26,8 @@ Cadastro Usuario Service
  [x] Persiste com nome cpf email senha corretos
  [x] Criptografa senha
  [x] Cria como ativo
+ [x] Falha ao criar com email existente
+ [x] Falha ao criar com cpfl existente
 
 CPF
  [x] Formata 81026092140 para 810.260.921-40
