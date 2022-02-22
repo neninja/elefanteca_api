@@ -13,10 +13,11 @@ use Core\Repositories\{
     IUsuariosRepository,
 };
 
-
 use Core\Providers\{
     ICriptografiaProvider,
 };
+
+use Core\Exceptions\ValidationException;
 
 class CadastroUsuarioService
 {
@@ -37,6 +38,18 @@ class CadastroUsuarioService
         }
 
         $senhaCriptografada = $this->crypt->encrypt($senha);
+
+        $usuarioExistente = $this->repo->findByEmail($email) ;
+
+        if(!is_null($usuarioExistente)) {
+            throw new ValidationException("Email já cadastrado", $email);
+        }
+
+        $usuarioExistente = $this->repo->findByCpf($cpf) ;
+
+        if(!is_null($usuarioExistente)) {
+            throw new ValidationException("CPF já cadastrado", $email);
+        }
 
         $u = new Usuario(
             nome:   $nome,

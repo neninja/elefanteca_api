@@ -7,6 +7,7 @@ use Doctrine\ORM\EntityManagerInterface;
 use Core\Models\{
     Usuario,
     Email,
+    CPF,
 };
 
 class UsuariosRepository extends BaseRepository implements \Core\Repositories\IUsuariosRepository
@@ -26,5 +27,10 @@ class UsuariosRepository extends BaseRepository implements \Core\Repositories\IU
     public function findByEmail(string $email): ?Usuario
     {
         return $this->base_findOneBy(['email' => new Email($email)]);
+    }
+
+    public function findByCpf(string $cpf): ?Usuario
+    {
+        return $this->base_findOneBy(['cpf' => new CPF($cpf)]);
     }
 }

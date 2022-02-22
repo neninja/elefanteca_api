@@ -10,6 +10,8 @@ use App\Adapters\{
     LumenCryptProvider,
 };
 
+use Core\Exceptions\CoreException;
+
 class CadastroUsuarioServiceTest extends IntegrationTestCase
 {
     private function sut()
@@ -108,5 +110,57 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
         $this->assertTrue($usuario->getAtivo());
 
         $this->assertTrue($this->usuarioPersistido($usuario)->getAtivo());
+    }
+
+    public function testFalhaAoCriarComEmailExistente()
+    {
+        $fixture = $this->fixture('ok');
+
+        $email = $fixture['email'];
+
+        $this->sut()->execute(
+            nome:   $fixture['nome'],
+            cpf:    $fixture['cpf'],
+            email:  $email,
+            senha:  $fixture['senha'],
+        );
+
+        $this->expectException(CoreException::class);
+        $this->expectExceptionMessage('Email já cadastrado');
+
+        $fixture = $this->fixture('ok');
+
+        $this->sut()->execute(
+            nome:   $fixture['nome'].'2',
+            cpf:    $fixture['cpf'],
+            email:  $email,
+            senha:  $fixture['senha'],
+        );
+    }
+
+    public function testFalhaAoCriarComCpflExistente()
+    {
+        $fixture = $this->fixture('ok');
+
+        $cpf = $fixture['cpf'];
+
+        $this->sut()->execute(
+            nome:   $fixture['nome'],
+            cpf:    $cpf,
+            email:  $fixture['email'],
+            senha:  $fixture['senha'],
+        );
+
+        $this->expectException(CoreException::class);
+        $this->expectExceptionMessage('CPF já cadastrado');
+
+        $fixture = $this->fixture('ok');
+
+        $this->sut()->execute(
+            nome:   $fixture['nome'].'2',
+            cpf:    $cpf,
+            email:  $fixture['email'],
+            senha:  $fixture['senha'],
+        );
     }
 }
