@@ -47,4 +47,58 @@ class UsersAPITest extends E2ETestCase
 
         $this->seeInDatabase('usuarios', ['email' => $bodyRequest['email']]);
     }
+
+    public function testCriaUsuarioComoColaborador()
+    {
+        $bodyRequest = [
+            'name'      => $this->fakeName(),
+            'cpf'       => $this->fakeCpf(),
+            'password'  => $this->fakePassword(),
+            'email'     => $this->fakeEmail(),
+            'role'      => 'colaborador',
+        ];
+
+        $bodyResponse = [
+            'name'      => $bodyRequest['name'],
+            'cpf'       => $bodyRequest['cpf'],
+            'email'     => $bodyRequest['email'],
+            'role'      => $bodyRequest['role'],
+        ];
+
+        $this
+            ->jsonComoAdmin('POST', self::$ep, $bodyRequest)
+            ->seeJson($bodyResponse)
+            ->seeJsonStructure(['id'])
+            ->response
+            ->assertOk();
+
+        $this->seeInDatabase('usuarios', ['email' => $bodyRequest['email']]);
+    }
+
+    public function testCriaUsuarioComoMembroTentandoCriarColaborador()
+    {
+        $bodyRequest = [
+            'name'      => $this->fakeName(),
+            'cpf'       => $this->fakeCpf(),
+            'password'  => $this->fakePassword(),
+            'email'     => $this->fakeEmail(),
+            'role'      => 'colaborador',
+        ];
+
+        $bodyResponse = [
+            'name'      => $bodyRequest['name'],
+            'cpf'       => $bodyRequest['cpf'],
+            'email'     => $bodyRequest['email'],
+            'role'      => 'membro',
+        ];
+
+        $this
+            ->json('POST', self::$ep, $bodyRequest)
+            ->seeJson($bodyResponse)
+            ->seeJsonStructure(['id'])
+            ->response
+            ->assertOk();
+
+        $this->seeInDatabase('usuarios', ['email' => $bodyRequest['email']]);
+    }
 }

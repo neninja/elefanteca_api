@@ -81,6 +81,7 @@ class UserController extends Controller
                 'name'      => $u->nome,
                 'cpf'       => $u->cpf->getNumero(),
                 'email'     => $u->email->getEmail(),
+                'role'      => $u->papel->get(),
             ]);
     }
 }
