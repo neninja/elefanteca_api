@@ -10,12 +10,7 @@ use Core\Models\Papel;
 
 class HasRole
 {
-    protected $auth;
-
-    public function __construct(Auth $auth)
-    {
-        $this->auth = $auth;
-    }
+    public function __construct(protected Auth $auth){}
 
     public function handle($request, Closure $next, ...$roles)
     {
