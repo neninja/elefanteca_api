@@ -20,10 +20,6 @@ class HasRole
     public function handle($request, Closure $next, ...$roles)
     {
         try {
-            if(empty($roles)) {
-                throw new \Exception();
-            }
-
             foreach($roles as $role) {
                 if(Gate::check('papel', Papel::$$role)) {
                     return $next($request);
