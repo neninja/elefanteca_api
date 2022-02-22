@@ -33,7 +33,7 @@ class AuthorsAPITest extends E2ETestCase
     public function testFalhaComoMembroAoCriar()
     {
         $this
-            ->jsonComoMembro('POST', self::$ep, ['name' => $this->fakeName()])
+            ->jsonMembro('POST', self::$ep, ['name' => $this->fakeName()])
             ->response
             ->assertUnauthorized();
     }
@@ -45,7 +45,7 @@ class AuthorsAPITest extends E2ETestCase
         ];
 
         $this
-            ->jsonComoColaborador('POST', self::$ep, $body)
+            ->jsonColaborador('POST', self::$ep, $body)
             ->seeJson($body)
             ->seeJsonStructure(['id'])
             ->response
@@ -61,7 +61,7 @@ class AuthorsAPITest extends E2ETestCase
         ];
 
         $this
-            ->jsonComoAdmin('POST', self::$ep, $body)
+            ->jsonAdmin('POST', self::$ep, $body)
             ->seeJson($body)
             ->seeJsonStructure(['id'])
             ->response
@@ -109,7 +109,7 @@ class AuthorsAPITest extends E2ETestCase
         ];
 
         $this
-            ->jsonComoColaborador('PUT', self::$ep."/{$a->getId()}", $body)
+            ->jsonColaborador('PUT', self::$ep."/{$a->getId()}", $body)
             ->seeJson($body)
             ->seeJsonStructure(['id'])
             ->response

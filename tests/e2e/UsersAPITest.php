@@ -66,7 +66,7 @@ class UsersAPITest extends E2ETestCase
         ];
 
         $this
-            ->jsonComoAdmin('POST', self::$ep, $bodyRequest)
+            ->jsonAdmin('POST', self::$ep, $bodyRequest)
             ->seeJson($bodyResponse)
             ->seeJsonStructure(['id'])
             ->response

@@ -16,7 +16,7 @@ abstract class E2ETestCase extends LumenTestCase
             ->json($method, $ep, $body, $headers);
     }
 
-    protected function jsonComoAdmin(
+    protected function jsonAdmin(
         string $method, string $ep, array $body = [], $headers = []
     ) {
         return $this->jsonComo(
@@ -28,7 +28,7 @@ abstract class E2ETestCase extends LumenTestCase
         );
     }
 
-    protected function jsonComoMembro(
+    protected function jsonMembro(
         string $method, string $ep, array $body = [], $headers = []
     ) {
         return $this->jsonComo(
@@ -40,7 +40,7 @@ abstract class E2ETestCase extends LumenTestCase
         );
     }
 
-    protected function jsonComoColaborador(
+    protected function jsonColaborador(
         string $method, string $ep, array $body = [], $headers = []
     ) {
         $login = $this->criaColaborador()['loginJWT'];
