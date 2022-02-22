@@ -7,11 +7,11 @@
 
 ##teamcity[testStarted name='testCriaTokenJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testCriaTokenJwt' flowId='1']
 
-##teamcity[testFinished name='testCriaTokenJwt' duration='133' flowId='1']
+##teamcity[testFinished name='testCriaTokenJwt' duration='134' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenSemAutenticacaoJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenSemAutenticacaoJwt' flowId='1']
 
-##teamcity[testFinished name='testFalhaAoCriarTokenSemAutenticacaoJwt' duration='22' flowId='1']
+##teamcity[testFinished name='testFalhaAoCriarTokenSemAutenticacaoJwt' duration='23' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthAPITest' flowId='1']
 
@@ -23,7 +23,7 @@
 
 ##teamcity[testStarted name='testFalhaComoMembroAoCriar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaComoMembroAoCriar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoCriar' duration='16' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoCriar' duration='20' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaComoColaborador' flowId='1']
 
@@ -35,15 +35,15 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoEditar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='27' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='28' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoEditar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaComoMembroAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='16' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='15' flowId='1']
 
 ##teamcity[testStarted name='testEditaComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testEditaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testEditaComoColaborador' duration='23' flowId='1']
+##teamcity[testFinished name='testEditaComoColaborador' duration='24' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthorsAPITest' flowId='1']
 
@@ -53,7 +53,7 @@
 
 ##teamcity[testStarted name='testValida with data set "sem todos campos"' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testValida with data set "sem todos campos"' flowId='1']
 
-##teamcity[testFinished name='testValida with data set "sem todos campos"' duration='17' flowId='1']
+##teamcity[testFinished name='testValida with data set "sem todos campos"' duration='18' flowId='1']
 
 ##teamcity[testSuiteFinished name='testValida' flowId='1']
 
@@ -103,11 +103,11 @@
 
 ##teamcity[testStarted name='testFalhaAoCriarComEmailExistente' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testFalhaAoCriarComEmailExistente' flowId='1']
 
-##teamcity[testFinished name='testFalhaAoCriarComEmailExistente' duration='6' flowId='1']
+##teamcity[testFinished name='testFalhaAoCriarComEmailExistente' duration='5' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarComCpflExistente' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testFalhaAoCriarComCpflExistente' flowId='1']
 
-##teamcity[testFinished name='testFalhaAoCriarComCpflExistente' duration='6' flowId='1']
+##teamcity[testFinished name='testFalhaAoCriarComCpflExistente' duration='5' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroUsuarioServiceTest' flowId='1']
 
@@ -169,7 +169,7 @@
 
 ##teamcity[testStarted name='testFalhaComErroAmigavel with data set #8' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #8' flowId='1']
 
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #8' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #8' duration='2' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComErroAmigavel with data set #9' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #9' flowId='1']
 
@@ -177,7 +177,7 @@
 
 ##teamcity[testStarted name='testFalhaComErroAmigavel with data set #10' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #10' flowId='1']
 
-##teamcity[testFinished name='testFalhaComErroAmigavel with data set #10' duration='1' flowId='1']
+##teamcity[testFinished name='testFalhaComErroAmigavel with data set #10' duration='2' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComErroAmigavel with data set #11' locationHint='php_qn:///app/tests/unit/CPFTest.php::\CPFTest::testFalhaComErroAmigavel with data set #11' flowId='1']
 
