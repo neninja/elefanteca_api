@@ -33,7 +33,7 @@ class AuthorsAPITest extends E2ETestCase
     public function testFalhaComoMembroAoCriar()
     {
         $this
-            ->json('POST', self::$ep, ['name' => $this->fakeName()])
+            ->jsonComoMembro('POST', self::$ep, ['name' => $this->fakeName()])
             ->response
             ->assertUnauthorized();
     }
