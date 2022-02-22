@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645496971">
-  <project timestamp="1645496971">
+<coverage generated="1645497143">
+  <project timestamp="1645497143">
     <file name="/app/app/Core/Exceptions/CoreException.php">
       <class name="Core\Exceptions\CoreException" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
@@ -257,12 +257,6 @@
       </class>
       <metrics loc="10" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <file name="/app/app/Http/Controllers/ExampleController.php">
-      <class name="App\Http\Controllers\ExampleController" namespace="global">
-        <metrics complexity="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
-      </class>
-      <metrics loc="18" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
-    </file>
     <file name="/app/app/Http/Controllers/UserController.php">
       <class name="App\Http\Controllers\UserController" namespace="global">
         <metrics complexity="3" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="14" elements="16" coveredelements="14"/>
@@ -299,14 +293,6 @@
       <line num="49" type="stmt" count="4"/>
       <metrics loc="52" ncloc="33" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="8" coveredelements="8"/>
     </file>
-    <file name="/app/app/Http/Middleware/ExampleMiddleware.php">
-      <class name="App\Http\Middleware\ExampleMiddleware" namespace="global">
-        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </class>
-      <line num="16" type="method" name="handle" visibility="public" complexity="1" crap="2" count="0"/>
-      <line num="18" type="stmt" count="0"/>
-      <metrics loc="20" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-    </file>
     <file name="/app/app/Http/Middleware/HasRole.php">
       <class name="App\Http\Middleware\HasRole" namespace="global">
         <metrics complexity="6" methods="2" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="5" elements="11" coveredelements="6"/>
@@ -340,6 +326,6 @@
       <line num="36" type="stmt" count="11"/>
       <metrics loc="40" ncloc="29" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="11" elements="13" coveredelements="11"/>
     </file>
-    <metrics files="25" loc="925" ncloc="773" classes="18" methods="38" coveredmethods="25" conditionals="0" coveredconditionals="0" statements="166" coveredstatements="144" elements="204" coveredelements="169"/>
+    <metrics files="23" loc="887" ncloc="749" classes="17" methods="37" coveredmethods="25" conditionals="0" coveredconditionals="0" statements="165" coveredstatements="144" elements="202" coveredelements="169"/>
   </project>
 </coverage>
