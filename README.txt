@@ -42,4 +42,6 @@ CPF
  [x] Falha como "CPF inválido" 88888888888
  [x] Falha como "CPF inválido" 99999999999
  [x] Falha como "CPF inválido" 81026092141
+ [x] Falha como "CPF inválido" 881026092141
+ [x] Falha como "CPF inválido" 8102609214
 
