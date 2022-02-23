@@ -28,12 +28,18 @@ abstract class BaseRepository
         return $this->em->find($this->model, $id);
     }
 
-    protected function base_findBy(array $condition): array
-    {
+    protected function base_findBy(
+        array $condition, int $limit = 10, int $page = 1
+    ): array {
         return $this
             ->em
             ->getRepository($this->model)
-            ->findBy($condition);
+            ->findBy(
+                $condition,
+                [],
+                $limit,
+                $limit * ($page - 1) // após $offset, listar $limit
+            );
     }
 
     protected function base_findOneBy(array $condition)

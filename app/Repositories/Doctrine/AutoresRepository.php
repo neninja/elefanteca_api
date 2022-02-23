@@ -19,5 +19,10 @@ class AutoresRepository extends BaseRepository implements \Core\Repositories\IAu
     {
         return $this->base_findById($id);
     }
+
+    public function findBy(array $condition, int $page, int $limit = 10): array
+    {
+        return $this->base_findBy($condition, $limit, $page);
+    }
 }
 

@@ -8,11 +8,27 @@ use Core\Services\{
     Emprestimo\CadastroAutorService,
 };
 
+use Core\Repositories\{
+    IAutoresRepository,
+};
+
 class AuthorController extends Controller
 {
     public function __construct(
-        private CadastroAutorService $cadastroService
+        private CadastroAutorService $cadastroService,
+        private IAutoresRepository $autoresRepository,
     ) {}
+
+    public function index(Request $r)
+    {
+        $page = $r->page ?? 1;
+
+        $a = $this
+            ->autoresRepository
+            ->findBy([], $page);
+
+        return ['data' => $a];
+    }
 
     /**
      * @OA\Post(
