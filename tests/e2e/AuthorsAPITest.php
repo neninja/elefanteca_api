@@ -130,9 +130,27 @@ class AuthorsAPITest extends E2ETestCase
             ->assertOk();
     }
 
+    public function testFalhaSemAutenticacaoAoListarPorId()
+    {
+        $a = $this->given('autor existente');
+
+        $this
+            ->json('GET', self::$ep."/{$a->getId()}")
+            ->response
+            ->assertUnauthorized();
+    }
+
     public function testListaPorId()
     {
-        $this->markTestIncomplete();
+        $a = $this->given('autor existente');
+
+        $r = [ 'data' => $a ];
+
+        $this
+            ->jsonMembro('GET', self::$ep."/{$a->getId()}")
+            ->seeJsonEquals($r)
+            ->response
+            ->assertOk();
     }
 
     /******** UPDATE *******/

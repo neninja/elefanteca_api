@@ -22,11 +22,36 @@ class AuthorController extends Controller
     /**
      * @OA\Get(
      *     tags={"autor"},
-     *     path="/api/authors",
-     *     description="Edição de autor",
+     *     path="/api/authors/{id}",
+     *     description="Exibição de 1 autor",
      *     security={{"JWT":{}}},
      *     @OA\Parameter(
-     *         name="author",
+     *         in="path",
+     *         name="id",
+     *         required=true,
+     *         @OA\Schema(type="string"),
+     *         @OA\Examples(example="int", value="1", summary="Id autor"),
+     *     ),
+     *     @OA\Response(response="200", description="Pesquisa realizada")
+     * )
+     */
+    public function show(int $id, Request $r)
+    {
+        $a = $this
+            ->autoresRepository
+            ->findById($id);
+
+        return ['data' => $a];
+    }
+
+    /**
+     * @OA\Get(
+     *     tags={"autor"},
+     *     path="/api/authors",
+     *     description="Listagem de autores",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         name="name",
      *         in="query",
      *         description="Nome parcial do autor",
      *         @OA\Schema(
@@ -34,7 +59,7 @@ class AuthorController extends Controller
      *             example="Allan"
      *         )
      *     ),
-     *     @OA\Response(response="200", description="Autor criado")
+     *     @OA\Response(response="200", description="Pesquisa realizada")
      * )
      */
     public function index(Request $r)
