@@ -9,8 +9,9 @@ Authors API
  [x] Cria como admin
  [x] Falha sem autenticacao ao listar
  [x] Lista 20 com 2 paginas
- [ ] Lista por nome parcial
- [ ] Lista por id
+ [x] Lista por nome parcial
+ [x] Falha sem autenticacao ao listar por id
+ [x] Lista por id
  [x] Falha sem autenticacao ao editar
  [x] Falha como membro ao editar
  [x] Edita como colaborador

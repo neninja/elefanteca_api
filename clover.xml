@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1645592625">
-  <project timestamp="1645592625">
+<coverage generated="1645638645">
+  <project timestamp="1645638645">
     <file name="/app/app/Core/Exceptions/CoreException.php">
       <class name="Core\Exceptions\CoreException" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
@@ -26,13 +26,13 @@
       <class name="Core\Models\Autor" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
       </class>
-      <line num="12" type="method" name="getId" visibility="public" complexity="1" crap="1" count="9"/>
-      <line num="13" type="stmt" count="9"/>
+      <line num="12" type="method" name="getId" visibility="public" complexity="1" crap="1" count="12"/>
+      <line num="13" type="stmt" count="12"/>
       <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
     </file>
     <file name="/app/app/Core/Models/CPF.php">
       <class name="Core\Models\CPF" namespace="global">
-        <metrics complexity="11" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="49" elements="53" coveredelements="53"/>
+        <metrics complexity="11" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="48" coveredstatements="48" elements="52" coveredelements="52"/>
       </class>
       <line num="11" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="26"/>
       <line num="13" type="stmt" count="26"/>
@@ -42,7 +42,6 @@
       <line num="21" type="stmt" count="26"/>
       <line num="22" type="stmt" count="2"/>
       <line num="25" type="stmt" count="24"/>
-      <line num="28" type="stmt" count="24"/>
       <line num="40" type="stmt" count="24"/>
       <line num="41" type="stmt" count="10"/>
       <line num="44" type="stmt" count="14"/>
@@ -87,7 +86,7 @@
       <line num="96" type="stmt" count="3"/>
       <line num="99" type="method" name="getNumero" visibility="public" complexity="1" crap="1" count="10"/>
       <line num="101" type="stmt" count="10"/>
-      <metrics loc="103" ncloc="103" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="49" coveredstatements="49" elements="53" coveredelements="53"/>
+      <metrics loc="103" ncloc="103" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="48" coveredstatements="48" elements="52" coveredelements="52"/>
     </file>
     <file name="/app/app/Core/Models/Email.php">
       <class name="Core\Models\Email" namespace="global">
@@ -170,9 +169,9 @@
       <class name="Core\Services\Emprestimo\CadastroAutorService" namespace="global">
         <metrics complexity="2" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
       </class>
-      <line num="19" type="method" name="execute" visibility="public" complexity="1" crap="1" count="9"/>
-      <line num="23" type="stmt" count="9"/>
-      <line num="28" type="stmt" count="9"/>
+      <line num="19" type="method" name="execute" visibility="public" complexity="1" crap="1" count="12"/>
+      <line num="23" type="stmt" count="12"/>
+      <line num="28" type="stmt" count="12"/>
       <metrics loc="31" ncloc="31" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="2" elements="3" coveredelements="3"/>
     </file>
     <file name="/app/app/Core/Services/Emprestimo/CadastroLivroService.php">
@@ -220,47 +219,54 @@
     </file>
     <file name="/app/app/Http/Controllers/AuthController.php">
       <class name="App\Http\Controllers\AuthController" namespace="global">
-        <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
+        <metrics complexity="3" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
       </class>
       <line num="42" type="method" name="loginJWT" visibility="public" complexity="2" crap="2" count="2"/>
       <line num="44" type="stmt" count="2"/>
-      <line num="45" type="stmt" count="2"/>
       <line num="49" type="stmt" count="2"/>
       <line num="51" type="stmt" count="2"/>
       <line num="52" type="stmt" count="1"/>
       <line num="55" type="stmt" count="1"/>
       <line num="56" type="stmt" count="1"/>
       <line num="57" type="stmt" count="1"/>
-      <line num="58" type="stmt" count="1"/>
       <line num="61" type="stmt" count="1"/>
-      <metrics loc="63" ncloc="39" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="10" elements="11" coveredelements="11"/>
+      <metrics loc="63" ncloc="39" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="8" coveredstatements="8" elements="9" coveredelements="9"/>
     </file>
     <file name="/app/app/Http/Controllers/AuthorController.php">
       <class name="App\Http\Controllers\AuthorController" namespace="global">
-        <metrics complexity="4" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="21" coveredelements="21"/>
+        <metrics complexity="6" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="30" coveredelements="30"/>
       </class>
-      <line num="22" type="method" name="index" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="24" type="stmt" count="1"/>
-      <line num="26" type="stmt" count="1"/>
-      <line num="27" type="stmt" count="1"/>
-      <line num="30" type="stmt" count="1"/>
-      <line num="53" type="method" name="store" visibility="public" complexity="1" crap="1" count="2"/>
-      <line num="55" type="stmt" count="2"/>
-      <line num="56" type="stmt" count="2"/>
-      <line num="59" type="stmt" count="2"/>
-      <line num="60" type="stmt" count="2"/>
-      <line num="63" type="stmt" count="2"/>
-      <line num="65" type="stmt" count="2"/>
-      <line num="66" type="stmt" count="2"/>
-      <line num="97" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
-      <line num="99" type="stmt" count="1"/>
-      <line num="100" type="stmt" count="1"/>
-      <line num="103" type="stmt" count="1"/>
-      <line num="105" type="stmt" count="1"/>
-      <line num="108" type="stmt" count="1"/>
-      <line num="110" type="stmt" count="1"/>
-      <line num="111" type="stmt" count="1"/>
-      <metrics loc="114" ncloc="67" classes="1" methods="3" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="18" elements="21" coveredelements="21"/>
+      <line num="38" type="method" name="show" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="40" type="stmt" count="1"/>
+      <line num="41" type="stmt" count="1"/>
+      <line num="42" type="stmt" count="1"/>
+      <line num="44" type="stmt" count="1"/>
+      <line num="65" type="method" name="index" visibility="public" complexity="2" crap="2" count="2"/>
+      <line num="67" type="stmt" count="2"/>
+      <line num="69" type="stmt" count="2"/>
+      <line num="71" type="stmt" count="2"/>
+      <line num="72" type="stmt" count="1"/>
+      <line num="75" type="stmt" count="2"/>
+      <line num="76" type="stmt" count="2"/>
+      <line num="77" type="stmt" count="2"/>
+      <line num="79" type="stmt" count="2"/>
+      <line num="102" type="method" name="store" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="104" type="stmt" count="2"/>
+      <line num="108" type="stmt" count="2"/>
+      <line num="109" type="stmt" count="2"/>
+      <line num="112" type="stmt" count="2"/>
+      <line num="113" type="stmt" count="2"/>
+      <line num="114" type="stmt" count="2"/>
+      <line num="115" type="stmt" count="2"/>
+      <line num="146" type="method" name="update" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="148" type="stmt" count="1"/>
+      <line num="152" type="stmt" count="1"/>
+      <line num="154" type="stmt" count="1"/>
+      <line num="157" type="stmt" count="1"/>
+      <line num="158" type="stmt" count="1"/>
+      <line num="159" type="stmt" count="1"/>
+      <line num="160" type="stmt" count="1"/>
+      <metrics loc="163" ncloc="82" classes="1" methods="4" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="26" coveredstatements="26" elements="30" coveredelements="30"/>
     </file>
     <file name="/app/app/Http/Controllers/Controller.php">
       <class name="App\Http\Controllers\Controller" namespace="global">
@@ -274,7 +280,6 @@
       </class>
       <line num="55" type="method" name="store" visibility="public" complexity="2" crap="2" count="4"/>
       <line num="57" type="stmt" count="4"/>
-      <line num="58" type="stmt" count="4"/>
       <line num="64" type="stmt" count="3"/>
       <line num="66" type="stmt" count="3"/>
       <line num="67" type="stmt" count="1"/>
@@ -284,6 +289,7 @@
       <line num="73" type="stmt" count="3"/>
       <line num="74" type="stmt" count="3"/>
       <line num="78" type="stmt" count="3"/>
+      <line num="79" type="stmt" count="3"/>
       <line num="80" type="stmt" count="3"/>
       <line num="81" type="stmt" count="3"/>
       <line num="82" type="stmt" count="3"/>
@@ -295,12 +301,12 @@
       <class name="App\Http\Middleware\Authenticate" namespace="global">
         <metrics complexity="4" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
       </class>
-      <line num="16" type="method" name="handle" visibility="public" complexity="3" crap="3" count="9"/>
-      <line num="19" type="stmt" count="9"/>
-      <line num="20" type="stmt" count="4"/>
-      <line num="23" type="stmt" count="5"/>
-      <line num="24" type="stmt" count="4"/>
-      <line num="25" type="stmt" count="4"/>
+      <line num="16" type="method" name="handle" visibility="public" complexity="3" crap="3" count="12"/>
+      <line num="19" type="stmt" count="12"/>
+      <line num="20" type="stmt" count="5"/>
+      <line num="23" type="stmt" count="7"/>
+      <line num="24" type="stmt" count="5"/>
+      <line num="25" type="stmt" count="5"/>
       <metrics loc="28" ncloc="28" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="6" coveredelements="6"/>
     </file>
     <file name="/app/app/Http/Middleware/HasRole.php">
@@ -317,22 +323,23 @@
       <metrics loc="30" ncloc="30" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="6" elements="7" coveredelements="7"/>
     </file>
     <file name="/app/routes/web.php">
-      <line num="16" type="stmt" count="15"/>
+      <line num="16" type="stmt" count="18"/>
       <line num="17" type="stmt" count="0"/>
-      <line num="20" type="stmt" count="15"/>
+      <line num="20" type="stmt" count="18"/>
       <line num="21" type="stmt" count="0"/>
-      <line num="24" type="stmt" count="15"/>
-      <line num="25" type="stmt" count="15"/>
-      <line num="27" type="stmt" count="15"/>
-      <line num="28" type="stmt" count="15"/>
-      <line num="31" type="stmt" count="15"/>
-      <line num="32" type="stmt" count="15"/>
-      <line num="33" type="stmt" count="15"/>
-      <line num="34" type="stmt" count="15"/>
-      <line num="35" type="stmt" count="15"/>
-      <line num="36" type="stmt" count="15"/>
-      <metrics loc="40" ncloc="29" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="12" elements="14" coveredelements="12"/>
+      <line num="24" type="stmt" count="18"/>
+      <line num="25" type="stmt" count="18"/>
+      <line num="27" type="stmt" count="18"/>
+      <line num="28" type="stmt" count="18"/>
+      <line num="31" type="stmt" count="18"/>
+      <line num="32" type="stmt" count="18"/>
+      <line num="33" type="stmt" count="18"/>
+      <line num="34" type="stmt" count="18"/>
+      <line num="35" type="stmt" count="18"/>
+      <line num="36" type="stmt" count="18"/>
+      <line num="37" type="stmt" count="18"/>
+      <metrics loc="41" ncloc="30" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="13" elements="15" coveredelements="13"/>
     </file>
-    <metrics files="23" loc="886" ncloc="767" classes="17" methods="36" coveredmethods="27" conditionals="0" coveredconditionals="0" statements="173" coveredstatements="158" elements="209" coveredelements="185"/>
+    <metrics files="23" loc="936" ncloc="783" classes="17" methods="37" coveredmethods="28" conditionals="0" coveredconditionals="0" statements="179" coveredstatements="164" elements="216" coveredelements="192"/>
   </project>
 </coverage>

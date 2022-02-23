@@ -24,32 +24,33 @@ paths:
       responses:
         '200':
           description: 'JWT gerado'
-  /api/authors:
-    post:
+  '/api/authors/{id}':
+    get:
       tags:
         - autor
-      description: 'Cadastro de usuário'
-      operationId: 291d8539d3b5490d46fe9f2ebd84c64c
-      requestBody:
-        content:
-          application/json;charset=UTF-8:
-            schema:
-              properties:
-                name:
-                  type: string
-                  example: 'Edgar Allan Poe'
-              type: object
+      description: 'Exibição de 1 autor'
+      operationId: c14c739d68f46a33acfd0694a12c27dc
+      parameters:
+        -
+          name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          examples:
+            int:
+              summary: 'Id autor'
+              value: '1'
       responses:
         '200':
-          description: 'Autor criado'
+          description: 'Pesquisa realizada'
       security:
         -
           JWT: []
-  '/api/authors/{id}':
     put:
       tags:
         - autor
-      description: 'Cadastro de usuário'
+      description: 'Edição de autor'
       operationId: 2a9f154a4061c0d3257520aba98221a5
       parameters:
         -
@@ -62,6 +63,46 @@ paths:
             int:
               summary: 'Id autor'
               value: '1'
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: 'Edgar Allan Poe'
+              type: object
+      responses:
+        '200':
+          description: 'Autor atualizado'
+      security:
+        -
+          JWT: []
+  /api/authors:
+    get:
+      tags:
+        - autor
+      description: 'Listagem de autores'
+      operationId: 0c71439e213e1b284fc37995d74bca2b
+      parameters:
+        -
+          name: name
+          in: query
+          description: 'Nome parcial do autor'
+          schema:
+            type: string
+            example: Allan
+      responses:
+        '200':
+          description: 'Pesquisa realizada'
+      security:
+        -
+          JWT: []
+    post:
+      tags:
+        - autor
+      description: 'Cadastro de autor'
+      operationId: 291d8539d3b5490d46fe9f2ebd84c64c
       requestBody:
         content:
           application/json;charset=UTF-8:
