@@ -19,13 +19,37 @@ class AuthorController extends Controller
         private IAutoresRepository $autoresRepository,
     ) {}
 
+    /**
+     * @OA\Get(
+     *     tags={"autor"},
+     *     path="/api/authors",
+     *     description="Edição de autor",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         name="author",
+     *         in="query",
+     *         description="Nome parcial do autor",
+     *         @OA\Schema(
+     *             type="string",
+     *             example="Allan"
+     *         )
+     *     ),
+     *     @OA\Response(response="200", description="Autor criado")
+     * )
+     */
     public function index(Request $r)
     {
         $page = $r->page ?? 1;
 
+        $condition = [];
+
+        if(!is_null($r->name)) {
+            $condition['nome'] = $r->name;
+        }
+
         $a = $this
             ->autoresRepository
-            ->findBy([], $page);
+            ->findBy($condition, $page);
 
         return ['data' => $a];
     }
@@ -34,7 +58,7 @@ class AuthorController extends Controller
      * @OA\Post(
      *     tags={"autor"},
      *     path="/api/authors",
-     *     description="Cadastro de usuário",
+     *     description="Cadastro de autor",
      *     security={{"JWT":{}}},
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
@@ -71,7 +95,7 @@ class AuthorController extends Controller
      * @OA\Put(
      *     tags={"autor"},
      *     path="/api/authors/{id}",
-     *     description="Cadastro de usuário",
+     *     description="Edição de autor",
      *     security={{"JWT":{}}},
      *     @OA\Parameter(
      *         in="path",
@@ -91,7 +115,7 @@ class AuthorController extends Controller
      *         ),
      *         )
      *     ),
-     *     @OA\Response(response="200", description="Autor criado")
+     *     @OA\Response(response="200", description="Autor atualizado")
      * )
      */
     public function update(int $id, Request $r)

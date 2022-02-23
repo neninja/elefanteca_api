@@ -49,5 +49,47 @@ abstract class BaseRepository
             ->getRepository($this->model)
             ->findOneBy($condition);
     }
+
+    protected function base_qb()
+    {
+        return $this
+            ->em
+            ->getRepository($this->model)
+            ->createQueryBuilder('t');
+    }
+
+    protected function base_findByWithLikeEqual(
+        array $likeProps,
+        array $allConditions,
+        int $limit = 10,
+        int $page = 1,
+    ) {
+        $props = array_keys($allConditions);
+
+        $likeConditions = array_filter(
+            $props,
+            fn($p) => in_array($p, $likeProps)
+        );
+
+        if(empty($likeConditions)) {
+            return $this->base_findBy($allConditions, $limit, $page);
+        }
+
+        $qb = $this->base_qb();
+
+        $equalCondition = array_diff($props, $likeConditions);
+
+        foreach($likeConditions as $p) {
+            $qb->where("t.$p LIKE :$p")
+               ->setParameter($p, "%{$allConditions[$p]}%");
+        }
+
+        foreach($equalCondition as $p) {
+            $qb->where("t.$p = :$p")
+               ->setParameter($p, $allConditions[$p]);
+        }
+
+        return $qb->getQuery()->getResult();
+    }
 }
 

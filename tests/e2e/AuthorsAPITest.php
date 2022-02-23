@@ -99,7 +99,7 @@ class AuthorsAPITest extends E2ETestCase
         $p2 = ['data' => $data[1]];
 
         $this
-            ->jsonMembro('GET', self::$ep.'?page=1')
+            ->jsonMembro('GET', self::$ep)
             ->seeJsonEquals($p1)
             ->response
             ->assertOk();
@@ -113,7 +113,21 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testListaPorNomeParcial()
     {
-        $this->markTestIncomplete();
+        $autores = $this->given('autores existentes', 5);
+
+        $nome = $autores[3]->nome;
+        $nome = substr($nome, 1);
+        $nome = substr($nome, 0, -1);
+
+        $r = [
+            'data' => [$autores[3]]
+        ];
+
+        $this
+            ->jsonMembro('GET', self::$ep.'?name='.$nome)
+            ->seeJsonEquals($r)
+            ->response
+            ->assertOk();
     }
 
     public function testListaPorId()
