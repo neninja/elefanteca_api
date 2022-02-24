@@ -37,7 +37,7 @@ paths:
           description: 'Id autor'
           required: true
           schema:
-            type: int
+            type: integer
             example: 1
       responses:
         2XX:
@@ -57,7 +57,7 @@ paths:
           description: 'Id autor'
           required: true
           schema:
-            type: int
+            type: integer
             example: 1
       requestBody:
         content:
@@ -86,7 +86,7 @@ paths:
           description: 'Id autor'
           required: true
           schema:
-            type: int
+            type: integer
             example: 1
       responses:
         2XX:
@@ -113,7 +113,7 @@ paths:
           in: query
           description: Paginação
           schema:
-            type: int
+            type: integer
             example: 1
       responses:
         2XX:
