@@ -7,6 +7,8 @@ class AuthorsAPITest extends E2ETestCase
     protected function given(string $context, ...$params)
     {
         switch ($context) {
+        case 'autor existente com livro':
+            return $this->criaAutorComLivro();
         case 'autor existente':
             return $this->criaAutor();
         case 'autores existentes':
@@ -23,6 +25,27 @@ class AuthorsAPITest extends E2ETestCase
         );
 
         $a = $s->execute($this->fakeName());
+
+        return $a;
+    }
+
+    protected function criaAutorComLivro()
+    {
+        $as = $this->factory(
+            \Core\Services\Emprestimo\CadastroAutorService::class
+        );
+
+        $a = $as->execute($this->fakeName());
+
+        $ls = $this->factory(
+            \Core\Services\Emprestimo\CadastroLivroService::class
+        );
+
+        $ls->execute(
+            titulo:     $this->fakeWord(),
+            idAutor:    $a->getId(),
+            quantidade: 1,
+        );
 
         return $a;
     }
@@ -201,6 +224,32 @@ class AuthorsAPITest extends E2ETestCase
         $this->seeInDatabase('autores', [
             'id'    => $a->getId(),
             'nome'  => $body['name'],
+        ]);
+    }
+
+    /******** DELETE *******/
+
+    public function testFalhaSemAutenticacaoAoDeletar()
+    {
+        $a = $this->given('autor existente');
+
+        $this
+            ->json('DELETE', self::$ep."/{$a->getId()}")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testDeletaComoColaborador()
+    {
+        $a = $this->given('autor existente com livro');
+
+        $this
+            ->jsonColaborador('DELETE', self::$ep."/{$a->getId()}")
+            ->response
+            ->assertNoContent();
+
+        $this->notSeeInDatabase('autores', [
+            'id'    => $a->getId(),
         ]);
     }
 }

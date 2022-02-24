@@ -13,6 +13,12 @@ trait Fake
             return $this->faker;
         }
     }
+
+    public function fakeWord()
+    {
+        return $this->faker()->word();
+    }
+
     public function fakeName()
     {
         return $this->faker()->name();

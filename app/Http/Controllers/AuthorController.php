@@ -37,9 +37,7 @@ class AuthorController extends Controller
      */
     public function show(int $id, Request $r)
     {
-        $a = $this
-            ->autoresRepository
-            ->findById($id);
+        $a = $this->autoresRepository->findById($id);
 
         return ['data' => $a];
     }
@@ -72,9 +70,7 @@ class AuthorController extends Controller
             $condition['nome'] = $r->name;
         }
 
-        $a = $this
-            ->autoresRepository
-            ->findBy($condition, $page);
+        $a = $this->autoresRepository->findBy($condition, $page);
 
         return ['data' => $a];
     }
@@ -159,5 +155,28 @@ class AuthorController extends Controller
                 'id'    => $a->getId(),
                 'name'  => $a->nome,
             ]);
+    }
+
+    /**
+     * @OA\Delete(
+     *     tags={"autor"},
+     *     path="/api/authors/{id}",
+     *     description="Deleção de autor",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         in="path",
+     *         name="id",
+     *         required=true,
+     *         @OA\Schema(type="string"),
+     *         @OA\Examples(example="int", value="1", summary="Id autor"),
+     *     ),
+     *     @OA\Response(response="200", description="Autor deletado")
+     * )
+     */
+    public function destroy(int $id)
+    {
+        $this->autoresRepository->delete($id);
+
+        return response()->json('', 204);
     }
 }

@@ -54,5 +54,10 @@ class AutoresRepository extends BaseRepository implements \Core\Repositories\IAu
 
         return $qb->getQuery()->getResult();
     }
+
+    public function delete(int $id)
+    {
+        return $this->base_delete($id);
+    }
 }
 

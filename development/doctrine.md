@@ -17,7 +17,10 @@
     docker-compose exec app composer doctrine:migrations migrations:diff
     ```
 
-    > Lembrar de remover criação de tabelas existentes e schema public
+    > Lembrar de remover a migration gerada:
+    > - create/drop de schema public
+    > - create/drop de tabelas existentes
+    > - create/drop de index existente, e quando não existir remover **UNIQUE**
 
 - Criação/atualização:
     ```sh

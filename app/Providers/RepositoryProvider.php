@@ -10,11 +10,13 @@ use App\Repositories\Doctrine\EntityManagerFactory;
 use Core\Repositories\{
     IUsuariosRepository,
     IAutoresRepository,
+    ILivrosRepository,
 };
 
 use App\Repositories\Doctrine\{
     UsuariosRepository,
     AutoresRepository,
+    LivrosRepository,
 };
 
 class RepositoryProvider extends ServiceProvider
@@ -32,6 +34,15 @@ class RepositoryProvider extends ServiceProvider
             IAutoresRepository::class,
             function ($app) {
                 return new AutoresRepository(
+                    $app->make(EntityManagerInterface::class),
+                );
+            }
+        );
+
+        $this->app->bind(
+            ILivrosRepository::class,
+            function ($app) {
+                return new LivrosRepository(
                     $app->make(EntityManagerInterface::class),
                 );
             }

@@ -91,5 +91,12 @@ abstract class BaseRepository
 
         return $qb->getQuery()->getResult();
     }
+
+    protected function base_delete(int $id)
+    {
+        $e = $this->base_findById($id);
+        $this->em->remove($e);
+        $this->em->flush();
+    }
 }
 

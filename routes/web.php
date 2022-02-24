@@ -35,6 +35,7 @@ $router->group(['prefix' => 'api'], function ($request) use ($router) {
             $router->group(['middleware' => 'hasRole:COLABORADOR,ADMIN'], function ($request) use ($router) {
                 $router->post('', 'AuthorController@store');
                 $router->put('{id}', 'AuthorController@update');
+                $router->delete('{id}', 'AuthorController@destroy');
             });
         });
     });
