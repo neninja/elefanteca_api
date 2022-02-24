@@ -14,23 +14,16 @@ final class Version20211001004014 extends AbstractMigration
 {
     public function getDescription(): string
     {
-        return '';
+        return 'Add campo ativo em usuarios';
     }
 
     public function up(Schema $schema): void
     {
-        // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE usuarios ADD ativo BOOLEAN NOT NULL');
-        $this->addSql('ALTER TABLE usuarios ALTER email TYPE VARCHAR(45)');
-        $this->addSql('ALTER TABLE usuarios ALTER email DROP DEFAULT');
-        $this->addSql('ALTER TABLE usuarios ALTER email TYPE VARCHAR(45)');
     }
 
     public function down(Schema $schema): void
     {
-        // this down() migration is auto-generated, please modify it to your needs
         $this->addSql('ALTER TABLE usuarios DROP ativo');
-        $this->addSql('ALTER TABLE usuarios ALTER email TYPE VARCHAR(45)');
-        $this->addSql('ALTER TABLE usuarios ALTER email DROP DEFAULT');
     }
 }
