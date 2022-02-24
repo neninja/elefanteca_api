@@ -25,31 +25,31 @@ class UserController extends Controller
      *     security={{"JWT":{}}},
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
-     *         @OA\Schema(
-     *             @OA\Property(
-     *                  property="name",
-     *                  type="string",
-     *                  example="Diego"
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                      property="name",
+     *                      type="string",
+     *                      example="Diego",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="cpf",
+     *                      type="string",
+     *                      example="37128197060",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="password",
+     *                      type="string",
+     *                      example="19800507",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="email",
+     *                      type="string",
+     *                      example="example@foo.com",
+     *                 ),
      *             ),
-     *             @OA\Property(
-     *                  property="cpf",
-     *                  type="string",
-     *                  example="37128197060"
-     *             ),
-     *             @OA\Property(
-     *                  property="password",
-     *                  type="string",
-     *                  example="19800507"
-     *             ),
-     *             @OA\Property(
-     *                  property="email",
-     *                  type="string",
-     *                  example="example@foo.com"
-     *             )
      *         ),
-     *         )
      *     ),
-     *     @OA\Response(response="200", description="Usuário criado")
+     *     @OA\Response(response="2XX", description="OK"),
      * )
      */
     public function store(Request $r)

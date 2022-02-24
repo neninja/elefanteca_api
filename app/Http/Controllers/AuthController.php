@@ -22,21 +22,21 @@ class AuthController extends Controller
      *     description="Login com JWT",
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
-     *         @OA\Schema(
-     *             @OA\Property(
-     *                  property="email",
-     *                  type="string",
-     *                  example="admin@desativemeemprod.com"
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                      property="email",
+     *                      type="string",
+     *                      example="admin@desativemeemprod.com",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="password",
+     *                      type="string",
+     *                      example="asdf",
+     *                 ),
      *             ),
-     *             @OA\Property(
-     *                  property="password",
-     *                  type="string",
-     *                  example="asdf"
-     *             )
      *         ),
-     *         )
      *     ),
-     *     @OA\Response(response="200", description="JWT gerado")
+     *     @OA\Response(response="2XX", description="OK"),
      * )
      */
     public function loginJWT(Request $r)

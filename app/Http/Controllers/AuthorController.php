@@ -26,13 +26,13 @@ class AuthorController extends Controller
      *     description="Exibição de 1 autor",
      *     security={{"JWT":{}}},
      *     @OA\Parameter(
-     *         in="path",
      *         name="id",
+     *         in="path",
+     *         description="Id autor",
      *         required=true,
-     *         @OA\Schema(type="string"),
-     *         @OA\Examples(example="int", value="1", summary="Id autor"),
+     *         @OA\Schema(type="int", example=1),
      *     ),
-     *     @OA\Response(response="200", description="Pesquisa realizada")
+     *     @OA\Response(response="2XX", description="OK"),
      * )
      */
     public function show(int $id, Request $r)
@@ -52,12 +52,15 @@ class AuthorController extends Controller
      *         name="name",
      *         in="query",
      *         description="Nome parcial do autor",
-     *         @OA\Schema(
-     *             type="string",
-     *             example="Allan"
-     *         )
+     *         @OA\Schema(type="string", example="Allan"),
      *     ),
-     *     @OA\Response(response="200", description="Pesquisa realizada")
+     *     @OA\Parameter(
+     *         name="page",
+     *         in="query",
+     *         description="Paginação",
+     *         @OA\Schema(type="int", example=1),
+     *     ),
+     *     @OA\Response(response="2XX", description="OK"),
      * )
      */
     public function index(Request $r)
@@ -83,16 +86,16 @@ class AuthorController extends Controller
      *     security={{"JWT":{}}},
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
-     *         @OA\Schema(
-     *             @OA\Property(
-     *                  property="name",
-     *                  type="string",
-     *                  example="Edgar Allan Poe"
-     *             )
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                      property="name",
+     *                      type="string",
+     *                      example="Edgar Allan Poe",
+     *                 ),
+     *             ),
      *         ),
-     *         )
      *     ),
-     *     @OA\Response(response="200", description="Autor criado")
+     *     @OA\Response(response="2XX", description="OK"),
      * )
      */
     public function store(Request $r)
@@ -119,24 +122,24 @@ class AuthorController extends Controller
      *     description="Edição de autor",
      *     security={{"JWT":{}}},
      *     @OA\Parameter(
-     *         in="path",
      *         name="id",
+     *         in="path",
+     *         description="Id autor",
      *         required=true,
-     *         @OA\Schema(type="string"),
-     *         @OA\Examples(example="int", value="1", summary="Id autor"),
+     *         @OA\Schema(type="int", example=1)
      *     ),
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
-     *         @OA\Schema(
-     *             @OA\Property(
-     *                  property="name",
-     *                  type="string",
-     *                  example="Edgar Allan Poe"
-     *             )
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                      property="name",
+     *                      type="string",
+     *                      example="Edgar Allan Poe",
+     *                 ),
+     *             ),
      *         ),
-     *         )
      *     ),
-     *     @OA\Response(response="200", description="Autor atualizado")
+     *     @OA\Response(response="2XX", description="OK"),
      * )
      */
     public function update(int $id, Request $r)
@@ -164,13 +167,13 @@ class AuthorController extends Controller
      *     description="Deleção de autor",
      *     security={{"JWT":{}}},
      *     @OA\Parameter(
-     *         in="path",
      *         name="id",
+     *         in="path",
+     *         description="Id autor",
      *         required=true,
-     *         @OA\Schema(type="string"),
-     *         @OA\Examples(example="int", value="1", summary="Id autor"),
+     *         @OA\Schema(type="int", example=1),
      *     ),
-     *     @OA\Response(response="200", description="Autor deletado")
+     *     @OA\Response(response="2XX", description="OK"),
      * )
      */
     public function destroy(int $id)
