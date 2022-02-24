@@ -22,7 +22,7 @@ final class Version20220216031415 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->addSql('CREATE TABLE autores (id SERIAL NOT NULL, nome VARCHAR(45) NOT NULL, PRIMARY KEY(id))');
         $this->addSql('CREATE TABLE livros (id SERIAL NOT NULL, id_autor INT DEFAULT NULL, titulo VARCHAR(45) NOT NULL, quantidade INT NOT NULL, ativo BOOLEAN NOT NULL, PRIMARY KEY(id))');
-        $this->addSql('CREATE UNIQUE INDEX UNIQ_689E6F2EDF821F8A ON livros (id_autor)');
+        $this->addSql('CREATE INDEX UNIQ_689E6F2EDF821F8A ON livros (id_autor)');
         $this->addSql('ALTER TABLE livros ADD CONSTRAINT FK_689E6F2EDF821F8A FOREIGN KEY (id_autor) REFERENCES autores (id) NOT DEFERRABLE INITIALLY IMMEDIATE');
     }
 

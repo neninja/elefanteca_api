@@ -44,7 +44,17 @@ API de sistema para bibliotecas.
     docker-compose exec app composer doctrine:migrations migrate
     ```
 
-7. Crie a documentação de suporte que ficará disponível em `localhost:8989/swagger`
+7. Crie alguns dados básicos para a aplicação ser funcional em um primeiro momento, como por exemplo um usuário admin com login ``admin@desativemeemprod.com asdf``
+    ```sh
+    docker-compose exec app php artisan db:reset
+    ```
+
+    > Para melhorar o ambiente de desenvolvimento com exemplos, utilize ``docker-compose exec app php artisan db:reset --development``
+
+    > Toda vez que esse comando for rodado reseta o banco de dados
+
+
+8. Crie a documentação de suporte que ficará disponível em `localhost:8989/swagger`
     ```sh
     docker-compose exec app composer swagger
     ```

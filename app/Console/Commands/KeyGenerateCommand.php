@@ -32,13 +32,13 @@ class KeyGenerateCommand extends Command
         $key = $this->getRandomKey();
 
         if ($this->option('show')) {
-            return $this->line('<comment>'.$key.'</comment>');
+            return $this->comment($key);
         }
 
         $currentAppKey = env('APP_KEY');
 
         if (!empty($currentAppKey) && !$this->option('force')) {
-            return $this->line('<comment>APP_KEY already set, use --force to override</comment>');
+            return $this->comment('APP_KEY already set, use --force to override');
         }
 
         $path = base_path('.env');
@@ -72,7 +72,7 @@ class KeyGenerateCommand extends Command
     {
         return array(
             array('show', null, InputOption::VALUE_NONE, 'Simply display the key instead of modifying files.'),
-            array('force', null, InputOption::VALUE_NONE, 'Force update of cuurent APP_KEY.'),
+            array('force', null, InputOption::VALUE_NONE, 'Force update of current APP_KEY.'),
         );
     }
 }

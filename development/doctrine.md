@@ -61,3 +61,5 @@
     docker-compose exec app composer doctrine:migrations migrate first
     docker-compose exec app composer doctrine:migrations migrate latest
     ```
+
+    > Comando abstraido para desenvolvimento com ``docker-compose exec app php artisan db:reset --development``
