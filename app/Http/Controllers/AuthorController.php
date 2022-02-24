@@ -30,7 +30,7 @@ class AuthorController extends Controller
      *         in="path",
      *         description="Id autor",
      *         required=true,
-     *         @OA\Schema(type="int", example=1),
+     *         @OA\Schema(type="integer", example=1),
      *     ),
      *     @OA\Response(response="2XX", description="OK"),
      * )
@@ -58,7 +58,7 @@ class AuthorController extends Controller
      *         name="page",
      *         in="query",
      *         description="Paginação",
-     *         @OA\Schema(type="int", example=1),
+     *         @OA\Schema(type="integer", example=1),
      *     ),
      *     @OA\Response(response="2XX", description="OK"),
      * )
@@ -126,7 +126,7 @@ class AuthorController extends Controller
      *         in="path",
      *         description="Id autor",
      *         required=true,
-     *         @OA\Schema(type="int", example=1)
+     *         @OA\Schema(type="integer", example=1)
      *     ),
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
@@ -171,7 +171,7 @@ class AuthorController extends Controller
      *         in="path",
      *         description="Id autor",
      *         required=true,
-     *         @OA\Schema(type="int", example=1),
+     *         @OA\Schema(type="integer", example=1),
      *     ),
      *     @OA\Response(response="2XX", description="OK"),
      * )
