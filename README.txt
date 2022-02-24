@@ -15,6 +15,8 @@ Authors API
  [x] Falha sem autenticacao ao editar
  [x] Falha como membro ao editar
  [x] Edita como colaborador
+ [x] Falha sem autenticacao ao deletar
+ [x] Deleta como colaborador
 
 Users API
  [x] Falha sem todos campos

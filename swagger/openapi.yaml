@@ -16,14 +16,14 @@ paths:
               properties:
                 email:
                   type: string
-                  example: example@foo.com
+                  example: admin@desativemeemprod.com
                 password:
                   type: string
-                  example: '19800507'
+                  example: asdf
               type: object
       responses:
-        '200':
-          description: 'JWT gerado'
+        2XX:
+          description: OK
   '/api/authors/{id}':
     get:
       tags:
@@ -34,16 +34,14 @@ paths:
         -
           name: id
           in: path
+          description: 'Id autor'
           required: true
           schema:
-            type: string
-          examples:
-            int:
-              summary: 'Id autor'
-              value: '1'
+            type: int
+            example: 1
       responses:
-        '200':
-          description: 'Pesquisa realizada'
+        2XX:
+          description: OK
       security:
         -
           JWT: []
@@ -56,13 +54,11 @@ paths:
         -
           name: id
           in: path
+          description: 'Id autor'
           required: true
           schema:
-            type: string
-          examples:
-            int:
-              summary: 'Id autor'
-              value: '1'
+            type: int
+            example: 1
       requestBody:
         content:
           application/json;charset=UTF-8:
@@ -73,8 +69,28 @@ paths:
                   example: 'Edgar Allan Poe'
               type: object
       responses:
-        '200':
-          description: 'Autor atualizado'
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+    delete:
+      tags:
+        - autor
+      description: 'Deleção de autor'
+      operationId: c04021713290d77b82e912ec58f94c36
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id autor'
+          required: true
+          schema:
+            type: int
+            example: 1
+      responses:
+        2XX:
+          description: OK
       security:
         -
           JWT: []
@@ -92,9 +108,16 @@ paths:
           schema:
             type: string
             example: Allan
+        -
+          name: page
+          in: query
+          description: Paginação
+          schema:
+            type: int
+            example: 1
       responses:
-        '200':
-          description: 'Pesquisa realizada'
+        2XX:
+          description: OK
       security:
         -
           JWT: []
@@ -113,8 +136,8 @@ paths:
                   example: 'Edgar Allan Poe'
               type: object
       responses:
-        '200':
-          description: 'Autor criado'
+        2XX:
+          description: OK
       security:
         -
           JWT: []
@@ -143,8 +166,8 @@ paths:
                   example: example@foo.com
               type: object
       responses:
-        '200':
-          description: 'Usuário criado'
+        2XX:
+          description: OK
       security:
         -
           JWT: []
