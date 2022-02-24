@@ -1,4 +1,4 @@
-## Docker
+# Docker
 
 - Caso modifique Dockerfile, rebuilde com ``docker-compose up -d --build``
 

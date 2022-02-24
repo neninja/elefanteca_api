@@ -6,7 +6,6 @@ API de sistema para bibliotecas.
 
 - [Requisitos](https://neni.dev/elefanteca_api/README.txt)
 - [Referência da API](https://neni.dev/elefanteca_api/swagger/index.html?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml) não funcional
-- [Instruções de desenvolvimento](/devdocs)
 
 ## <a name="status"></a> Situação do projeto [:clipboard:](#status)
 
@@ -14,7 +13,9 @@ API de sistema para bibliotecas.
 - [Marcos](https://github.com/nenitf/elefanteca_api/milestones)
 - [Planejamento](https://github.com/nenitf/elefanteca_api/projects/2)
 
-## Configuração inicial
+## Execução local com Docker
+
+### Configuração inicial
 
 1. Duplique `.env.example` e renomeie para `.env`
     ```sh
@@ -44,14 +45,12 @@ API de sistema para bibliotecas.
     docker-compose exec app composer doctrine:migrations migrate
     ```
 
-7. Crie alguns dados básicos para a aplicação ser funcional em um primeiro momento, como por exemplo um usuário admin com login ``admin@desativemeemprod.com asdf``
+7. Com o comando para resetar o banco, crie alguns dados básicos para a aplicação ser funcional em um primeiro momento, como por exemplo um usuário admin com email e senha ``admin@desativemeemprod.com`` ``asdf``
     ```sh
     docker-compose exec app php artisan db:reset
     ```
 
     > Para melhorar o ambiente de desenvolvimento com exemplos, utilize ``docker-compose exec app php artisan db:reset --development``
-
-    > Toda vez que esse comando for rodado reseta o banco de dados
 
 
 8. Crie a documentação de suporte que ficará disponível em `localhost:8989/swagger`
@@ -59,15 +58,15 @@ API de sistema para bibliotecas.
     docker-compose exec app composer swagger
     ```
 
-## Execução local
+### Execução
 
-Caso recém tenha feito a **configuração inicial** e os containers continuem rodando: tudo certo, aplicação disponível em ``localhost:8989``. Do contrário, suba os containers novamente:
+Com a **configuração inicial** já realizada, suba os containers se necessário e acesse a aplicação em `localhost:8989`
 
 ```sh
 docker-compose up -d
 ```
 
-## Teste
+### Teste
 
 - Individual
     ```sh

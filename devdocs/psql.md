@@ -2,8 +2,5 @@
 
 - Acessar banco pelo terminal
     ```sh
-    docker-compose exec db bash
-    ```
-    ```sh
-    psql -U elefanteca_user -d elefanteca
+    docker-compose exec db psql -U elefanteca_user -d elefanteca
     ```

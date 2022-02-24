@@ -11,13 +11,13 @@
     bash tdd.sh
     ```
 
-    > O script executa o teste simples anterior, aceitando argumentos como ``bash tdd.sh -- --filter testName$ tests/caminho/do/ExemploTest.php``
+    > O script executa o teste simples anterior, aceitando argumentos como ``bash tdd.sh -- --filter testName$ tests/caminho/do/ExemploTest.php``. Sua diferença é que executa novamente com qualquer tecla
 
 - CI
     ```sh
     docker-compose exec app composer ci
     ```
-    > Dashboard de relatório de cobertura disponível em `tests/_reports/index.html`
+    > Dashboard de relatório de cobertura disponível em `_reports/coverage/index.html`
 
 - Testes de mutação
     ```sh
@@ -35,7 +35,7 @@
 
 - Nomear teste com verbo no imperativo explicitando a intencionalidade do teste, evitar nomes como "deve fazer x". [Orientação do time do Spotify](https://github.com/spotify/should-up)
 - Quando for criada uma trait precisa ser recriado o autoload com ``composer du``
-- Analise dos testes executados no github actions:
+- Análise dos testes executados no github actions:
     - [Visualizador JUnit (relatório de testes)](https://codepen.io/nenitf/full/GREQZRd?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/phpunit-log.xml)
     - [Visualizador Clover (relatório de cobertura)](https://codepen.io/nenitf/full/NWwYQoz?url=https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/clover.xml)
     - [Dashboard de cobertura](https://neni.dev/elefanteca_api/coverage/dashboard.html)
