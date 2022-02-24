@@ -29,15 +29,5 @@ class AppServiceProvider extends ServiceProvider
                 return new LumenCryptProvider();
             }
         );
-
-        $this->app->bind(
-            CadastroUsuarioService::class,
-            function ($app) {
-                return new CadastroUsuarioService(
-                    $app->make(IUsuariosRepository::class),
-                    $app->make(ICriptografiaProvider::class)
-                );
-            }
-        );
     }
 }
