@@ -16,10 +16,10 @@
     </testsuites>
 
     <logging>
-        <testdoxText outputFile="docs/README.txt"/>
-        <testdoxHtml outputFile="docs/index.html"/>
-        <junit outputFile="docs/phpunit-log.xml"/>
-        <teamcity outputFile="docs/phpunit-teamcity.txt"/>
+        <testdoxText outputFile="_reports/README.txt"/>
+        <testdoxHtml outputFile="_reports/index.html"/>
+        <junit outputFile="_reports/phpunit-log.xml"/>
+        <teamcity outputFile="_reports/phpunit-teamcity.txt"/>
     </logging>
 
     <coverage cacheDirectory="tests/_reports/cache_coverage"
@@ -29,9 +29,9 @@
           ignoreDeprecatedCodeUnits="true"
           disableCodeCoverageIgnore="true">
         <report>
-            <html outputDirectory="tests/_reports" lowUpperBound="50" highLowerBound="90"/>
-            <text outputFile="docs/coverage.txt"/>
-            <clover outputFile="docs/clover.xml"/>
+            <html outputDirectory="_reports/coverage" lowUpperBound="50" highLowerBound="90"/>
+            <text outputFile="_reports/coverage.txt"/>
+            <clover outputFile="_reports/clover.xml"/>
         </report>
 
         <include>

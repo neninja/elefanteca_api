@@ -24,7 +24,7 @@
     docker-compose exec app composer ci:mutation
     ```
 
-    > Veja o resultado no arquivo gerado em `docs/infection.diff`
+    > Veja o resultado no arquivo gerado em `_reports/infection.diff`
 
 ## Configurações
 

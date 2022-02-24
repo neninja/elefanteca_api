@@ -5,8 +5,7 @@ Homestead.yaml
 .env
 .phpunit.result.cache
 
-/docs
-tests/_reports
+_reports
 
 openapi.yaml
 

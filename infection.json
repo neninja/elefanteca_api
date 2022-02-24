@@ -12,7 +12,7 @@
         ]
     },
     "logs": {
-        "text": "docs/infection.diff"
+        "text": "_reports/infection.diff"
     },
     "mutators": {
         "@default": true

@@ -6,7 +6,7 @@ API de sistema para bibliotecas.
 
 - [Requisitos](https://neni.dev/elefanteca_api/README.txt)
 - [Referência da API](https://neni.dev/elefanteca_api/swagger/index.html?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml) não funcional
-- [Instruções de desenvolvimento](/development)
+- [Instruções de desenvolvimento](/devdocs)
 
 ## <a name="status"></a> Situação do projeto [:clipboard:](#status)
 
