@@ -43,8 +43,6 @@ abstract class E2ETestCase extends LumenTestCase
     protected function jsonColaborador(
         string $method, string $ep, array $body = [], $headers = []
     ) {
-        $login = $this->criaColaborador()['loginJWT'];
-
         return $this->jsonComo(
             $this->criaColaborador(),
             $method,

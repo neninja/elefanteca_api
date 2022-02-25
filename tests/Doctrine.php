@@ -32,20 +32,6 @@ trait Doctrine {
         return $execute->fetchAll();
     }
 
-    public static function doctrineGetMetadatas(
-        EntityManagerInterface $em
-    ) {
-        $models = [
-            Usuario::class,
-            Livro::class,
-            Autor::class,
-        ];
-
-        return array_map(function($model) use ($em) {
-            return $em->getClassMetadata($model);
-        }, $models);
-    }
-
     public static function doctrineCreateDatabase(
         EntityManagerInterface $em
     ) {

@@ -26,11 +26,6 @@
 
     > Veja o resultado no arquivo gerado em `_reports/infection.diff`
 
-## Configurações
-
-- Atualizar `$tables` em `IntegrationTestCase`
-- Atualizar `doctrineGetMetadatas` na trait `Doctrine`
-
 ## Instruções
 
 - Nomear teste com verbo no imperativo explicitando a intencionalidade do teste, evitar nomes como "deve fazer x". [Orientação do time do Spotify](https://github.com/spotify/should-up)
