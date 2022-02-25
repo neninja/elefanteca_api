@@ -28,8 +28,8 @@ trait Doctrine {
             ->getConnection()
             ->prepare($query);
 
-        $stmt->execute();
-        return $stmt->fetchAll();
+        $execute = $stmt->execute();
+        return $execute->fetchAll();
     }
 
     public static function doctrineGetMetadatas(
@@ -49,14 +49,29 @@ trait Doctrine {
     public static function doctrineCreateDatabase(
         EntityManagerInterface $em
     ) {
-        $schemaTool = new SchemaTool($em);
-        $schemaTool->createSchema(self::doctrineGetMetadatas($em));
+        // Clear Doctrine to be safe
+        $em->clear();
+
+        // Schema Tool to process our entities
+        $tool = new SchemaTool($em);
+        $classes = $em->getMetaDataFactory()->getAllMetaData();
+
+        // Drop all classes and re-build them for each test case
+        $tool->dropSchema($classes);
+        $tool->createSchema($classes);
     }
 
     public static function doctrineDeleteDatabase(
         EntityManagerInterface $em
     ) {
-        $schemaTool = new SchemaTool($em);
-        $schemaTool->dropSchema(self::doctrineGetMetadatas($em));
+        // Clear Doctrine to be safe
+        $em->clear();
+
+        // Schema Tool to process our entities
+        $tool = new SchemaTool($em);
+        $classes = $em->getMetaDataFactory()->getAllMetaData();
+
+        // Drop all classes and re-build them for each test case
+        $tool->dropSchema($classes);
     }
 }
