@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testCriaTokenJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testCriaTokenJwt' flowId='1']
 
-##teamcity[testFinished name='testCriaTokenJwt' duration='111' flowId='1']
+##teamcity[testFinished name='testCriaTokenJwt' duration='113' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenComSenhaErradaJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenComSenhaErradaJwt' flowId='1']
 
@@ -31,11 +31,11 @@
 
 ##teamcity[testStarted name='testCriaComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testCriaComoColaborador' duration='16' flowId='1']
+##teamcity[testFinished name='testCriaComoColaborador' duration='17' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoAdmin' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaComoAdmin' flowId='1']
 
-##teamcity[testFinished name='testCriaComoAdmin' duration='11' flowId='1']
+##teamcity[testFinished name='testCriaComoAdmin' duration='12' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoListar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoListar' flowId='1']
 
@@ -43,7 +43,7 @@
 
 ##teamcity[testStarted name='testLista20Com2Paginas' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testLista20Com2Paginas' flowId='1']
 
-##teamcity[testFinished name='testLista20Com2Paginas' duration='33' flowId='1']
+##teamcity[testFinished name='testLista20Com2Paginas' duration='35' flowId='1']
 
 ##teamcity[testStarted name='testListaPorNomeParcial' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testListaPorNomeParcial' flowId='1']
 
@@ -59,11 +59,11 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoEditar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='7' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='8' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoEditar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaComoMembroAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='9' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='10' flowId='1']
 
 ##teamcity[testStarted name='testEditaComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testEditaComoColaborador' flowId='1']
 
@@ -91,19 +91,19 @@
 
 ##teamcity[testStarted name='testCriaComoColaborador' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testCriaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testCriaComoColaborador' duration='13' flowId='1']
+##teamcity[testFinished name='testCriaComoColaborador' duration='14' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoAdmin' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testCriaComoAdmin' flowId='1']
 
-##teamcity[testFinished name='testCriaComoAdmin' duration='12' flowId='1']
+##teamcity[testFinished name='testCriaComoAdmin' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoListar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoListar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoListar' duration='6' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoListar' duration='7' flowId='1']
 
 ##teamcity[testStarted name='testLista20Com2Paginas' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testLista20Com2Paginas' flowId='1']
 
-##teamcity[testFinished name='testLista20Com2Paginas' duration='45' flowId='1']
+##teamcity[testFinished name='testLista20Com2Paginas' duration='46' flowId='1']
 
 ##teamcity[testStarted name='testListaPorTituloParcial' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testListaPorTituloParcial' flowId='1']
 
@@ -111,7 +111,7 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoListarPorId' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoListarPorId' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoListarPorId' duration='8' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoListarPorId' duration='9' flowId='1']
 
 ##teamcity[testStarted name='testListaPorId' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testListaPorId' flowId='1']
 
@@ -127,7 +127,7 @@
 
 ##teamcity[testStarted name='testEditaComoColaborador' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testEditaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testEditaComoColaborador' duration='14' flowId='1']
+##teamcity[testFinished name='testEditaComoColaborador' duration='15' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoDeletar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoDeletar' flowId='1']
 
@@ -159,11 +159,11 @@
 
 ##teamcity[testStarted name='testCriaUsuario' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuario' flowId='1']
 
-##teamcity[testFinished name='testCriaUsuario' duration='11' flowId='1']
+##teamcity[testFinished name='testCriaUsuario' duration='12' flowId='1']
 
 ##teamcity[testStarted name='testCriaUsuarioComoColaborador' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuarioComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testCriaUsuarioComoColaborador' duration='12' flowId='1']
+##teamcity[testFinished name='testCriaUsuarioComoColaborador' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testCriaUsuarioComoMembroTentandoCriarColaborador' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuarioComoMembroTentandoCriarColaborador' flowId='1']
 
