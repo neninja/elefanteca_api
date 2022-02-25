@@ -19,6 +19,11 @@ trait Fake
         return $this->faker()->word();
     }
 
+    public function fakeWords(int $number = 2)
+    {
+        return $this->faker()->words($number, true);
+    }
+
     public function fakeName()
     {
         return $this->faker()->name();
