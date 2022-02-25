@@ -17,15 +17,15 @@ abstract class LumenTestCase extends \Laravel\Lumen\Testing\TestCase
 
     /*
      * O App deve ser instanciado (usando ->createApplication), e isso ocorre
-     * APÓS ::setUpBeforeClass(), portando configurações que devem ser feitas
-     * somente uma vez e dependem do app:
+     * APÓS ::setUpBeforeClass() com parent::setUp(), portando as configurações
+     * que devem ser feitas somente uma vez e dependem do app:
      *  1) Ainda devem ser estáticas
      *  2) Precisam estar inicialmente no array de instruções
      *  3) Serem removidas após a primeira execução
      */
     public static function setUpBeforeClass(): void
     {
-        self::$dynamicSetUp = ['databaseInitialConfigProccess'];
+        self::$dynamicSetUp = ['initialDynamicSetup'];
     }
 
     public function setUp(): void
@@ -36,12 +36,14 @@ abstract class LumenTestCase extends \Laravel\Lumen\Testing\TestCase
             $this->$setup();
         }
 
-        $connection = self::$em
-            ->getConnection()
-            ->getNativeConnection();
-
-        /* Asserts de database do Lumen */
-        DB::connection()->setPdo($connection);
+        /*
+         * Precisa repassar a conexão para utilizar os asserts de banco de
+         * dados do Lumen, mas por algum motivo ela se perde a cada teste.
+         * Sendo necessário reforçá-la de maneira fixa no ->setUp
+         */
+        DB::connection()->setPdo(
+            self::$em->getConnection()->getNativeConnection()
+        );
 
         self::beginTransaction();
     }
@@ -57,14 +59,22 @@ abstract class LumenTestCase extends \Laravel\Lumen\Testing\TestCase
         self::deleteDatabase();
     }
 
-    protected static function databaseInitialConfigProccess()
+    protected static function initialDynamicSetup()
     {
-        /* Conexão singleton criada e utilizada no app pelo Lumen */
         self::$em = app()->make(EntityManager::class);
 
         self::createDatabase();
 
-        // self::$dynamicSetUp = []; // deveria ser feita a configuração inicial somente uma vez
+        self::$dynamicSetUp = ['dynamicSetUpMaintenance']; // cria database somente uma vez
+    }
+
+    protected function dynamicSetUpMaintenance()
+    {
+        /*
+         * Reaproveita EntityManager criado em initialDynamicSetup para
+         * utilizar o mesmo banco in memory
+         */
+        $this->app->instance(EntityManager::class, self::$em);
     }
 
     protected static function beginTransaction()
