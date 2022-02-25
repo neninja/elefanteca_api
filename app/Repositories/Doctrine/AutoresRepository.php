@@ -28,31 +28,6 @@ class AutoresRepository extends BaseRepository implements \Core\Repositories\IAu
             $limit,
             $page,
         );
-        $props = array_keys($condition);
-
-        $likeConditions = array_filter($props, function($p) {
-            return $p === 'nome';
-        });
-
-        if(empty($likeConditions)) {
-            return $this->base_findBy($condition, $limit, $page);
-        }
-
-        $qb = $this->base_qb();
-
-        $equalCondition = array_diff($props, $likeConditions);
-
-        foreach($likeConditions as $p) {
-            $qb->where("t.$p LIKE :$p")
-               ->setParameter($p, "%{$condition[$p]}%");
-        }
-
-        foreach($equalCondition as $p) {
-            $qb->where("t.$p = :$p")
-               ->setParameter($p, $condition[$p]);
-        }
-
-        return $qb->getQuery()->getResult();
     }
 
     public function delete(int $id)
