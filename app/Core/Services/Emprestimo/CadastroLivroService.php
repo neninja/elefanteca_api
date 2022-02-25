@@ -22,10 +22,12 @@ class CadastroLivroService
     public function execute(
         string $titulo,
         string $idAutor,
-        string $quantidade
+        string $quantidade,
+        ?int   $id = null,
     ): Livro {
         $autor = $this->autoresRepo->findById($idAutor);
         $l = new Livro(
+            id:         $id,
             titulo:     $titulo,
             autor:      $autor,
             quantidade: $quantidade,

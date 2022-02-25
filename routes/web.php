@@ -29,6 +29,7 @@ $router->group(['prefix' => 'api'], function ($request) use ($router) {
     });
 
     $router->group(['middleware' => 'auth'], function ($request) use ($router) {
+
         $router->group(['prefix' => 'authors'], function () use ($router) {
             $router->get('', 'AuthorController@index');
             $router->get('{id}', 'AuthorController@show');
@@ -38,5 +39,16 @@ $router->group(['prefix' => 'api'], function ($request) use ($router) {
                 $router->delete('{id}', 'AuthorController@destroy');
             });
         });
+
+        $router->group(['prefix' => 'books'], function () use ($router) {
+            $router->get('', 'BookController@index');
+            $router->get('{id}', 'BookController@show');
+            $router->group(['middleware' => 'hasRole:COLABORADOR,ADMIN'], function ($request) use ($router) {
+                $router->post('', 'BookController@store');
+                $router->put('{id}', 'BookController@update');
+                $router->delete('{id}', 'BookController@destroy');
+            });
+        });
+
     });
 });

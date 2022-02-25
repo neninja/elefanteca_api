@@ -19,5 +19,15 @@ class LivrosRepository extends BaseRepository implements \Core\Repositories\ILiv
     {
         return $this->base_findById($id);
     }
+
+    public function findBy(array $condition, int $page, int $limit = 10): array
+    {
+        return $this->base_findByWithLikeEqual(
+            ['titulo'],
+            $condition,
+            $limit,
+            $page,
+        );
+    }
 }
 
