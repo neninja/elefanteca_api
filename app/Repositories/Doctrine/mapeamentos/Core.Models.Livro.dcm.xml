@@ -13,10 +13,10 @@
             column="quantidade"
             type="integer" />
 
-        <one-to-one field="autor" target-entity="Autor" inversed-by="livro">
+        <many-to-one field="autor" target-entity="Autor" inversed-by="livro">
             <cascade><cascade-remove /></cascade>
             <join-column name="id_autor" referenced-column-name="id" />
-        </one-to-one>
+        </many-to-one>
 
         <field name="ativo"
             column="ativo"

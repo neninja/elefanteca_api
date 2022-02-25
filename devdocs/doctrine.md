@@ -20,7 +20,7 @@
     > Lembrar de remover da migration gerada:
     > - create/drop de schema public
     > - create/drop de tabelas existentes
-    > - create/drop de index existente, e quando não existir remover **UNIQUE**
+    > - create/drop de index existente ou, quando não existir, remover **UNIQUE**
 
 - Criação/atualização:
     ```sh
