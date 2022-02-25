@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Resources\AuthorResource;
+
 use Core\Services\{
     Emprestimo\CadastroAutorService,
 };
@@ -39,7 +41,7 @@ class AuthorController extends Controller
     {
         $a = $this->autoresRepository->findById($id);
 
-        return ['data' => $a];
+        return new AuthorResource($a);
     }
 
     /**
@@ -75,7 +77,7 @@ class AuthorController extends Controller
 
         $a = $this->autoresRepository->findBy($condition, $page);
 
-        return ['data' => $a];
+        return AuthorResource::collection($a);
     }
 
     /**
@@ -108,11 +110,7 @@ class AuthorController extends Controller
             nome: $r->name,
         );
 
-        return response()
-            ->json([
-                'id'    => $a->getId(),
-                'name'  => $a->nome,
-            ]);
+        return new AuthorResource($a);
     }
 
     /**
@@ -153,11 +151,7 @@ class AuthorController extends Controller
             nome:   $r->name,
         );
 
-        return response()
-            ->json([
-                'id'    => $a->getId(),
-                'name'  => $a->nome,
-            ]);
+        return new AuthorResource($a);
     }
 
     /**

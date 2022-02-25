@@ -24,9 +24,7 @@ class AuthorsAPITest extends E2ETestCase
             \Core\Services\Emprestimo\CadastroAutorService::class
         );
 
-        $a = $s->execute($this->fakeName());
-
-        return $a;
+        return $s->execute($this->fakeName());
     }
 
     protected function criaAutorComLivro()
@@ -70,34 +68,34 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testCriaComoColaborador()
     {
-        $body = [
+        $req = [
             'name' => $this->fakeName(),
         ];
 
         $this
-            ->jsonColaborador('POST', self::$ep, $body)
-            ->seeJson($body)
-            ->seeJsonStructure(['id'])
+            ->jsonColaborador('POST', self::$ep, $req)
+            ->seeJson($req)
+            ->seeJsonStructure(['data' => ['id']])
             ->response
             ->assertOk();
 
-        $this->seeInDatabase('autores', ['nome' => $body['name']]);
+        $this->seeInDatabase('autores', ['nome' => $req['name']]);
     }
 
     public function testCriaComoAdmin()
     {
-        $body = [
+        $req = [
             'name' => $this->fakeName(),
         ];
 
         $this
-            ->jsonAdmin('POST', self::$ep, $body)
-            ->seeJson($body)
-            ->seeJsonStructure(['id'])
+            ->jsonAdmin('POST', self::$ep, $req)
+            ->seeJson($req)
+            ->seeJsonStructure(['data' => ['id']])
             ->response
             ->assertOk();
 
-        $this->seeInDatabase('autores', ['nome' => $body['name']]);
+        $this->seeInDatabase('autores', ['nome' => $req['name']]);
     }
 
     /******** READ *******/
@@ -115,22 +113,62 @@ class AuthorsAPITest extends E2ETestCase
         $autores = $this->given('autores existentes', 20);
 
         $data = array_chunk(
-            array_map(fn($a) => [ 'nome' => $a->nome ], $autores), 10
+            array_map(fn($a) => [ 'name' => $a->nome ], $autores), 10,
         );
 
-        $p1 = ['data' => $data[0]];
-        $p2 = ['data' => $data[1]];
+        $p1 = $data[0];
+        $p2 = $data[1];
 
         $this
             ->jsonMembro('GET', self::$ep)
-            ->seeJsonEquals($p1)
+            ->seeJsonStructure(['data'])
             ->response
+            ->assertJsonFragment($p1[0])
+            ->assertJsonFragment($p1[1])
+            ->assertJsonFragment($p1[2])
+            ->assertJsonFragment($p1[3])
+            ->assertJsonFragment($p1[4])
+            ->assertJsonFragment($p1[5])
+            ->assertJsonFragment($p1[6])
+            ->assertJsonFragment($p1[7])
+            ->assertJsonFragment($p1[8])
+            ->assertJsonFragment($p1[9])
+            ->assertJsonMissing($p2[0])
+            ->assertJsonMissing($p2[1])
+            ->assertJsonMissing($p2[2])
+            ->assertJsonMissing($p2[3])
+            ->assertJsonMissing($p2[4])
+            ->assertJsonMissing($p2[5])
+            ->assertJsonMissing($p2[6])
+            ->assertJsonMissing($p2[7])
+            ->assertJsonMissing($p2[8])
+            ->assertJsonMissing($p2[9])
             ->assertOk();
 
         $this
             ->jsonMembro('GET', self::$ep.'?page=2')
-            ->seeJsonEquals($p2)
+            ->seeJsonStructure(['data'])
             ->response
+            ->assertJsonFragment($p2[0])
+            ->assertJsonFragment($p2[1])
+            ->assertJsonFragment($p2[2])
+            ->assertJsonFragment($p2[3])
+            ->assertJsonFragment($p2[4])
+            ->assertJsonFragment($p2[5])
+            ->assertJsonFragment($p2[6])
+            ->assertJsonFragment($p2[7])
+            ->assertJsonFragment($p2[8])
+            ->assertJsonFragment($p2[9])
+            ->assertJsonMissing($p1[0])
+            ->assertJsonMissing($p1[1])
+            ->assertJsonMissing($p1[2])
+            ->assertJsonMissing($p1[3])
+            ->assertJsonMissing($p1[4])
+            ->assertJsonMissing($p1[5])
+            ->assertJsonMissing($p1[6])
+            ->assertJsonMissing($p1[7])
+            ->assertJsonMissing($p1[8])
+            ->assertJsonMissing($p1[9])
             ->assertOk();
     }
 
@@ -138,18 +176,23 @@ class AuthorsAPITest extends E2ETestCase
     {
         $autores = $this->given('autores existentes', 5);
 
+        $data = array_map(fn($a) => [
+            'name' => $a->nome
+        ], $autores);
+
         $nome = $autores[3]->nome;
         $nome = substr($nome, 1);
         $nome = substr($nome, 0, -1);
 
-        $r = [
-            'data' => [$autores[3]]
-        ];
-
         $this
             ->jsonMembro('GET', self::$ep.'?name='.$nome)
-            ->seeJsonEquals($r)
+            ->seeJsonStructure(['data' => [['id',  'name']]])
             ->response
+            ->assertJsonMissing($data[0])
+            ->assertJsonMissing($data[1])
+            ->assertJsonMissing($data[2])
+            ->assertJsonFragment($data[3])
+            ->assertJsonMissing($data[4])
             ->assertOk();
     }
 
@@ -167,12 +210,11 @@ class AuthorsAPITest extends E2ETestCase
     {
         $a = $this->given('autor existente');
 
-        $r = [ 'data' => $a ];
-
         $this
             ->jsonMembro('GET', self::$ep."/{$a->getId()}")
-            ->seeJsonEquals($r)
+            ->seeJsonStructure(['data' => ['id',  'name']])
             ->response
+            ->assertJsonFragment(['name' => $a->nome])
             ->assertOk();
     }
 
@@ -182,12 +224,12 @@ class AuthorsAPITest extends E2ETestCase
     {
         $a = $this->given('autor existente');
 
-        $body = [
+        $req = [
             'name' => $a->nome."diferente",
         ];
 
         $this
-            ->json('PUT', self::$ep."/{$a->getId()}", $body)
+            ->json('PUT', self::$ep."/{$a->getId()}", $req)
             ->response
             ->assertUnauthorized();
     }
@@ -196,12 +238,12 @@ class AuthorsAPITest extends E2ETestCase
     {
         $a = $this->given('autor existente');
 
-        $body = [
+        $req = [
             'name' => $a->nome."diferente",
         ];
 
         $this
-            ->json('PUT', self::$ep."/{$a->getId()}", $body)
+            ->jsonMembro('PUT', self::$ep."/{$a->getId()}", $req)
             ->response
             ->assertUnauthorized();
     }
@@ -210,20 +252,20 @@ class AuthorsAPITest extends E2ETestCase
     {
         $a = $this->given('autor existente');
 
-        $body = [
+        $req = [
             'name' => $a->nome."diferente",
         ];
 
         $this
-            ->jsonColaborador('PUT', self::$ep."/{$a->getId()}", $body)
-            ->seeJson($body)
-            ->seeJsonStructure(['id'])
+            ->jsonColaborador('PUT', self::$ep."/{$a->getId()}", $req)
+            ->seeJsonStructure(['data' => ['id',  'name']])
             ->response
+            ->assertJsonFragment(['name' => $req['name']])
             ->assertOk();
 
         $this->seeInDatabase('autores', [
             'id'    => $a->getId(),
-            'nome'  => $body['name'],
+            'nome'  => $req['name'],
         ]);
     }
 
@@ -249,7 +291,7 @@ class AuthorsAPITest extends E2ETestCase
             ->assertNoContent();
 
         $this->notSeeInDatabase('autores', [
-            'id'    => $a->getId(),
+            'id' => $a->getId(),
         ]);
     }
 }
