@@ -123,6 +123,7 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonMembro('GET', self::$ep)
             ->seeJsonStructure(['data'])
             ->response
+            ->assertJsonCount(10, 'data')
             ->assertJsonFragment($p1[0])
             ->assertJsonFragment($p1[1])
             ->assertJsonFragment($p1[2])
@@ -149,6 +150,7 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonMembro('GET', self::$ep.'?page=2')
             ->seeJsonStructure(['data'])
             ->response
+            ->assertJsonCount(10, 'data')
             ->assertJsonFragment($p2[0])
             ->assertJsonFragment($p2[1])
             ->assertJsonFragment($p2[2])
