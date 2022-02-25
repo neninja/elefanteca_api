@@ -33,6 +33,8 @@ Books API
  [x] Edita como colaborador
  [x] Falha sem autenticacao ao deletar
  [x] Deleta como colaborador
+ [x] Falha sem autenticacao ao reativar
+ [x] Reativa como colaborador
 
 Users API
  [x] Falha sem todos campos

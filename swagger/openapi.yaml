@@ -285,6 +285,27 @@ paths:
       security:
         -
           JWT: []
+  '/api/books/{id}/activate':
+    post:
+      tags:
+        - livro
+      description: 'Reativação de livro'
+      operationId: 5c950fcb2a8845e1aaa716d24bdad2d6
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id livro'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
   /api/users:
     post:
       tags:
