@@ -2,7 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
-  <title>Dashboard for /app/app/Http/Controllers</title>
+  <title>Dashboard for /app/app/Http/Resources</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="../../../_css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="../../../_css/nv.d3.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,7 @@
          <li class="breadcrumb-item"><a href="../../../index.html">/app</a></li>
          <li class="breadcrumb-item"><a href="../../index.html">app</a></li>
          <li class="breadcrumb-item"><a href="../index.html">Http</a></li>
-         <li class="breadcrumb-item"><a href="index.html">Controllers</a></li>
+         <li class="breadcrumb-item"><a href="index.html">Resources</a></li>
          <li class="breadcrumb-item active">(Dashboard)</li>
 
        </ol>
@@ -157,7 +157,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#classCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,5], "Class Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Class Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -175,7 +175,7 @@ $(document).ready(function() {
       .yAxis.tickFormat(d3.format('d'));
 
     d3.select('#methodCoverageDistribution svg')
-      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,16], "Method Coverage"))
+      .datum(getCoverageDistributionData([0,0,0,0,0,0,0,0,0,0,0,2], "Method Coverage"))
       .transition().duration(500).call(chart);
 
     nv.utils.windowResize(chart.update);
@@ -225,7 +225,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Cyclomatic Complexity');
 
     d3.select('#classComplexity svg')
-      .datum(getComplexityData([[100,3,"<a href=\"AuthController.php.html#12\">App\\Http\\Controllers\\AuthController<\/a>"],[100,7,"<a href=\"AuthorController.php.html#17\">App\\Http\\Controllers\\AuthorController<\/a>"],[100,7,"<a href=\"BookController.php.html#17\">App\\Http\\Controllers\\BookController<\/a>"],[100,0,"<a href=\"Controller.php.html#7\">App\\Http\\Controllers\\Controller<\/a>"],[100,3,"<a href=\"UserController.php.html#14\">App\\Http\\Controllers\\UserController<\/a>"]], 'Class Complexity'))
+      .datum(getComplexityData([[100,1,"<a href=\"AuthorResource.php.html#7\">App\\Http\\Resources\\AuthorResource<\/a>"],[100,1,"<a href=\"BookResource.php.html#7\">App\\Http\\Resources\\BookResource<\/a>"]], 'Class Complexity'))
       .transition()
       .duration(500)
       .call(chart);
@@ -249,7 +249,7 @@ $(document).ready(function() {
     chart.yAxis.axisLabel('Method Complexity');
 
     d3.select('#methodComplexity svg')
-      .datum(getComplexityData([[100,1,"<a href=\"AuthController.php.html#14\">App\\Http\\Controllers\\AuthController::__construct<\/a>"],[100,2,"<a href=\"AuthController.php.html#43\">App\\Http\\Controllers\\AuthController::loginJWT<\/a>"],[100,1,"<a href=\"AuthorController.php.html#19\">App\\Http\\Controllers\\AuthorController::__construct<\/a>"],[100,1,"<a href=\"AuthorController.php.html#40\">App\\Http\\Controllers\\AuthorController::show<\/a>"],[100,2,"<a href=\"AuthorController.php.html#68\">App\\Http\\Controllers\\AuthorController::index<\/a>"],[100,1,"<a href=\"AuthorController.php.html#104\">App\\Http\\Controllers\\AuthorController::store<\/a>"],[100,1,"<a href=\"AuthorController.php.html#145\">App\\Http\\Controllers\\AuthorController::update<\/a>"],[100,1,"<a href=\"AuthorController.php.html#175\">App\\Http\\Controllers\\AuthorController::destroy<\/a>"],[100,1,"<a href=\"BookController.php.html#19\">App\\Http\\Controllers\\BookController::__construct<\/a>"],[100,1,"<a href=\"BookController.php.html#40\">App\\Http\\Controllers\\BookController::show<\/a>"],[100,2,"<a href=\"BookController.php.html#68\">App\\Http\\Controllers\\BookController::index<\/a>"],[100,1,"<a href=\"BookController.php.html#114\">App\\Http\\Controllers\\BookController::store<\/a>"],[100,1,"<a href=\"BookController.php.html#169\">App\\Http\\Controllers\\BookController::update<\/a>"],[100,1,"<a href=\"BookController.php.html#203\">App\\Http\\Controllers\\BookController::destroy<\/a>"],[100,1,"<a href=\"UserController.php.html#16\">App\\Http\\Controllers\\UserController::__construct<\/a>"],[100,2,"<a href=\"UserController.php.html#61\">App\\Http\\Controllers\\UserController::store<\/a>"]], 'Method Complexity'))
+      .datum(getComplexityData([[100,1,"<a href=\"AuthorResource.php.html#9\">App\\Http\\Resources\\AuthorResource::toArray<\/a>"],[100,1,"<a href=\"BookResource.php.html#9\">App\\Http\\Resources\\BookResource::toArray<\/a>"]], 'Method Complexity'))
       .transition()
       .duration(500)
       .call(chart);

@@ -18,6 +18,22 @@ Authors API
  [x] Falha sem autenticacao ao deletar
  [x] Deleta como colaborador
 
+Books API
+ [x] Falha sem autenticacao ao criar
+ [x] Falha como membro ao criar
+ [x] Cria como colaborador
+ [x] Cria como admin
+ [x] Falha sem autenticacao ao listar
+ [x] Lista 20 com 2 paginas
+ [x] Lista por titulo parcial
+ [x] Falha sem autenticacao ao listar por id
+ [x] Lista por id
+ [x] Falha sem autenticacao ao editar
+ [x] Falha como membro ao editar
+ [x] Edita como colaborador
+ [x] Falha sem autenticacao ao deletar
+ [x] Deleta como colaborador
+
 Users API
  [x] Falha sem todos campos
  [x] Cria usuario

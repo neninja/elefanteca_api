@@ -13,6 +13,9 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
+              required:
+                - email
+                - password
               properties:
                 email:
                   type: string
@@ -63,6 +66,8 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
+              required:
+                - name
               properties:
                 name:
                   type: string
@@ -130,10 +135,149 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
+              required:
+                - name
               properties:
                 name:
                   type: string
                   example: 'Edgar Allan Poe'
+              type: object
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+  '/api/books/{id}':
+    get:
+      tags:
+        - livro
+      description: 'Exibição de 1 livro'
+      operationId: 2fdd668eb661591758aff4c56ca9b66a
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id livro'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+    put:
+      tags:
+        - livro
+      description: 'Edição de livro'
+      operationId: f5ca658c501a803d68655af0365e3802
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id livro'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              required:
+                - title
+                - author_id
+                - amount
+              properties:
+                title:
+                  type: string
+                  example: 'Coração delator'
+                author_id:
+                  type: integer
+                  example: 1
+                amount:
+                  type: integer
+                  example: 3
+              type: object
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+    delete:
+      tags:
+        - livro
+      description: 'Deleção de livro'
+      operationId: 1a9c26667c32b8ed5e5770d7a1cc9d5c
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id livro'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+  /api/books:
+    get:
+      tags:
+        - livro
+      description: 'Listagem de livros'
+      operationId: a9d13283dfab262e97af3c914d51b7a8
+      parameters:
+        -
+          name: title
+          in: query
+          description: 'Título parcial do livro'
+          schema:
+            type: string
+            example: Allan
+        -
+          name: page
+          in: query
+          description: Paginação
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+    post:
+      tags:
+        - livro
+      description: 'Cadastro de livro'
+      operationId: 47047e95a700b3271b697e57d0965191
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              required:
+                - title
+                - author_id
+                - amount
+              properties:
+                title:
+                  type: string
+                  example: 'Coração delator'
+                author_id:
+                  type: integer
+                  example: 1
+                amount:
+                  type: integer
+                  example: 3
               type: object
       responses:
         2XX:
@@ -151,6 +295,11 @@ paths:
         content:
           application/json;charset=UTF-8:
             schema:
+              required:
+                - name
+                - cpf
+                - password
+                - email
               properties:
                 name:
                   type: string
@@ -164,6 +313,9 @@ paths:
                 email:
                   type: string
                   example: example@foo.com
+                role:
+                  type: string
+                  example: membro
               type: object
       responses:
         2XX:
