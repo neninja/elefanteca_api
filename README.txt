@@ -1,6 +1,7 @@
 Auth API
  [x] Cria token jwt
- [x] Falha ao criar token sem autenticacao jwt
+ [x] Falha ao criar token com senha errada jwt
+ [x] Falha ao criar token com email errado jwt
 
 Authors API
  [x] Falha sem autenticacao ao criar

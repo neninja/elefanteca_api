@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:      
-  2022-02-25 05:51:14      
+  2022-02-25 05:57:36      
                            
  Summary:                  
-  Classes: 80.00% (16/20)  
-  Methods: 86.96% (40/46)  
-  Lines:   95.56% (215/225)
+  Classes: 85.00% (17/20)  
+  Methods: 89.13% (41/46)  
+  Lines:   96.00% (216/225)
 
 App\Http\Controllers\AuthController
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  8/  8)
@@ -47,4 +47,4 @@ Core\Services\Emprestimo\CadastroLivroService
 Core\Services\Usuario\CadastroUsuarioService
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% ( 14/ 14)
 Core\Services\Usuario\LoginEmailSenhaService
-  Methods:   0.00% ( 0/ 1)   Lines:  80.00% (  4/  5)
+  Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  5/  5)
