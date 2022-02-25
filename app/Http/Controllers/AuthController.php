@@ -23,6 +23,7 @@ class AuthController extends Controller
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
      *             @OA\Schema(
+     *                 required={"email", "password"},
      *                 @OA\Property(
      *                      property="email",
      *                      type="string",

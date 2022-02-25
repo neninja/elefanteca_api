@@ -89,6 +89,7 @@ class AuthorController extends Controller
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
      *             @OA\Schema(
+     *                 required={"name"},
      *                 @OA\Property(
      *                      property="name",
      *                      type="string",
@@ -129,6 +130,7 @@ class AuthorController extends Controller
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
      *             @OA\Schema(
+     *                 required={"name"},
      *                 @OA\Property(
      *                      property="name",
      *                      type="string",

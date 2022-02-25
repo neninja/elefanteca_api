@@ -89,6 +89,7 @@ class BookController extends Controller
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
      *             @OA\Schema(
+     *                 required={"title", "author_id", "amount"},
      *                 @OA\Property(
      *                      property="title",
      *                      type="string",
@@ -143,6 +144,7 @@ class BookController extends Controller
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
      *             @OA\Schema(
+     *                 required={"title", "author_id", "amount"},
      *                 @OA\Property(
      *                      property="title",
      *                      type="string",

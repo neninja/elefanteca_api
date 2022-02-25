@@ -26,6 +26,7 @@ class UserController extends Controller
      *     @OA\RequestBody(
      *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
      *             @OA\Schema(
+     *                 required={"name", "cpf", "password", "email"},
      *                 @OA\Property(
      *                      property="name",
      *                      type="string",
@@ -45,6 +46,11 @@ class UserController extends Controller
      *                      property="email",
      *                      type="string",
      *                      example="example@foo.com",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="role",
+     *                      type="string",
+     *                      example="membro",
      *                 ),
      *             ),
      *         ),
