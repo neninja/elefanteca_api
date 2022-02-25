@@ -8,10 +8,10 @@
 
 - TDD
     ```sh
-    bash tdd.sh
+    ./tdd
     ```
 
-    > O script executa o teste simples anterior, aceitando argumentos como ``bash tdd.sh -- --filter testName$ tests/caminho/do/ExemploTest.php``. Sua diferença é que executa novamente com qualquer tecla
+    > O script executa o teste simples anterior, aceitando argumentos como ``./tdd -- --filter testName$ tests/caminho/do/ExemploTest.php``. Sua diferença é que executa novamente com qualquer tecla
 
 - CI
     ```sh
