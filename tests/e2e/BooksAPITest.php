@@ -333,4 +333,29 @@ class BooksAPITest extends E2ETestCase
             'ativo' => false,
         ]);
     }
+
+    public function testFalhaSemAutenticacaoAoReativar()
+    {
+        $l = $this->given('livro existente');
+
+        $this
+            ->json('POST', self::$ep."/{$l->getId()}/activate")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testReativaComoColaborador()
+    {
+        $l = $this->given('livro existente');
+
+        $this
+            ->jsonColaborador('POST', self::$ep."/{$l->getId()}/activate")
+            ->response
+            ->assertNoContent();
+
+        $this->seeInDatabase('livros', [
+            'id'    => $l->getId(),
+            'ativo' => true,
+        ]);
+    }
 }

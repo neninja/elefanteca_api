@@ -47,6 +47,7 @@ $router->group(['prefix' => 'api'], function ($request) use ($router) {
                 $router->post('', 'BookController@store');
                 $router->put('{id}', 'BookController@update');
                 $router->delete('{id}', 'BookController@destroy');
+                $router->post('{id}/activate', 'BookController@activate');
             });
         });
 

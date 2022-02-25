@@ -208,5 +208,30 @@ class BookController extends Controller
 
         return response()->json('', 204);
     }
+
+    /**
+     * @OA\Post(
+     *     tags={"livro"},
+     *     path="/api/books/{id}/activate",
+     *     description="Reativação de livro",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         description="Id livro",
+     *         required=true,
+     *         @OA\Schema(type="integer", example=1),
+     *     ),
+     *     @OA\Response(response="2XX", description="OK"),
+     * )
+     */
+    public function activate(int $id)
+    {
+        $l = $this->livrosRepository->findById($id);
+        $l->ativar();
+        $this->livrosRepository->save($l);
+
+        return response()->json('', 204);
+    }
 }
 
