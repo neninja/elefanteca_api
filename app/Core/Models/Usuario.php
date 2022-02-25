@@ -11,6 +11,8 @@ use Core\Models\{
 class Usuario
 {
     protected bool $ativo;
+    public \DateTimeImmutable   $created_at;
+    public \DateTime            $updated_at;
 
     public function __construct(
         private     ?int    $id = null,

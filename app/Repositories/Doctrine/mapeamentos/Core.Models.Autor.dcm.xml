@@ -8,5 +8,8 @@
             column="nome"
             type="string"
             length="45" />
+
+        <field name="created_at" type="datetime_immutable" />
+        <field name="updated_at" type="datetime" />
     </entity>
 </doctrine-mapping>

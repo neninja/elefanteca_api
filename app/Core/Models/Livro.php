@@ -9,6 +9,8 @@ use Core\Models\{
 class Livro
 {
     protected bool $ativo;
+    public \DateTimeImmutable   $created_at;
+    public \DateTime            $updated_at;
 
     public function __construct(
         private     ?int    $id = null,

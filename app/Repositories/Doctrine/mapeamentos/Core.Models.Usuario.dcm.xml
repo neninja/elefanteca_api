@@ -29,5 +29,8 @@
         <field name="papel"
             column="papel"
             type="papel" />
+
+        <field name="created_at" type="datetime_immutable" />
+        <field name="updated_at" type="datetime" />
     </entity>
 </doctrine-mapping>

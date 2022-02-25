@@ -36,12 +36,14 @@ class DbResetCommand extends Command
 
             $qb->insert('usuarios')
                ->values([
-                   'nome'  => ':nome',
-                   'ativo' => ':ativo',
-                   'cpf'   => ':cpf',
-                   'senha' => ':senha',
-                   'email' => ':email',
-                   'papel' => ':papel',
+                   'nome'       => ':nome',
+                   'ativo'      => ':ativo',
+                   'cpf'        => ':cpf',
+                   'senha'      => ':senha',
+                   'email'      => ':email',
+                   'papel'      => ':papel',
+                   'created_at' => ':created_at',
+                   'updated_at' => ':updated_at',
                ])
                ->setParameter('nome', 'Admin')
                ->setParameter('ativo', 1)
@@ -49,6 +51,8 @@ class DbResetCommand extends Command
                ->setParameter('senha', $this->encrypt('asdf'))
                ->setParameter('email', 'admin@desativemeemprod.com')
                ->setParameter('papel', Papel::$ADMIN)
+               ->setParameter('created_at', date("c"))
+               ->setParameter('updated_at', date("c"))
                ->execute();
 
             if ($this->option('development')) {
@@ -184,10 +188,14 @@ class DbResetCommand extends Command
                 foreach($columns as $column) {
                     $qb->setValue($column, ":".$column);
                 }
+                $qb->setValue('created_at', ":created_at");
+                $qb->setValue('updated_at', ":updated_at");
 
                 foreach($columns as $column) {
                     $qb->setParameter($column, $d[$column]);
                 }
+                $qb->setParameter('created_at', date("c"));
+                $qb->setParameter('updated_at', date("c"));
 
                 $qb->execute();
             }

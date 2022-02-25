@@ -12,11 +12,20 @@ abstract class BaseRepository
         protected EntityManagerInterface $em
     ) {}
 
-    protected function base_save($entity)
+    protected function base_save($entity, bool $timestamp = true)
     {
         if(is_null($entity->getId())) {
+            if($timestamp) {
+                $entity->created_at = new \DateTimeImmutable();
+                $entity->updated_at = new \DateTime();
+            }
+
             $this->em->persist($entity);
         } else {
+            if($timestamp) {
+                $entity->updated_at = new \DateTime();
+            }
+
             $this->em->merge($entity);
         }
         $this->em->flush();
