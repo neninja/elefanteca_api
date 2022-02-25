@@ -42,7 +42,7 @@ class AuthAPITest extends E2ETestCase
         $this->assertNotEmpty($token);
     }
 
-    public function testFalhaAoCriarTokenSemAutenticacaoJwt()
+    public function testFalhaAoCriarTokenComSenhaErradaJwt()
     {
         $login = $this->criaUsuario(Papel::$MEMBRO)['loginJWT'];
 
@@ -52,6 +52,22 @@ class AuthAPITest extends E2ETestCase
         $this
             ->json('POST', '/api/auth/login/jwt', [
                 'email' => $email, 'password' => $passw.'senhaincorreta'
+            ])
+            ->seeJson(["Usuário ou senha inválidos"])
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testFalhaAoCriarTokenComEmailErradoJwt()
+    {
+        $login = $this->criaUsuario(Papel::$MEMBRO)['loginJWT'];
+
+        $email = $login['email'];
+        $passw = $login['password'];
+
+        $this
+            ->json('POST', '/api/auth/login/jwt', [
+                'email' => $email.'emailincorreto', 'password' => $passw
             ])
             ->seeJson(["Usuário ou senha inválidos"])
             ->response
