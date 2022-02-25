@@ -26,12 +26,21 @@ class CadastroLivroService
         ?int   $id = null,
     ): Livro {
         $autor = $this->autoresRepo->findById($idAutor);
-        $l = new Livro(
-            id:         $id,
-            titulo:     $titulo,
-            autor:      $autor,
-            quantidade: $quantidade,
-        );
+
+        $l = null;
+
+        if(!is_null($id)) {
+            $l = $this->livrosRepo->findById($id);
+            $l->titulo      = $titulo;
+            $l->autor       = $autor;
+            $l->quantidade  = $quantidade;
+        } else {
+            $l = new Livro(
+                titulo:     $titulo,
+                autor:      $autor,
+                quantidade: $quantidade,
+            );
+        }
 
         return $this->livrosRepo->save($l);
     }
