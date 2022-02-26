@@ -41,7 +41,7 @@ class UsersAPITest extends E2ETestCase
         $this
             ->json('POST', self::$ep, $req)
             ->seeJson($res)
-            ->seeJsonStructure(['id'])
+            ->seeJsonStructure(['data' => ['id']])
             ->response
             ->assertOk();
 
@@ -68,7 +68,7 @@ class UsersAPITest extends E2ETestCase
         $this
             ->jsonAdmin('POST', self::$ep, $req)
             ->seeJson($res)
-            ->seeJsonStructure(['id'])
+            ->seeJsonStructure(['data' => ['id']])
             ->response
             ->assertOk();
 
@@ -95,7 +95,7 @@ class UsersAPITest extends E2ETestCase
         $this
             ->json('POST', self::$ep, $req)
             ->seeJson($res)
-            ->seeJsonStructure(['id'])
+            ->seeJsonStructure(['data' => ['id']])
             ->response
             ->assertOk();
 

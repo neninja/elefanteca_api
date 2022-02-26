@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Core\Models\Papel;
 
+use App\Http\Resources\UserResource;
+
 use Core\Services\{
     Usuario\CadastroUsuarioService,
 };
@@ -81,13 +83,6 @@ class UserController extends Controller
             papel:  $role,
         );
 
-        return response()
-            ->json([
-                'id'        => $u->getId(),
-                'name'      => $u->nome,
-                'cpf'       => $u->cpf->getNumero(),
-                'email'     => $u->email->getEmail(),
-                'role'      => $u->papel->get(),
-            ]);
+        return new UserResource($u);
     }
 }
