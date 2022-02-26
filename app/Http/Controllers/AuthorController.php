@@ -148,6 +148,12 @@ class AuthorController extends Controller
      */
     public function update(int $id, Request $r)
     {
+        $a = $this->autoresRepository->findById($id);
+
+        if(is_null($a)) {
+            abort(404);
+        }
+
         $this->validate($r, [
             'name' => 'required',
         ]);

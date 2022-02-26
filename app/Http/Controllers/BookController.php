@@ -172,6 +172,12 @@ class BookController extends Controller
      */
     public function update(int $id, Request $r)
     {
+        $l = $this->livrosRepository->findById($id);
+
+        if(is_null($l)) {
+            abort(404);
+        }
+
         $this->validate($r, [
             'title'     => 'required',
             'author_id' => 'required|integer',

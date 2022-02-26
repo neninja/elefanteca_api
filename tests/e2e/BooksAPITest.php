@@ -54,32 +54,16 @@ class BooksAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacaoAoCriar()
     {
-        $autor = $this->given('autor existente');
-
-        $req = [
-            'title'      => $this->fakeWords(2),
-            'idAutor'    => $autor->getId(),
-            'quantidade' => 1,
-        ];
-
         $this
-            ->json('POST', self::$ep, $req)
+            ->json('POST', self::$ep)
             ->response
             ->assertUnauthorized();
     }
 
     public function testFalhaComoMembroAoCriar()
     {
-        $autor = $this->given('autor existente');
-
-        $req = [
-            'title'      => $this->fakeWords(2),
-            'idAutor'    => $autor->getId(),
-            'quantidade' => 1,
-        ];
-
         $this
-            ->jsonMembro('POST', self::$ep, $req)
+            ->jsonMembro('POST', self::$ep)
             ->response
             ->assertUnauthorized();
     }
@@ -236,10 +220,8 @@ class BooksAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacaoAoListarPorId()
     {
-        $l = $this->given('livro existente');
-
         $this
-            ->json('GET', self::$ep."/{$l->getId()}")
+            ->json('GET', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
@@ -268,28 +250,16 @@ class BooksAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacaoAoEditar()
     {
-        $l = $this->given('livro existente');
-
-        $req = [
-            'title' => $l->titulo."diferente",
-        ];
-
         $this
-            ->json('PUT', self::$ep."/{$l->getId()}", $req)
+            ->json('PUT', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
 
     public function testFalhaComoMembroAoEditar()
     {
-        $l = $this->given('livro existente');
-
-        $req = [
-            'title' => $l->titulo."diferente",
-        ];
-
         $this
-            ->jsonMembro('PUT', self::$ep."/{$l->getId()}", $req)
+            ->jsonMembro('PUT', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
@@ -317,14 +287,20 @@ class BooksAPITest extends E2ETestCase
         ]);
     }
 
+    public function testFalhaSeNaoExisteAoEditarPorId()
+    {
+        $this
+            ->jsonColaborador('PUT', self::$ep.'/123456')
+            ->response
+            ->assertNotFound();
+    }
+
     #/******** DELETE *******/
 
     public function testFalhaSemAutenticacaoAoDeletar()
     {
-        $l = $this->given('livro existente');
-
         $this
-            ->json('DELETE', self::$ep."/{$l->getId()}")
+            ->json('DELETE', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
@@ -346,10 +322,8 @@ class BooksAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacaoAoReativar()
     {
-        $l = $this->given('livro existente');
-
         $this
-            ->json('POST', self::$ep."/{$l->getId()}/activate")
+            ->json('POST', self::$ep."/123456/activate")
             ->response
             ->assertUnauthorized();
     }

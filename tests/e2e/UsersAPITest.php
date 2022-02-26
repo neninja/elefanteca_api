@@ -268,20 +268,16 @@ class UsersAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacaoAoListarPorId()
     {
-        $u = $this->given('usuario existente');
-
         $this
-            ->json('GET', self::$ep."/{$u->getId()}")
+            ->json('GET', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
 
     public function testFalhaComoMembroAoListarPorId()
     {
-        $u = $this->given('usuario existente');
-
         $this
-            ->jsonMembro('GET', self::$ep."/{$u->getId()}")
+            ->jsonMembro('GET', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
@@ -304,5 +300,23 @@ class UsersAPITest extends E2ETestCase
             ->jsonAdmin('GET', self::$ep.'/123456')
             ->response
             ->assertNotFound();
+    }
+
+    /******** UPDATE *******/
+
+    public function testFalhaSemAutenticacaoAoEditar()
+    {
+        $this
+            ->json('PUT', self::$ep."/123456")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testFalhaComoMembroAoEditar()
+    {
+        $this
+            ->jsonMembro('PUT', self::$ep."/123456")
+            ->response
+            ->assertUnauthorized();
     }
 }
