@@ -20,8 +20,8 @@ use App\Repositories\Doctrine\{
     AutoresRepository,
 };
 
-use App\Adapters\{
-    LumenCryptProvider,
+use \Core\Providers\{
+    ICriptografiaProvider,
 };
 
 abstract class IntegrationTestCase extends \PHPUnit\Framework\TestCase
@@ -75,8 +75,22 @@ abstract class IntegrationTestCase extends \PHPUnit\Framework\TestCase
         }
 
         switch($namespace){
-        case LumenCryptProvider::class:
-            return new $namespace();
+        case ICriptografiaProvider::class:
+            $stub = $this->createMock(ICriptografiaProvider::class);
+
+            $stub
+                ->method('encrypt')
+                ->will($this->returnCallBack(function($d) {
+                    return $d."+";
+                }));
+
+            $stub
+                ->method('decrypt')
+                ->will($this->returnCallBack(function($d) {
+                    return substr($d, 1);
+                }));
+
+            return $stub;
         case CadastroAutorService::class:
             return new CadastroAutorService(
                 $this->factory(AutoresRepository::class),

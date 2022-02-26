@@ -6,8 +6,8 @@ use Core\Models\Usuario;
 use App\Repositories\Doctrine\{
     UsuariosRepository,
 };
-use App\Adapters\{
-    LumenCryptProvider,
+use Core\Providers\{
+    ICriptografiaProvider,
 };
 
 use Core\Exceptions\CoreException;
@@ -18,7 +18,7 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
     {
         return new CadastroUsuarioService(
             $this->factory(UsuariosRepository::class),
-            $this->factory(LumenCryptProvider::class),
+            $this->factory(ICriptografiaProvider::class),
         );
     }
 
