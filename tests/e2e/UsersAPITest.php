@@ -319,4 +319,9 @@ class UsersAPITest extends E2ETestCase
             ->response
             ->assertUnauthorized();
     }
+
+    public function testEditaComoColaborador()
+    {
+        $this->markTestIncomplete();
+    }
 }

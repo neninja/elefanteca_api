@@ -186,4 +186,57 @@ class UserController extends Controller
 
         return new UserResource($u);
     }
+
+    /**
+     * @OA\Put(
+     *     tags={"usuário"},
+     *     path="/api/users/{id}",
+     *     description="Edição de usuário",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         description="Id usuário",
+     *         required=true,
+     *         @OA\Schema(type="integer", example=1)
+     *     ),
+     *     @OA\RequestBody(
+     *         @OA\MediaType(mediaType="application/json;charset=UTF-8",
+     *             @OA\Schema(
+     *                 required={"name", "cpf", "password", "email"},
+     *                 @OA\Property(
+     *                      property="name",
+     *                      type="string",
+     *                      example="Diego",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="cpf",
+     *                      type="string",
+     *                      example="37128197060",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="password",
+     *                      type="string",
+     *                      example="19800507",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="email",
+     *                      type="string",
+     *                      example="example@foo.com",
+     *                 ),
+     *                 @OA\Property(
+     *                      property="role",
+     *                      type="string",
+     *                      example="membro",
+     *                 ),
+     *             ),
+     *         ),
+     *     ),
+     *     @OA\Response(response="2XX", description="OK"),
+     * )
+     */
+    public function update(int $id, Request $r)
+    {
+        abort(404); // TODO
+    }
 }

@@ -53,7 +53,7 @@ class AuthorsAPITest extends E2ETestCase
     public function testFalhaSemAutenticacaoAoCriar()
     {
         $this
-            ->json('POST', self::$ep, ['name' => $this->fakeName()])
+            ->json('POST', self::$ep)
             ->response
             ->assertUnauthorized();
     }
@@ -61,7 +61,7 @@ class AuthorsAPITest extends E2ETestCase
     public function testFalhaComoMembroAoCriar()
     {
         $this
-            ->jsonMembro('POST', self::$ep, ['name' => $this->fakeName()])
+            ->jsonMembro('POST', self::$ep)
             ->response
             ->assertUnauthorized();
     }
@@ -200,10 +200,8 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacaoAoListarPorId()
     {
-        $a = $this->given('autor existente');
-
         $this
-            ->json('GET', self::$ep."/{$a->getId()}")
+            ->json('GET', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
@@ -232,28 +230,16 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testFalhaSemAutenticacaoAoEditar()
     {
-        $a = $this->given('autor existente');
-
-        $req = [
-            'name' => $a->nome."diferente",
-        ];
-
         $this
-            ->json('PUT', self::$ep."/{$a->getId()}", $req)
+            ->json('PUT', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
 
     public function testFalhaComoMembroAoEditar()
     {
-        $a = $this->given('autor existente');
-
-        $req = [
-            'name' => $a->nome."diferente",
-        ];
-
         $this
-            ->jsonMembro('PUT', self::$ep."/{$a->getId()}", $req)
+            ->jsonMembro('PUT', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
@@ -279,14 +265,20 @@ class AuthorsAPITest extends E2ETestCase
         ]);
     }
 
+    public function testFalhaSeNaoExisteAoEditarPorId()
+    {
+        $this
+            ->jsonColaborador('PUT', self::$ep.'/123456')
+            ->response
+            ->assertNotFound();
+    }
+
     /******** DELETE *******/
 
     public function testFalhaSemAutenticacaoAoDeletar()
     {
-        $a = $this->given('autor existente');
-
         $this
-            ->json('DELETE', self::$ep."/{$a->getId()}")
+            ->json('DELETE', self::$ep."/123456")
             ->response
             ->assertUnauthorized();
     }
@@ -303,5 +295,14 @@ class AuthorsAPITest extends E2ETestCase
         $this->notSeeInDatabase('autores', [
             'id' => $a->getId(),
         ]);
+    }
+
+    public function testFalhaSeNaoExisteAoDeletar()
+    {
+        $this->markTestIncomplete();
+        $this
+            ->jsonColaborador('DELETE', self::$ep.'/123456')
+            ->response
+            ->assertNotFound();
     }
 }

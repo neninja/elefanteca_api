@@ -320,6 +320,15 @@ class BooksAPITest extends E2ETestCase
         ]);
     }
 
+    public function testFalhaSeNaoExisteAoDeletar()
+    {
+        $this->markTestIncomplete();
+        $this
+            ->jsonColaborador('DELETE', self::$ep.'/123456')
+            ->response
+            ->assertNotFound();
+    }
+
     public function testFalhaSemAutenticacaoAoReativar()
     {
         $this
@@ -341,5 +350,14 @@ class BooksAPITest extends E2ETestCase
             'id'    => $l->getId(),
             'ativo' => true,
         ]);
+    }
+
+    public function testFalhaSeNaoExisteAoReativar()
+    {
+        $this->markTestIncomplete();
+        $this
+            ->jsonColaborador('DELETE', self::$ep.'/123456/activate')
+            ->response
+            ->assertNotFound();
     }
 }
