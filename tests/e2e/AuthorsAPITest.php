@@ -123,6 +123,7 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonMembro('GET', self::$ep)
             ->seeJsonStructure(['data'])
             ->response
+            ->assertOk()
             ->assertJsonCount(10, 'data')
             ->assertJsonFragment($p1[0])
             ->assertJsonFragment($p1[1])
@@ -143,13 +144,13 @@ class AuthorsAPITest extends E2ETestCase
             ->assertJsonMissing($p2[6])
             ->assertJsonMissing($p2[7])
             ->assertJsonMissing($p2[8])
-            ->assertJsonMissing($p2[9])
-            ->assertOk();
+            ->assertJsonMissing($p2[9]);
 
         $this
             ->jsonMembro('GET', self::$ep.'?page=2')
             ->seeJsonStructure(['data'])
             ->response
+            ->assertOk()
             ->assertJsonCount(10, 'data')
             ->assertJsonFragment($p2[0])
             ->assertJsonFragment($p2[1])
@@ -170,8 +171,7 @@ class AuthorsAPITest extends E2ETestCase
             ->assertJsonMissing($p1[6])
             ->assertJsonMissing($p1[7])
             ->assertJsonMissing($p1[8])
-            ->assertJsonMissing($p1[9])
-            ->assertOk();
+            ->assertJsonMissing($p1[9]);
     }
 
     public function testListaPorNomeParcial()
@@ -190,12 +190,12 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonMembro('GET', self::$ep.'?name='.$nome)
             ->seeJsonStructure(['data' => [['id',  'name']]])
             ->response
+            ->assertOk()
             ->assertJsonMissing($data[0])
             ->assertJsonMissing($data[1])
             ->assertJsonMissing($data[2])
             ->assertJsonFragment($data[3])
-            ->assertJsonMissing($data[4])
-            ->assertOk();
+            ->assertJsonMissing($data[4]);
     }
 
     public function testFalhaSemAutenticacaoAoListarPorId()
@@ -216,8 +216,16 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonMembro('GET', self::$ep."/{$a->getId()}")
             ->seeJsonStructure(['data' => ['id',  'name']])
             ->response
-            ->assertJsonFragment(['name' => $a->nome])
-            ->assertOk();
+            ->assertOk()
+            ->assertJsonFragment(['name' => $a->nome]);
+    }
+
+    public function testFalhaSeNaoExisteAoListarPorId()
+    {
+        $this
+            ->jsonMembro('GET', self::$ep.'/123456')
+            ->response
+            ->assertNotFound();
     }
 
     /******** UPDATE *******/
@@ -262,8 +270,8 @@ class AuthorsAPITest extends E2ETestCase
             ->jsonColaborador('PUT', self::$ep."/{$a->getId()}", $req)
             ->seeJsonStructure(['data' => ['id',  'name']])
             ->response
-            ->assertJsonFragment(['name' => $req['name']])
-            ->assertOk();
+            ->assertOk()
+            ->assertJsonFragment(['name' => $req['name']]);
 
         $this->seeInDatabase('autores', [
             'id'    => $a->getId(),

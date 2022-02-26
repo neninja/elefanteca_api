@@ -29,6 +29,12 @@ $router->group(['prefix' => 'api'], function ($request) use ($router) {
     });
 
     $router->group(['middleware' => 'auth'], function ($request) use ($router) {
+        $router->group(['prefix' => 'users'], function () use ($router) {
+            $router->group(['middleware' => 'hasRole:COLABORADOR,ADMIN'], function ($request) use ($router) {
+                $router->get('', 'UserController@index');
+                $router->get('{id}', 'UserController@show');
+            });
+        });
 
         $router->group(['prefix' => 'authors'], function () use ($router) {
             $router->get('', 'AuthorController@index');

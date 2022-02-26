@@ -33,4 +33,14 @@ class UsuariosRepository extends BaseRepository implements \Core\Repositories\IU
     {
         return $this->base_findOneBy(['cpf' => new CPF($cpf)]);
     }
+
+    public function findBy(array $condition, int $page, int $limit = 10): array
+    {
+        return $this->base_findByWithLikeEqual(
+            ['nome', 'email'],
+            $condition,
+            $limit,
+            $page,
+        );
+    }
 }

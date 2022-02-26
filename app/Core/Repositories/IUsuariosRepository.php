@@ -2,7 +2,6 @@
 
 namespace Core\Repositories;
 
-
 use Core\Models\Usuario;
 
 interface IUsuariosRepository
@@ -11,4 +10,5 @@ interface IUsuariosRepository
     public function findById(int $id): ?Usuario;
     public function findByEmail(string $email): ?Usuario;
     public function findByCpf(string $cpf): ?Usuario;
+    public function findBy(array $condition, int $page, int $limit): array;
 }

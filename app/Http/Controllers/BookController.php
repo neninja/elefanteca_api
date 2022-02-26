@@ -41,6 +41,10 @@ class BookController extends Controller
     {
         $l = $this->livrosRepository->findById($id);
 
+        if(is_null($l)) {
+            abort(404);
+        }
+
         return new BookResource($l);
     }
 

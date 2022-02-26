@@ -52,7 +52,7 @@ abstract class E2ETestCase extends LumenTestCase
         );
     }
 
-    protected function criaUsuario($papel)
+    private function criaUser($papel)
     {
         $faker = Faker\Factory::create('pt_BR');
 
@@ -66,16 +66,16 @@ abstract class E2ETestCase extends LumenTestCase
 
     protected function criaMembro()
     {
-        return $this->criaUsuario(Papel::$MEMBRO);
+        return $this->criaUser(Papel::$MEMBRO);
     }
 
     protected function criaColaborador()
     {
-        return $this->criaUsuario(Papel::$COLABORADOR);
+        return $this->criaUser(Papel::$COLABORADOR);
     }
 
     protected function criaAdmin()
     {
-        return $this->criaUsuario(Papel::$ADMIN);
+        return $this->criaUser(Papel::$ADMIN);
     }
 }

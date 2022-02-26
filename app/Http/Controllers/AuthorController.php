@@ -41,6 +41,10 @@ class AuthorController extends Controller
     {
         $a = $this->autoresRepository->findById($id);
 
+        if(is_null($a)) {
+            abort(404);
+        }
+
         return new AuthorResource($a);
     }
 
