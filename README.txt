@@ -13,6 +13,7 @@ Authors API
  [x] Lista por nome parcial
  [x] Falha sem autenticacao ao listar por id
  [x] Lista por id
+ [x] Falha se nao existe ao listar por id
  [x] Falha sem autenticacao ao editar
  [x] Falha como membro ao editar
  [x] Edita como colaborador
@@ -29,6 +30,7 @@ Books API
  [x] Lista por titulo parcial
  [x] Falha sem autenticacao ao listar por id
  [x] Lista por id
+ [x] Falha se nao existe ao listar por id
  [x] Falha sem autenticacao ao editar
  [x] Falha como membro ao editar
  [x] Edita como colaborador
@@ -42,6 +44,16 @@ Users API
  [x] Cria usuario
  [x] Cria usuario como colaborador
  [x] Cria usuario como membro tentando criar colaborador
+ [x] Falha sem autenticacao ao listar
+ [x] Falha como membro ao listar
+ [x] Lista como colaborador admin
+ [x] Lista 20 com 2 paginas
+ [x] Lista por name parcial
+ [x] Lista por email parcial
+ [x] Falha sem autenticacao ao listar por id
+ [x] Falha como membro ao listar por id
+ [x] Lista por id
+ [x] Falha se nao existe ao listar por id
 
 Cadastro Autor Service
  [x] Cria com valores obrigatorios

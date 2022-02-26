@@ -306,7 +306,78 @@ paths:
       security:
         -
           JWT: []
+  '/api/user/{id}':
+    get:
+      tags:
+        - usuário
+      description: 'Exibição de 1 usuário'
+      operationId: d8f696420bea235f4916124c9ba1c507
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id usuário'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
   /api/users:
+    get:
+      tags:
+        - usuário
+      description: 'Listagem de usuários'
+      operationId: c457726701591d1183b53aa71fc13441
+      parameters:
+        -
+          name: name
+          in: query
+          description: 'Nome parcial do usuário'
+          schema:
+            type: string
+            example: Allan
+        -
+          name: email
+          in: query
+          description: 'Email parcial do usuário'
+          schema:
+            type: string
+            example: example@foo.com
+        -
+          name: cpf
+          in: query
+          description: 'CPF do usuário'
+          schema:
+            type: string
+            example: '37128197060'
+        -
+          name: role
+          in: query
+          description: 'Papel do usuário'
+          schema:
+            type: string
+            enum:
+              - membro
+              - colaborador
+              - admin
+        -
+          name: page
+          in: query
+          description: Paginação
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
     post:
       tags:
         - usuário
