@@ -17,8 +17,10 @@ Authors API
  [x] Falha sem autenticacao ao editar
  [x] Falha como membro ao editar
  [x] Edita como colaborador
+ [x] Falha se nao existe ao editar por id
  [x] Falha sem autenticacao ao deletar
  [x] Deleta como colaborador
+ [ ] Falha se nao existe ao deletar
 
 Books API
  [x] Falha sem autenticacao ao criar
@@ -34,10 +36,13 @@ Books API
  [x] Falha sem autenticacao ao editar
  [x] Falha como membro ao editar
  [x] Edita como colaborador
+ [x] Falha se nao existe ao editar por id
  [x] Falha sem autenticacao ao deletar
  [x] Deleta como colaborador
+ [ ] Falha se nao existe ao deletar
  [x] Falha sem autenticacao ao reativar
  [x] Reativa como colaborador
+ [ ] Falha se nao existe ao reativar
 
 Users API
  [x] Falha sem todos campos
@@ -54,6 +59,9 @@ Users API
  [x] Falha como membro ao listar por id
  [x] Lista por id
  [x] Falha se nao existe ao listar por id
+ [x] Falha sem autenticacao ao editar
+ [x] Falha como membro ao editar
+ [ ] Edita como colaborador
 
 Cadastro Autor Service
  [x] Cria com valores obrigatorios

@@ -415,6 +415,53 @@ paths:
       security:
         -
           JWT: []
+  '/api/users/{id}':
+    put:
+      tags:
+        - usuário
+      description: 'Edição de usuário'
+      operationId: b9091397c8b25f12c6adb74be6ce3a5a
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id usuário'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              required:
+                - name
+                - cpf
+                - password
+                - email
+              properties:
+                name:
+                  type: string
+                  example: Diego
+                cpf:
+                  type: string
+                  example: '37128197060'
+                password:
+                  type: string
+                  example: '19800507'
+                email:
+                  type: string
+                  example: example@foo.com
+                role:
+                  type: string
+                  example: membro
+              type: object
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
 components:
   securitySchemes:
     JWT:
