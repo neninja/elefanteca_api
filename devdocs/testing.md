@@ -32,6 +32,8 @@
 
 - Nomear teste com verbo no imperativo explicitando a intencionalidade do teste, evitar nomes como "deve fazer x". [Orientação do time do Spotify](https://github.com/spotify/should-up)
 - Quando for criada uma trait precisa ser recriado o autoload com ``composer du``
+- Caso por algum motivo o teste esteja incompleto e isso deve ser evidente, utilize ``$this->markTestIncomplete();``
+    - Para listar os testes incompletos utilize a flag ``--verbose``
 
 ### Testes e2e
 
