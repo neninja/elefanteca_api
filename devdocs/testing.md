@@ -13,6 +13,8 @@
 
     > O script executa o teste simples anterior, aceitando argumentos como ``./tdd -- --filter testName$ tests/caminho/do/ExemploTest.php``. Sua diferença é que executa novamente com qualquer tecla
 
+    > O script pode ser executado com o git bash no Windows
+
 - CI
     ```sh
     docker-compose exec app composer ci
