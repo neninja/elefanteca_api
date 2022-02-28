@@ -20,7 +20,7 @@ Authors API
  [x] Falha se nao existe ao editar por id
  [x] Falha sem autenticacao ao deletar
  [x] Deleta como colaborador
- [ ] Falha se nao existe ao deletar
+ [x] Falha se nao existe ao deletar
 
 Books API
  [x] Falha sem autenticacao ao criar
@@ -39,10 +39,10 @@ Books API
  [x] Falha se nao existe ao editar por id
  [x] Falha sem autenticacao ao deletar
  [x] Deleta como colaborador
- [ ] Falha se nao existe ao deletar
+ [x] Falha se nao existe ao deletar
  [x] Falha sem autenticacao ao reativar
  [x] Reativa como colaborador
- [ ] Falha se nao existe ao reativar
+ [x] Falha se nao existe ao reativar
 
 Users API
  [x] Falha sem todos campos
