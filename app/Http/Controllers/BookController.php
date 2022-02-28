@@ -39,11 +39,7 @@ class BookController extends Controller
      */
     public function show(int $id, Request $r)
     {
-        $l = $this->livrosRepository->findById($id);
-
-        if(is_null($l)) {
-            abort(404);
-        }
+        $l = $this->findOrFail($id);
 
         return new BookResource($l);
     }
@@ -172,11 +168,7 @@ class BookController extends Controller
      */
     public function update(int $id, Request $r)
     {
-        $l = $this->livrosRepository->findById($id);
-
-        if(is_null($l)) {
-            abort(404);
-        }
+        $this->findOrFail($id);
 
         $this->validate($r, [
             'title'     => 'required',
@@ -212,7 +204,7 @@ class BookController extends Controller
      */
     public function destroy(int $id)
     {
-        $l = $this->livrosRepository->findById($id);
+        $l = $this->findOrFail($id);
         $l->inativar();
         $this->livrosRepository->save($l);
 
@@ -237,11 +229,22 @@ class BookController extends Controller
      */
     public function activate(int $id)
     {
-        $l = $this->livrosRepository->findById($id);
+        $l = $this->findOrFail($id);
         $l->ativar();
         $this->livrosRepository->save($l);
 
         return response()->json('', 204);
+    }
+
+    private function findOrFail(int $id)
+    {
+        $l = $this->livrosRepository->findById($id);
+
+        if(is_null($l)) {
+            abort(404);
+        }
+
+        return $l;
     }
 }
 

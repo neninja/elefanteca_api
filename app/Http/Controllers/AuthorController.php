@@ -39,11 +39,7 @@ class AuthorController extends Controller
      */
     public function show(int $id, Request $r)
     {
-        $a = $this->autoresRepository->findById($id);
-
-        if(is_null($a)) {
-            abort(404);
-        }
+        $a = $this->findOrFail($id);
 
         return new AuthorResource($a);
     }
@@ -148,11 +144,7 @@ class AuthorController extends Controller
      */
     public function update(int $id, Request $r)
     {
-        $a = $this->autoresRepository->findById($id);
-
-        if(is_null($a)) {
-            abort(404);
-        }
+        $this->findOrFail($id);
 
         $this->validate($r, [
             'name' => 'required',
@@ -184,8 +176,21 @@ class AuthorController extends Controller
      */
     public function destroy(int $id)
     {
+        $this->findOrFail($id);
+
         $this->autoresRepository->delete($id);
 
         return response()->json('', 204);
+    }
+
+    private function findOrFail(int $id)
+    {
+        $a = $this->autoresRepository->findById($id);
+
+        if(is_null($a)) {
+            abort(404);
+        }
+
+        return $a;
     }
 }

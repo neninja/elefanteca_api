@@ -276,7 +276,6 @@ class BooksAPITest extends E2ETestCase
 
         $this
             ->jsonColaborador('PUT', self::$ep."/{$l->getId()}", $req)
-            ->seeJsonStructure(['data' => ['id',  'title', 'amount']])
             ->response
             ->assertOk()
             ->assertJsonFragment(['title' => $req['title']]);
@@ -322,7 +321,6 @@ class BooksAPITest extends E2ETestCase
 
     public function testFalhaSeNaoExisteAoDeletar()
     {
-        $this->markTestIncomplete();
         $this
             ->jsonColaborador('DELETE', self::$ep.'/123456')
             ->response
@@ -354,9 +352,8 @@ class BooksAPITest extends E2ETestCase
 
     public function testFalhaSeNaoExisteAoReativar()
     {
-        $this->markTestIncomplete();
         $this
-            ->jsonColaborador('DELETE', self::$ep.'/123456/activate')
+            ->jsonColaborador('POST', self::$ep.'/123456/activate')
             ->response
             ->assertNotFound();
     }

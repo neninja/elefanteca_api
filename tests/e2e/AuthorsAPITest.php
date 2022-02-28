@@ -299,7 +299,6 @@ class AuthorsAPITest extends E2ETestCase
 
     public function testFalhaSeNaoExisteAoDeletar()
     {
-        $this->markTestIncomplete();
         $this
             ->jsonColaborador('DELETE', self::$ep.'/123456')
             ->response
