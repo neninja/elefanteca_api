@@ -1,5 +1,5 @@
 
-##teamcity[testCount count='88' flowId='1']
+##teamcity[testCount count='100' flowId='1']
 
 ##teamcity[testSuiteStarted name='e2e' flowId='1']
 
@@ -7,7 +7,7 @@
 
 ##teamcity[testStarted name='testCriaTokenJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testCriaTokenJwt' flowId='1']
 
-##teamcity[testFinished name='testCriaTokenJwt' duration='119' flowId='1']
+##teamcity[testFinished name='testCriaTokenJwt' duration='114' flowId='1']
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenComSenhaErradaJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenComSenhaErradaJwt' flowId='1']
 
@@ -15,7 +15,7 @@
 
 ##teamcity[testStarted name='testFalhaAoCriarTokenComEmailErradoJwt' locationHint='php_qn:///app/tests/e2e/AuthAPITest.php::\AuthAPITest::testFalhaAoCriarTokenComEmailErradoJwt' flowId='1']
 
-##teamcity[testFinished name='testFalhaAoCriarTokenComEmailErradoJwt' duration='13' flowId='1']
+##teamcity[testFinished name='testFalhaAoCriarTokenComEmailErradoJwt' duration='12' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthAPITest' flowId='1']
 
@@ -23,7 +23,7 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoCriar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoCriar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoCriar' duration='16' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoCriar' duration='14' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoCriar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaComoMembroAoCriar' flowId='1']
 
@@ -31,7 +31,7 @@
 
 ##teamcity[testStarted name='testCriaComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testCriaComoColaborador' duration='19' flowId='1']
+##teamcity[testFinished name='testCriaComoColaborador' duration='15' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoAdmin' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testCriaComoAdmin' flowId='1']
 
@@ -39,55 +39,55 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoListar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoListar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoListar' duration='7' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoListar' duration='6' flowId='1']
 
 ##teamcity[testStarted name='testLista20Com2Paginas' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testLista20Com2Paginas' flowId='1']
 
-##teamcity[testFinished name='testLista20Com2Paginas' duration='37' flowId='1']
+##teamcity[testFinished name='testLista20Com2Paginas' duration='35' flowId='1']
 
 ##teamcity[testStarted name='testListaPorNomeParcial' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testListaPorNomeParcial' flowId='1']
 
-##teamcity[testFinished name='testListaPorNomeParcial' duration='24' flowId='1']
+##teamcity[testFinished name='testListaPorNomeParcial' duration='22' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoListarPorId' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoListarPorId' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoListarPorId' duration='9' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoListarPorId' duration='8' flowId='1']
 
 ##teamcity[testStarted name='testListaPorId' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testListaPorId' flowId='1']
 
-##teamcity[testFinished name='testListaPorId' duration='11' flowId='1']
+##teamcity[testFinished name='testListaPorId' duration='10' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSeNaoExisteAoListarPorId' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSeNaoExisteAoListarPorId' flowId='1']
 
-##teamcity[testFinished name='testFalhaSeNaoExisteAoListarPorId' duration='11' flowId='1']
+##teamcity[testFinished name='testFalhaSeNaoExisteAoListarPorId' duration='10' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoEditar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='7' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='6' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoEditar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaComoMembroAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='10' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='9' flowId='1']
 
 ##teamcity[testStarted name='testEditaComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testEditaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testEditaComoColaborador' duration='14' flowId='1']
+##teamcity[testFinished name='testEditaComoColaborador' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSeNaoExisteAoEditarPorId' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSeNaoExisteAoEditarPorId' flowId='1']
 
-##teamcity[testFinished name='testFalhaSeNaoExisteAoEditarPorId' duration='11' flowId='1']
+##teamcity[testFinished name='testFalhaSeNaoExisteAoEditarPorId' duration='10' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoDeletar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSemAutenticacaoAoDeletar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoDeletar' duration='7' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoDeletar' duration='6' flowId='1']
 
 ##teamcity[testStarted name='testDeletaComoColaborador' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testDeletaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testDeletaComoColaborador' duration='13' flowId='1']
+##teamcity[testFinished name='testDeletaComoColaborador' duration='12' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSeNaoExisteAoDeletar' locationHint='php_qn:///app/tests/e2e/AuthorsAPITest.php::\AuthorsAPITest::testFalhaSeNaoExisteAoDeletar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSeNaoExisteAoDeletar' duration='11' flowId='1']
+##teamcity[testFinished name='testFalhaSeNaoExisteAoDeletar' duration='10' flowId='1']
 
 ##teamcity[testSuiteFinished name='AuthorsAPITest' flowId='1']
 
@@ -95,31 +95,31 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoCriar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoCriar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoCriar' duration='14' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoCriar' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoCriar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaComoMembroAoCriar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoCriar' duration='10' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoCriar' duration='9' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoColaborador' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testCriaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testCriaComoColaborador' duration='14' flowId='1']
+##teamcity[testFinished name='testCriaComoColaborador' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testCriaComoAdmin' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testCriaComoAdmin' flowId='1']
 
-##teamcity[testFinished name='testCriaComoAdmin' duration='14' flowId='1']
+##teamcity[testFinished name='testCriaComoAdmin' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoListar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoListar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoListar' duration='7' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoListar' duration='6' flowId='1']
 
 ##teamcity[testStarted name='testLista20Com2Paginas' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testLista20Com2Paginas' flowId='1']
 
-##teamcity[testFinished name='testLista20Com2Paginas' duration='48' flowId='1']
+##teamcity[testFinished name='testLista20Com2Paginas' duration='46' flowId='1']
 
 ##teamcity[testStarted name='testListaPorTituloParcial' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testListaPorTituloParcial' flowId='1']
 
-##teamcity[testFinished name='testListaPorTituloParcial' duration='36' flowId='1']
+##teamcity[testFinished name='testListaPorTituloParcial' duration='34' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoListarPorId' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoListarPorId' flowId='1']
 
@@ -127,27 +127,27 @@
 
 ##teamcity[testStarted name='testListaPorId' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testListaPorId' flowId='1']
 
-##teamcity[testFinished name='testListaPorId' duration='13' flowId='1']
+##teamcity[testFinished name='testListaPorId' duration='12' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSeNaoExisteAoListarPorId' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSeNaoExisteAoListarPorId' flowId='1']
 
-##teamcity[testFinished name='testFalhaSeNaoExisteAoListarPorId' duration='10' flowId='1']
+##teamcity[testFinished name='testFalhaSeNaoExisteAoListarPorId' duration='9' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoEditar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='8' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='7' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoEditar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaComoMembroAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='10' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='9' flowId='1']
 
 ##teamcity[testStarted name='testEditaComoColaborador' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testEditaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testEditaComoColaborador' duration='16' flowId='1']
+##teamcity[testFinished name='testEditaComoColaborador' duration='15' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSeNaoExisteAoEditarPorId' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSeNaoExisteAoEditarPorId' flowId='1']
 
-##teamcity[testFinished name='testFalhaSeNaoExisteAoEditarPorId' duration='10' flowId='1']
+##teamcity[testFinished name='testFalhaSeNaoExisteAoEditarPorId' duration='9' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoDeletar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoDeletar' flowId='1']
 
@@ -155,23 +155,23 @@
 
 ##teamcity[testStarted name='testDeletaComoColaborador' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testDeletaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testDeletaComoColaborador' duration='14' flowId='1']
+##teamcity[testFinished name='testDeletaComoColaborador' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSeNaoExisteAoDeletar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSeNaoExisteAoDeletar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSeNaoExisteAoDeletar' duration='11' flowId='1']
+##teamcity[testFinished name='testFalhaSeNaoExisteAoDeletar' duration='10' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoReativar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSemAutenticacaoAoReativar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoReativar' duration='8' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoReativar' duration='7' flowId='1']
 
 ##teamcity[testStarted name='testReativaComoColaborador' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testReativaComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testReativaComoColaborador' duration='16' flowId='1']
+##teamcity[testFinished name='testReativaComoColaborador' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSeNaoExisteAoReativar' locationHint='php_qn:///app/tests/e2e/BooksAPITest.php::\BooksAPITest::testFalhaSeNaoExisteAoReativar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSeNaoExisteAoReativar' duration='11' flowId='1']
+##teamcity[testFinished name='testFalhaSeNaoExisteAoReativar' duration='9' flowId='1']
 
 ##teamcity[testSuiteFinished name='BooksAPITest' flowId='1']
 
@@ -181,7 +181,7 @@
 
 ##teamcity[testStarted name='testValida with data set "sem todos campos"' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testValida with data set "sem todos campos"' flowId='1']
 
-##teamcity[testFinished name='testValida with data set "sem todos campos"' duration='19' flowId='1']
+##teamcity[testFinished name='testValida with data set "sem todos campos"' duration='17' flowId='1']
 
 ##teamcity[testSuiteFinished name='testValida' flowId='1']
 
@@ -191,7 +191,7 @@
 
 ##teamcity[testStarted name='testCriaUsuarioComoColaborador' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuarioComoColaborador' flowId='1']
 
-##teamcity[testFinished name='testCriaUsuarioComoColaborador' duration='17' flowId='1']
+##teamcity[testFinished name='testCriaUsuarioComoColaborador' duration='14' flowId='1']
 
 ##teamcity[testStarted name='testCriaUsuarioComoMembroTentandoCriarColaborador' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testCriaUsuarioComoMembroTentandoCriarColaborador' flowId='1']
 
@@ -199,29 +199,29 @@
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoListar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSemAutenticacaoAoListar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoListar' duration='8' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoListar' duration='7' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoListar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaComoMembroAoListar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoListar' duration='11' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoListar' duration='10' flowId='1']
 
 ##teamcity[testStarted name='testListaComoColaboradorAdmin' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testListaComoColaboradorAdmin' flowId='1']
 
-##teamcity[testFinished name='testListaComoColaboradorAdmin' duration='16' flowId='1']
+##teamcity[testFinished name='testListaComoColaboradorAdmin' duration='15' flowId='1']
 
 ##teamcity[testStarted name='testLista20Com2Paginas' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testLista20Com2Paginas' flowId='1']
 
-##teamcity[testFinished name='testLista20Com2Paginas' duration='72' flowId='1']
+##teamcity[testFinished name='testLista20Com2Paginas' duration='65' flowId='1']
 
 ##teamcity[testSuiteStarted name='testListaPorNomeParcial' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testListaPorNomeParcial' flowId='1']
 
 ##teamcity[testStarted name='testListaPorNomeParcial with data set #0' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testListaPorNomeParcial with data set #0' flowId='1']
 
-##teamcity[testFinished name='testListaPorNomeParcial with data set #0' duration='25' flowId='1']
+##teamcity[testFinished name='testListaPorNomeParcial with data set #0' duration='22' flowId='1']
 
 ##teamcity[testStarted name='testListaPorNomeParcial with data set #1' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testListaPorNomeParcial with data set #1' flowId='1']
 
-##teamcity[testFinished name='testListaPorNomeParcial with data set #1' duration='25' flowId='1']
+##teamcity[testFinished name='testListaPorNomeParcial with data set #1' duration='23' flowId='1']
 
 ##teamcity[testSuiteFinished name='testListaPorNomeParcial' flowId='1']
 
@@ -231,29 +231,63 @@
 
 ##teamcity[testStarted name='testFalhaComoMembroAoListarPorId' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaComoMembroAoListarPorId' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoListarPorId' duration='12' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoListarPorId' duration='11' flowId='1']
 
 ##teamcity[testStarted name='testListaPorId' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testListaPorId' flowId='1']
 
-##teamcity[testFinished name='testListaPorId' duration='15' flowId='1']
+##teamcity[testFinished name='testListaPorId' duration='13' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSeNaoExisteAoListarPorId' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSeNaoExisteAoListarPorId' flowId='1']
 
-##teamcity[testFinished name='testFalhaSeNaoExisteAoListarPorId' duration='13' flowId='1']
+##teamcity[testFinished name='testFalhaSeNaoExisteAoListarPorId' duration='12' flowId='1']
 
 ##teamcity[testStarted name='testFalhaSemAutenticacaoAoEditar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSemAutenticacaoAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='9' flowId='1']
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoEditar' duration='8' flowId='1']
 
 ##teamcity[testStarted name='testFalhaComoMembroAoEditar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaComoMembroAoEditar' flowId='1']
 
-##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='12' flowId='1']
+##teamcity[testFinished name='testFalhaComoMembroAoEditar' duration='11' flowId='1']
 
 ##teamcity[testStarted name='testEditaComoColaborador' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testEditaComoColaborador' flowId='1']
 
-##teamcity[testIgnored name='testEditaComoColaborador' message='' details=' /app/tests/e2e/UsersAPITest.php:325|n ' duration='7' flowId='1']
+##teamcity[testFinished name='testEditaComoColaborador' duration='16' flowId='1']
 
-##teamcity[testFinished name='testEditaComoColaborador' duration='7' flowId='1']
+##teamcity[testStarted name='testFalhaSeNaoExisteAoEditarPorId' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSeNaoExisteAoEditarPorId' flowId='1']
+
+##teamcity[testFinished name='testFalhaSeNaoExisteAoEditarPorId' duration='11' flowId='1']
+
+##teamcity[testStarted name='testFalhaSemAutenticacaoAoDeletar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSemAutenticacaoAoDeletar' flowId='1']
+
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoDeletar' duration='8' flowId='1']
+
+##teamcity[testStarted name='testFalhaComoMembroAoDeletar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaComoMembroAoDeletar' flowId='1']
+
+##teamcity[testFinished name='testFalhaComoMembroAoDeletar' duration='11' flowId='1']
+
+##teamcity[testStarted name='testDeletaComoColaborador' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testDeletaComoColaborador' flowId='1']
+
+##teamcity[testFinished name='testDeletaComoColaborador' duration='14' flowId='1']
+
+##teamcity[testStarted name='testFalhaSeNaoExisteAoDeletarPorId' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSeNaoExisteAoDeletarPorId' flowId='1']
+
+##teamcity[testFinished name='testFalhaSeNaoExisteAoDeletarPorId' duration='11' flowId='1']
+
+##teamcity[testStarted name='testFalhaSemAutenticacaoAoReativar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSemAutenticacaoAoReativar' flowId='1']
+
+##teamcity[testFinished name='testFalhaSemAutenticacaoAoReativar' duration='8' flowId='1']
+
+##teamcity[testStarted name='testFalhaComoMembroAoReativar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaComoMembroAoReativar' flowId='1']
+
+##teamcity[testFinished name='testFalhaComoMembroAoReativar' duration='8' flowId='1']
+
+##teamcity[testStarted name='testReativaComoColaborador' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testReativaComoColaborador' flowId='1']
+
+##teamcity[testFinished name='testReativaComoColaborador' duration='14' flowId='1']
+
+##teamcity[testStarted name='testFalhaSeNaoExisteAoReativar' locationHint='php_qn:///app/tests/e2e/UsersAPITest.php::\UsersAPITest::testFalhaSeNaoExisteAoReativar' flowId='1']
+
+##teamcity[testFinished name='testFalhaSeNaoExisteAoReativar' duration='11' flowId='1']
 
 ##teamcity[testSuiteFinished name='UsersAPITest' flowId='1']
 
@@ -301,9 +335,25 @@
 
 ##teamcity[testStarted name='testFalhaAoCriarComCpflExistente' locationHint='php_qn:///app/tests/integration/CadastroUsuarioServiceTest.php::\CadastroUsuarioServiceTest::testFalhaAoCriarComCpflExistente' flowId='1']
 
-##teamcity[testFinished name='testFalhaAoCriarComCpflExistente' duration='8' flowId='1']
+##teamcity[testFinished name='testFalhaAoCriarComCpflExistente' duration='7' flowId='1']
 
 ##teamcity[testSuiteFinished name='CadastroUsuarioServiceTest' flowId='1']
+
+##teamcity[testSuiteStarted name='EdicaoUsuarioServiceTest' locationHint='php_qn:///app/tests/integration/EdicaoUsuarioServiceTest.php::\EdicaoUsuarioServiceTest' flowId='1']
+
+##teamcity[testStarted name='testPersisteComNomeCpfEmailCorretos' locationHint='php_qn:///app/tests/integration/EdicaoUsuarioServiceTest.php::\EdicaoUsuarioServiceTest::testPersisteComNomeCpfEmailCorretos' flowId='1']
+
+##teamcity[testFinished name='testPersisteComNomeCpfEmailCorretos' duration='5' flowId='1']
+
+##teamcity[testStarted name='testFalhaAoEditarComEmailNovoJaUtilizado' locationHint='php_qn:///app/tests/integration/EdicaoUsuarioServiceTest.php::\EdicaoUsuarioServiceTest::testFalhaAoEditarComEmailNovoJaUtilizado' flowId='1']
+
+##teamcity[testFinished name='testFalhaAoEditarComEmailNovoJaUtilizado' duration='6' flowId='1']
+
+##teamcity[testStarted name='testFalhaAoEditarComCpfNovoJaUtilizado' locationHint='php_qn:///app/tests/integration/EdicaoUsuarioServiceTest.php::\EdicaoUsuarioServiceTest::testFalhaAoEditarComCpfNovoJaUtilizado' flowId='1']
+
+##teamcity[testFinished name='testFalhaAoEditarComCpfNovoJaUtilizado' duration='7' flowId='1']
+
+##teamcity[testSuiteFinished name='EdicaoUsuarioServiceTest' flowId='1']
 
 ##teamcity[testSuiteFinished name='integration' flowId='1']
 

@@ -61,7 +61,16 @@ Users API
  [x] Falha se nao existe ao listar por id
  [x] Falha sem autenticacao ao editar
  [x] Falha como membro ao editar
- [ ] Edita como colaborador
+ [x] Edita como colaborador
+ [x] Falha se nao existe ao editar por id
+ [x] Falha sem autenticacao ao deletar
+ [x] Falha como membro ao deletar
+ [x] Deleta como colaborador
+ [x] Falha se nao existe ao deletar por id
+ [x] Falha sem autenticacao ao reativar
+ [x] Falha como membro ao reativar
+ [x] Reativa como colaborador
+ [x] Falha se nao existe ao reativar
 
 Cadastro Autor Service
  [x] Cria com valores obrigatorios
@@ -76,6 +85,11 @@ Cadastro Usuario Service
  [x] Cria como ativo
  [x] Falha ao criar com email existente
  [x] Falha ao criar com cpfl existente
+
+Edicao Usuario Service
+ [x] Persiste com nome cpf email corretos
+ [x] Falha ao editar com email novo ja utilizado
+ [x] Falha ao editar com cpf novo ja utilizado
 
 CPF
  [x] Formata 81026092140 para 810.260.921-40

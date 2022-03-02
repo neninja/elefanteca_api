@@ -462,6 +462,47 @@ paths:
       security:
         -
           JWT: []
+    delete:
+      tags:
+        - usuários
+      description: 'Deleção de usuário'
+      operationId: fa56cffde745d3f152f95cbacd936c0b
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id autor'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+  '/api/users/{id}/activate':
+    post:
+      tags:
+        - usuário
+      description: 'Reativação de usuário'
+      operationId: cb4c16ff60385a3c5181104d0e9e79c7
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id usuário'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
 components:
   securitySchemes:
     JWT:
