@@ -11,6 +11,7 @@ use App\Http\Resources\UserResource;
 
 use Core\Services\{
     Usuario\CadastroUsuarioService,
+    Usuario\EdicaoUsuarioService,
 };
 
 use Core\Repositories\{
@@ -21,6 +22,7 @@ class UserController extends Controller
 {
     public function __construct(
         private CadastroUsuarioService $cadastroService,
+        private EdicaoUsuarioService $edicaoService,
         private IUsuariosRepository $usuariosRepository,
     ) {}
 
@@ -237,6 +239,89 @@ class UserController extends Controller
      */
     public function update(int $id, Request $r)
     {
-        abort(404); // TODO
+        $u = $this->findOrFail($id);
+
+        $this->validate($r, [
+            'name'      => 'required',
+            'cpf'       => 'required',
+            'email'     => 'required|email',
+        ]);
+
+        $role = '';
+
+        if(Gate::check('papel', Papel::$ADMIN)) {
+            $role = $r->role ?? '';
+        }
+
+        $u = $this->edicaoService->execute(
+            id:     $id,
+            nome:   $r->name,
+            cpf:    $r->cpf,
+            email:  $r->email,
+            papel:  $role,
+        );
+
+        return new UserResource($u);
+    }
+
+    /**
+     * @OA\Delete(
+     *     tags={"usuários"},
+     *     path="/api/users/{id}",
+     *     description="Deleção de usuário",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         description="Id autor",
+     *         required=true,
+     *         @OA\Schema(type="integer", example=1),
+     *     ),
+     *     @OA\Response(response="2XX", description="OK"),
+     * )
+     */
+    public function destroy(int $id)
+    {
+        $u = $this->findOrFail($id);
+        $u->inativar();
+        $this->usuariosRepository->save($u);
+
+        return response()->json('', 204);
+    }
+
+    /**
+     * @OA\Post(
+     *     tags={"usuário"},
+     *     path="/api/users/{id}/activate",
+     *     description="Reativação de usuário",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         description="Id usuário",
+     *         required=true,
+     *         @OA\Schema(type="integer", example=1),
+     *     ),
+     *     @OA\Response(response="2XX", description="OK"),
+     * )
+     */
+    public function activate(int $id)
+    {
+        $u = $this->findOrFail($id);
+        $u->ativar();
+        $this->usuariosRepository->save($u);
+
+        return response()->json('', 204);
+    }
+
+    private function findOrFail(int $id)
+    {
+        $u = $this->usuariosRepository->findById($id);
+
+        if(is_null($u)) {
+            abort(404);
+        }
+
+        return $u;
     }
 }

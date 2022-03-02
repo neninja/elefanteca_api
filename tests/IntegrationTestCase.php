@@ -8,8 +8,11 @@ use Core\Models\{
     Autor,
 };
 
-use Core\Services\Emprestimo\{
+use Core\Services\Usuario\{
     CadastroUsuarioService,
+};
+
+use Core\Services\Emprestimo\{
     CadastroLivroService,
     CadastroAutorService,
 };
@@ -91,6 +94,11 @@ abstract class IntegrationTestCase extends \PHPUnit\Framework\TestCase
                 }));
 
             return $stub;
+        case CadastroUsuarioService::class:
+            return new CadastroUsuarioService(
+                $this->factory(UsuariosRepository::class),
+                $this->factory(ICriptografiaProvider::class),
+            );
         case CadastroAutorService::class:
             return new CadastroAutorService(
                 $this->factory(AutoresRepository::class),

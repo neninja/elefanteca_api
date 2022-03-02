@@ -322,6 +322,112 @@ class UsersAPITest extends E2ETestCase
 
     public function testEditaComoColaborador()
     {
-        $this->markTestIncomplete();
+        $u = $this->given('usuario existente');
+
+        $req = [
+            'name'  => $u->nome."diferente",
+            'email' => $u->email->getEmail(),
+            'cpf'   => $u->cpf->getNumero(),
+        ];
+
+        $this
+            ->jsonColaborador('PUT', self::$ep."/{$u->getId()}", $req)
+            ->seeJsonStructure(['data' => ['id',  'name', 'cpf', 'email']])
+            ->response
+            ->assertOk()
+            ->assertJsonFragment(['name' => $req['name']]);
+
+        $this->seeInDatabase('usuarios', [
+            'id'    => $u->getId(),
+            'nome'  => $req['name'],
+        ]);
+    }
+
+    public function testFalhaSeNaoExisteAoEditarPorId()
+    {
+        $this
+            ->jsonColaborador('PUT', self::$ep.'/123456')
+            ->response
+            ->assertNotFound();
+    }
+
+    /******** DELETE *******/
+
+    public function testFalhaSemAutenticacaoAoDeletar()
+    {
+        $this
+            ->json('DELETE', self::$ep."/123456")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testFalhaComoMembroAoDeletar()
+    {
+        $this
+            ->jsonMembro('DELETE', self::$ep."/123456")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testDeletaComoColaborador()
+    {
+        $u = $this->given('usuario existente');
+
+        $this
+            ->jsonColaborador('DELETE', self::$ep."/{$u->getId()}")
+            ->response
+            ->assertNoContent();
+
+        $this->seeInDatabase('usuarios', [
+            'id'    => $u->getId(),
+            'ativo' => false,
+        ]);
+    }
+
+    public function testFalhaSeNaoExisteAoDeletarPorId()
+    {
+        $this
+            ->jsonColaborador('DELETE', self::$ep.'/123456')
+            ->response
+            ->assertNotFound();
+    }
+
+    public function testFalhaSemAutenticacaoAoReativar()
+    {
+        $this
+            ->json('POST', self::$ep."/123456/activate")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testFalhaComoMembroAoReativar()
+    {
+        $this
+            ->json('POST', self::$ep."/123456/activate")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testReativaComoColaborador()
+    {
+        $u = $this->given('usuario existente');
+
+        $this
+            ->jsonColaborador('POST', self::$ep."/{$u->getId()}/activate")
+            ->response
+            ->assertNoContent();
+
+        $this->seeInDatabase('usuarios', [
+            'id'    => $u->getId(),
+            'ativo' => true,
+        ]);
+    }
+
+    public function testFalhaSeNaoExisteAoReativar()
+    {
+        $this
+            ->jsonColaborador('POST', self::$ep.'/123456/activate')
+            ->response
+            ->assertNotFound();
     }
 }

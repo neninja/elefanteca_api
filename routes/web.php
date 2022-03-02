@@ -34,6 +34,8 @@ $router->group(['prefix' => 'api'], function ($request) use ($router) {
                 $router->get('', 'UserController@index');
                 $router->get('{id}', 'UserController@show');
                 $router->put('{id}', 'UserController@update');
+                $router->delete('{id}', 'UserController@destroy');
+                $router->post('{id}/activate', 'UserController@activate');
             });
         });
 

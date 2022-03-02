@@ -69,10 +69,6 @@ class CadastroUsuarioServiceTest extends IntegrationTestCase
             $persistido->email
         );
         $this->assertEquals(
-            $usuario->email,
-            $persistido->email
-        );
-        $this->assertEquals(
             $usuario->getSenha(),
             $persistido->getSenha()
         );
