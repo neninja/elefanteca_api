@@ -8,6 +8,8 @@ Diretório com arquivos "documentando" o desenvolvimento, seja para auxiliar ou 
 
 #### Quando usar nome no plural/singular e português/inglês?
 
+- Model/Tabela: **singular** e **português**
+
 - Repository: **plural** e **português**
     > `UsuariosRepository`
 
