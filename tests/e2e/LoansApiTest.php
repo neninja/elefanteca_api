@@ -240,5 +240,51 @@ class LoansAPITest extends E2ETestCase
             ->response
             ->assertNotFound();
     }
+
+    /******** UPDATE (DEVOLUÇÂO) *******/
+
+    public function testFalhaSemAutenticacaoAoDevolver()
+    {
+        $this
+            ->json('PATCH', self::$ep."/123456/devolution")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testFalhaComoMembroAoDevolver()
+    {
+        $this
+            ->jsonMembro('PATCH', self::$ep."/123456/devolution")
+            ->response
+            ->assertUnauthorized();
+    }
+
+    public function testDevolveComoColaborador()
+    {
+        $e = $this->given('emprestimo existente');
+
+        $this
+            ->jsonColaborador('PATCH', self::$ep."/{$e->getId()}/devolution")
+            ->seeJsonStructure(['data'])
+            ->response
+            ->assertOk();
+
+        $this->seeInDatabase('emprestimos', [
+            'id'    => $e->getId(),
+        ]);
+
+        $this->notSeeInDatabase('emprestimos', [
+            'id'                     => $e->getId(),
+            'data_entrega_realizada' => null
+        ]);
+    }
+
+    public function testFalhaSeNaoExisteAoDevolver()
+    {
+        $this
+            ->jsonColaborador('PATCH', self::$ep.'/123456/devolution')
+            ->response
+            ->assertNotFound();
+    }
 }
 

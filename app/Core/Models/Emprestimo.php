@@ -26,7 +26,7 @@ class Emprestimo
             $dataEntregaPrevista
         );
 
-        $this->ativo     = true;
+        $this->ativo = true;
     }
 
     public function getId() {

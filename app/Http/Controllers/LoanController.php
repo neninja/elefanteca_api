@@ -8,6 +8,7 @@ use App\Http\Resources\LoanResource;
 
 use Core\Services\{
     Emprestimo\EmprestimoService,
+    Emprestimo\DevolucaoService,
 };
 
 use Core\Repositories\{
@@ -18,6 +19,7 @@ class LoanController extends Controller
 {
     public function __construct(
         private EmprestimoService $emprestimoService,
+        private DevolucaoService $devolucaoService,
         private IEmprestimosRepository $emprestimosRepository,
     ) {}
 
@@ -131,6 +133,33 @@ class LoanController extends Controller
             idLivro:        $r->bookId,
             idMembro:       $r->memberId,
             idColaborador:  $r->collaboratorId,
+        );
+
+        return new LoanResource($e);
+    }
+
+    /**
+     * @OA\Patch(
+     *     tags={"empréstimo"},
+     *     path="/api/loans/{id}/devolution",
+     *     description="Devolução de empréstimo",
+     *     security={{"JWT":{}}},
+     *     @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         description="Id empréstimo",
+     *         required=true,
+     *         @OA\Schema(type="integer", example=1)
+     *     ),
+     *     @OA\Response(response="2XX", description="OK"),
+     * )
+     */
+    public function devolution(int $id)
+    {
+        $this->findOrFail($id);
+
+        $e = $this->devolucaoService->execute(
+            idEmprestimo: $id,
         );
 
         return new LoanResource($e);

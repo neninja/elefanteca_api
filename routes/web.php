@@ -44,6 +44,7 @@ $router->group(['prefix' => 'api'], function ($request) use ($router) {
                 $router->get('', 'LoanController@index');
                 $router->get('{id}', 'LoanController@show');
                 $router->post('', 'LoanController@store');
+                $router->patch('{id}/devolution', 'LoanController@devolution');
             });
         });
 

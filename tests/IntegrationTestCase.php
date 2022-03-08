@@ -16,6 +16,7 @@ use Core\Services\Emprestimo\{
     CadastroLivroService,
     CadastroAutorService,
     EmprestimoService,
+    DevolucaoService,
 };
 
 use App\Repositories\Doctrine\{
@@ -115,6 +116,10 @@ abstract class IntegrationTestCase extends \PHPUnit\Framework\TestCase
                 $this->factory(EmprestimosRepository::class),
                 $this->factory(LivrosRepository::class),
                 $this->factory(UsuariosRepository::class),
+            );
+        case DevolucaoService::class:
+            return new DevolucaoService(
+                $this->factory(EmprestimosRepository::class),
             );
         }
 
