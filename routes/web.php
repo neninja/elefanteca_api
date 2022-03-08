@@ -39,6 +39,14 @@ $router->group(['prefix' => 'api'], function ($request) use ($router) {
             });
         });
 
+        $router->group(['prefix' => 'loans'], function () use ($router) {
+            $router->group(['middleware' => 'hasRole:COLABORADOR,ADMIN'], function ($request) use ($router) {
+                $router->get('', 'LoanController@index');
+                $router->get('{id}', 'LoanController@show');
+                $router->post('', 'LoanController@store');
+            });
+        });
+
         $router->group(['prefix' => 'authors'], function () use ($router) {
             $router->get('', 'AuthorController@index');
             $router->get('{id}', 'AuthorController@show');

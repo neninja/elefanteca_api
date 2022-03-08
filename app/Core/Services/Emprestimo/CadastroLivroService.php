@@ -21,7 +21,7 @@ class CadastroLivroService
 
     public function execute(
         string $titulo,
-        string $idAutor,
+        int    $idAutor,
         string $quantidade,
         ?int   $id = null,
     ): Livro {

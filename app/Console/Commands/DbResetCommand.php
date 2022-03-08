@@ -99,7 +99,7 @@ class DbResetCommand extends Command
                         'email' => 'membro@desativemeemprod.com',
                         'papel' => Papel::$MEMBRO,
                     ],
-                ]
+                ],
             ],
             [
                 'table'  => 'autores',
@@ -110,7 +110,7 @@ class DbResetCommand extends Command
                     [
                         'nome'  => 'Agatha Christie',
                     ],
-                ]
+                ],
             ],
             [
                 'table'  => 'livros',
@@ -169,7 +169,20 @@ class DbResetCommand extends Command
                         'id_autor'   => 2,
                         'ativo'      => 1,
                     ],
-                ]
+                ],
+            ],
+            [
+                'table'  => 'emprestimos',
+                'params' => [
+                    [
+                        'id_livro'                  => 2,
+                        'id_usuario_membro'         => 2,
+                        'id_usuario_colaborador'    => 1,
+                        'data_emprestimo'            => '2022-03-05 02:21:33.001',
+                        'data_entrega_prevista'       => '2022-03-10 02:21:33.001',
+                        'ativo'                     => 1,
+                    ],
+                ],
             ],
         ];
     }

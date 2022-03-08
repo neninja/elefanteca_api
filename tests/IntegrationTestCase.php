@@ -15,12 +15,14 @@ use Core\Services\Usuario\{
 use Core\Services\Emprestimo\{
     CadastroLivroService,
     CadastroAutorService,
+    EmprestimoService,
 };
 
 use App\Repositories\Doctrine\{
     UsuariosRepository,
     LivrosRepository,
     AutoresRepository,
+    EmprestimosRepository,
 };
 
 use \Core\Providers\{
@@ -99,9 +101,20 @@ abstract class IntegrationTestCase extends \PHPUnit\Framework\TestCase
                 $this->factory(UsuariosRepository::class),
                 $this->factory(ICriptografiaProvider::class),
             );
+        case CadastroLivroService::class:
+            return new CadastroLivroService(
+                $this->factory(LivrosRepository::class),
+                $this->factory(AutoresRepository::class),
+            );
         case CadastroAutorService::class:
             return new CadastroAutorService(
                 $this->factory(AutoresRepository::class),
+            );
+        case EmprestimoService::class:
+            return new EmprestimoService(
+                $this->factory(EmprestimosRepository::class),
+                $this->factory(LivrosRepository::class),
+                $this->factory(UsuariosRepository::class),
             );
         }
 

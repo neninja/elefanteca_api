@@ -266,7 +266,7 @@ class UserController extends Controller
 
     /**
      * @OA\Delete(
-     *     tags={"usuários"},
+     *     tags={"usuário"},
      *     path="/api/users/{id}",
      *     description="Deleção de usuário",
      *     security={{"JWT":{}}},
