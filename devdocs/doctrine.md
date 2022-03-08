@@ -59,6 +59,11 @@
     docker-compose exec app composer doctrine:migrations migrate
     ```
 
+- Criação de Proxies
+    ```sh
+    docker-compose exec app composer doctrine orm:generate-proxies
+    ```
+
 - Reset database:
     ```sh
     docker-compose exec app composer doctrine:migrations migrate first
