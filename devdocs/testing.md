@@ -34,6 +34,7 @@
 - Quando for criada uma trait precisa ser recriado o autoload com ``composer du``
 - Caso por algum motivo o teste esteja incompleto e isso deve ser evidente, utilize ``$this->markTestIncomplete();``
     - Para listar os testes incompletos utilize a flag ``--verbose``
+- ``dd($var)`` e ``dump($var)`` são bem úteis para inspecionar o valor de uma variável
 
 ### Testes e2e
 
