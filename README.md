@@ -2,10 +2,9 @@
 
 [![CI](https://github.com/nenitf/elefanteca_api/actions/workflows/ci.yml/badge.svg)](https://github.com/nenitf/elefanteca_api/actions/workflows/ci.yml) [![coverage](https://raw.githubusercontent.com/nenitf/elefanteca_api/gh-pages/coverage.svg)](https://neni.dev/elefanteca_api/coverage/index.html) [![emojicom](https://img.shields.io/badge/emojicom-%F0%9F%90%9B%20%F0%9F%86%95%20%F0%9F%92%AF%20%F0%9F%91%AE%20%F0%9F%86%98%20%F0%9F%92%A4-%23fff)](http://neni.dev/emojicom)
 
-API de sistema para bibliotecas.
+[![Swagger](https://validator.swagger.io/validator?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml)](https://neni.dev/elefanteca_api/swagger/index.html?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml) 
 
-- [Requisitos](https://neni.dev/elefanteca_api/README.txt)
-- [Referência da API](https://neni.dev/elefanteca_api/swagger/index.html?url=https://neni.dev/elefanteca_api/swagger/openapi.yaml) não funcional
+API de sistema para bibliotecas.
 
 ## <a name="status"></a> Situação do projeto [:clipboard:](#status)
 
