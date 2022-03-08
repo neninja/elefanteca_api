@@ -29,7 +29,7 @@ Books API
  [x] Cria como admin
  [x] Falha sem autenticacao ao listar
  [x] Lista 20 com 2 paginas
- [ ] Lista por titulo parcial
+ [x] Lista por titulo parcial
  [x] Falha sem autenticacao ao listar por id
  [x] Lista por id
  [x] Falha se nao existe ao listar por id
