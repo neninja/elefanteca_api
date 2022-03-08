@@ -306,6 +306,91 @@ paths:
       security:
         -
           JWT: []
+  '/api/loans/{id}':
+    get:
+      tags:
+        - empréstimo
+      description: 'Exibição de 1 empréstimo'
+      operationId: 357235ea3e97150863cac011d494fbb4
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id empréstimo'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+  /api/loans:
+    get:
+      tags:
+        - empréstimo
+      description: 'Listagem de empréstimos'
+      operationId: 53fdef403307586122900dc3b1d07368
+      parameters:
+        -
+          name: bookId
+          in: query
+          description: Livro
+          schema:
+            type: integer
+            example: 1
+        -
+          name: memberId
+          in: query
+          description: 'Usuário do membro'
+          schema:
+            type: integer
+            example: 1
+        -
+          name: collaboratorId
+          in: query
+          description: 'Usuário do colaborador'
+          schema:
+            type: integer
+            example: 2
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
+    post:
+      tags:
+        - empréstimo
+      description: 'Cadastro de empréstimo'
+      operationId: 92bd5c653a9a8345b4f161d5ba3bbd71
+      requestBody:
+        content:
+          application/json;charset=UTF-8:
+            schema:
+              required:
+                - bookId
+                - memberId
+                - collaboratorId
+              properties:
+                bookId:
+                  type: integer
+                  example: 1
+                memberId:
+                  type: integer
+                  example: 1
+                collaboratorId:
+                  type: integer
+                  example: 2
+              type: object
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
   '/api/user/{id}':
     get:
       tags:
@@ -464,7 +549,7 @@ paths:
           JWT: []
     delete:
       tags:
-        - usuários
+        - usuário
       description: 'Deleção de usuário'
       operationId: fa56cffde745d3f152f95cbacd936c0b
       parameters:

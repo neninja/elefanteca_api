@@ -44,6 +44,21 @@ Books API
  [x] Reativa como colaborador
  [x] Falha se nao existe ao reativar
 
+Loans API
+ [x] Falha sem autenticacao ao criar
+ [x] Falha como membro ao criar
+ [x] Cria como colaborador
+ [x] Cria como admin
+ [x] Falha sem autenticacao ao listar
+ [x] Falha como membro ao listar
+ [x] Lista 20 com 2 paginas
+ [x] Lista por livro
+ [x] Lista por membro
+ [x] Falha sem autenticacao ao listar por id
+ [x] Falha como membro ao listar por id
+ [x] Lista por id
+ [x] Falha se nao existe ao listar por id
+
 Users API
  [x] Falha sem todos campos
  [x] Cria usuario
@@ -91,6 +106,10 @@ Edicao Usuario Service
  [x] Falha ao editar com email novo ja utilizado
  [x] Falha ao editar com cpf novo ja utilizado
 
+Emprestimo Service
+ [x] Cria com valores obrigatorios
+ [x] Falha ao criar sem livro no estoque
+
 CPF
  [x] Formata 81026092140 para 810.260.921-40
  [x] Formata 84820226959 para 848.202.269-59
@@ -117,4 +136,7 @@ Email
  [x] Falha como "Email inválido" @com
  [x] Falha como "Email inválido" @.com
  [x] Falha como "Email inválido" exemplo@com
+
+Emprestimo
+ [x] Reserva para duas semanas
 

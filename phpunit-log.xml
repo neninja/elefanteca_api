@@ -1,140 +1,162 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="100" assertions="393" errors="0" warnings="0" failures="0" skipped="0" time="1.057435">
-    <testsuite name="e2e" tests="66" assertions="320" errors="0" warnings="0" failures="0" skipped="0" time="0.986636">
-      <testsuite name="AuthAPITest" file="/app/tests/e2e/AuthAPITest.php" tests="3" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.138679">
-        <testcase name="testCriaTokenJwt" class="AuthAPITest" classname="AuthAPITest" file="/app/tests/e2e/AuthAPITest.php" line="33" assertions="2" time="0.113844"/>
-        <testcase name="testFalhaAoCriarTokenComSenhaErradaJwt" class="AuthAPITest" classname="AuthAPITest" file="/app/tests/e2e/AuthAPITest.php" line="45" assertions="2" time="0.012889"/>
-        <testcase name="testFalhaAoCriarTokenComEmailErradoJwt" class="AuthAPITest" classname="AuthAPITest" file="/app/tests/e2e/AuthAPITest.php" line="61" assertions="2" time="0.011946"/>
+  <testsuite name="" tests="116" assertions="433" errors="0" warnings="0" failures="0" skipped="0" time="1.780615">
+    <testsuite name="e2e" tests="79" assertions="355" errors="0" warnings="0" failures="0" skipped="0" time="1.686528">
+      <testsuite name="AuthAPITest" file="/app/tests/e2e/AuthAPITest.php" tests="3" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.145893">
+        <testcase name="testCriaTokenJwt" class="AuthAPITest" classname="AuthAPITest" file="/app/tests/e2e/AuthAPITest.php" line="33" assertions="2" time="0.121485"/>
+        <testcase name="testFalhaAoCriarTokenComSenhaErradaJwt" class="AuthAPITest" classname="AuthAPITest" file="/app/tests/e2e/AuthAPITest.php" line="45" assertions="2" time="0.013778"/>
+        <testcase name="testFalhaAoCriarTokenComEmailErradoJwt" class="AuthAPITest" classname="AuthAPITest" file="/app/tests/e2e/AuthAPITest.php" line="61" assertions="2" time="0.010631"/>
       </testsuite>
-      <testsuite name="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" tests="17" assertions="90" errors="0" warnings="0" failures="0" skipped="0" time="0.209169">
-        <testcase name="testFalhaSemAutenticacaoAoCriar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="53" assertions="1" time="0.014343"/>
-        <testcase name="testFalhaComoMembroAoCriar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="61" assertions="1" time="0.009741"/>
-        <testcase name="testCriaComoColaborador" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="69" assertions="5" time="0.015301"/>
-        <testcase name="testCriaComoAdmin" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="85" assertions="5" time="0.011593"/>
-        <testcase name="testFalhaSemAutenticacaoAoListar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="103" assertions="1" time="0.006092"/>
-        <testcase name="testLista20Com2Paginas" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="111" assertions="46" time="0.035453"/>
-        <testcase name="testListaPorNomeParcial" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="177" assertions="10" time="0.021910"/>
-        <testcase name="testFalhaSemAutenticacaoAoListarPorId" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="201" assertions="1" time="0.007828"/>
-        <testcase name="testListaPorId" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="209" assertions="5" time="0.009897"/>
-        <testcase name="testFalhaSeNaoExisteAoListarPorId" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="221" assertions="1" time="0.009771"/>
-        <testcase name="testFalhaSemAutenticacaoAoEditar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="231" assertions="1" time="0.006465"/>
-        <testcase name="testFalhaComoMembroAoEditar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="239" assertions="1" time="0.009238"/>
-        <testcase name="testEditaComoColaborador" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="247" assertions="6" time="0.013051"/>
-        <testcase name="testFalhaSeNaoExisteAoEditarPorId" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="268" assertions="1" time="0.010317"/>
-        <testcase name="testFalhaSemAutenticacaoAoDeletar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="278" assertions="1" time="0.006399"/>
-        <testcase name="testDeletaComoColaborador" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="286" assertions="3" time="0.012071"/>
-        <testcase name="testFalhaSeNaoExisteAoDeletar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="300" assertions="1" time="0.009701"/>
+      <testsuite name="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" tests="17" assertions="90" errors="0" warnings="0" failures="0" skipped="0" time="0.221553">
+        <testcase name="testFalhaSemAutenticacaoAoCriar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="53" assertions="1" time="0.017615"/>
+        <testcase name="testFalhaComoMembroAoCriar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="61" assertions="1" time="0.010111"/>
+        <testcase name="testCriaComoColaborador" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="69" assertions="5" time="0.016121"/>
+        <testcase name="testCriaComoAdmin" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="85" assertions="5" time="0.012203"/>
+        <testcase name="testFalhaSemAutenticacaoAoListar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="103" assertions="1" time="0.006487"/>
+        <testcase name="testLista20Com2Paginas" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="111" assertions="46" time="0.034176"/>
+        <testcase name="testListaPorNomeParcial" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="177" assertions="10" time="0.023719"/>
+        <testcase name="testFalhaSemAutenticacaoAoListarPorId" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="201" assertions="1" time="0.008383"/>
+        <testcase name="testListaPorId" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="209" assertions="5" time="0.010675"/>
+        <testcase name="testFalhaSeNaoExisteAoListarPorId" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="221" assertions="1" time="0.010439"/>
+        <testcase name="testFalhaSemAutenticacaoAoEditar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="231" assertions="1" time="0.007120"/>
+        <testcase name="testFalhaComoMembroAoEditar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="239" assertions="1" time="0.009885"/>
+        <testcase name="testEditaComoColaborador" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="247" assertions="6" time="0.012863"/>
+        <testcase name="testFalhaSeNaoExisteAoEditarPorId" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="268" assertions="1" time="0.010216"/>
+        <testcase name="testFalhaSemAutenticacaoAoDeletar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="278" assertions="1" time="0.007222"/>
+        <testcase name="testDeletaComoColaborador" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="286" assertions="3" time="0.014010"/>
+        <testcase name="testFalhaSeNaoExisteAoDeletar" class="AuthorsAPITest" classname="AuthorsAPITest" file="/app/tests/e2e/AuthorsAPITest.php" line="300" assertions="1" time="0.010307"/>
       </testsuite>
-      <testsuite name="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" tests="20" assertions="98" errors="0" warnings="0" failures="0" skipped="0" time="0.261328">
-        <testcase name="testFalhaSemAutenticacaoAoCriar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="55" assertions="1" time="0.013160"/>
-        <testcase name="testFalhaComoMembroAoCriar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="63" assertions="1" time="0.008981"/>
-        <testcase name="testCriaComoColaborador" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="71" assertions="7" time="0.013081"/>
-        <testcase name="testCriaComoAdmin" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="96" assertions="7" time="0.012954"/>
-        <testcase name="testFalhaSemAutenticacaoAoListar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="123" assertions="1" time="0.006113"/>
-        <testcase name="testLista20Com2Paginas" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="131" assertions="46" time="0.045848"/>
-        <testcase name="testListaPorTituloParcial" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="197" assertions="11" time="0.034426"/>
-        <testcase name="testFalhaSemAutenticacaoAoListarPorId" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="221" assertions="1" time="0.006589"/>
-        <testcase name="testListaPorId" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="229" assertions="6" time="0.012016"/>
-        <testcase name="testFalhaSeNaoExisteAoListarPorId" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="241" assertions="1" time="0.009242"/>
-        <testcase name="testFalhaSemAutenticacaoAoEditar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="251" assertions="1" time="0.006601"/>
-        <testcase name="testFalhaComoMembroAoEditar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="259" assertions="1" time="0.009116"/>
-        <testcase name="testEditaComoColaborador" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="267" assertions="3" time="0.014860"/>
-        <testcase name="testFalhaSeNaoExisteAoEditarPorId" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="289" assertions="1" time="0.009392"/>
-        <testcase name="testFalhaSemAutenticacaoAoDeletar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="299" assertions="1" time="0.006555"/>
-        <testcase name="testDeletaComoColaborador" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="307" assertions="3" time="0.013264"/>
-        <testcase name="testFalhaSeNaoExisteAoDeletar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="322" assertions="1" time="0.009730"/>
-        <testcase name="testFalhaSemAutenticacaoAoReativar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="330" assertions="1" time="0.006837"/>
-        <testcase name="testReativaComoColaborador" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="338" assertions="3" time="0.013116"/>
-        <testcase name="testFalhaSeNaoExisteAoReativar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="353" assertions="1" time="0.009445"/>
+      <testsuite name="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" tests="20" assertions="98" errors="0" warnings="0" failures="0" skipped="0" time="0.278799">
+        <testcase name="testFalhaSemAutenticacaoAoCriar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="55" assertions="1" time="0.017720"/>
+        <testcase name="testFalhaComoMembroAoCriar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="63" assertions="1" time="0.010209"/>
+        <testcase name="testCriaComoColaborador" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="71" assertions="7" time="0.013760"/>
+        <testcase name="testCriaComoAdmin" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="96" assertions="7" time="0.013313"/>
+        <testcase name="testFalhaSemAutenticacaoAoListar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="123" assertions="1" time="0.006520"/>
+        <testcase name="testLista20Com2Paginas" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="131" assertions="46" time="0.044718"/>
+        <testcase name="testListaPorTituloParcial" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="197" assertions="11" time="0.033746"/>
+        <testcase name="testFalhaSemAutenticacaoAoListarPorId" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="221" assertions="1" time="0.007207"/>
+        <testcase name="testListaPorId" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="229" assertions="6" time="0.011549"/>
+        <testcase name="testFalhaSeNaoExisteAoListarPorId" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="241" assertions="1" time="0.009484"/>
+        <testcase name="testFalhaSemAutenticacaoAoEditar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="251" assertions="1" time="0.006788"/>
+        <testcase name="testFalhaComoMembroAoEditar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="259" assertions="1" time="0.009686"/>
+        <testcase name="testEditaComoColaborador" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="267" assertions="3" time="0.014098"/>
+        <testcase name="testFalhaSeNaoExisteAoEditarPorId" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="289" assertions="1" time="0.010091"/>
+        <testcase name="testFalhaSemAutenticacaoAoDeletar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="299" assertions="1" time="0.006947"/>
+        <testcase name="testDeletaComoColaborador" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="307" assertions="3" time="0.012676"/>
+        <testcase name="testFalhaSeNaoExisteAoDeletar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="322" assertions="1" time="0.016562"/>
+        <testcase name="testFalhaSemAutenticacaoAoReativar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="330" assertions="1" time="0.008652"/>
+        <testcase name="testReativaComoColaborador" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="338" assertions="3" time="0.013823"/>
+        <testcase name="testFalhaSeNaoExisteAoReativar" class="BooksAPITest" classname="BooksAPITest" file="/app/tests/e2e/BooksAPITest.php" line="353" assertions="1" time="0.011249"/>
       </testsuite>
-      <testsuite name="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" tests="26" assertions="126" errors="0" warnings="0" failures="0" skipped="0" time="0.377461">
-        <testsuite name="UsersAPITest::testValida" tests="1" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.017324">
-          <testcase name="testValida with data set &quot;sem todos campos&quot;" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="40" assertions="5" time="0.017324"/>
+      <testsuite name="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" tests="13" assertions="35" errors="0" warnings="0" failures="0" skipped="0" time="0.679635">
+        <testcase name="testFalhaSemAutenticacaoAoCriar" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="76" assertions="1" time="0.017658"/>
+        <testcase name="testFalhaComoMembroAoCriar" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="84" assertions="1" time="0.009566"/>
+        <testcase name="testCriaComoColaborador" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="92" assertions="8" time="0.021879"/>
+        <testcase name="testCriaComoAdmin" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="119" assertions="8" time="0.020166"/>
+        <testcase name="testFalhaSemAutenticacaoAoListar" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="148" assertions="1" time="0.006864"/>
+        <testcase name="testFalhaComoMembroAoListar" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="156" assertions="1" time="0.009683"/>
+        <testcase name="testLista20Com2Paginas" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="164" assertions="6" time="0.429974"/>
+        <testcase name="testListaPorLivro" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="183" assertions="2" time="0.059309"/>
+        <testcase name="testListaPorMembro" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="196" assertions="2" time="0.060106"/>
+        <testcase name="testFalhaSemAutenticacaoAoListarPorId" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="209" assertions="1" time="0.007066"/>
+        <testcase name="testFalhaComoMembroAoListarPorId" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="217" assertions="1" time="0.009777"/>
+        <testcase name="testListaPorId" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="225" assertions="2" time="0.017322"/>
+        <testcase name="testFalhaSeNaoExisteAoListarPorId" class="LoansAPITest" classname="LoansAPITest" file="/app/tests/e2e/LoansApiTest.php" line="236" assertions="1" time="0.010265"/>
+      </testsuite>
+      <testsuite name="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" tests="26" assertions="126" errors="0" warnings="0" failures="0" skipped="0" time="0.360649">
+        <testsuite name="UsersAPITest::testValida" tests="1" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.020515">
+          <testcase name="testValida with data set &quot;sem todos campos&quot;" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="40" assertions="5" time="0.020515"/>
         </testsuite>
-        <testcase name="testCriaUsuario" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="55" assertions="7" time="0.014581"/>
-        <testcase name="testCriaUsuarioComoColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="80" assertions="8" time="0.013936"/>
-        <testcase name="testCriaUsuarioComoMembroTentandoCriarColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="107" assertions="8" time="0.014009"/>
-        <testcase name="testFalhaSemAutenticacaoAoListar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="136" assertions="1" time="0.007350"/>
-        <testcase name="testFalhaComoMembroAoListar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="144" assertions="1" time="0.010233"/>
-        <testcase name="testListaComoColaboradorAdmin" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="152" assertions="2" time="0.014850"/>
-        <testcase name="testLista20Com2Paginas" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="165" assertions="45" time="0.065225"/>
-        <testsuite name="UsersAPITest::testListaPorNomeParcial" tests="2" assertions="18" errors="0" warnings="0" failures="0" skipped="0" time="0.044928">
-          <testcase name="testListaPorNomeParcial with data set #0" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="234" assertions="9" time="0.022423"/>
-          <testcase name="testListaPorNomeParcial with data set #1" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="234" assertions="9" time="0.022505"/>
+        <testcase name="testCriaUsuario" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="55" assertions="7" time="0.012426"/>
+        <testcase name="testCriaUsuarioComoColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="80" assertions="8" time="0.013858"/>
+        <testcase name="testCriaUsuarioComoMembroTentandoCriarColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="107" assertions="8" time="0.011842"/>
+        <testcase name="testFalhaSemAutenticacaoAoListar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="136" assertions="1" time="0.006339"/>
+        <testcase name="testFalhaComoMembroAoListar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="144" assertions="1" time="0.008986"/>
+        <testcase name="testListaComoColaboradorAdmin" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="152" assertions="2" time="0.013450"/>
+        <testcase name="testLista20Com2Paginas" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="165" assertions="45" time="0.069723"/>
+        <testsuite name="UsersAPITest::testListaPorNomeParcial" tests="2" assertions="18" errors="0" warnings="0" failures="0" skipped="0" time="0.040761">
+          <testcase name="testListaPorNomeParcial with data set #0" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="234" assertions="9" time="0.020544"/>
+          <testcase name="testListaPorNomeParcial with data set #1" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="234" assertions="9" time="0.020217"/>
         </testsuite>
-        <testcase name="testFalhaSemAutenticacaoAoListarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="269" assertions="1" time="0.008568"/>
-        <testcase name="testFalhaComoMembroAoListarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="277" assertions="1" time="0.010699"/>
-        <testcase name="testListaPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="285" assertions="5" time="0.013321"/>
-        <testcase name="testFalhaSeNaoExisteAoListarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="297" assertions="1" time="0.011541"/>
-        <testcase name="testFalhaSemAutenticacaoAoEditar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="307" assertions="1" time="0.008084"/>
-        <testcase name="testFalhaComoMembroAoEditar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="315" assertions="1" time="0.010714"/>
-        <testcase name="testEditaComoColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="323" assertions="8" time="0.016072"/>
-        <testcase name="testFalhaSeNaoExisteAoEditarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="346" assertions="1" time="0.011136"/>
-        <testcase name="testFalhaSemAutenticacaoAoDeletar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="356" assertions="1" time="0.007904"/>
-        <testcase name="testFalhaComoMembroAoDeletar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="364" assertions="1" time="0.011119"/>
-        <testcase name="testDeletaComoColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="372" assertions="3" time="0.013691"/>
-        <testcase name="testFalhaSeNaoExisteAoDeletarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="387" assertions="1" time="0.011109"/>
-        <testcase name="testFalhaSemAutenticacaoAoReativar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="395" assertions="1" time="0.008046"/>
-        <testcase name="testFalhaComoMembroAoReativar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="403" assertions="1" time="0.008001"/>
-        <testcase name="testReativaComoColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="411" assertions="3" time="0.013674"/>
-        <testcase name="testFalhaSeNaoExisteAoReativar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="426" assertions="1" time="0.011346"/>
+        <testcase name="testFalhaSemAutenticacaoAoListarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="269" assertions="1" time="0.006980"/>
+        <testcase name="testFalhaComoMembroAoListarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="277" assertions="1" time="0.009537"/>
+        <testcase name="testListaPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="285" assertions="5" time="0.013877"/>
+        <testcase name="testFalhaSeNaoExisteAoListarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="297" assertions="1" time="0.010808"/>
+        <testcase name="testFalhaSemAutenticacaoAoEditar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="307" assertions="1" time="0.006955"/>
+        <testcase name="testFalhaComoMembroAoEditar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="315" assertions="1" time="0.009592"/>
+        <testcase name="testEditaComoColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="323" assertions="8" time="0.016552"/>
+        <testcase name="testFalhaSeNaoExisteAoEditarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="346" assertions="1" time="0.010675"/>
+        <testcase name="testFalhaSemAutenticacaoAoDeletar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="356" assertions="1" time="0.006947"/>
+        <testcase name="testFalhaComoMembroAoDeletar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="364" assertions="1" time="0.009528"/>
+        <testcase name="testDeletaComoColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="372" assertions="3" time="0.013917"/>
+        <testcase name="testFalhaSeNaoExisteAoDeletarPorId" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="387" assertions="1" time="0.009837"/>
+        <testcase name="testFalhaSemAutenticacaoAoReativar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="395" assertions="1" time="0.006836"/>
+        <testcase name="testFalhaComoMembroAoReativar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="403" assertions="1" time="0.006876"/>
+        <testcase name="testReativaComoColaborador" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="411" assertions="3" time="0.014011"/>
+        <testcase name="testFalhaSeNaoExisteAoReativar" class="UsersAPITest" classname="UsersAPITest" file="/app/tests/e2e/UsersAPITest.php" line="426" assertions="1" time="0.009820"/>
       </testsuite>
     </testsuite>
-    <testsuite name="integration" tests="11" assertions="30" errors="0" warnings="0" failures="0" skipped="0" time="0.054931">
-      <testsuite name="CadastroAutorServiceTest" file="/app/tests/integration/CadastroAutorServiceTest.php" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.004007">
-        <testcase name="testCriaComValoresObrigatorios" class="CadastroAutorServiceTest" classname="CadastroAutorServiceTest" file="/app/tests/integration/CadastroAutorServiceTest.php" line="36" assertions="3" time="0.001996"/>
-        <testcase name="testEditaComValoresObrigatorios" class="CadastroAutorServiceTest" classname="CadastroAutorServiceTest" file="/app/tests/integration/CadastroAutorServiceTest.php" line="66" assertions="2" time="0.002011"/>
+    <testsuite name="integration" tests="13" assertions="34" errors="0" warnings="0" failures="0" skipped="0" time="0.077454">
+      <testsuite name="CadastroAutorServiceTest" file="/app/tests/integration/CadastroAutorServiceTest.php" tests="2" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.003865">
+        <testcase name="testCriaComValoresObrigatorios" class="CadastroAutorServiceTest" classname="CadastroAutorServiceTest" file="/app/tests/integration/CadastroAutorServiceTest.php" line="36" assertions="3" time="0.001932"/>
+        <testcase name="testEditaComValoresObrigatorios" class="CadastroAutorServiceTest" classname="CadastroAutorServiceTest" file="/app/tests/integration/CadastroAutorServiceTest.php" line="66" assertions="2" time="0.001933"/>
       </testsuite>
-      <testsuite name="CadastroLivroServiceTest" file="/app/tests/integration/CadastroLivroServiceTest.php" tests="1" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.002594">
-        <testcase name="testPersisteComValoresObrigatorios" class="CadastroLivroServiceTest" classname="CadastroLivroServiceTest" file="/app/tests/integration/CadastroLivroServiceTest.php" line="46" assertions="5" time="0.002594"/>
+      <testsuite name="CadastroLivroServiceTest" file="/app/tests/integration/CadastroLivroServiceTest.php" tests="1" assertions="5" errors="0" warnings="0" failures="0" skipped="0" time="0.002591">
+        <testcase name="testPersisteComValoresObrigatorios" class="CadastroLivroServiceTest" classname="CadastroLivroServiceTest" file="/app/tests/integration/CadastroLivroServiceTest.php" line="46" assertions="5" time="0.002591"/>
       </testsuite>
-      <testsuite name="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" tests="5" assertions="13" errors="0" warnings="0" failures="0" skipped="0" time="0.030191">
-        <testcase name="testPersisteComNomeCpfEmailSenhaCorretos" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="45" assertions="5" time="0.005615"/>
-        <testcase name="testCriptografaSenha" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="77" assertions="2" time="0.005581"/>
-        <testcase name="testCriaComoAtivo" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="95" assertions="2" time="0.005690"/>
-        <testcase name="testFalhaAoCriarComEmailExistente" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="111" assertions="2" time="0.006650"/>
-        <testcase name="testFalhaAoCriarComCpflExistente" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="137" assertions="2" time="0.006654"/>
+      <testsuite name="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" tests="5" assertions="13" errors="0" warnings="0" failures="0" skipped="0" time="0.024098">
+        <testcase name="testPersisteComNomeCpfEmailSenhaCorretos" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="45" assertions="5" time="0.005552"/>
+        <testcase name="testCriptografaSenha" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="77" assertions="2" time="0.004146"/>
+        <testcase name="testCriaComoAtivo" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="95" assertions="2" time="0.003722"/>
+        <testcase name="testFalhaAoCriarComEmailExistente" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="111" assertions="2" time="0.005258"/>
+        <testcase name="testFalhaAoCriarComCpflExistente" class="CadastroUsuarioServiceTest" classname="CadastroUsuarioServiceTest" file="/app/tests/integration/CadastroUsuarioServiceTest.php" line="137" assertions="2" time="0.005421"/>
       </testsuite>
-      <testsuite name="EdicaoUsuarioServiceTest" file="/app/tests/integration/EdicaoUsuarioServiceTest.php" tests="3" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.018139">
-        <testcase name="testPersisteComNomeCpfEmailCorretos" class="EdicaoUsuarioServiceTest" classname="EdicaoUsuarioServiceTest" file="/app/tests/integration/EdicaoUsuarioServiceTest.php" line="71" assertions="3" time="0.005096"/>
-        <testcase name="testFalhaAoEditarComEmailNovoJaUtilizado" class="EdicaoUsuarioServiceTest" classname="EdicaoUsuarioServiceTest" file="/app/tests/integration/EdicaoUsuarioServiceTest.php" line="98" assertions="2" time="0.006487"/>
-        <testcase name="testFalhaAoEditarComCpfNovoJaUtilizado" class="EdicaoUsuarioServiceTest" classname="EdicaoUsuarioServiceTest" file="/app/tests/integration/EdicaoUsuarioServiceTest.php" line="122" assertions="2" time="0.006556"/>
+      <testsuite name="EdicaoUsuarioServiceTest" file="/app/tests/integration/EdicaoUsuarioServiceTest.php" tests="3" assertions="7" errors="0" warnings="0" failures="0" skipped="0" time="0.019769">
+        <testcase name="testPersisteComNomeCpfEmailCorretos" class="EdicaoUsuarioServiceTest" classname="EdicaoUsuarioServiceTest" file="/app/tests/integration/EdicaoUsuarioServiceTest.php" line="71" assertions="3" time="0.005402"/>
+        <testcase name="testFalhaAoEditarComEmailNovoJaUtilizado" class="EdicaoUsuarioServiceTest" classname="EdicaoUsuarioServiceTest" file="/app/tests/integration/EdicaoUsuarioServiceTest.php" line="98" assertions="2" time="0.006479"/>
+        <testcase name="testFalhaAoEditarComCpfNovoJaUtilizado" class="EdicaoUsuarioServiceTest" classname="EdicaoUsuarioServiceTest" file="/app/tests/integration/EdicaoUsuarioServiceTest.php" line="122" assertions="2" time="0.007888"/>
+      </testsuite>
+      <testsuite name="EmprestimoServiceTest" file="/app/tests/integration/EmprestimoServiceTest.php" tests="2" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.027130">
+        <testcase name="testCriaComValoresObrigatorios" class="EmprestimoServiceTest" classname="EmprestimoServiceTest" file="/app/tests/integration/EmprestimoServiceTest.php" line="109" assertions="2" time="0.011467"/>
+        <testcase name="testFalhaAoCriarSemLivroNoEstoque" class="EmprestimoServiceTest" classname="EmprestimoServiceTest" file="/app/tests/integration/EmprestimoServiceTest.php" line="128" assertions="2" time="0.015663"/>
       </testsuite>
     </testsuite>
-    <testsuite name="unit" tests="23" assertions="43" errors="0" warnings="0" failures="0" skipped="0" time="0.015868">
-      <testsuite name="CPFTest" file="/app/tests/unit/CPFTest.php" tests="16" assertions="29" errors="0" warnings="0" failures="0" skipped="0" time="0.011510">
-        <testsuite name="CPFTest::testFormata" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.003180">
-          <testcase name="testFormata with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="13" assertions="1" time="0.001493"/>
-          <testcase name="testFormata with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="13" assertions="1" time="0.001025"/>
-          <testcase name="testFormata with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="13" assertions="1" time="0.000663"/>
+    <testsuite name="unit" tests="24" assertions="44" errors="0" warnings="0" failures="0" skipped="0" time="0.016632">
+      <testsuite name="CPFTest" file="/app/tests/unit/CPFTest.php" tests="16" assertions="29" errors="0" warnings="0" failures="0" skipped="0" time="0.010188">
+        <testsuite name="CPFTest::testFormata" tests="3" assertions="3" errors="0" warnings="0" failures="0" skipped="0" time="0.001930">
+          <testcase name="testFormata with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="13" assertions="1" time="0.000695"/>
+          <testcase name="testFormata with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="13" assertions="1" time="0.000631"/>
+          <testcase name="testFormata with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="13" assertions="1" time="0.000605"/>
         </testsuite>
-        <testsuite name="CPFTest::testFalhaComErroAmigavel" tests="13" assertions="26" errors="0" warnings="0" failures="0" skipped="0" time="0.008330">
-          <testcase name="testFalhaComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000683"/>
+        <testsuite name="CPFTest::testFalhaComErroAmigavel" tests="13" assertions="26" errors="0" warnings="0" failures="0" skipped="0" time="0.008257">
+          <testcase name="testFalhaComErroAmigavel with data set #0" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000716"/>
           <testcase name="testFalhaComErroAmigavel with data set #1" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000623"/>
-          <testcase name="testFalhaComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000619"/>
-          <testcase name="testFalhaComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000635"/>
+          <testcase name="testFalhaComErroAmigavel with data set #2" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000624"/>
+          <testcase name="testFalhaComErroAmigavel with data set #3" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000623"/>
           <testcase name="testFalhaComErroAmigavel with data set #4" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000619"/>
-          <testcase name="testFalhaComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000641"/>
-          <testcase name="testFalhaComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000628"/>
-          <testcase name="testFalhaComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000620"/>
-          <testcase name="testFalhaComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000629"/>
-          <testcase name="testFalhaComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000620"/>
-          <testcase name="testFalhaComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000762"/>
-          <testcase name="testFalhaComErroAmigavel with data set #11" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000616"/>
-          <testcase name="testFalhaComErroAmigavel with data set #12" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000634"/>
+          <testcase name="testFalhaComErroAmigavel with data set #5" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000618"/>
+          <testcase name="testFalhaComErroAmigavel with data set #6" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000620"/>
+          <testcase name="testFalhaComErroAmigavel with data set #7" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000639"/>
+          <testcase name="testFalhaComErroAmigavel with data set #8" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000618"/>
+          <testcase name="testFalhaComErroAmigavel with data set #9" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000614"/>
+          <testcase name="testFalhaComErroAmigavel with data set #10" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000692"/>
+          <testcase name="testFalhaComErroAmigavel with data set #11" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000624"/>
+          <testcase name="testFalhaComErroAmigavel with data set #12" class="CPFTest" classname="CPFTest" file="/app/tests/unit/CPFTest.php" line="35" assertions="2" time="0.000627"/>
         </testsuite>
       </testsuite>
-      <testsuite name="EmailTest" file="/app/tests/unit/EmailTest.php" tests="7" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="0.004358">
-        <testsuite name="EmailTest::testFalhaComErroAmigavel" tests="7" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="0.004358">
-          <testcase name="testFalhaComErroAmigavel with data set #0" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000688"/>
-          <testcase name="testFalhaComErroAmigavel with data set #1" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000610"/>
-          <testcase name="testFalhaComErroAmigavel with data set #2" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000610"/>
-          <testcase name="testFalhaComErroAmigavel with data set #3" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000625"/>
-          <testcase name="testFalhaComErroAmigavel with data set #4" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000609"/>
-          <testcase name="testFalhaComErroAmigavel with data set #5" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000608"/>
-          <testcase name="testFalhaComErroAmigavel with data set #6" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000610"/>
+      <testsuite name="EmailTest" file="/app/tests/unit/EmailTest.php" tests="7" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="0.004253">
+        <testsuite name="EmailTest::testFalhaComErroAmigavel" tests="7" assertions="14" errors="0" warnings="0" failures="0" skipped="0" time="0.004253">
+          <testcase name="testFalhaComErroAmigavel with data set #0" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000679"/>
+          <testcase name="testFalhaComErroAmigavel with data set #1" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000597"/>
+          <testcase name="testFalhaComErroAmigavel with data set #2" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000594"/>
+          <testcase name="testFalhaComErroAmigavel with data set #3" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000599"/>
+          <testcase name="testFalhaComErroAmigavel with data set #4" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000594"/>
+          <testcase name="testFalhaComErroAmigavel with data set #5" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000588"/>
+          <testcase name="testFalhaComErroAmigavel with data set #6" class="EmailTest" classname="EmailTest" file="/app/tests/unit/EmailTest.php" line="13" assertions="2" time="0.000602"/>
         </testsuite>
+      </testsuite>
+      <testsuite name="EmprestimoTest" file="/app/tests/unit/EmprestimoTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.002192">
+        <testcase name="testReservaParaDuasSemanas" class="EmprestimoTest" classname="EmprestimoTest" file="/app/tests/unit/EmprestimoTest.php" line="19" assertions="1" time="0.002192"/>
       </testsuite>
     </testsuite>
   </testsuite>
