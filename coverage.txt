@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:      
-  2022-03-08 03:01:52      
+  2022-03-08 03:49:52      
                            
  Summary:                  
-  Classes: 82.14% (23/28)  
-  Methods: 89.16% (74/83)  
-  Lines:   96.27% (361/375)
+  Classes: 82.76% (24/29)  
+  Methods: 90.70% (78/86)  
+  Lines:   96.64% (374/387)
 
 App\Http\Controllers\AuthController
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  9/  9)
@@ -17,7 +17,7 @@ App\Http\Controllers\BookController
 App\Http\Controllers\Controller
   Methods: 100.00% ( 1/ 1)   Lines: 100.00% (  5/  5)
 App\Http\Controllers\LoanController
-  Methods: 100.00% ( 5/ 5)   Lines: 100.00% ( 18/ 18)
+  Methods: 100.00% ( 6/ 6)   Lines: 100.00% ( 21/ 21)
 App\Http\Controllers\UserController
   Methods:  75.00% ( 6/ 8)   Lines:  93.88% ( 46/ 49)
 App\Http\Middleware\Authenticate
@@ -43,7 +43,7 @@ Core\Models\CPF
 Core\Models\Email
   Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  6/  6)
 Core\Models\Emprestimo
-  Methods:  40.00% ( 2/ 5)   Lines:  54.55% (  6/ 11)
+  Methods:  60.00% ( 3/ 5)   Lines:  63.64% (  7/ 11)
 Core\Models\Livro
   Methods: 100.00% ( 5/ 5)   Lines: 100.00% (  8/  8)
 Core\Models\Papel
@@ -54,6 +54,8 @@ Core\Services\Emprestimo\CadastroAutorService
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  7/  7)
 Core\Services\Emprestimo\CadastroLivroService
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 10/ 10)
+Core\Services\Emprestimo\DevolucaoService
+  Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  8/  8)
 Core\Services\Emprestimo\EmprestimoService
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% ( 15/ 15)
 Core\Services\Usuario\CadastroUsuarioService

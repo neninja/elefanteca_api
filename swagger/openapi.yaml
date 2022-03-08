@@ -391,6 +391,27 @@ paths:
       security:
         -
           JWT: []
+  '/api/loans/{id}/devolution':
+    patch:
+      tags:
+        - empréstimo
+      description: 'Devolução de empréstimo'
+      operationId: 33d07149d07d667298f1eb71d7d76545
+      parameters:
+        -
+          name: id
+          in: path
+          description: 'Id empréstimo'
+          required: true
+          schema:
+            type: integer
+            example: 1
+      responses:
+        2XX:
+          description: OK
+      security:
+        -
+          JWT: []
   '/api/user/{id}':
     get:
       tags:

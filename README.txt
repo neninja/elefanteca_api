@@ -58,6 +58,10 @@ Loans API
  [x] Falha como membro ao listar por id
  [x] Lista por id
  [x] Falha se nao existe ao listar por id
+ [x] Falha sem autenticacao ao devolver
+ [x] Falha como membro ao devolver
+ [x] Devolve como colaborador
+ [x] Falha se nao existe ao devolver
 
 Users API
  [x] Falha sem todos campos
@@ -100,6 +104,11 @@ Cadastro Usuario Service
  [x] Cria como ativo
  [x] Falha ao criar com email existente
  [x] Falha ao criar com cpfl existente
+
+Devolucao Service
+ [x] Cria com valores obrigatorios
+ [x] Falha ao devolver em duplicidade
+ [x] Falha ao devolver emprestimo inexistente
 
 Edicao Usuario Service
  [x] Persiste com nome cpf email corretos
