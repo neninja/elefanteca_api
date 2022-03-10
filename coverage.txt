@@ -1,12 +1,12 @@
 
 
 Code Coverage Report:      
-  2022-03-08 04:07:47      
+  2022-03-10 02:25:08      
                            
  Summary:                  
   Classes: 82.76% (24/29)  
   Methods: 90.70% (78/86)  
-  Lines:   96.64% (374/387)
+  Lines:   96.65% (375/388)
 
 App\Http\Controllers\AuthController
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  9/  9)
@@ -39,7 +39,7 @@ Core\Exceptions\ValidationException
 Core\Models\Autor
   Methods: 100.00% ( 2/ 2)   Lines: 100.00% (  2/  2)
 Core\Models\CPF
-  Methods: 100.00% ( 4/ 4)   Lines: 100.00% ( 48/ 48)
+  Methods: 100.00% ( 4/ 4)   Lines: 100.00% ( 49/ 49)
 Core\Models\Email
   Methods: 100.00% ( 3/ 3)   Lines: 100.00% (  6/  6)
 Core\Models\Emprestimo
