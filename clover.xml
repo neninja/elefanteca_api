@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1646879108">
-  <project timestamp="1646879108">
+<coverage generated="1651206569">
+  <project timestamp="1651206569">
     <file name="/app/app/Core/Exceptions/CoreException.php">
       <class name="Core\Exceptions\CoreException" namespace="global">
         <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
