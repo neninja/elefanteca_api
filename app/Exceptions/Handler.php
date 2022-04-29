@@ -35,8 +35,7 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
-        // var_dump($exception->getMessage(), $exception->getFile(), $exception->getLine());die;
-        // parent::report($exception);
+        parent::report($exception);
     }
 
     /**

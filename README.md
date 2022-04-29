@@ -57,6 +57,11 @@ API de sistema para bibliotecas.
     docker-compose exec app composer swagger
     ```
 
+9. Dê as permissões necessárias
+    ```sh
+    docker-compose exec app chmod -R 777 storage
+    ```
+
 ### Execução
 
 Com a **configuração inicial** já realizada, suba os containers se necessário e acesse a aplicação em `localhost:8989`
