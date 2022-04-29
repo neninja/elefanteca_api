@@ -17,14 +17,22 @@ services:
   app:
     build: .docker/php
     volumes:
-      - ./.docker/apache/vhost.conf:/etc/apache2/sites-available/000-default.conf
       - .:/var/www/html
     working_dir: /var/www/html
     links:
       - db:db
     ports:
-      - "${APP_PORT:?err}:80"
-    expose:
-      - "${APP_PORT:?err}"
+      - 9000:9000 # nginx connf
     depends_on:
       - db
+
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+      - ${APP_PORT-8080}:80
+    volumes:
+      - .:/var/www/html
+      - ./.docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    working_dir: /var/www/html
+    depends_on:
+      - app
